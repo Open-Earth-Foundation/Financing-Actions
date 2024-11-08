@@ -1,64 +1,55 @@
 import React, { useState } from "react";
 import Hero from "./components/Hero";
 import RiskAssessment from "./components/RiskAssessment";
-import { exportUtils } from './utils/exportUtils';
+import { DataProvider, useData } from "./data/DataContext";
+import { exportUtils } from "./utils/exportUtils";
 import "./index.css";
 
-const App = () => {
-  const [selectedCity, setSelectedCity] = useState("");
-  const [ccraData, setCcraData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+// Create a wrapper component to use the DataContext
+const AppContent = () => {
+  const [selectedCity, setSelectedCity] = useState(null);
+  const { fetchCityData, riskAssessment, loading, error } = useData();
 
-  const fetchCcraData = async (city) => {
-    if (!city) return;
-    setLoading(true);
-    setError(null);
-    try {
-      const apiUrl = `https://adapta-brasil-api.replit.app/process/?city=${encodeURIComponent(city)}`;
-      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
-      const response = await fetch(proxyUrl);
-      if (!response.ok) {
-        throw new Error(`Error fetching data: ${response.statusText}`);
-      }
-      const data = await response.json();
-      const parsedData = JSON.parse(data.contents);
-      console.log("Parsed CCRA Data:", parsedData);
-      setCcraData(parsedData);
-    } catch (err) {
-      setError(`Failed to fetch data: ${err.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleSearch = (searchTerm) => {
-    setSelectedCity(searchTerm);
-    if (searchTerm) {
-      fetchCcraData(searchTerm);
+  const handleSearch = (cityData) => {
+    console.log("Selected city:", cityData); // Debug log
+    setSelectedCity(cityData);
+    if (cityData?.actor_id) {
+      fetchCityData(cityData.actor_id, "current");
     }
   };
 
   const handleBack = () => {
-    setSelectedCity("");
-    setCcraData([]);
-    setError(null);
+    setSelectedCity(null);
   };
 
   const handleExportCSV = () => {
-    if (!ccraData || ccraData.length === 0) {
-      console.error('No data available to export');
+    if (!riskAssessment || riskAssessment.length === 0) {
+      console.error("No data available to export");
       return;
     }
-    exportUtils.exportToCSV(ccraData, `${selectedCity}_climate_risk_assessment.csv`);
-  };
 
-  // Remove handleExportPDF as we'll handle it directly in RiskAssessment component
+    // Transform data for CSV export
+    const csvData = riskAssessment.map((row) => ({
+      Year: row.latest_year,
+      "Key Impact": row.keyimpact,
+      Hazard: row.hazard,
+      "Hazard Score": row.hazard_score,
+      "Exposure Score": row.exposure_score,
+      "Vulnerability Score": row.vulnerability_score,
+      "Risk Score": row.risk_score,
+      "Normalized Risk Score": row.normalised_risk_score,
+    }));
+
+    exportUtils.exportToCSV(
+      csvData,
+      `${selectedCity.cityname}_climate_risk_assessment.csv`,
+    );
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-primary text-white p-4 ">
+      <header className="bg-primary text-white p-4">
         <div className="container mx-auto max-w-[1160px] align-center">
           <h1 className="text-xl font-semibold">CCRA PoC</h1>
         </div>
@@ -66,10 +57,8 @@ const App = () => {
 
       {/* Main Content */}
       <main className="flex-grow">
-        {/* Always show Hero component with search */}
         <Hero onSearch={handleSearch} initialCity={selectedCity} />
 
-        {/* Empty State */}
         {!selectedCity && (
           <div className="container mx-auto px-4 py-10 text-center text-gray-500">
             <p>
@@ -79,15 +68,14 @@ const App = () => {
           </div>
         )}
 
-        {/* Show Risk Assessment if city is selected */}
         {selectedCity && (
           <RiskAssessment
-            selectedCity={selectedCity}
-            ccraData={ccraData}
+            cityname={selectedCity.cityname}
+            region={selectedCity.region}
+            actor_id={selectedCity.actor_id}
             loading={loading}
             error={error}
             onBack={handleBack}
-            onExportCSV={handleExportCSV}
           />
         )}
       </main>
@@ -99,6 +87,15 @@ const App = () => {
         </div>
       </footer>
     </div>
+  );
+};
+
+// Main App component wrapped with DataProvider
+const App = () => {
+  return (
+    <DataProvider>
+      <AppContent />
+    </DataProvider>
   );
 };
 

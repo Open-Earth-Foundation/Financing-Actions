@@ -1,7 +1,11 @@
 import React from 'react';
 import CityDropdown from './CityDropdown';
 
-const Hero = ({ onSearch }) => {
+const Hero = ({ onSearch, initialCity }) => {
+  const handleCitySelect = (cityData) => {
+    onSearch(cityData);
+  };
+
   return (
     <div className="container mx-auto px-4 py-36 flex justify-center items-center gap-32 max-w-[1200px]">
       {/* Left column with text */}
@@ -22,7 +26,7 @@ const Hero = ({ onSearch }) => {
       {/* Right column with search */}
       <div className="flex-1">
         <div className="relative">
-          <div className="absolute left-3 top-[13px] z-10 pointer-events-none">
+          <div className="absolute left-3 top-[40px] z-10 pointer-events-none">
             <svg
               className="w-4 h-4 text-[#7A7B9A]"
               fill="none"
@@ -39,7 +43,7 @@ const Hero = ({ onSearch }) => {
             </svg>
           </div>
           <CityDropdown 
-            onCityChange={onSearch}
+            onCityChange={handleCitySelect}
             styles={{
               control: (base) => ({
                 ...base,

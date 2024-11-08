@@ -1,146 +1,143 @@
 import React, { useState, useEffect } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Polygon,
-  useMap,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Polygon, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Custom hook to fit bounds
-const FitBoundsToPolygon = ({ polygon }) => {
+const MapController = ({ center, zoom, polygon }) => {
   const map = useMap();
 
   useEffect(() => {
-    if (polygon && polygon.length > 0) {
-      // Create bounds from polygon coordinates
-      const bounds = polygon.reduce((bounds, coordinate) => {
-        return bounds.extend(coordinate);
-      }, map.getBounds());
+    console.log('MapController update:', { center, zoom, hasPolygon: !!polygon });
 
-      // Fit the map to the polygon bounds with some padding
-      map.fitBounds(bounds, {
-        padding: [50, 50],
-        maxZoom: 12, // Limit maximum zoom level
-        minZoom: 10, // Limit minimum zoom level
-      });
+    if (center) {
+      map.setView(center, zoom);
     }
-  }, [map, polygon]);
+
+    if (polygon && polygon.length > 0) {
+      try {
+        const bounds = polygon.reduce((bounds, coord) => 
+          bounds.extend([coord[0], coord[1]]), map.getBounds());
+        map.fitBounds(bounds, { 
+          padding: [50, 50],
+          maxZoom: 13  // Limit max zoom after fitting bounds
+        });
+      } catch (err) {
+        console.error('Error fitting bounds:', err);
+      }
+    }
+  }, [map, center, zoom, polygon]);
 
   return null;
 };
 
-const CityMap = ({ selectedCity }) => {
-  const [cityCoordinates, setCityCoordinates] = useState(null);
-  const [cityPolygon, setCityPolygon] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const CityMap = ({ cityname, region, osm_id }) => {
+  const [mapData, setMapData] = useState({
+    center: [-27.5954, -48.5480], // Default to Florianópolis
+    polygon: null,
+    zoom: 13  // Increased default zoom
+  });
+  const [loading, setLoading] = useState(false);
+
+  // ESRI World Imagery tile URL
+  const satelliteUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+  const satelliteAttribution = 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 
   useEffect(() => {
-    if (!selectedCity) return;
-
-    setLoading(true);
-    setError(null);
-
     const fetchCityData = async () => {
+      if (!cityname || !region) return;
+
+      setLoading(true);
       try {
-        const apiUrl = `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(selectedCity)}&format=json&polygon_geojson=1&addressdetails=1`;
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        const searchUrl = `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(cityname)}&state=${region}&country=Brazil&format=json&polygon_geojson=1&addressdetails=1`;
+        console.log('Fetching city data:', searchUrl);
 
+        const response = await fetch(searchUrl);
         const data = await response.json();
+
         if (data && data.length > 0) {
-          const { lat, lon } = data[0];
-          let polygon = data[0].geojson ? data[0].geojson.coordinates : null;
+          const cityData = data[0];
+          console.log('Found city data:', cityData);
 
-          // Handle different types of polygons
-          if (polygon) {
-            let coordinateArray;
+          // Set new center
+          const newCenter = [
+            parseFloat(cityData.lat),
+            parseFloat(cityData.lon)
+          ];
 
-            if (data[0].geojson.type === "MultiPolygon") {
+          // Handle polygon data
+          let polygonCoords = null;
+          if (cityData.geojson) {
+            if (cityData.geojson.type === 'Polygon') {
+              polygonCoords = cityData.geojson.coordinates[0].map(coord => 
+                [coord[1], coord[0]]
+              );
+            } else if (cityData.geojson.type === 'MultiPolygon') {
               // Get the largest polygon from MultiPolygon
-              coordinateArray = polygon.reduce((largest, current) => {
-                const currentArea = current[0].length;
-                const largestArea = largest[0].length;
-                return currentArea > largestArea ? current : largest;
-              })[0];
-            } else if (data[0].geojson.type === "Polygon") {
-              coordinateArray = polygon[0];
+              polygonCoords = cityData.geojson.coordinates[0][0].map(coord => 
+                [coord[1], coord[0]]
+              );
             }
-
-            // Convert coordinates to [lat, lng] format
-            const adjustedPolygon = coordinateArray.map((point) => [
-              point[1],
-              point[0],
-            ]);
-            setCityPolygon(adjustedPolygon);
           }
 
-          setCityCoordinates([parseFloat(lat), parseFloat(lon)]);
-        } else {
-          setError("City coordinates not found");
+          setMapData({
+            center: newCenter,
+            polygon: polygonCoords,
+            zoom: 13  // Higher zoom level
+          });
         }
-        setLoading(false);
       } catch (err) {
-        setError(err.message);
+        console.error('Error fetching city data:', err);
+      } finally {
         setLoading(false);
       }
     };
 
     fetchCityData();
-  }, [selectedCity]);
+  }, [cityname, region, osm_id]);
 
-  if (loading)
-    return (
-      <div className="flex items-center justify-center h-[400px] bg-gray-100 rounded-lg">
-        <p className="text-gray-600">Loading map for {selectedCity}...</p>
-      </div>
-    );
-
-  if (error)
-    return (
-      <div className="flex items-center justify-center h-[400px] bg-gray-100 rounded-lg">
-        <p className="text-red-500">Error loading map: {error}</p>
-      </div>
-    );
-
-  return cityCoordinates ? (
+  return (
     <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
+      {loading && (
+        <div className="absolute inset-0 bg-white bg-opacity-75 z-10 flex items-center justify-center">
+          <p className="text-gray-600">Loading map for {cityname}...</p>
+        </div>
+      )}
+
       <MapContainer
-        center={cityCoordinates}
-        zoom={12}
+        center={mapData.center}
+        zoom={mapData.zoom}
         style={{ height: "100%", width: "100%" }}
         className="z-0"
+        minZoom={4}  // Prevent zooming out too far
+        maxZoom={18} // Allow good satellite detail
       >
+        {/* Satellite Base Layer */}
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url={satelliteUrl}
+          attribution={satelliteAttribution}
         />
-        <Marker position={cityCoordinates} />
-        {cityPolygon && (
-          <>
-            <Polygon
-              positions={cityPolygon}
-              pathOptions={{
-                color: "blue",
-                weight: 2,
-                fillColor: "blue",
-                fillOpacity: 0.1,
-              }}
-            />
-            <FitBoundsToPolygon polygon={cityPolygon} />
-          </>
+
+        <MapController 
+          center={mapData.center}
+          zoom={mapData.zoom}
+          polygon={mapData.polygon}
+        />
+
+        {mapData.center && (
+          <Marker position={mapData.center} />
+        )}
+
+        {mapData.polygon && (
+          <Polygon
+            positions={mapData.polygon}
+            pathOptions={{
+              color: "#2351DC",
+              weight: 3, // Slightly thicker border for satellite view
+              fillColor: "#2351DC",
+              fillOpacity: 0.15, // Slightly higher opacity for satellite view
+            }}
+          />
         )}
       </MapContainer>
-    </div>
-  ) : (
-    <div className="flex items-center justify-center h-[400px] bg-gray-100 rounded-lg">
-      <p className="text-gray-600">
-        No coordinates available for {selectedCity}.
-      </p>
     </div>
   );
 };
