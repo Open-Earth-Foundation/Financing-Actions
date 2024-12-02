@@ -14,31 +14,13 @@ const CityDropdown = ({ onCityChange, styles }) => {
   const regions = React.useMemo(() => {
     if (!cities?.length) return [];
 
-    // Log all unique regions before filtering
     const allRegions = [...new Set(cities.map(city => city.region))];
-    console.log('All regions before filtering:', allRegions);
-
-    // Log any null/undefined regions
-    const invalidRegions = allRegions.filter(region => !region);
-    if (invalidRegions.length) {
-      console.log('Found invalid regions:', invalidRegions);
-    }
 
     const uniqueRegions = allRegions.filter(Boolean).sort();
-    console.log('Final regions after filtering:', uniqueRegions);
-
-    // Log if we're missing any standard Brazilian states
-    const missingStates = Object.keys(BRAZILIAN_STATES)
-      .filter(state => !uniqueRegions.includes(state));
-    if (missingStates.length) {
-      console.log('Missing Brazilian states:', missingStates);
-    }
 
     return uniqueRegions.map(region => {
       const stateName = getStateName(region);
-      if (!BRAZILIAN_STATES[region]) {
-        console.log('Unknown region code:', region);
-      }
+      
       return {
         value: region,
         label: stateName,

@@ -10,6 +10,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 import { getHazardColor } from '../../constants/hazardColors';
+import { formatScore } from '../../constants/riskLevels';
 
 const HazardProjections = ({ projectionData }) => {
   const [selectedHazards, setSelectedHazards] = useState(
@@ -37,10 +38,13 @@ const HazardProjections = ({ projectionData }) => {
     }));
   };
 
-  if (!projectionData) {
-    return null;
-  }
-  
+  // Calculate change between years
+  const calculateYearChange = (currentValue, previousValue) => {
+    if (!currentValue || !previousValue) return null;
+    const change = ((currentValue - previousValue) / previousValue) * 100;
+    return change.toFixed(1);
+  };
+
   // Transform data for the chart
   const chartData = useMemo(() => {
     if (!projectionData) return [];
@@ -84,6 +88,69 @@ const HazardProjections = ({ projectionData }) => {
     ];
   }, [projectionData, selectedScenarios]);
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (!active || !payload || !payload.length) return null;
+
+    const getBaseHazard = (dataKey) => dataKey.split('_')[0];
+
+    return (
+      <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
+        <p className="text-sm font-medium text-gray-900 mb-2">{label}</p>
+        {payload.map((entry, index) => {
+          const baseHazard = getBaseHazard(entry.dataKey);
+          const isProjection = entry.dataKey.includes('_');
+          const scenario = entry.dataKey.includes('optimistic') ? 'RCP 4.5' : 'RCP 8.5';
+
+          // Find the value from the previous year for projections
+          let changeFromPrevious = null;
+          if (label !== 'Current' && isProjection) {
+            const previousYear = label === '2050' ? '2030' : 'Current';
+            const previousValue = chartData.find(d => d.year === previousYear)?.[
+              label === '2050' ? `${baseHazard}_${entry.dataKey.includes('optimistic') ? 'optimistic' : 'pessimistic'}` : baseHazard
+            ];
+            changeFromPrevious = calculateYearChange(entry.value, previousValue);
+          }
+
+          return (
+            <div key={index} className="flex items-center gap-2 text-sm">
+              <div 
+                className="w-3 h-3 rounded-full"
+                style={{ backgroundColor: entry.color }}
+              />
+              <span className="text-gray-600">
+                {isProjection ? `${baseHazard} (${scenario})` : entry.name}:
+              </span>
+              <span className="font-medium" style={{ color: entry.color }}>
+                {formatScore(entry.value)}
+              </span>
+              {changeFromPrevious && (
+                <span className={`text-xs ${Number(changeFromPrevious) >= 0 ? 'text-red-500' : 'text-green-500'}`}>
+                  ({changeFromPrevious > 0 ? '+' : ''}{changeFromPrevious}% from {label === '2050' ? '2030' : 'current'})
+                </span>
+              )}
+            </div>
+          );
+        })}
+
+        {label === 'Current' && (
+          <div className="mt-2 text-xs text-gray-500 italic">
+            Current hazard scores based on historical data
+          </div>
+        )}
+        {label === '2030' && (
+          <div className="mt-2 text-xs text-gray-500 italic">
+            Changes shown relative to current scores
+          </div>
+        )}
+        {label === '2050' && (
+          <div className="mt-2 text-xs text-gray-500 italic">
+            Changes shown relative to 2030 scores
+          </div>
+        )}
+      </div>
+    );
+  };
+
   if (!projectionData) return null;
 
   return (
@@ -91,11 +158,10 @@ const HazardProjections = ({ projectionData }) => {
       <div className="mb-6">
         <h3 className="text-2xl font-normal font-poppins mb-4">Hazards Projection</h3>
         <p className="text-base font-normal font-opensans text-gray-600 mb-6">
-          Compare how hazard scores are projected to change over time under different climate scenarios.
+          Compare how hazard scores are projected to change over time under different climate scenarios. Changes in 2030 are relative to current scores, while changes in 2050 are relative to 2030 projections.
         </p>
 
         <div className="flex justify-between items-start gap-4 mb-6">
-          {/* Hazards section */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-500">Hazards:</label>
             <div className="flex flex-wrap gap-3">
@@ -120,7 +186,6 @@ const HazardProjections = ({ projectionData }) => {
             </div>
           </div>
 
-          {/* Scenarios section */}
           <div className="flex flex-col gap-2">
             <label className="text-sm font-medium text-gray-500">Scenarios:</label>
             <div className="flex gap-4">
@@ -162,17 +227,9 @@ const HazardProjections = ({ projectionData }) => {
               domain={[0, 1]} 
               stroke="#6b7280"
               tick={{ fill: '#6b7280' }}
-              tickFormatter={(value) => `${(value * 100).toFixed(0)}%`}
+              tickFormatter={value => formatScore(value)}
             />
-            <Tooltip
-              formatter={(value) => value ? `${(value * 100).toFixed(1)}%` : 'N/A'}
-              labelStyle={{ color: '#374151' }}
-              contentStyle={{ 
-                backgroundColor: 'white',
-                border: '1px solid #e5e7eb',
-                borderRadius: '6px'
-              }}
-            />
+            <Tooltip content={<CustomTooltip />} />
             <Legend />
 
             {Object.keys(projectionData).map(hazard => {
@@ -180,7 +237,6 @@ const HazardProjections = ({ projectionData }) => {
 
               return (
                 <React.Fragment key={hazard}>
-                  {/* Current scenario - solid line */}
                   <Line
                     type="monotone"
                     dataKey={hazard}
@@ -189,7 +245,6 @@ const HazardProjections = ({ projectionData }) => {
                     strokeWidth={2}
                     dot={{ fill: getHazardColor(hazard), r: 4 }}
                   />
-                  {/* Optimistic scenario - dashed line */}
                   {selectedScenarios.optimistic && (
                     <Line
                       type="monotone"
@@ -202,7 +257,6 @@ const HazardProjections = ({ projectionData }) => {
                       connectNulls
                     />
                   )}
-                  {/* Pessimistic scenario - dotted line */}
                   {selectedScenarios.pessimistic && (
                     <Line
                       type="monotone"

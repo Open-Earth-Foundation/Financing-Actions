@@ -1,5 +1,6 @@
+/* Base Layout */
 .risk-assessment {
-  @apply max-w-screen-xl mx-auto p-16 space-y-9;
+  @apply max-w-screen-xl mx-auto p-8 lg:p-16 space-y-9;
 }
 
 /* Typography */
@@ -13,7 +14,7 @@
 
 /* Card Styling */
 .dashboard-card {
-  @apply bg-white rounded-lg shadow-sm;
+  @apply bg-white/90 backdrop-blur-sm rounded-lg shadow-sm border border-gray-100;
 }
 
 .card-header {
@@ -21,7 +22,7 @@
 }
 
 .card-title {
-  @apply text-2xl font-normal font-poppins;
+  @apply text-2xl font-normal font-poppins text-gray-800;
 }
 
 .card-description {
@@ -30,7 +31,7 @@
 
 /* Risk Cards */
 .risk-card {
-  @apply p-6 border border-[#D7D8FA] rounded-lg;
+  @apply p-6 border border-[#D7D8FA] rounded-lg bg-white/95 backdrop-blur-sm transition-all duration-200 hover:shadow-md;
 }
 
 .risk-metric {
@@ -53,43 +54,132 @@
   @apply h-[5px] flex-1 rounded-full;
 }
 
-/* Table Styles - keeping existing styles and adding new ones */
+/* Table Styles */
 .data-table {
-  @apply w-full;
+  @apply w-full bg-white/90 backdrop-blur-sm rounded-lg overflow-hidden;
 }
 
 .data-table th {
-  @apply px-4 py-2 text-left bg-gray-50 font-semibold text-sm text-gray-700;
+  @apply px-4 py-3 text-left bg-gray-50/90 backdrop-blur-sm font-semibold text-sm text-gray-700 border-b border-gray-200;
 }
 
 .data-table td {
-  @apply px-4 py-2 border-b border-gray-200;
+  @apply px-4 py-3 border-b border-gray-200 text-gray-700;
+}
+
+.data-table tbody tr {
+  @apply hover:bg-gray-50/50 transition-colors duration-150;
 }
 
 /* Button Styles */
 .primary-button {
-  @apply px-4 py-4 bg-[#2351DC] text-white rounded-lg font-semibold uppercase tracking-wider;
+  @apply px-4 py-4 bg-[#2351DC] text-white rounded-lg font-semibold uppercase tracking-wider 
+         hover:bg-[#1a3eb3] transition-colors duration-200 
+         disabled:bg-gray-400 disabled:cursor-not-allowed;
 }
 
 .secondary-button {
-  @apply px-4 py-4 bg-white text-[#2351DC] rounded-lg font-semibold uppercase tracking-wider;
+  @apply px-4 py-4 bg-white/90 backdrop-blur-sm text-[#2351DC] rounded-lg font-semibold uppercase tracking-wider 
+         border border-[#2351DC] hover:bg-[#2351DC]/5 transition-colors duration-200
+         disabled:border-gray-400 disabled:text-gray-400 disabled:cursor-not-allowed;
 }
 
 /* Export Section */
 .export-container {
-  @apply flex justify-between items-center p-6 bg-white rounded-lg shadow-sm;
+  @apply flex justify-between items-center p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm border border-gray-100;
 }
 
-.export-buttons {
-  @apply space-y-4;
+/* Top Risks Section */
+.top-risks-container {
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm p-6 border border-gray-100;
 }
 
-/* Qualitative Assessment CTA */
-.qualitative-cta {
-  @apply bg-[#2351DC] rounded-lg shadow-sm p-12 flex justify-between items-center;
+/* Risk Comparisons Section */
+.risk-comparison-container {
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm p-6 border border-gray-100;
 }
 
-/* Hazard Comparison */
-.hazard-comparison {
-  @apply bg-white rounded-lg shadow-sm p-6 h-full;
+/* Charts Section */
+.chart-container {
+  @apply bg-white/90 backdrop-blur-sm rounded-lg p-6 h-full border border-gray-100;
+}
+
+/* Resilience Section */
+.resilience-container {
+  @apply bg-white/90 backdrop-blur-sm rounded-lg p-6 border border-gray-100;
+}
+
+/* Modal Styles */
+.modal-content {
+  @apply bg-white/95 backdrop-blur-sm rounded-lg shadow-xl;
+}
+
+/* Loading States */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .risk-assessment {
+    @apply p-4;
+  }
+  
+  .export-container {
+    @apply flex-col gap-4;
+  }
+}
+
+/* Tooltips */
+.tooltip {
+  @apply bg-gray-900/90 backdrop-blur-sm text-white px-2 py-1 rounded text-sm;
+}
+
+/* Status Indicators */
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-badge-error {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Animations */
+.fade-enter {
+  @apply opacity-0;
+}
+
+.fade-enter-active {
+  @apply opacity-100 transition-opacity duration-300;
+}
+
+.fade-exit {
+  @apply opacity-100;
+}
+
+.fade-exit-active {
+  @apply opacity-0 transition-opacity duration-300;
+}
+
+/* Print Styles */
+@media print {
+  .risk-assessment {
+    @apply p-0;
+  }
+
+  .no-print {
+    @apply hidden;
+  }
+
+  .print-only {
+    @apply block;
+  }
 }

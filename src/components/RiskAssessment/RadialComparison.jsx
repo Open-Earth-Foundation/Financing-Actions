@@ -5,38 +5,63 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
-  ResponsiveContainer
+  ResponsiveContainer,
+  Tooltip
 } from 'recharts';
 import { capitalize } from '../../utils/textUtils';
 import { RADIAL_COLORS } from '../../constants/radialColors';
+import { formatScore } from '../../constants/riskLevels';
+
+// Helper function to get radial color based on index
+const getRadialColor = (index) => {
+  const colorKeys = ['first', 'second', 'third'];
+  return RADIAL_COLORS[colorKeys[index]]?.base || RADIAL_COLORS.first.base;
+};
+
+// Helper function to format key impact
+const formatKeyImpact = (keyimpact) => {
+  const impactShortNames = {
+    'water resources': 'Water',
+    'food security': 'Food',
+    'energy security': 'Energy',
+    'healthcare': 'Health',
+    'infrastructure': 'Infra',
+    'geo-hydrological disasters': 'Geo-hydro',
+    'coastal zones': 'Coastal',
+    'biodiversity': 'Bio',
+    'urban infrastructure': 'Urban',
+    'agricultural production': 'Agri'
+  };
+
+  const normalized = keyimpact.toLowerCase();
+  return impactShortNames[normalized] || keyimpact;
+};
+
+const CustomTooltip = ({ active, payload }) => {
+  if (!active || !payload || !payload.length) return null;
+
+  return (
+    <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
+      <p className="text-sm font-medium text-gray-900 mb-2">{payload[0].payload.name}</p>
+      {payload.map((entry, index) => (
+        <div key={index} className="flex items-center gap-2 text-sm">
+          <div 
+            className="w-3 h-3 rounded-full"
+            style={{ backgroundColor: entry.color }}
+          />
+          <span className="text-gray-600">{entry.name}:</span>
+          <span className="font-medium" style={{ color: entry.color }}>
+            {formatScore(entry.value)}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const RadialComparison = ({ riskAssessment }) => {
-  // Helper function to get radial color based on index
-  const getRadialColor = (index) => {
-    const colorKeys = ['first', 'second', 'third'];
-    return RADIAL_COLORS[colorKeys[index]]?.base || RADIAL_COLORS.first.base;
-  };
-
-  // Helper function to format key impact
-  const formatKeyImpact = (keyimpact) => {
-    const impactShortNames = {
-      'water resources': 'Water',
-      'food security': 'Food',
-      'energy security': 'Energy',
-      'healthcare': 'Health',
-      'infrastructure': 'Infra',
-      'geo-hydrological disasters': 'Geo-hydro',
-      'coastal zones': 'Coastal',
-      'biodiversity': 'Bio',
-      'urban infrastructure': 'Urban',
-      'agricultural production': 'Agri'
-    };
-
-    const normalized = keyimpact.toLowerCase();
-    return impactShortNames[normalized] || keyimpact;
-  };
-
-  const topHazards = [...riskAssessment]
+  // Get top hazards based on risk score
+  const topHazards = [...(riskAssessment || [])]
     .sort((a, b) => b.risk_score - a.risk_score)
     .slice(0, 3)
     .map(risk => ({
@@ -66,7 +91,7 @@ const RadialComparison = ({ riskAssessment }) => {
     name: metric.label,
     ...topHazards.reduce((acc, hazard) => {
       if (selectedHazards.includes(hazard.id)) {
-        acc[hazard.id] = hazard[metric.key] * 100;
+        acc[hazard.id] = hazard[metric.key];
       }
       return acc;
     }, {})
@@ -80,9 +105,17 @@ const RadialComparison = ({ riskAssessment }) => {
     );
   };
 
+  if (!topHazards.length) {
+    return (
+      <div className="flex items-center justify-center h-full text-gray-500">
+        No risk comparison data available
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col h-full">
-      {/* Hazard Toggles with Label */}
+      {/* Hazard Toggles */}
       <div className="flex flex-col gap-2 mb-6">
         <label className="text-sm font-medium text-gray-700">Hazards:</label>
         <div className="flex flex-wrap gap-3">
@@ -118,10 +151,12 @@ const RadialComparison = ({ riskAssessment }) => {
             />
             <PolarRadiusAxis
               angle={30}
-              domain={[0, 100]}
+              domain={[0, 1]}
+              tickFormatter={value => formatScore(value)}
               tick={{ fontSize: 10, fontFamily: 'Inter', fill: '#D7D8FA' }}
               tickCount={5}
             />
+            <Tooltip content={<CustomTooltip />} />
             {topHazards.map((hazard, index) => (
               selectedHazards.includes(hazard.id) && (
                 <Radar

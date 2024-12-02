@@ -1,89 +1,146 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { capitalize } from '../../utils/textUtils';
+import { getRiskLevel, formatScore, getRiskChangeDescription } from '../../constants/riskLevels';
 
-const TopRisks = ({ riskAssessment }) => {
-  // Get top 3 risks
-  const topRisks = [...riskAssessment]
-    .sort((a, b) => b.risk_score - a.risk_score)
-    .slice(0, 3);
+const TopRisks = ({ riskAssessment, resilienceScore }) => {
+  // Get top 3 risks using memoized sorting
+  const topRisks = useMemo(() => {
+    if (!riskAssessment || riskAssessment.length === 0) return [];
+
+    return [...riskAssessment]
+      .sort((a, b) => {
+        const scoreA = a.risk_score ?? 0;
+        const scoreB = b.risk_score ?? 0;
+        return scoreB - scoreA;
+      })
+      .slice(0, 3);
+  }, [riskAssessment]);
+
+  if (topRisks.length === 0) {
+    return (
+      <div className="text-center py-8 text-gray-500">
+        No risk data available.
+      </div>
+    );
+  }
 
   return (
-    <div className="flex gap-4">
-      {topRisks.map((risk, index) => (
-        <div 
-          key={`${risk.hazard}-${risk.keyimpact}-${index}`}
-          className="flex-1 p-6 bg-white rounded-lg border border-[#D7D8FA]"
-        >
-          {/* Key Impact / Sector */}
-          <div className="uppercase text-[#575757] text-[10px] font-semibold tracking-[1.5px] py-2">
-            {capitalize(risk.keyimpact)}
-          </div>
+    <div className="flex flex-col lg:flex-row gap-4">
+      {topRisks.map((risk, index) => {
+        const riskLevel = getRiskLevel(risk.risk_score);
+        const changeDescription = resilienceScore !== null ?
+          getRiskChangeDescription(risk.original_risk_score, risk.risk_score) : null;
 
-          {/* Hazard Name */}
-          <div className="mb-4">
-            <h4 className="text-2xl font-semibold">
-              {capitalize(risk.hazard)}
-            </h4>
-            <span className="text-[#575757] text-xs font-medium leading-4 tracking-[0.5px]">
-              Hazard
-            </span>
-          </div>
-
-          {/* Risk Score */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-center py-2">
-              <span className="text-[#575757] text-sm font-medium leading-5 tracking-[0.5px]">
-                Risk Score
-              </span>
-              <span className="text-4xl font-semibold font-inter">
-                {risk.risk_score?.toFixed(2)}
+        return (
+          <div 
+            key={`${risk.hazard}-${risk.keyimpact}-${index}`}
+            className="flex-1 p-6 bg-white rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
+          >
+            {/* Key Impact / Sector */}
+            <div className="flex items-center justify-between mb-4">
+              <div className="uppercase text-gray-600 text-xs font-semibold tracking-wider">
+                {capitalize(risk.keyimpact)}
+              </div>
+              <span
+                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
+                style={{
+                  backgroundColor: riskLevel.backgroundColor,
+                  color: riskLevel.textColor
+                }}
+              >
+                {riskLevel.label}
               </span>
             </div>
 
-            {/* Progress bars */}
-            <div className="flex gap-1">
-              {[...Array(4)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-[5px] flex-1 rounded-full ${
-                    i < Math.ceil(risk.risk_score * 4)
-                      ? 'bg-[#2351DC]'
-                      : 'bg-[#E2E2E2]'
-                  }`}
-                />
-              ))}
+            {/* Hazard Name */}
+            <div className="mb-6">
+              <h4 className="text-2xl font-semibold text-gray-900">
+                {capitalize(risk.hazard)}
+              </h4>
+              <span className="text-gray-500 text-sm">
+                Climate Hazard
+              </span>
             </div>
 
-            {/* Scores */}
-            <div className="space-y-2 mt-4">
-              <div className="flex justify-between items-center">
-                <span className="text-[#575757] text-xs font-medium leading-4 tracking-[0.5px]">
-                  Hazard Score
+            {/* Risk Score */}
+            <div className="space-y-4">
+              <div className="flex justify-between items-baseline">
+                <span className="text-gray-600 text-sm font-medium">
+                  Risk Score
                 </span>
-                <span className="text-[#575757] text-base font-semibold">
-                  {risk.hazard_score?.toFixed(2)}
-                </span>
+                <div className="flex items-baseline gap-2">
+                  {resilienceScore !== null && (
+                    <span className="text-gray-500 text-sm">
+                      {formatScore(risk.original_risk_score)}
+                    </span>
+                  )}
+                  <span className="text-3xl font-bold" style={{ color: riskLevel.color }}>
+                    {formatScore(risk.risk_score)}
+                  </span>
+                </div>
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-[#575757] text-xs font-medium leading-4 tracking-[0.5px]">
-                  Exposure Score
-                </span>
-                <span className="text-[#575757] text-base font-semibold">
-                  {risk.exposure_score?.toFixed(2)}
-                </span>
+
+              {/* Change Description */}
+              {changeDescription && (
+                <div className="text-sm text-right" style={{ color: changeDescription.color }}>
+                  {changeDescription.text}
+                </div>
+              )}
+
+              {/* Progress bars */}
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => {
+                  const thresholds = [0.01, 0.078, 0.165, 0.289, 0.508];
+                  const isActive = risk.risk_score >= thresholds[i];
+
+                  return (
+                    <div
+                      key={i}
+                      className={`h-1.5 flex-1 rounded-full transition-colors ${
+                        isActive ? 'bg-current' : 'bg-gray-200'
+                      }`}
+                      style={{ color: isActive ? riskLevel.color : undefined }}
+                    />
+                  );
+                })}
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-[#575757] text-xs font-medium leading-4 tracking-[0.5px]">
-                  Vulnerability Score
-                </span>
-                <span className="text-[#575757] text-base font-semibold">
-                  {risk.vulnerability_score?.toFixed(2)}
-                </span>
+
+              {/* Component Scores */}
+              <div className="space-y-3 pt-4">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-gray-600">Hazard Score</span>
+                  <span className="font-medium text-gray-900">
+                    {formatScore(risk.hazard_score)}
+                  </span>
+                </div>
+
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-gray-600">Exposure Score</span>
+                  <span className="font-medium text-gray-900">
+                    {formatScore(risk.exposure_score)}
+                  </span>
+                </div>
+
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-gray-600">Vulnerability Score</span>
+                  <div className="flex items-baseline gap-2">
+                    {resilienceScore !== null && (
+                      <span className="text-gray-500 text-xs">
+                        {formatScore(risk.original_vulnerability_score)}
+                      </span>
+                    )}
+                    <span className={`font-medium ${
+                      resilienceScore !== null ? 'text-blue-600' : 'text-gray-900'
+                    }`}>
+                      {formatScore(risk.vulnerability_score)}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
