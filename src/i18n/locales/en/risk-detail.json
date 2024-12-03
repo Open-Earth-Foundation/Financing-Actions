@@ -1,0 +1,33 @@
+{
+  "title": {
+    "impact": "Impact on",
+    "subtitle": "Detailed indicator information for different climate scenarios"
+  },
+  "scenarios": {
+    "current": {
+      "label": "Current",
+      "description": "Current climate conditions"
+    },
+    "optimistic": {
+      "label": "RCP 4.5",
+      "description": "Optimistic climate scenario"
+    },
+    "pessimistic": {
+      "label": "RCP 8.5",
+      "description": "Pessimistic climate scenario"
+    }
+  },
+  "table": {
+    "headers": {
+      "category": "Category",
+      "indicator": "Indicator",
+      "score": "Score",
+      "units": "Units",
+      "year": "Year",
+      "source": "Source"
+    }
+  },
+  "loading": "Loading indicator data...",
+  "no_data": "No indicator data available for this scenario.",
+  "error": "Failed to load indicator details"
+}

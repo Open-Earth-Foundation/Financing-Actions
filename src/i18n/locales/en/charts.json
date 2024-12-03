@@ -1,0 +1,15 @@
+{
+  "risk_distribution": {
+    "no_data": "No risk distribution data available",
+    "tooltip": {
+      "risk_level": "Risk Level"
+    },
+    "axis": {
+      "risk_score": "Risk Score",
+      "sector": "Sector"
+    },
+    "legend": {
+      "hazard_prefix": "Hazard:"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "disclaimer": {
+    "title": "Qualitative Assessment Score",
+    "tooltip": "This score represents the city's overall capacity to respond to and recover from climate-related risks based on institutional, infrastructural, and social factors.",
+    "resilience_suffix": "Resilience",
+    "influence_note": "This assessment influences the final risk calculations by adjusting vulnerability scores based on the city's resilience capacity."
+  }
+}

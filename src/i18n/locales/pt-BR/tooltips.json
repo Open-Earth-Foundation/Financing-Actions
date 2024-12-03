@@ -1,0 +1,34 @@
+{
+  "ccra": {
+    "what_is": {
+      "title": "O que é um CCRA?",
+      "content": "A Avaliação de Risco das Mudanças Climáticas (CCRA) ajuda as cidades a entenderem e se prepararem para riscos relacionados ao clima. Analisa como diferentes riscos climáticos podem afetar vários setores da sua cidade, considerando tanto vulnerabilidades atuais quanto projeções futuras."
+    },
+    "scores": {
+      "risk": {
+        "title": "Entendendo as Pontuações de Risco",
+        "content": "As pontuações de risco combinam três fatores: a probabilidade de ocorrência de um risco climático (Risco), quem/o que pode ser afetado (Exposição) e quão suscetíveis são aos danos (Vulnerabilidade). Pontuações mais altas indicam maior risco."
+      },
+      "hazard": {
+        "title": "Pontuação de Risco",
+        "content": "Isso mede quão provável e grave é uma ameaça climática para sua área. É baseado em dados históricos e projeções climáticas."
+      },
+      "exposure": {
+        "title": "Pontuação de Exposição",
+        "content": "Isso indica quantas pessoas, ativos ou sistemas podem ser afetados por um risco climático em sua área."
+      },
+      "vulnerability": {
+        "title": "Pontuação de Vulnerabilidade",
+        "content": "Isso mostra quão sensíveis são as pessoas e sistemas da sua cidade aos danos causados por riscos climáticos, e quão bem eles podem se adaptar ou se recuperar."
+      }
+    },
+    "risk_levels": {
+      "title": "Níveis de Risco Explicados",
+      "content": "Muito Alto (>0.8): Ação imediata necessária\nAlto (0.6-0.8): Ação prioritária necessária\nMédio (0.4-0.6): Monitorar e planejar ação\nBaixo (0.2-0.4): Manter monitoramento\nMuito Baixo (<0.2): Risco atual mínimo"
+    },
+    "what_is_ccra": {
+      "title": "O que é um CCRA?",
+      "content": "Uma Avaliação de Risco das Mudanças Climáticas (CCRA) ajuda as cidades a entenderem e se prepararem para riscos relacionados ao clima. Analisa como diferentes riscos climáticos podem afetar vários setores da sua cidade, considerando tanto vulnerabilidades atuais quanto projeções futuras."
+    }
+  }
+}

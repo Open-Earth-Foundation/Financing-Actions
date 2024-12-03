@@ -1,0 +1,79 @@
+{
+    "city_dropdown": {
+      "region": {
+        "label": "Region:",
+        "placeholder": {
+          "default": "Select a region...",
+          "loading": "Loading regions..."
+        }
+      },
+      "city": {
+        "label": "City:",
+        "placeholder": {
+          "default": "Search for a city...",
+          "loading": "Loading cities...",
+          "select_region": "Select a region first"
+        },
+        "no_options": {
+          "select_region": "Select a region first",
+          "no_cities": "No cities found"
+        }
+      },
+      "error": {
+        "no_connection": "No internet connection. Please check your connection and try again.",
+        "load_failed": "Unable to load cities. Please try again later. ({{error}})",
+        "placeholder": "Failed to load cities..."
+      }
+    },
+  "hazardProjections": {
+    "title": "Hazards Projection",
+    "description": "Compare how hazard scores are projected to change over time under different climate scenarios. Changes in 2030 are relative to current scores, while changes in 2050 are relative to 2030 projections.",
+    "hazards": "Hazards:",
+    "scenarios": "Scenarios:",
+    "current_note": "Current hazard scores based on historical data",
+    "changes_2030": "Changes shown relative to current scores",
+    "changes_2050": "Changes shown relative to 2030 scores",
+    "rcp_45": "RCP 4.5: Optimistic scenario - Lower emissions pathway",
+    "rcp_85": "RCP 8.5: Pessimistic scenario - Higher emissions pathway"
+  },
+  "radialComparison": {
+    "title": "Hazard Comparison",
+    "no_data": "No risk comparison data available",
+    "hazards": "Hazards:",
+    "metrics": {
+      "sensitivity": "Sensitivity",
+      "exposure": "Exposure",
+      "climate_threat": "Climate Threat",
+      "vulnerability": "Vulnerability",
+      "risk": "Risk"
+    }
+  },
+  "riskTable": {
+    "no_data": "No risk assessment data available.",
+    "columns": {
+      "year": "Year",
+      "key_impact": "Key Impact",
+      "hazard": "Hazard",
+      "components": "Components",
+      "risk_score": "Risk Score",
+      "risk_level": "Risk Level",
+      "details": "Details"
+    },
+    "components": {
+      "hazard": "Hazard",
+      "exposure": "Exposure",
+      "vulnerability": "Vulnerability",
+      "indicators": "indicators"
+    }
+  },
+  "topRisks": {
+    "no_data": "No risk data available.",
+    "climate_hazard": "Climate Hazard",
+    "risk_score": "Risk Score",
+    "component_scores": {
+      "hazard": "Hazard Score",
+      "exposure": "Exposure Score",
+      "vulnerability": "Vulnerability Score"
+    }
+  }
+}

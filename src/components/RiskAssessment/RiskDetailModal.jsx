@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
 import ccraApi from '../../api/ccraApi';
 
-const SCENARIOS = [
-  { id: 'current', label: 'Current', description: 'Current climate conditions' },
-  { id: 'optimistic', label: 'RCP 4.5', description: 'Optimistic climate scenario' },
-  { id: 'pesimistic', label: 'RCP 8.5', description: 'Pessimistic climate scenario' }
-];
-
 const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
+  const { t } = useTranslation('risk-detail');
   const [activeScenario, setActiveScenario] = useState('current');
   const [indicators, setIndicators] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -30,48 +26,50 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
         const data = await ccraApi.getIndicatorDetails(actor_id, activeScenario);
         console.debug('Received indicators:', data);
 
-        // Filter indicators for current hazard and keyimpact
-        const relevantIndicators = data.filter(indicator => {
-          const match = indicator.hazard?.toLowerCase() === rowData?.hazard?.toLowerCase() &&
-                       indicator.keyimpact?.toLowerCase() === rowData?.keyimpact?.toLowerCase();
+        const relevantIndicators = data.filter(indicator =>
+          indicator.hazard?.toLowerCase() === rowData?.hazard?.toLowerCase() &&
+          indicator.keyimpact?.toLowerCase() === rowData?.keyimpact?.toLowerCase()
+        );
 
-          console.debug('Indicator match check:', {
-            indicator: {
-              hazard: indicator.hazard,
-              keyimpact: indicator.keyimpact,
-              category: indicator.category
-            },
-            rowData: {
-              hazard: rowData?.hazard,
-              keyimpact: rowData?.keyimpact
-            },
-            isMatch: match
-          });
-
-          return match;
-        });
-
-        console.debug('Filtered indicators:', relevantIndicators);
         setIndicators(relevantIndicators);
         setError(null);
       } catch (err) {
         console.error('Error fetching indicators:', err);
-        setError('Failed to load indicator details');
+        setError(t('error'));
       } finally {
         setLoading(false);
       }
     };
 
     fetchIndicators();
-  }, [isOpen, actor_id, activeScenario, rowData]);
+  }, [isOpen, actor_id, activeScenario, rowData, t]);
 
   if (!isOpen) return null;
+
+  // Define SCENARIOS dynamically to ensure translations are loaded
+  const SCENARIOS = [
+    {
+      id: 'current',
+      label: t('scenarios.current.label'),
+      description: t('scenarios.current.description')
+    },
+    {
+      id: 'optimistic',
+      label: t('scenarios.optimistic.label'),
+      description: t('scenarios.optimistic.description')
+    },
+    {
+      id: 'pessimistic',
+      label: t('scenarios.pessimistic.label'),
+      description: t('scenarios.pessimistic.description')
+    }
+  ];
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex items-center justify-center min-h-screen p-4">
         {/* Backdrop */}
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-25 transition-opacity"
           onClick={onClose}
         />
@@ -82,10 +80,10 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-xl font-semibold capitalize">
-                {rowData.hazard} Impact on {rowData.keyimpact}
+                {rowData.hazard} {t('title.impact')} {rowData.keyimpact}
               </h3>
               <p className="text-sm text-gray-500 mt-1">
-                Detailed indicator information for different climate scenarios
+                {t('title.subtitle')}
               </p>
             </div>
             <button
@@ -123,7 +121,7 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
           <div className="space-y-4">
             {loading ? (
               <div className="text-center py-8">
-                <p className="text-gray-500">Loading indicator data...</p>
+                <p className="text-gray-500">{t('loading')}</p>
               </div>
             ) : error ? (
               <div className="text-center py-8">
@@ -131,19 +129,28 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
               </div>
             ) : indicators?.length === 0 ? (
               <div className="text-center py-8">
-                <p className="text-gray-500">No indicator data available for this scenario.</p>
+                <p className="text-gray-500">{t('no_data')}</p>
               </div>
             ) : (
               <div className="overflow-x-auto">
                 <table className="min-w-full">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Category</th>
-                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Indicator</th>
-                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Score</th>
-                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Units</th>
-                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Year</th>
-                      <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Source</th>
+                      {[
+                        'category',
+                        'indicator',
+                        'score',
+                        'units',
+                        'year',
+                        'source'
+                      ].map((header) => (
+                        <th
+                          key={header}
+                          className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase"
+                        >
+                          {t(`table.headers.${header}`)}
+                        </th>
+                      ))}
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">

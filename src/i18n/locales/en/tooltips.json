@@ -1,0 +1,30 @@
+{
+  "ccra": {
+    "what_is": {
+      "title": "What is a CCRA?",
+      "content": "A Climate Change Risk Assessment (CCRA) helps cities understand and prepare for climate-related risks. It analyzes how different climate hazards might affect various sectors of your city, considering both current vulnerabilities and future projections."
+    },
+    "scores": {
+      "risk": {
+        "title": "Understanding Risk Scores",
+        "content": "Risk scores combine three factors: the likelihood of a climate hazard occurring (Hazard), who/what might be affected (Exposure), and how susceptible they are to damage (Vulnerability). Higher scores indicate greater risk."
+      },
+      "hazard": {
+        "title": "Hazard Score",
+        "content": "This measures how likely and severe a climate threat is for your area. It's based on historical data and climate projections."
+      },
+      "exposure": {
+        "title": "Exposure Score",
+        "content": "This indicates how many people, assets, or systems could be affected by a climate hazard in your area."
+      },
+      "vulnerability": {
+        "title": "Vulnerability Score",
+        "content": "This shows how sensitive your city's people and systems are to damage from climate hazards, and how well they can adapt or recover."
+      }
+    },
+    "risk_levels": {
+      "title": "Risk Levels Explained",
+      "content": "Very High (>0.8): Immediate action required\nHigh (0.6-0.8): Priority action needed\nMedium (0.4-0.6): Monitor and plan action\nLow (0.2-0.4): Keep monitoring\nVery Low (<0.2): Minimal current risk"
+    }
+  }
+}

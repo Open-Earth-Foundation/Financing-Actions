@@ -1,0 +1,34 @@
+{
+  "back_to_search": "Voltar à pesquisa",
+  "selected_city": "Cidade selecionada",
+  "region": "Região",
+  "top_risks": {
+    "title": "Principais riscos para sua cidade",
+    "description": "Visão geral dos riscos climáticos mais altos que afetam sua cidade"
+  },
+  "hazard_comparison": {
+    "title": "Comparação de Riscos",
+    "description": "Compare diferentes riscos climáticos e seus níveis de impacto"
+  },
+  "sector_distribution": {
+    "title": "Distribuição por Setor",
+    "description": "Distribuição dos riscos climáticos entre diferentes setores"
+  },
+  "projections": {
+    "title": "Projeções Futuras",
+    "description": "Mudanças projetadas nos riscos climáticos ao longo do tempo"
+  },
+  "qualitative_assessment": {
+    "title": "Obtenha melhores insights.",
+    "subtitle": "Responda algumas perguntas.",
+    "description": "Responda o Questionário de Avaliação Qualitativa para considerar outros fatores não numéricos em nossos cálculos e obter pontuações mais personalizadas após apenas 5 perguntas.",
+    "start_button": "responder o questionário"
+  },
+  "export": {
+    "title": "Acesse seus dados em um clique",
+    "description": "Exporte esta visualização no formato que melhor atende às suas necessidades",
+    "button": "Exportar como CSV"
+  },
+  "loading": "Carregando dados para {{cityname}}...",
+  "error": "Erro ao carregar dados: {{error}}"
+}

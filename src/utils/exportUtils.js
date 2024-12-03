@@ -1,75 +1,53 @@
-import { jsPDF } from 'jspdf';
-import 'jspdf-autotable';
 import { saveAs } from 'file-saver';
+import Papa from 'papaparse';
+import { pdf } from '@react-pdf/renderer';
+import { createReportDocument } from '../components/PDFReport/index';
+import { formatScore, getRiskLevel } from '../constants/riskLevels';
 
-const convertToCSV = (data) => {
-  if (!data || !data.length) return '';
+export const exportToCSV = (riskData, cityname) => {
+  if (!riskData?.length) return;
 
-  const headers = Object.keys(data[0]);
-  const csvRows = [
-    headers.join(','),
-    ...data.map(row => 
-      headers.map(header => {
-        let cell = row[header] ?? '';
-        if (cell.toString().includes(',')) {
-          cell = `"${cell}"`;
-        }
-        return cell;
-      }).join(',')
-    )
-  ];
+  const csvData = riskData.map(item => ({
+    sector: item.keyimpact || 'Unspecified',
+    hazard: item.hazard,
+    risk_score: formatScore(item.risk_score),
+    risk_level: getRiskLevel(item.risk_score).label,
+    hazard_score: formatScore(item.hazard_score),
+    exposure_score: formatScore(item.exposure_score),
+    vulnerability_score: formatScore(item.vulnerability_score),
+    adaptive_capacity: formatScore(item.adaptive_capacity)
+  }));
 
-  return csvRows.join('\n');
-};
+  const csv = Papa.unparse(csvData, {
+    columns: [
+      'sector',
+      'hazard',
+      'risk_score',
+      'risk_level',
+      'hazard_score',
+      'exposure_score',
+      'vulnerability_score',
+      'adaptive_capacity'
+    ]
+  });
 
-export const exportToCSV = (data, filename) => {
-  const csv = convertToCSV(data);
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  saveAs(blob, filename);
+  saveAs(blob, `${cityname}_risk_assessment_${new Date().toISOString().split('T')[0]}.csv`);
 };
 
-const generatePdfReport = (cityname, ccraData, qualitativeScore, customRiskLevels) => {
-  const doc = new jsPDF();
-  let currentY = 20;
-  const pageWidth = doc.internal.pageSize.width;
-  const margin = 20;
-  const pageHeight = doc.internal.pageSize.height;
+export const exportToPDF = async (riskData, cityname, region, projectionData) => {
+  try {
+    const doc = createReportDocument({
+      riskData,
+      cityname,
+      region,
+      projectionData
+    });
 
-  // Helper functions remain the same...
-
-  // Title Section
-  doc.setFontSize(24);
-  doc.text('Climate Change Risk Assessment Report', margin, currentY);
-  currentY += 15;
-
-  // City and Date
-  doc.setFontSize(16);
-  doc.text(`City: ${cityname}`, margin, currentY);
-  currentY += 10;
-  doc.setFontSize(12);
-  doc.text(`Report generated on: ${new Date().toLocaleDateString()}`, margin, currentY);
-  currentY += 15;
-
-  // Executive Summary
-  doc.setFontSize(14);
-  doc.text('Executive Summary', margin, currentY);
-  currentY += 10;
-  doc.setFontSize(10);
-  const summaryText = `This report presents a comprehensive Climate Change Risk Assessment for ${cityname}. ` +
-    `The assessment evaluates various climate hazards and their potential impacts across different sectors.`;
-
-  // Rest of the function remains the same...
-  return doc;
+    const blob = await pdf(doc).toBlob();
+    saveAs(blob, `${cityname}_risk_assessment_report_${new Date().toISOString().split('T')[0]}.pdf`);
+  } catch (error) {
+    console.error('Error generating PDF:', error);
+    throw error;
+  }
 };
-
-export const exportToPDF = (cityname, ccraData, qualitativeScore, customRiskLevels) => {
-  const doc = generatePdfReport(cityname, ccraData, qualitativeScore, customRiskLevels);
-  doc.save(`${cityname.replace(/\s+/g, '_')}_CCRA_Report.pdf`);
-};
-
-export const exportUtils = {
-  exportToCSV,
-  exportToPDF
-};
-
-export default exportUtils;

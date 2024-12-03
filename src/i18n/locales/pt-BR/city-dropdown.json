@@ -1,0 +1,19 @@
+{
+  "region": {
+    "label": "Região:",
+    "placeholder": {
+      "default": "Selecione uma região...",
+      "loading": "Carregando regiões..."
+    }
+  },
+  "city": {
+    "label": "Cidade:",
+    "placeholder": {
+      "default": "Busque uma cidade...",
+      "loading": "Carregando cidades...",
+      "select_region": "Selecione uma região primeiro",
+      "quick": "Cidades de acesso rápido"
+
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "labels": {
+    "climate_hazard": "Risco Climático",
+    "risk_score": "Pontuação de Risco",
+    "hazard_score": "Pontuação de Risco",
+    "exposure_score": "Pontuação de Exposição",
+    "vulnerability_score": "Pontuação de Vulnerabilidade",
+    "hazards": "Riscos",
+    "scenarios": "Cenários",
+    "indicators": "indicadores"
+  },
+  "metrics": {
+    "sensitivity": "Sensibilidade",
+    "exposure": "Exposição",
+    "climate_threat": "Ameaça Climática",
+    "vulnerability": "Vulnerabilidade",
+    "risk": "Risco"
+  },
+  "risk_levels": {
+    "very_low": "Muito Baixo",
+    "low": "Baixo",
+    "medium": "Médio",
+    "high": "Alto",
+    "very_high": "Muito Alto"
+  },
+  "hazards": {
+    "drought": "Seca",
+    "flooding": "Inundação",
+    "heatwaves": "Onda de Calor",
+    "landslide": "Deslizamento",
+    "storm": "Tempestade",
+    "rainfall": "Chuva",
+    "temperature": "Temperatura",
+    "diseases": "Enfermidade",
+    "sea level rise": "Aumento do nível do mar"
+  },
+  "sectors": {
+    "water_resources": "Recursos Hídricos",
+    "food_security": "Segurança Alimentar",
+    "energy_security": "Segurança Energética",
+    "healthcare": "Saúde",
+    "infrastructure": "Infraestrutura",
+    "biodiversity": "Biodiversidade",
+    "coastal_zones": "Zonas Costeiras",
+    "urban_infrastructure": "Infraestrutura Urbana",
+    "agricultural_production": "Produção Agrícola",
+    "geo-hydrological_disasters": "Desastres Geo-hidrológicos",
+    "other": "Outro"
+  },
+  "region": "Região"
+}

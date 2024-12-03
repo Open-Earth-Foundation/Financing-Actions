@@ -1,0 +1,34 @@
+{
+  "back_to_search": "Back to search",
+  "selected_city": "Selected city",
+  "region": "Region",
+  "top_risks": {
+    "title": "Top risks for your city",
+    "description": "Overview of the highest risk climate hazards affecting your city"
+  },
+  "hazard_comparison": {
+    "title": "Hazard Comparison",
+    "description": "Compare different climate hazards and their impact levels"
+  },
+  "sector_distribution": {
+    "title": "Sector Distribution",
+    "description": "Distribution of climate risks across different sectors"
+  },
+  "projections": {
+    "title": "Future Projections",
+    "description": "Projected changes in climate hazards over time"
+  },
+  "qualitative_assessment": {
+    "title": "Get better insights.",
+    "subtitle": "Answer a few questions.",
+    "description": "Take the Qualitative Assessment Questionnaire to weigh-in other non-numerical factors in our calculations and get more tailored scorings after just 5 questions.",
+    "start_button": "answer the quiz"
+  },
+  "export": {
+    "title": "Access your data in one click",
+    "description": "Export this visualization in the format that best suits your needs",
+    "button": "Export as CSV"
+  },
+  "loading": "Loading data for {{cityname}}...",
+  "error": "Error loading data: {{error}}"
+}

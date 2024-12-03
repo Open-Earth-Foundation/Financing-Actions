@@ -1,0 +1,17 @@
+{
+  "title": "Saiba Mais Sobre o CCRA",
+  "sections": {
+    "methodology": {
+      "title": "Metodologia de Avaliação",
+      "content": "Nossa metodologia CCRA combina dados de riscos climáticos, níveis de exposição e indicadores de vulnerabilidade para calcular pontuações de risco. Utilizamos dados do AdaptaBrasil e aplicamos a estrutura de avaliação de risco do C40."
+    },
+    "calculations": {
+      "title": "Cálculos de Pontuação de Risco",
+      "content": "As pontuações de risco são calculadas usando a fórmula: Risco = Risco Climático × Exposição × Vulnerabilidade. Cada componente é normalizado em uma escala de 0-1, com pontuações mais altas indicando maior risco."
+    },
+    "features": {
+      "title": "Principais Características",
+      "content": "• Avaliação baseada em dados\n• Projeções climáticas futuras\n• Integração de avaliação qualitativa\n• Análise específica por setor\n• Relatórios personalizáveis"
+    }
+  }
+}

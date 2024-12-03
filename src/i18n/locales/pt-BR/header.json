@@ -1,0 +1,9 @@
+{
+  "app_name": "iCare + Brisa + OpenEarth",
+  "app_subtitle": "Avaliação de Risco das Mudanças Climáticas",
+  "welcome": {
+    "find_city": "Encontre sua cidade",
+    "placeholder": "Busque uma cidade ou região",
+    "no_city_selected": "Comece selecionando uma cidade para ver seus dados de Avaliação de Risco das Mudanças Climáticas."
+  }
+}

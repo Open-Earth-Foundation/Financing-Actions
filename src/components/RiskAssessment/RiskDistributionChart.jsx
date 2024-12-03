@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   BarChart,
   Bar,
@@ -13,7 +14,6 @@ import {
 import { getHazardColor } from '../../constants/hazardColors';
 import { getRiskLevel, formatScore } from '../../constants/riskLevels';
 
-// Custom shape for rounded bars
 const RoundedBar = (props) => {
   const { fill, x, y, width, height } = props;
   const radius = 2;
@@ -39,6 +39,8 @@ const RoundedBar = (props) => {
 };
 
 const CustomTooltip = ({ active, payload, label }) => {
+  const { t } = useTranslation();
+
   if (!active || !payload || !payload.length) {
     return null;
   }
@@ -54,11 +56,11 @@ const CustomTooltip = ({ active, payload, label }) => {
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: entry.color }}
             />
-            <span className="text-gray-600">{entry.name}:</span>
+            <span className="text-gray-600">{t('charts:risk_distribution.legend.hazard_prefix')} {entry.name}</span>
             <span className="font-medium" style={{ color: riskLevel.color }}>
               {formatScore(entry.value)}
             </span>
-            <span className="text-xs text-gray-500">({riskLevel.label})</span>
+            <span className="text-xs text-gray-500">({t('common:risk_levels.' + riskLevel.label.toLowerCase())})</span>
           </div>
         );
       })}
@@ -66,12 +68,14 @@ const CustomTooltip = ({ active, payload, label }) => {
   );
 };
 
-const RiskDistributionChart = ({ riskAssessment }) => {
+const RiskDistributionChart = forwardRef(({ riskAssessment }, ref) => {
+  const { t } = useTranslation();
+
   const chartData = useMemo(() => {
     if (!riskAssessment || riskAssessment.length === 0) return [];
 
     const sectorData = riskAssessment.reduce((acc, item) => {
-      const sector = item.keyimpact || 'Other';
+      const sector = item.keyimpact || t('common:sectors.other');
       const hazard = item.hazard?.toLowerCase() || 'unknown';
       const score = item.risk_score || 0;
 
@@ -95,7 +99,7 @@ const RiskDistributionChart = ({ riskAssessment }) => {
         sector,
         ...hazards
       }));
-  }, [riskAssessment]);
+  }, [riskAssessment, t]);
 
   const hazards = useMemo(() => {
     if (!riskAssessment || riskAssessment.length === 0) return [];
@@ -107,69 +111,83 @@ const RiskDistributionChart = ({ riskAssessment }) => {
   if (!chartData.length) {
     return (
       <div className="flex items-center justify-center h-full text-gray-500">
-        No risk distribution data available
+        {t('charts:risk_distribution.no_data')}
       </div>
     );
   }
 
   return (
-    <ResponsiveContainer width="100%" height={400}>
-      <BarChart
-        data={chartData}
-        margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
-      >
-        <CartesianGrid 
-          strokeDasharray="3 3" 
-          vertical={false}
-          stroke="#E5E7EB"
-        />
-        <XAxis 
-          dataKey="sector"
-          tick={{ fill: '#6B7280', fontSize: 12 }}
-          interval={0}
-          angle={-45}
-          textAnchor="end"
-          height={80}
-        />
-        <YAxis
-          tickFormatter={value => formatScore(value)}
-          tick={{ fill: '#6B7280', fontSize: 12 }}
-          domain={[0, 1]}
-          ticks={[0, 0.2, 0.4, 0.6, 0.8, 1]}
-        />
-        <Tooltip content={<CustomTooltip />} />
-        <Legend 
-          wrapperStyle={{ paddingTop: 20 }}
-          formatter={(value) => (
-            <span className="text-sm text-gray-600">
-              {value.charAt(0).toUpperCase() + value.slice(1)}
-            </span>
-          )}
-        />
-        {hazards.map(hazard => (
-          <Bar
-            key={hazard}
-            dataKey={hazard}
-            stackId="a"
-            fill={getHazardColor(hazard)}
-            shape={<RoundedBar />}
-            name={hazard.charAt(0).toUpperCase() + hazard.slice(1)}
-          >
-            {chartData.map((entry, index) => {
-              const value = entry[hazard];
-              const riskLevel = value ? getRiskLevel(value) : null;
-              return (
-                <Cell
-                  key={`cell-${index}`}
-                  fillOpacity={riskLevel ? 0.8 : 0.4}
-                />
-              );
-            })}
-          </Bar>
-        ))}
-      </BarChart>
-    </ResponsiveContainer>
+    <div ref={ref} className="h-[412px]">
+      <ResponsiveContainer width="100%" height={400}>
+        <BarChart
+          data={chartData}
+          margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+        >
+          <CartesianGrid 
+            strokeDasharray="3 3" 
+            vertical={false}
+            stroke="#E5E7EB"
+          />
+          <XAxis 
+            dataKey="sector"
+            tick={{ fill: '#6B7280', fontSize: 12 }}
+            interval={0}
+            angle={-45}
+            textAnchor="end"
+            height={80}
+            label={{ 
+              value: t('charts:risk_distribution.axis.sector'),
+              position: 'bottom',
+              offset: 40
+            }}
+          />
+          <YAxis
+            tickFormatter={value => formatScore(value)}
+            tick={{ fill: '#6B7280', fontSize: 12 }}
+            domain={[0, 1]}
+            ticks={[0, 0.2, 0.4, 0.6, 0.8, 1]}
+            label={{ 
+              value: t('charts:risk_distribution.axis.risk_score'),
+              angle: -90,
+              position: 'insideLeft',
+              offset: -10
+            }}
+          />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend 
+            wrapperStyle={{ paddingTop: 20 }}
+            formatter={(value) => (
+              <span className="text-sm text-gray-600">
+                {value.charAt(0).toUpperCase() + value.slice(1)}
+              </span>
+            )}
+          />
+          {hazards.map(hazard => (
+            <Bar
+              key={hazard}
+              dataKey={hazard}
+              stackId="a"
+              fill={getHazardColor(hazard)}
+              shape={<RoundedBar />}
+              name={t(`common:hazards.${hazard}`, { defaultValue: hazard.charAt(0).toUpperCase() + hazard.slice(1) })}
+            >
+              {chartData.map((entry, index) => {
+                const value = entry[hazard];
+                const riskLevel = value ? getRiskLevel(value) : null;
+                return (
+                  <Cell
+                    key={`cell-${index}`}
+                    fillOpacity={riskLevel ? 0.8 : 0.4}
+                  />
+                );
+              })}
+            </Bar>
+          ))}
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
   );
-};
+});
 
+RiskDistributionChart.displayName = 'RiskDistributionChart';
 export default RiskDistributionChart;

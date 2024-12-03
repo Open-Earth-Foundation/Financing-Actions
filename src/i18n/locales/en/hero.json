@@ -1,0 +1,28 @@
+{
+  "headline": {
+    "first": "Know more.",
+    "second": "Prepare better."
+  },
+  "description": "Prepare and adapt your city to potential risks with science-backed insights",
+  "search": {
+    "title": "Find your city"
+  },
+  "ccra_info": {
+    "title": "What is a CCRA?",
+    "content": "A Climate Change Risk Assessment (CCRA) helps cities understand and prepare for climate-related risks. It analyzes how different climate hazards might affect various sectors of your city, considering both current vulnerabilities and future projections.",
+    "how_to_use": {
+      "title": "How to use this assessment",
+      "steps": {
+        "1": "Search for your city using the search box above",
+        "2": "Review the Top Risks section to identify priorities",
+        "3": "Explore the Hazard Comparison to understand risk factors",
+        "4": "Check Projections to see future scenarios",
+        "5": "Complete the Qualitative Assessment for tailored results"
+      }
+    }
+  },
+  "features": {
+    "data_driven": "Data-Driven Insights",
+    "enhanced_ui": "Enhanced User Interface"
+  }
+}

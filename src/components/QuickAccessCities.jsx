@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MapPin } from 'lucide-react';
 import ccraApi from '../api/ccraApi';
+import { useTranslation } from 'react-i18next';
 
 const FEATURED_CITY_NAMES = [
   { name: "Caxias do Sul", region: "RS" },
@@ -11,6 +12,7 @@ const FEATURED_CITY_NAMES = [
 ];
 
 const QuickAccessCities = ({ onCitySelect }) => {
+  const { t } = useTranslation();
   const [featuredCities, setFeaturedCities] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -73,7 +75,7 @@ const QuickAccessCities = ({ onCitySelect }) => {
 
   return (
     <div className="mt-6 flex flex-wrap gap-2">
-      <p className="w-full text-sm text-gray-500 mb-2">Quick access to city data:</p>
+      <p className="w-full text-sm text-gray-500 mb-2">{t('city-dropdown:city.placeholder.quick')}</p>
       <div className="flex flex-wrap gap-2">
         {featuredCities.map(city => (
           <button

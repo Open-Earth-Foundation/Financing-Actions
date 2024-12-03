@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Info } from 'lucide-react';
 import ResilienceDisclaimer from './ResilienceDisclaimer';
 import RiskDetailModal from './RiskDetailModal';
 import { getRiskLevel, getRiskChangeDescription, formatScore } from '../../constants/riskLevels';
 
 const RiskTable = ({ riskAssessment, actor_id, resilienceScore }) => {
+  const { t } = useTranslation();
   const [selectedRow, setSelectedRow] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -16,7 +18,7 @@ const RiskTable = ({ riskAssessment, actor_id, resilienceScore }) => {
   if (!riskAssessment || riskAssessment.length === 0) {
     return (
       <div className="text-center py-8 text-gray-500">
-        No risk assessment data available.
+        {t('sections:ccra_table.no_data')}
       </div>
     );
   }
@@ -29,27 +31,19 @@ const RiskTable = ({ riskAssessment, actor_id, resilienceScore }) => {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Year
-              </th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Key Impact
-              </th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Hazard
-              </th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Components
-              </th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Risk Score
-              </th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Risk Level
-              </th>
-              <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Details
-              </th>
+              {[
+                'year',
+                'key_impact',
+                'hazard',
+                'components',
+                'risk_score',
+                'risk_level',
+                'details'
+              ].map((header) => (
+                <th key={header} scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  {t(`sections:ccra_table.columns.${header}`)}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -64,21 +58,27 @@ const RiskTable = ({ riskAssessment, actor_id, resilienceScore }) => {
                     {row.latest_year}
                   </td>
                   <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900 capitalize">
-                    {row.keyimpact}
+                    {t(`common:sectors.${row.keyimpact.toLowerCase().replace(/ /g, '_')}`, { defaultValue: row.keyimpact })}
                   </td>
                   <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900 capitalize">
-                    {row.hazard}
+                    {t(`common:hazards.${row.hazard.toLowerCase()}`, { defaultValue: row.hazard })}
                   </td>
                   <td className="px-4 py-4 whitespace-nowrap">
                     <div className="space-y-1 text-sm">
                       <div className="text-gray-600">
-                        Hazard: <span className="font-medium text-gray-900">{formatScore(row.hazard_score)}</span>
+                        {t('sections:ccra_table.columns.hazard')}: 
+                        <span className="font-medium text-gray-900">
+                          {formatScore(row.hazard_score)}
+                        </span>
                       </div>
                       <div className="text-gray-600">
-                        Exposure: <span className="font-medium text-gray-900">{formatScore(row.exposure_score)}</span>
+                        {t('sections:ccra_table.columns.exposure')}: 
+                        <span className="font-medium text-gray-900">
+                          {formatScore(row.exposure_score)}
+                        </span>
                       </div>
                       <div className="text-gray-600">
-                        Vulnerability: {" "}
+                        {t('sections:ccra_table.columns.vulnerability')}: {" "}
                         <span className="font-medium">
                           {resilienceScore !== null && (
                             <span className="text-gray-500 text-xs mr-1">
@@ -90,7 +90,7 @@ const RiskTable = ({ riskAssessment, actor_id, resilienceScore }) => {
                           </span>
                           {row.indicator_count > 0 && (
                             <span className="text-gray-500 text-xs ml-1">
-                              ({row.indicator_count} indicators)
+                              ({row.indicator_count} {t('common:indicators')})
                             </span>
                           )}
                         </span>
@@ -120,14 +120,14 @@ const RiskTable = ({ riskAssessment, actor_id, resilienceScore }) => {
                         color: riskLevel.textColor
                       }}
                     >
-                      {riskLevel.label}
+                      {t(`common:risk_levels.${riskLevel.label.toLowerCase()}`)}
                     </span>
                   </td>
                   <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
                     <button
                       onClick={() => handleShowDetails(row)}
                       className="p-2 hover:bg-gray-100 rounded-full"
-                      title="View Details"
+                      title={t('sections:ccra_table.columns.details')}
                     >
                       <Info className="w-5 h-5 text-gray-500" />
                     </button>

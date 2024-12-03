@@ -1,0 +1,36 @@
+{
+  "title": {
+    "impact": "Impacto em",
+    "subtitle": "Informações detalhadas dos indicadores para diferentes cenários climáticos"
+  },
+  "scenarios": {
+    "current": {
+      "label": "Atual",
+      "description": "Condições climáticas atuais"
+    },
+    "optimistic": {
+      "label": "RCP 4.5",
+      "description": "Cenário climático otimista"
+    },
+    "pessimistic": {
+      "label": "RCP 8.5",
+      "description": "Cenário climático pessimista"
+    }
+  },
+  "table": {
+    "headers": {
+      "category": "Categoria",
+      "indicator": "Indicador",
+      "score": "Pontuação",
+      "units": "Unidades",
+      "year": "Ano",
+      "source": "Fonte"
+    },
+    "columns": {
+      "exposure": "Exposição"
+    }
+  },
+  "loading": "Carregando dados dos indicadores...",
+  "no_data": "Nenhum dado de indicador disponível para este cenário.",
+  "error": "Falha ao carregar detalhes dos indicadores"
+}

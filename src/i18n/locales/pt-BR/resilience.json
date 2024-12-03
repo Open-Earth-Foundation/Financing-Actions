@@ -1,0 +1,8 @@
+{
+  "disclaimer": {
+    "title": "Pontuação da Avaliação Qualitativa",
+    "tooltip": "Esta pontuação representa a capacidade geral da cidade de responder e se recuperar de riscos climáticos com base em fatores institucionais, infraestruturais e sociais.",
+    "resilience_suffix": "Resiliência",
+    "influence_note": "Esta avaliação influencia os cálculos finais de risco ajustando as pontuações de vulnerabilidade com base na capacidade de resiliência da cidade."
+  }
+}

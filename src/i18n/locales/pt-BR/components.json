@@ -1,0 +1,79 @@
+{
+  "hazardProjections": {
+    "title": "Projeção de Riscos",
+    "description": "Compare como os riscos devem mudar ao longo do tempo em diferentes cenários climáticos. Mudanças em 2030 são relativas aos valores atuais, enquanto mudanças em 2050 são relativas a 2030.",
+    "hazards": "Riscos:",
+    "scenarios": "Cenários:",
+    "current_note": "Valores atuais baseados em dados históricos",
+    "changes_2030": "Mudanças relativas aos valores atuais",
+    "changes_2050": "Mudanças relativas aos valores de 2030",
+    "rcp_45": "RCP 4.5: Cenário otimista - Menor caminho de emissões",
+    "rcp_85": "RCP 8.5: Cenário pessimista - Maior caminho de emissões"
+  },
+  "radialComparison": {
+    "title": "Comparação de Riscos",
+    "no_data": "Dados de comparação de risco não disponíveis",
+    "hazards": "Riscos:",
+    "metrics": {
+      "sensitivity": "Sensibilidade",
+      "exposure": "Exposição",
+      "climate_threat": "Ameaça Climática",
+      "vulnerability": "Vulnerabilidade",
+      "risk": "Risco"
+    }
+  },
+  "riskTable": {
+    "no_data": "Dados de avaliação de risco não disponíveis.",
+    "columns": {
+      "year": "Ano",
+      "key_impact": "Impacto Chave",
+      "hazard": "Risco",
+      "components": "Componentes",
+      "risk_score": "Pontuação de Risco",
+      "risk_level": "Nível de Risco",
+      "details": "Detalhes"
+    },
+    "components": {
+      "hazard": "Risco",
+      "exposure": "Exposição",
+      "vulnerability": "Vulnerabilidade",
+      "indicators": "indicadores"
+    }
+  },
+  "topRisks": {
+    "no_data": "Dados de risco não disponíveis.",
+    "climate_hazard": "Risco Climático",
+    "risk_score": "Pontuação de Risco",
+    "component_scores": {
+      "hazard": "Pontuação de Risco",
+      "exposure": "Pontuação de Exposição",
+      "vulnerability": "Pontuação de Vulnerabilidade"
+    },
+    "city_dropdown": {
+      "region": {
+        "label": "Região:",
+        "placeholder": {
+          "default": "Selecione uma região...",
+          "loading": "Carregando regiões..."
+        }
+      },
+      "city": {
+        "label": "Cidade:",
+        "placeholder": {
+          "default": "Busque uma cidade...",
+          "loading": "Carregando cidades...",
+          "select_region": "Selecione uma região primeiro"
+        },
+        "no_options": {
+          "select_region": "Selecione uma região primeiro",
+          "no_cities": "Nenhuma cidade encontrada"
+        }
+      },
+      "error": {
+        "no_connection": "Sem conexão com a internet. Por favor, verifique sua conexão e tente novamente.",
+        "load_failed": "Não foi possível carregar as cidades. Por favor, tente novamente mais tarde. ({{error}})",
+        "placeholder": "Falha ao carregar cidades..."
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "app_name": "iCare + Brisa + OpenEarth",
+  "app_subtitle": "Climate Change Risk Assessment",
+  "welcome": {
+    "find_city": "Find your city",
+    "placeholder": "Search for a city or region",
+    "no_city_selected": "Start by selecting a city to view its Climate Change Risk Assessment data."
+  }
+}

@@ -1,6 +1,6 @@
 const riskLevels = {
   VERY_LOW: {
-    label: 'Very Low',
+    label: 'Very_Low',
     color: '#02C650',
     backgroundColor: '#DCFCE7',
     textColor: '#166534'
@@ -24,7 +24,7 @@ const riskLevels = {
     textColor: '#991B1B'
   },
   VERY_HIGH: {
-    label: 'Very High',
+    label: 'Very_High',
     color: '#F40000',
     backgroundColor: '#FFE4E6',
     textColor: '#9F1239'

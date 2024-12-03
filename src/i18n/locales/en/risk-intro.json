@@ -1,0 +1,30 @@
+{
+  "title": "Climate Change Risk Assessment",
+  "description": "Understand your city's climate risks and vulnerability through comprehensive analysis",
+  "sections": {
+    "risk_score": {
+      "title": "Risk Score",
+      "description": "Combined measure of hazard, exposure, and vulnerability",
+      "tooltip": {
+        "title": "Understanding Risk Scores",
+        "content": "Risk scores combine hazard likelihood, exposure levels, and vulnerability factors to provide a comprehensive measure of risk."
+      }
+    },
+    "projections": {
+      "title": "Projections",
+      "description": "Future scenarios and their implications",
+      "tooltip": {
+        "title": "Climate Projections",
+        "content": "View how climate risks may evolve under different future scenarios based on scientific projections."
+      }
+    },
+    "adaptation": {
+      "title": "Adaptation",
+      "description": "Recommended actions based on your risks",
+      "tooltip": {
+        "title": "Adaptation Strategies",
+        "content": "Get tailored recommendations for adapting to and mitigating identified climate risks."
+      }
+    }
+  }
+}

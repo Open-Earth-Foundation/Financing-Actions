@@ -1,0 +1,28 @@
+{
+  "headline": {
+    "first": "Saiba mais.",
+    "second": "Prepare-se melhor."
+  },
+  "description": "Prepare e adapte sua cidade para riscos potenciais com insights baseados em ciência",
+  "search": {
+    "title": "Encontre sua cidade"
+  },
+  "ccra_info": {
+    "title": "O que é um CCRA?",
+    "content": "A Avaliação de Risco das Mudanças Climáticas (CCRA) ajuda as cidades a entenderem e se prepararem para riscos relacionados ao clima. Analisa como diferentes riscos climáticos podem afetar vários setores da sua cidade, considerando tanto vulnerabilidades atuais quanto projeções futuras.",
+    "how_to_use": {
+      "title": "Como usar esta avaliação",
+      "steps": {
+        "1": "Procure sua cidade usando a caixa de busca acima",
+        "2": "Revise a seção de Principais Riscos para identificar prioridades",
+        "3": "Explore a Comparação de Riscos para entender os fatores de risco",
+        "4": "Verifique as Projeções para ver cenários futuros",
+        "5": "Complete a Avaliação Qualitativa para resultados personalizados"
+      }
+    }
+  },
+  "features": {
+    "data_driven": "Insights Baseados em Dados",
+    "enhanced_ui": "Interface Aprimorada"
+  }
+}

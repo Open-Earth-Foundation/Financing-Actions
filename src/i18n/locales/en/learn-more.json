@@ -1,0 +1,17 @@
+{
+  "title": "Learn More About CCRA",
+  "sections": {
+    "methodology": {
+      "title": "Assessment Methodology",
+      "content": "Our CCRA methodology combines climate hazard data, exposure levels, and vulnerability indicators to calculate risk scores. We use data from AdaptaBrasil and apply the C40 risk assessment framework."
+    },
+    "calculations": {
+      "title": "Risk Score Calculations",
+      "content": "Risk scores are calculated using the formula: Risk = Hazard × Exposure × Vulnerability. Each component is normalized on a 0-1 scale, with higher scores indicating greater risk."
+    },
+    "features": {
+      "title": "Key Features",
+      "content": "• Data-driven risk assessment\n• Future climate projections\n• Qualitative assessment integration\n• Sector-specific analysis\n• Customizable reporting"
+    }
+  }
+}

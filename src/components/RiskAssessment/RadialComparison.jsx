@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   RadarChart,
   PolarGrid,
@@ -12,32 +13,19 @@ import { capitalize } from '../../utils/textUtils';
 import { RADIAL_COLORS } from '../../constants/radialColors';
 import { formatScore } from '../../constants/riskLevels';
 
-// Helper function to get radial color based on index
 const getRadialColor = (index) => {
   const colorKeys = ['first', 'second', 'third'];
   return RADIAL_COLORS[colorKeys[index]]?.base || RADIAL_COLORS.first.base;
 };
 
-// Helper function to format key impact
-const formatKeyImpact = (keyimpact) => {
-  const impactShortNames = {
-    'water resources': 'Water',
-    'food security': 'Food',
-    'energy security': 'Energy',
-    'healthcare': 'Health',
-    'infrastructure': 'Infra',
-    'geo-hydrological disasters': 'Geo-hydro',
-    'coastal zones': 'Coastal',
-    'biodiversity': 'Bio',
-    'urban infrastructure': 'Urban',
-    'agricultural production': 'Agri'
-  };
-
-  const normalized = keyimpact.toLowerCase();
-  return impactShortNames[normalized] || keyimpact;
+const formatKeyImpact = (keyimpact, t) => {
+  const translationKey = `common:sectors.${keyimpact.toLowerCase()}`;
+  return t(translationKey, { defaultValue: keyimpact });
 };
 
 const CustomTooltip = ({ active, payload }) => {
+  const { t } = useTranslation();
+
   if (!active || !payload || !payload.length) return null;
 
   return (
@@ -59,8 +47,17 @@ const CustomTooltip = ({ active, payload }) => {
   );
 };
 
-const RadialComparison = ({ riskAssessment }) => {
-  // Get top hazards based on risk score
+const RadialComparison = forwardRef(({ riskAssessment }, ref) => {
+  const { t } = useTranslation();
+
+  const metrics = [
+    { key: "sensitivity_score", label: t('common:metrics.sensitivity') },
+    { key: "exposure_score", label: t('common:metrics.exposure') },
+    { key: "hazard_score", label: t('common:metrics.climate_threat') },
+    { key: "vulnerability_score", label: t('common:metrics.vulnerability') },
+    { key: "risk_score", label: t('common:metrics.risk') }
+  ];
+
   const topHazards = [...(riskAssessment || [])]
     .sort((a, b) => b.risk_score - a.risk_score)
     .slice(0, 3)
@@ -78,14 +75,6 @@ const RadialComparison = ({ riskAssessment }) => {
   const [selectedHazards, setSelectedHazards] = useState(
     topHazards.map(hazard => hazard.id)
   );
-
-  const metrics = [
-    { key: "sensitivity_score", label: "Sensitivity" },
-    { key: "exposure_score", label: "Exposure" },
-    { key: "hazard_score", label: "Climate Threat" },
-    { key: "vulnerability_score", label: "Vulnerability" },
-    { key: "risk_score", label: "Risk" }
-  ];
 
   const chartData = metrics.map(metric => ({
     name: metric.label,
@@ -108,16 +97,17 @@ const RadialComparison = ({ riskAssessment }) => {
   if (!topHazards.length) {
     return (
       <div className="flex items-center justify-center h-full text-gray-500">
-        No risk comparison data available
+        {t('sections:hazard_comparison.no_data')}
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Hazard Toggles */}
+    <div ref={ref} className="flex flex-col h-full">
       <div className="flex flex-col gap-2 mb-6">
-        <label className="text-sm font-medium text-gray-700">Hazards:</label>
+        <label className="text-sm font-medium text-gray-700">
+          {t('common:labels.hazards')}:
+        </label>
         <div className="flex flex-wrap gap-3">
           {topHazards.map((hazard, index) => (
             <button
@@ -134,13 +124,12 @@ const RadialComparison = ({ riskAssessment }) => {
                   : undefined
               }}
             >
-              {`${capitalize(hazard.hazard)} (${formatKeyImpact(hazard.keyimpact)})`}
+              {`${t(`common:hazards.${hazard.hazard.toLowerCase()}`)} (${formatKeyImpact(hazard.keyimpact, t)})`}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Radar Chart */}
       <div className="flex-1">
         <ResponsiveContainer width="100%" height={350}>
           <RadarChart data={chartData} margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
@@ -161,7 +150,7 @@ const RadialComparison = ({ riskAssessment }) => {
               selectedHazards.includes(hazard.id) && (
                 <Radar
                   key={hazard.id}
-                  name={`${capitalize(hazard.hazard)} (${formatKeyImpact(hazard.keyimpact)})`}
+                  name={`${capitalize(t(`common:hazards.${hazard.hazard.toLowerCase()}`))} (${formatKeyImpact(hazard.keyimpact, t)})`}
                   dataKey={hazard.id}
                   stroke={getRadialColor(index)}
                   fill={getRadialColor(index)}
@@ -174,7 +163,6 @@ const RadialComparison = ({ riskAssessment }) => {
         </ResponsiveContainer>
       </div>
 
-      {/* Legend */}
       <div className="m-auto mt-6 flex flex-wrap gap-4">
         {topHazards.map((hazard, index) => (
           <div key={hazard.id} className="flex items-center gap-2">
@@ -186,13 +174,14 @@ const RadialComparison = ({ riskAssessment }) => {
               style={{ color: selectedHazards.includes(hazard.id) ? getRadialColor(index) : '#6B7280' }}
               className="text-sm font-medium transition-colors"
             >
-              {`${capitalize(hazard.hazard)} (${formatKeyImpact(hazard.keyimpact)})`}
+              {`${capitalize(t(`common:hazards.${hazard.hazard.toLowerCase()}`))} (${formatKeyImpact(hazard.keyimpact, t)})`}
             </span>
           </div>
         ))}
       </div>
     </div>
   );
-};
+});
 
+RadialComparison.displayName = 'RadialComparison';
 export default RadialComparison;

@@ -1,0 +1,50 @@
+{
+  "labels": {
+    "climate_hazard": "Climate Hazard",
+    "risk_score": "Risk Score",
+    "hazard_score": "Hazard Score",
+    "exposure_score": "Exposure Score",
+    "vulnerability_score": "Vulnerability Score",
+    "hazards": "Hazards",
+    "scenarios": "Scenarios",
+    "indicators": "indicators"
+  },
+  "metrics": {
+    "sensitivity": "Sensitivity",
+    "exposure": "Exposure",
+    "climate_threat": "Climate Threat",
+    "vulnerability": "Vulnerability",
+    "risk": "Risk"
+  },
+  "risk_levels": {
+    "very_low": "Very Low",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "very_high": "Very High"
+  },
+  "hazards": {
+    "drought": "Drought",
+    "flooding": "Flood",
+    "heatwaves": "Heatwaves",
+    "landslide": "Landslide",
+    "storm": "Storm",
+    "rainfall": "Rainfall",
+    "temperature": "Temperature",
+    "diseases": "Diseases",
+    "sea level rise": "Sea level rise"
+  },
+  "sectors": {
+    "water_resources": "Water Resources",
+    "food_security": "Food Security",
+    "energy_security": "Energy Security",
+    "healthcare": "Healthcare",
+    "infrastructure": "Infrastructure",
+    "biodiversity": "Biodiversity",
+    "coastal_zones": "Coastal Zones",
+    "urban_infrastructure": "Urban Infrastructure",
+    "agricultural_production": "Agricultural Production",
+    "other": "Other"
+  },
+  "region": "Region"
+}

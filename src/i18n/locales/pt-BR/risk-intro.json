@@ -1,0 +1,30 @@
+{
+  "title": "Avaliação de Risco das Mudanças Climáticas",
+  "description": "Compreenda os riscos climáticos e a vulnerabilidade da sua cidade através de uma análise abrangente",
+  "sections": {
+    "risk_score": {
+      "title": "Pontuação de Risco",
+      "description": "Medida combinada de risco, exposição e vulnerabilidade",
+      "tooltip": {
+        "title": "Entendendo as Pontuações de Risco",
+        "content": "As pontuações de risco combinam probabilidade de risco, níveis de exposição e fatores de vulnerabilidade para fornecer uma medida abrangente do risco."
+      }
+    },
+    "projections": {
+      "title": "Projeções",
+      "description": "Cenários futuros e suas implicações",
+      "tooltip": {
+        "title": "Projeções Climáticas",
+        "content": "Veja como os riscos climáticos podem evoluir em diferentes cenários futuros com base em projeções científicas."
+      }
+    },
+    "adaptation": {
+      "title": "Adaptação",
+      "description": "Ações recomendadas com base em seus riscos",
+      "tooltip": {
+        "title": "Estratégias de Adaptação",
+        "content": "Obtenha recomendações personalizadas para adaptar e mitigar os riscos climáticos identificados."
+      }
+    }
+  }
+}

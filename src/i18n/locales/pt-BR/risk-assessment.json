@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "top_risks": {
+      "title": "Principais riscos para sua cidade",
+      "description": "Visão geral dos riscos climáticos mais altos que afetam sua cidade com base em dados atuais e projeções."
+    },
+    "hazard_comparison": {
+      "title": "Comparação de Riscos",
+      "description": "Compare diferentes riscos climáticos e seus componentes em várias métricas."
+    },
+    "sector_distribution": {
+      "title": "Distribuição por Setor",
+      "description": "Veja como os riscos climáticos estão distribuídos entre diferentes setores em sua cidade."
+    },
+    "projections": {
+      "title": "Projeções Futuras",
+      "description": "Explore como os riscos climáticos devem mudar ao longo do tempo em diferentes cenários."
+    },
+    "ccra_table": {
+      "title": "Avaliação de Risco das Mudanças Climáticas",
+      "description": "Detalhamento de todos os riscos climáticos e seus componentes.",
+      "description_with_assessment": "Detalhamento de todos os riscos climáticos e seus componentes. Valores foram ajustados com base nos resultados da Avaliação Qualitativa."
+    }
+  },
+  "qualitative_assessment": {
+    "title": "Obtenha melhores insights.",
+    "subtitle": "Responda algumas perguntas.",
+    "description": "Responda o Questionário de Avaliação Qualitativa para considerar outros fatores não numéricos em nossos cálculos e obter pontuações mais personalizadas após apenas 5 perguntas.",
+    "start_button": "responder o questionário"
+  },
+  "export": {
+    "title": "Acesse seus dados em um clique",
+    "description": "Exporte esta visualização no formato que melhor atende às suas necessidades",
+    "button": "Exportar como CSV",
+    "exporting": "Exportando..."
+  }
+}

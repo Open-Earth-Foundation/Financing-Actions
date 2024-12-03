@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "back_to_search": "Voltar à busca",
+    "selected_city": "Cidade selecionada"
+  },
+  "top_risks": {
+    "title": "Principais Riscos para Sua Cidade",
+    "description": "Estes são os riscos climáticos que representam a maior ameaça para sua cidade. São calculados combinando probabilidade de risco, exposição e pontuações de vulnerabilidade.",
+    "insights": "Foque nos riscos marcados como 'Alto' ou 'Muito Alto' pois requerem atenção imediata. Considere tanto a pontuação geral de risco quanto os componentes individuais ao planejar respostas.",
+    "no_data": "Nenhum dado de risco disponível"
+  },
+  "hazard_comparison": {
+    "title": "Comparação de Riscos",
+    "description": "Este gráfico mostra como diferentes aspectos de risco contribuem para a pontuação geral de risco de sua cidade para cada ameaça climática.",
+    "insights": "Procure padrões no que impulsiona seus riscos - é alta probabilidade de risco, exposição ou vulnerabilidade? Isso ajuda a direcionar suas estratégias de adaptação efetivamente.",
+    "no_data": "Nenhum dado de comparação disponível"
+  },
+  "sector_distribution": {
+    "title": "Distribuição por Setor",
+    "description": "Esta visualização mostra como os riscos climáticos estão distribuídos entre diferentes setores de sua cidade.",
+    "insights": "Identifique quais setores enfrentam múltiplos riscos altos - estes podem precisar de estratégias de adaptação transversais.",
+    "no_data": "Nenhum dado de distribuição por setor disponível"
+  },
+  "projections": {
+    "title": "Projeções Futuras",
+    "description": "Estes gráficos mostram como os riscos climáticos podem mudar no futuro sob diferentes cenários.",
+    "insights": "Preste atenção aos riscos que apresentam aumentos significativos em cenários futuros — eles podem exigir planejamento de longo prazo e mudanças na infraestrutura.",
+    "scenarios": {
+      "current": "Condições atuais",
+      "optimistic": "RCP 4.5 – Cenário otimista",
+      "pessimistic": "RCP 8.5 – Cenário pessimista"
+    },
+    "no_data": "Nenhum dado de projeção disponível"
+  },
+  "ccra_table": {
+    "title": "Tabela Completa de Avaliação de Risco",
+    "description": "Detalhamento dos dados de avaliação de risco mostrando todos os riscos analisados e seus componentes.",
+    "insights":"Compare pontuações de risco e componentes em diferentes perigos. Preste atenção especial à relação entre pontuações de risco, exposição e vulnerabilidade para entender o que impulsiona cada nível de risco.",
+    "description_with_assessment": "Detalhamento dos dados de avaliação de risco mostrando todos os riscos analisados e seus componentes. Valores foram ajustados com base nos resultados da Avaliação Qualitativa.",
+    "no_data": "Nenhum dado de avaliação de risco disponível",
+    "columns": {
+      "year": "Ano",
+      "key_impact": "Impacto Chave",
+      "hazard": "Risco",
+      "exposure": "Exposição",
+      "vulnerability": "Vulnerabilidade",
+      "components": "Componentes",
+      "risk_score": "Pontuação de Risco",
+      "risk_level": "Nível de Risco",
+      "details": "Detalhes"
+    }
+  },
+  "qualitative_assessment": {
+    "title": "Obtenha melhores insights.",
+    "subtitle": "Responda algumas perguntas.",
+    "description": "Responda o Questionário de Avaliação Qualitativa para considerar outros fatores não numéricos em nossos cálculos e obter pontuações mais personalizadas após apenas 5 perguntas.",
+    "start_button": "Responder o questionário"
+  },
+  "export": {
+    "title": "Acesse seus dados em um clique",
+    "description": "Exporte esta visualização no formato que melhor atende às suas necessidades",
+    "button": "Exportar como CSV",
+    "exporting": "Exportando..."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "top_risks": {
+      "title": "Top risks for your city",
+      "description": "Overview of the highest risk climate hazards affecting your city based on current data and projections."
+    },
+    "hazard_comparison": {
+      "title": "Hazard Comparison",
+      "description": "Compare different climate hazards and their components across various metrics."
+    },
+    "sector_distribution": {
+      "title": "Sector Distribution",
+      "description": "View how climate risks are distributed across different sectors in your city."
+    },
+    "projections": {
+      "title": "Future Projections",
+      "description": "Explore how climate hazards are projected to change over time under different scenarios."
+    },
+    "ccra_table": {
+      "title": "Climate Change Risk Assessment",
+      "description": "Detailed breakdown of all climate risks and their components.",
+      "description_with_assessment": "Detailed breakdown of all climate risks and their components. Values have been adjusted based on Qualitative Assessment results."
+    }
+  },
+  "qualitative_assessment": {
+    "title": "Get better insights.",
+    "subtitle": "Answer a few questions.",
+    "description": "Take the Qualitative Assessment Questionnaire to weigh-in other non-numerical factors in our calculations and get more tailored scorings after just 5 questions.",
+    "start_button": "answer the quiz"
+  },
+  "export": {
+    "title": "Access your data in one click",
+    "description": "Export this visualization in the format that best suits your needs",
+    "button": "Export as CSV",
+    "exporting": "Exporting..."
+  }
+}
