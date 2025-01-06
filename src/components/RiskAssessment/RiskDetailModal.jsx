@@ -46,7 +46,6 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
 
   if (!isOpen) return null;
 
-  // Define SCENARIOS dynamically to ensure translations are loaded
   const SCENARIOS = [
     {
       id: 'current',
@@ -59,7 +58,7 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
       description: t('scenarios.optimistic.description')
     },
     {
-      id: 'pessimistic',
+      id: 'pesimistic',
       label: t('scenarios.pessimistic.label'),
       description: t('scenarios.pessimistic.description')
     }
@@ -139,8 +138,9 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
                       {[
                         'category',
                         'indicator',
-                        'score',
+                        'raw_score',
                         'units',
+                        'normalized_score',
                         'year',
                         'source'
                       ].map((header) => (
@@ -159,9 +159,12 @@ const RiskDetailModal = ({ isOpen, onClose, rowData, actor_id }) => {
                         <td className="px-4 py-2 capitalize">{indicator.category}</td>
                         <td className="px-4 py-2 capitalize">{indicator.indicator_name}</td>
                         <td className="px-4 py-2">
-                          {indicator.indicator_normalized_score?.toFixed(2) ?? 'N/A'}
+                          {indicator.indicator_score?.toFixed(2) ?? 'N/A'}
                         </td>
                         <td className="px-4 py-2">{indicator.indicator_units ?? 'N/A'}</td>
+                        <td className="px-4 py-2">
+                          {indicator.indicator_normalized_score?.toFixed(2) ?? 'N/A'}
+                        </td>
                         <td className="px-4 py-2">{indicator.indicator_year}</td>
                         <td className="px-4 py-2">{indicator.datasource}</td>
                       </tr>

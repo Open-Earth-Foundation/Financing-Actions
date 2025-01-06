@@ -38,6 +38,33 @@ const RoundedBar = (props) => {
   );
 };
 
+const CustomXAxisTick = ({ x, y, payload }) => {
+  const maxLength = 15;
+
+  const truncateText = (text) => {
+    if (text.length > maxLength) {
+      return `${text.substring(0, maxLength)}...`;
+    }
+    return text;
+  };
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={0}
+        y={0}
+        dy={16}
+        textAnchor="end"
+        fill="#6B7280"
+        fontSize={12}
+        transform="rotate(-45)"
+      >
+        {truncateText(payload.value)}
+      </text>
+    </g>
+  );
+};
+
 const CustomTooltip = ({ active, payload, label }) => {
   const { t } = useTranslation();
 
@@ -47,7 +74,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
   return (
     <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
-      <p className="text-sm font-medium text-gray-900 mb-2">{label}</p>
+      <p className="text-sm font-medium text-gray-900 mb-2 break-words max-w-[200px]">{label}</p>
       {payload.map((entry, index) => {
         const riskLevel = getRiskLevel(entry.value);
         return (
@@ -56,14 +83,40 @@ const CustomTooltip = ({ active, payload, label }) => {
               className="w-3 h-3 rounded-full"
               style={{ backgroundColor: entry.color }}
             />
-            <span className="text-gray-600">{t('charts:risk_distribution.legend.hazard_prefix')} {entry.name}</span>
+            <span className="text-gray-600">{entry.name}</span>
             <span className="font-medium" style={{ color: riskLevel.color }}>
               {formatScore(entry.value)}
             </span>
-            <span className="text-xs text-gray-500">({t('common:risk_levels.' + riskLevel.label.toLowerCase())})</span>
+            <span className="text-xs text-gray-500">
+              ({t('common:risk_levels.' + riskLevel.label.toLowerCase())})
+            </span>
           </div>
         );
       })}
+    </div>
+  );
+};
+
+const CustomLegend = ({ payload }) => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="mt-6 flex justify-center items-center pb-8">
+      <div className="flex flex-wrap gap-4 justify-center">
+        {payload.map((entry) => (
+          <div key={entry.value} className="flex items-center gap-2">
+            <div 
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: entry.color }}
+            />
+            <span className="text-sm font-medium text-gray-600">
+              {t(`common:hazards.${entry.value}`, { 
+                defaultValue: entry.value.charAt(0).toUpperCase() + entry.value.slice(1) 
+              })}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -97,6 +150,7 @@ const RiskDistributionChart = forwardRef(({ riskAssessment }, ref) => {
       .sort((a, b) => b.totalRisk - a.totalRisk)
       .map(({ sector, hazards }) => ({
         sector,
+        fullSector: sector,
         ...hazards
       }));
   }, [riskAssessment, t]);
@@ -117,11 +171,11 @@ const RiskDistributionChart = forwardRef(({ riskAssessment }, ref) => {
   }
 
   return (
-    <div ref={ref} className="h-[412px]">
-      <ResponsiveContainer width="100%" height={400}>
+    <div className="h-[450px]">
+      <ResponsiveContainer width="100%" height={560}>
         <BarChart
           data={chartData}
-          margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+          margin={{ top: 20, right: 30, left: 20, bottom: 90 }}
         >
           <CartesianGrid 
             strokeDasharray="3 3" 
@@ -130,22 +184,15 @@ const RiskDistributionChart = forwardRef(({ riskAssessment }, ref) => {
           />
           <XAxis 
             dataKey="sector"
-            tick={{ fill: '#6B7280', fontSize: 12 }}
+            tick={<CustomXAxisTick />}
             interval={0}
-            angle={-45}
-            textAnchor="end"
-            height={80}
-            label={{ 
-              value: t('charts:risk_distribution.axis.sector'),
-              position: 'bottom',
-              offset: 40
-            }}
+            height={100}
           />
           <YAxis
             tickFormatter={value => formatScore(value)}
             tick={{ fill: '#6B7280', fontSize: 12 }}
             domain={[0, 1]}
-            ticks={[0, 0.2, 0.4, 0.6, 0.8, 1]}
+            ticks={[0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2]}
             label={{ 
               value: t('charts:risk_distribution.axis.risk_score'),
               angle: -90,
@@ -154,14 +201,7 @@ const RiskDistributionChart = forwardRef(({ riskAssessment }, ref) => {
             }}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Legend 
-            wrapperStyle={{ paddingTop: 20 }}
-            formatter={(value) => (
-              <span className="text-sm text-gray-600">
-                {value.charAt(0).toUpperCase() + value.slice(1)}
-              </span>
-            )}
-          />
+          <Legend content={<CustomLegend />} />
           {hazards.map(hazard => (
             <Bar
               key={hazard}
@@ -169,18 +209,16 @@ const RiskDistributionChart = forwardRef(({ riskAssessment }, ref) => {
               stackId="a"
               fill={getHazardColor(hazard)}
               shape={<RoundedBar />}
-              name={t(`common:hazards.${hazard}`, { defaultValue: hazard.charAt(0).toUpperCase() + hazard.slice(1) })}
-            >
-              {chartData.map((entry, index) => {
-                const value = entry[hazard];
-                const riskLevel = value ? getRiskLevel(value) : null;
-                return (
-                  <Cell
-                    key={`cell-${index}`}
-                    fillOpacity={riskLevel ? 0.8 : 0.4}
-                  />
-                );
+              name={t(`common:hazards.${hazard}`, { 
+                defaultValue: hazard.charAt(0).toUpperCase() + hazard.slice(1) 
               })}
+            >
+              {chartData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fillOpacity={0.8}
+                />
+              ))}
             </Bar>
           ))}
         </BarChart>

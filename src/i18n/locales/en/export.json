@@ -1,0 +1,53 @@
+{
+  "languages": {
+    "english": "English",
+    "portuguese": "Portuguese"
+  },
+  "report": {
+    "title": "Climate Risk Assessment Report",
+    "generated": "Generated",
+    "fileName": {
+      "csv": "risk_assessment",
+      "pdf": "ccra_report"
+    },
+    "executive_summary": {
+      "title": "Executive Summary",
+      "overview": "This Climate Change Risk Assessment (CCRA) report analyzes climate-related risks across key strategic sectors. The assessment evaluates hazards, exposure, and vulnerability to determine risk levels and prioritize adaptation actions.",
+      "sections": "The report contains five main sections:",
+      "section_1": "1. Methodology overview of risk calculations and scoring",
+      "section_2": "2. Top climate risks requiring immediate attention",
+      "section_3": "3. Complete risk assessment data across all sectors",
+      "section_4": "4. Qualitative assessment findings from stakeholder engagement",
+      "section_5": "5. Recommended next steps for climate adaptation"
+    },
+    "methodology": {
+      "title": "Methodology",
+      "formula": "Risk scores are calculated using the formula: Risk = Hazard x Exposure x Vulnerability, where each component is normalized on a 0-1 scale. Vulnerability considers both sensitivity and adaptive capacity indicators.",
+      "scoring": "Scores are normalized within hazard groups to enable comparison, with risk levels defined as: Very High (>0.8), High (0.6-0.8), Medium (0.4-0.6), Low (0.2-0.4), Very Low (<0.2)"
+    },
+    "tables": {
+      "headers": {
+        "sector": "Strategic Sector",
+        "hazard": "Climate Hazard",
+        "risk_score": "Risk Score",
+        "risk_level": "Risk Level",
+        "hazard_score": "Hazard Score",
+        "exposure_score": "Exposure Score",
+        "vulnerability_score": "Vulnerability Score",
+        "adaptive_capacity": "Adaptive Capacity"
+      }
+    },
+    "next_steps": {
+      "title": "Recommended Next Steps",
+      "steps": {
+        "1": "Develop detailed adaptation strategies for high-risk sectors",
+        "2": "Engage stakeholders to validate findings and gather additional insights",
+        "3": "Identify funding sources for priority adaptation measures",
+        "4": "Establish monitoring systems to track risk indicators",
+        "5": "Update emergency response plans based on identified risks",
+        "6": "Integrate findings into city planning and policy development"
+      }
+    },
+    "footer": "CityCatalyst CCRA Report"
+  }
+}

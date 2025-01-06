@@ -14,7 +14,7 @@ const Hero = ({ onSearch, initialCity }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="hero">
       <div className="container mx-auto px-4 py-24 sm:py-32 flex flex-col lg:flex-row justify-center items-start gap-12 max-w-[1200px]">
         {/* Left column with text */}
         <div className="flex-1 flex flex-col justify-start items-start gap-8">

@@ -1,29 +1,47 @@
 {
-  "title": "Climate Change Risk Assessment",
+  "title": "What you need to know about CCRA",
   "description": "Understand your city's climate risks and vulnerability through comprehensive analysis",
   "sections": {
     "risk_score": {
       "title": "Risk Score",
       "description": "Combined measure of hazard, exposure, and vulnerability",
-      "tooltip": {
-        "title": "Understanding Risk Scores",
-        "content": "Risk scores combine hazard likelihood, exposure levels, and vulnerability factors to provide a comprehensive measure of risk."
+      "cards": {
+       "title": "Understanding Risk Scores",
+       "content": "Risk scores combine risk probability, exposure levels, and vulnerability factors to provide a comprehensive risk measure.",
+       "detailsCount": "3",
+       "details": {
+         "0": "Risk assessment considers both current climate data and future projections",
+         "1": "Exposure analysis evaluates population and infrastructure at risk",
+         "2": "Vulnerability factors include social, economic and environmental conditions"
+       }
       }
     },
     "projections": {
       "title": "Projections",
       "description": "Future scenarios and their implications",
-      "tooltip": {
-        "title": "Climate Projections",
-        "content": "View how climate risks may evolve under different future scenarios based on scientific projections."
+      "cards": {
+       "title": "Climate Projections", 
+       "content": "See how climate risks may evolve in different future scenarios based on scientific projections.",
+       "detailsCount": "3",
+       "details": {
+         "0": "Short-term projections (2030) for immediate planning",
+         "1": "Medium-term scenarios (2050) for infrastructure development",
+         "2": "Long-term outlook (2100) for strategic planning"
+       }
       }
     },
     "adaptation": {
       "title": "Adaptation",
       "description": "Recommended actions based on your risks",
-      "tooltip": {
-        "title": "Adaptation Strategies",
-        "content": "Get tailored recommendations for adapting to and mitigating identified climate risks."
+      "cards": {
+       "title": "Adaptation Strategies",
+       "content": "Get personalized recommendations to adapt and mitigate identified climate risks.",
+       "detailsCount": "3", 
+       "details": {
+         "0": "Infrastructure improvements and urban planning",
+         "1": "Community engagement and capacity building",
+         "2": "Policy development and implementation"
+       }
       }
     }
   }

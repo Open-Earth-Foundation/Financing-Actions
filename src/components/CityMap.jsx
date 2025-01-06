@@ -1,43 +1,46 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Polygon, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
+import L from 'leaflet';
 import "leaflet/dist/leaflet.css";
 
-const MapController = ({ center, zoom, polygon }) => {
+// Fix marker icon
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png'
+});
+
+const customIcon = new L.Icon({
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+const MapController = ({ center, zoom }) => {
   const map = useMap();
 
   useEffect(() => {
-    console.log('MapController update:', { center, zoom, hasPolygon: !!polygon });
-
     if (center) {
       map.setView(center, zoom);
     }
-
-    if (polygon && polygon.length > 0) {
-      try {
-        const bounds = polygon.reduce((bounds, coord) => 
-          bounds.extend([coord[0], coord[1]]), map.getBounds());
-        map.fitBounds(bounds, { 
-          padding: [50, 50],
-          maxZoom: 13  // Limit max zoom after fitting bounds
-        });
-      } catch (err) {
-        console.error('Error fitting bounds:', err);
-      }
-    }
-  }, [map, center, zoom, polygon]);
+  }, [map, center, zoom]);
 
   return null;
 };
 
-const CityMap = ({ cityname, region, osm_id }) => {
+const CityMap = ({ cityname, region }) => {
   const [mapData, setMapData] = useState({
     center: [-27.5954, -48.5480], // Default to Florianópolis
-    polygon: null,
-    zoom: 13  // Increased default zoom
+    zoom: 12
   });
   const [loading, setLoading] = useState(false);
 
-  // ESRI World Imagery tile URL
+  // ESRI World Imagery
   const satelliteUrl = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
   const satelliteAttribution = 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 
@@ -47,41 +50,15 @@ const CityMap = ({ cityname, region, osm_id }) => {
 
       setLoading(true);
       try {
-        const searchUrl = `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(cityname)}&state=${region}&country=Brazil&format=json&polygon_geojson=1&addressdetails=1`;
-        console.log('Fetching city data:', searchUrl);
-
+        const searchUrl = `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(cityname)}&state=${region}&country=Brazil&format=json`;
         const response = await fetch(searchUrl);
         const data = await response.json();
 
         if (data && data.length > 0) {
           const cityData = data[0];
-          console.log('Found city data:', cityData);
-
-          // Set new center
-          const newCenter = [
-            parseFloat(cityData.lat),
-            parseFloat(cityData.lon)
-          ];
-
-          // Handle polygon data
-          let polygonCoords = null;
-          if (cityData.geojson) {
-            if (cityData.geojson.type === 'Polygon') {
-              polygonCoords = cityData.geojson.coordinates[0].map(coord => 
-                [coord[1], coord[0]]
-              );
-            } else if (cityData.geojson.type === 'MultiPolygon') {
-              // Get the largest polygon from MultiPolygon
-              polygonCoords = cityData.geojson.coordinates[0][0].map(coord => 
-                [coord[1], coord[0]]
-              );
-            }
-          }
-
           setMapData({
-            center: newCenter,
-            polygon: polygonCoords,
-            zoom: 13  // Higher zoom level
+            center: [parseFloat(cityData.lat), parseFloat(cityData.lon)],
+            zoom: 12
           });
         }
       } catch (err) {
@@ -92,7 +69,7 @@ const CityMap = ({ cityname, region, osm_id }) => {
     };
 
     fetchCityData();
-  }, [cityname, region, osm_id]);
+  }, [cityname, region]);
 
   return (
     <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
@@ -107,10 +84,9 @@ const CityMap = ({ cityname, region, osm_id }) => {
         zoom={mapData.zoom}
         style={{ height: "100%", width: "100%" }}
         className="z-0"
-        minZoom={4}  // Prevent zooming out too far
-        maxZoom={18} // Allow good satellite detail
+        minZoom={4}
+        maxZoom={18}
       >
-        {/* Satellite Base Layer */}
         <TileLayer
           url={satelliteUrl}
           attribution={satelliteAttribution}
@@ -119,23 +95,10 @@ const CityMap = ({ cityname, region, osm_id }) => {
         <MapController 
           center={mapData.center}
           zoom={mapData.zoom}
-          polygon={mapData.polygon}
         />
 
         {mapData.center && (
-          <Marker position={mapData.center} />
-        )}
-
-        {mapData.polygon && (
-          <Polygon
-            positions={mapData.polygon}
-            pathOptions={{
-              color: "#2351DC",
-              weight: 3, // Slightly thicker border for satellite view
-              fillColor: "#2351DC",
-              fillOpacity: 0.15, // Slightly higher opacity for satellite view
-            }}
-          />
+          <Marker position={mapData.center} icon={customIcon} />
         )}
       </MapContainer>
     </div>

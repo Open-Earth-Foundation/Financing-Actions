@@ -21,7 +21,8 @@
     "headers": {
       "category": "Category",
       "indicator": "Indicator",
-      "score": "Score",
+      "raw_score": "Value",
+      "normalized_score": "Normalized Score",
       "units": "Units",
       "year": "Year",
       "source": "Source"

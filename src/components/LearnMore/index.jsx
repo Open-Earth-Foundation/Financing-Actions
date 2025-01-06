@@ -38,6 +38,14 @@ const LearnMore = () => {
       title: t('learn-more:sections.calculations.title'),
       content: t('learn-more:sections.calculations.content')
     },
+    resilience: {
+      title: t('learn-more:sections.resilience.title'),
+      content: t('learn-more:sections.resilience.content')
+    },
+    quality: {
+      title: t('learn-more:sections.quality.title'),
+      content: t('learn-more:sections.quality.content')
+    },
     features: {
       title: t('learn-more:sections.features.title'),
       content: t('learn-more:sections.features.content')
@@ -45,7 +53,7 @@ const LearnMore = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="bg-white rounded-lg shadow-md min-h-[360px] p-6">
       <h2 className="text-2xl font-normal font-poppins mb-6">
         {t('learn-more:title')}
       </h2>

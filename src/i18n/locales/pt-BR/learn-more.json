@@ -3,15 +3,23 @@
   "sections": {
     "methodology": {
       "title": "Metodologia de Avaliação",
-      "content": "Nossa metodologia CCRA combina dados de riscos climáticos, níveis de exposição e indicadores de vulnerabilidade para calcular pontuações de risco. Utilizamos dados do AdaptaBrasil e aplicamos a estrutura de avaliação de risco do C40."
+      "content": "Nossa metodologia CCRA combina dados de riscos climáticos, níveis de exposição e indicadores de vulnerabilidade para calcular pontuações de risco. Utilizamos um modelo de três componentes com ajuste adicional para fatores de resiliência. O processo envolve cálculo de pontuação bruta, normalização e ajuste de vulnerabilidade baseado em medidas de resiliência."
     },
     "calculations": {
       "title": "Cálculos de Pontuação de Risco",
-      "content": "As pontuações de risco são calculadas usando a fórmula: Risco = Risco Climático × Exposição × Vulnerabilidade. Cada componente é normalizado em uma escala de 0-1, com pontuações mais altas indicando maior risco."
+      "content": "As pontuações de risco usam uma fórmula central: Risco = Risco Climático × Exposição × Vulnerabilidade. Cada componente é normalizado em uma escala de 0-1.\n\nOs componentes base são:\n• Pontuação de Risco Climático: Representa a probabilidade e magnitude de uma ameaça climática\n• Pontuação de Exposição: Indica o quanto uma área está exposta ao risco\n• Pontuação de Vulnerabilidade: Mede o quanto uma área é suscetível a danos\n\nAs pontuações são então normalizadas usando: Pontuação Normalizada = (Pontuação Bruta - Limite Inferior) / (Limite Superior - Limite Inferior)"
+    },
+    "resilience": {
+      "title": "Ajuste de Resiliência",
+      "content": "As medidas de resiliência são incorporadas através do ajuste de vulnerabilidade:\n\n• Pontuações altas de resiliência (>0.5) reduzem a vulnerabilidade\n• Pontuações baixas de resiliência (<0.5) aumentam a vulnerabilidade\n• Uma pontuação de resiliência de 0.5 mantém a vulnerabilidade original\n\nO ajuste usa a fórmula: Vulnerabilidade Ajustada = Vulnerabilidade Original × (1 + (0.5 - Pontuação de Resiliência))"
+    },
+    "quality": {
+      "title": "Controle de Qualidade",
+      "content": "Nossas medidas de controle de qualidade incluem:\n\n• Proteção de Limites: Todas as pontuações são limitadas entre 0.01 e 0.99\n• Tratamento de Erros: Dados ausentes retornam nulo em vez de cálculos incorretos\n• Rastreamento de Dados: Pontuações originais são preservadas junto com as ajustadas"
     },
     "features": {
       "title": "Principais Características",
-      "content": "• Avaliação baseada em dados\n• Projeções climáticas futuras\n• Integração de avaliação qualitativa\n• Análise específica por setor\n• Relatórios personalizáveis"
+      "content": "• Avaliação baseada em dados\n• Projeções climáticas futuras\n• Integração de avaliação qualitativa\n• Análise específica por setor\n• Relatórios personalizáveis\n• Rastreamento de pontuações originais e ajustadas\n• Integração de fatores de resiliência"
     }
   }
 }

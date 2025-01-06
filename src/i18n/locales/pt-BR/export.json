@@ -1,0 +1,53 @@
+{
+  "languages": {
+    "english": "Inglês",
+    "portuguese": "Português"
+  },
+  "report": {
+    "title": "Relatório de Avaliação de Risco Climático",
+    "generated": "Gerado em",
+    "fileName": {
+      "csv": "avaliacao_de_risco",
+      "pdf": "relatorio_armc"
+    },
+    "executive_summary": {
+      "title": "Sumário Executivo",
+      "overview": "Este relatório de Avaliação de Risco das Mudanças Climáticas (ARMC) analisa os riscos climáticos em setores estratégicos principais. A avaliação considera ameaças, exposição e vulnerabilidade para determinar níveis de risco e priorizar ações de adaptação.",
+      "sections": "O relatório contém cinco seções principais:",
+      "section_1": "1. Visão geral da metodologia de cálculos e pontuação de risco",
+      "section_2": "2. Principais riscos climáticos que requerem atenção imediata",
+      "section_3": "3. Dados completos de avaliação de risco em todos os setores",
+      "section_4": "4. Resultados da avaliação qualitativa do engajamento das partes interessadas",
+      "section_5": "5. Próximos passos recomendados para adaptação climática"
+    },
+    "methodology": {
+      "title": "Metodologia",
+      "formula": "As pontuações de risco são calculadas usando a fórmula: Risco = Ameaça x Exposição x Vulnerabilidade, onde cada componente é normalizado em uma escala de 0-1. A vulnerabilidade considera indicadores de sensibilidade e capacidade adaptativa.",
+      "scoring": "As pontuações são normalizadas dentro dos grupos de ameaças para permitir comparação, com níveis de risco definidos como: Muito Alto (>0,8), Alto (0,6-0,8), Médio (0,4-0,6), Baixo (0,2-0,4), Muito Baixo (<0,2)"
+    },
+    "tables": {
+      "headers": {
+        "sector": "Setor Estratégico",
+        "hazard": "Ameaça Climática",
+        "risk_score": "Pontuação de Risco",
+        "risk_level": "Nível de Risco",
+        "hazard_score": "Pontuação de Ameaça",
+        "exposure_score": "Pontuação de Exposição",
+        "vulnerability_score": "Pontuação de Vulnerabilidade",
+        "adaptive_capacity": "Capacidade Adaptativa"
+      }
+    },
+    "next_steps": {
+      "title": "Próximos Passos Recomendados",
+      "steps": {
+        "1": "Desenvolver estratégias detalhadas de adaptação para setores de alto risco",
+        "2": "Engajar partes interessadas para validar descobertas e coletar insights adicionais",
+        "3": "Identificar fontes de financiamento para medidas prioritárias de adaptação",
+        "4": "Estabelecer sistemas de monitoramento para acompanhar indicadores de risco",
+        "5": "Atualizar planos de resposta a emergências com base nos riscos identificados",
+        "6": "Integrar descobertas ao planejamento e desenvolvimento de políticas da cidade"
+      }
+    },
+    "footer": "Relatório CCRA CityCatalyst"
+  }
+}

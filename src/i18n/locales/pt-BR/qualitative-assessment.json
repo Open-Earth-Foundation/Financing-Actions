@@ -1,0 +1,163 @@
+{
+  "title": "Avaliação Qualitativa",
+  "progress": "Questão {{current}} de {{total}}",
+  "buttons": {
+    "back": "Voltar",
+    "retake": "Refazer Avaliação",
+    "close": "Fechar Avaliação"
+  },
+  "results": {
+    "title": "Avaliação Concluída",
+    "resilience_level": "Resiliência",
+    "description": "Avaliação baseada nas respostas do questionário"
+  },
+  "resilience_levels": {
+    "very_low": {
+      "label": "Muito Baixa",
+      "description": "Capacidade limitada de resposta aos riscos climáticos"
+    },
+    "low": {
+      "label": "Baixa",
+      "description": "Conscientização básica e preparação mínima"
+    },
+    "medium": {
+      "label": "Média",
+      "description": "Medidas estabelecidas mas com espaço para melhorias"
+    },
+    "high": {
+      "label": "Alta",
+      "description": "Forte capacidade de preparação e adaptação"
+    },
+    "very_high": {
+      "label": "Muito Alta",
+      "description": "Medidas abrangentes de resiliência climática"
+    }
+  },
+  "questions": {
+    "1": {
+      "text": "O plano diretor da cidade (ou outro plano estratégico relevante) inclui aspectos de redução ou resposta a riscos de desastres?",
+      "options": {
+        "0": {
+          "label": "Não abordado",
+          "description": "O plano diretor ou qualquer outro plano estratégico relevante não menciona redução ou resposta a riscos de desastres."
+        },
+        "1": {
+          "label": "Minimamente abordado",
+          "description": "A redução ou resposta a riscos de desastres é brevemente mencionada, mas não há ações concretas ou estratégias detalhadas."
+        },
+        "2": {
+          "label": "Parcialmente abordado",
+          "description": "O plano diretor ou outro plano estratégico inclui redução ou resposta a riscos de desastres, mas é limitado a poucos aspectos ou setores sem uma abordagem abrangente."
+        },
+        "3": {
+          "label": "Substancialmente abordado",
+          "description": "A redução ou resposta a riscos de desastres é bem coberta no plano diretor/plano estratégico, com estratégias e ações definidas, mas falta integração completa em todos os setores ou mecanismos claros de implementação."
+        },
+        "4": {
+          "label": "Totalmente integrado e acionável",
+          "description": "A redução ou resposta a riscos de desastres está totalmente incorporada ao plano diretor ou outro plano estratégico, com estratégias claras, ações e planos de implementação em todos os setores, incluindo mecanismos de monitoramento e revisão."
+        }
+      }
+    },
+    "2": {
+      "text": "Existe uma agência, secretaria ou instituição com autoridade e recursos apropriados para resposta e redução de riscos climáticos?",
+      "options": {
+        "0": {
+          "label": "Não existe instituição",
+          "description": "Não há agência, secretaria ou instituição responsável pela resposta e redução de riscos climáticos, incluindo entidades como a Defesa Civil."
+        },
+        "1": {
+          "label": "Existe, mas falta autoridade ou recursos",
+          "description": "Existe uma instituição, como a Defesa Civil, responsável por algumas tarefas de resposta a riscos climáticos, mas falta autoridade ou os recursos necessários (pessoal, financiamento, equipamento) para ser eficaz."
+        },
+        "2": {
+          "label": "Instituição existe com capacidade limitada",
+          "description": "Uma instituição como a Defesa Civil está estabelecida com alguma autoridade e recursos, mas está subfinanciada ou apenas parcialmente equipada para lidar com resposta e redução de riscos climáticos de forma abrangente."
+        },
+        "3": {
+          "label": "Instituição bem estabelecida com capacidade moderada",
+          "description": "Existe uma instituição bem funcional, como a Defesa Civil, com autoridade clara e recursos moderados para gerenciar resposta e redução de riscos climáticos, embora algumas áreas ainda possam precisar de melhorias ou recursos adicionais."
+        },
+        "4": {
+          "label": "Instituição totalmente capaz",
+          "description": "Existe uma instituição dedicada (ex.: Defesa Civil ou similar) com autoridade total, recursos suficientes e capacidade demonstrada para gerenciar e coordenar efetivamente a resposta e redução de riscos climáticos em todos os setores, com capacidade de escalar operações quando necessário."
+        }
+      }
+    },
+    "3": {
+      "text": "A cidade tem um conhecimento claro dos seus principais impactos e áreas propensas a riscos climáticos?",
+      "options": {
+        "0": {
+          "label": "Sem conhecimento ou mapeamento de risco",
+          "description": "A cidade não tem compreensão dos seus principais impactos climáticos, e nenhum mapeamento de risco ou avaliação de áreas propensas a riscos climáticos foi realizado."
+        },
+        "1": {
+          "label": "Conhecimento limitado, sem mapeamento formal",
+          "description": "A cidade tem alguma consciência dos seus impactos climáticos, mas não há mapeamento formal ou abrangente de áreas vulneráveis. O conhecimento é baseado em evidências anedóticas ou eventos isolados."
+        },
+        "2": {
+          "label": "Conhecimento parcial com mapeamento básico",
+          "description": "A cidade identificou alguns riscos climáticos principais e realizou mapeamento básico de risco, mas o mapeamento está incompleto, desatualizado ou cobre apenas certas regiões ou impactos."
+        },
+        "3": {
+          "label": "Conhecimento substancial com mapeamento de risco",
+          "description": "A cidade tem uma boa compreensão dos seus principais riscos climáticos e realizou mapeamento detalhado de risco para a maioria das áreas vulneráveis, embora possa haver lacunas em dados ou cobertura de certos impactos."
+        },
+        "4": {
+          "label": "Conhecimento abrangente com mapeamento atualizado",
+          "description": "A cidade tem uma compreensão clara e abrangente dos seus impactos climáticos e desenvolveu mapeamento de risco atualizado e detalhado que cobre todas as áreas vulneráveis e riscos. Este mapeamento é regularmente revisado e informa decisões de política e planejamento."
+        }
+      }
+    },
+    "4": {
+      "text": "A cidade possui orçamento restrito definido ou fundo de contingência para redução de desastres climáticos (mitigação, prevenção, resposta e recuperação)?",
+      "options": {
+        "0": {
+          "label": "Sem orçamento ou fundo de contingência",
+          "description": "A cidade não tem orçamento específico ou fundo de contingência alocado para redução de desastres climáticos, incluindo mitigação, prevenção, resposta ou esforços de recuperação, então depende de ajuda nacional ou subnacional."
+        },
+        "1": {
+          "label": "Alocação orçamentária mínima ou informal",
+          "description": "A cidade tem alguma alocação informal ou mínima de fundos para redução de desastres climáticos, mas não é claramente definida ou restrita especificamente para esses propósitos. Ajuda nacional ou subnacional ainda é muito importante caso ocorra um evento climático."
+        },
+        "2": {
+          "label": "Orçamento parcial ou inconsistente",
+          "description": "A cidade tem um orçamento parcialmente definido ou fundo de contingência para alguns aspectos de redução de desastres climáticos (ex.: resposta e recuperação), mas a alocação é inconsistente, insuficiente ou não cobre todas as áreas como mitigação e prevenção. Ajuda dos governos nacional ou subnacional pode complementar o orçamento, especialmente em caso de evento climático."
+        },
+        "3": {
+          "label": "Orçamento substancial mas não abrangente",
+          "description": "A cidade tem um orçamento bem definido ou fundo de contingência para redução de desastres climáticos, cobrindo a maioria das áreas (mitigação, prevenção, resposta, recuperação), mas pode não ser totalmente abrangente ou garantido para necessidades de longo prazo. Para eventos extremos, ajuda nacional ou subnacional será importante."
+        },
+        "4": {
+          "label": "Orçamento ou fundo de contingência abrangente e dedicado",
+          "description": "A cidade tem um orçamento claramente definido e dedicado ou fundo de contingência especificamente para redução de desastres climáticos que cobre todos os aspectos (mitigação, prevenção, resposta, recuperação). Este orçamento é seguro, consistentemente financiado e adaptável a cenários de risco climático em mudança."
+        }
+      }
+    },
+    "5": {
+      "text": "A população passa por treinamento e sabe o que fazer em caso de eventos climáticos extremos?",
+      "options": {
+        "0": {
+          "label": "Sem treinamento ou conscientização",
+          "description": "A população não recebeu nenhum treinamento ou informação sobre como responder a eventos climáticos extremos, e não há conscientização pública sobre procedimentos de emergência."
+        },
+        "1": {
+          "label": "Conscientização limitada ou informal",
+          "description": "Há conscientização pública mínima, com algumas informações informais fornecidas, mas sem programas formais de treinamento. A maioria da população não sabe como responder a eventos climáticos extremos."
+        },
+        "2": {
+          "label": "Conscientização básica, treinamento limitado",
+          "description": "Alguns segmentos da população receberam treinamento básico ou informações sobre como responder a eventos climáticos extremos, mas o treinamento não é generalizado ou regularmente conduzido. Procedimentos de emergência são conhecidos por alguns, mas não por todos."
+        },
+        "3": {
+          "label": "Conscientização ampla, treinamento ocasional",
+          "description": "Uma parte significativa da população passou por treinamento e sabe como responder a eventos climáticos extremos. Existem procedimentos estabelecidos, e programas de treinamento são conduzidos ocasionalmente, embora não universalmente ou regularmente atualizados."
+        },
+        "4": {
+          "label": "Treinamento abrangente e simulações regulares",
+          "description": "A maior parte da população passa regularmente por treinamento abrangente, especialmente aqueles em áreas de risco, com conhecimento claro dos procedimentos de emergência para eventos climáticos extremos. Simulações regulares e campanhas de conscientização pública são conduzidas para garantir a preparação em todos os setores da sociedade."
+        }
+      }
+    }
+  }
+}

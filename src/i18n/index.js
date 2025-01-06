@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 // English translations
-import enAssessment from './locales/en/assessment.json';
+import enQualitativeAssessment from './locales/en/qualitative-assessment.json';
 import enCharts from './locales/en/charts.json';
 import enCityDropdown from './locales/en/city-dropdown.json';
 import enCommon from './locales/en/common.json';
@@ -19,9 +19,10 @@ import enRiskIntro from './locales/en/risk-intro.json';
 import enSections from './locales/en/sections.json';
 import enTooltips from './locales/en/tooltips.json';
 import enTranslation from './locales/en/translation.json';
+import enExport from './locales/en/export.json';
 
 // Portuguese translations
-import ptBRAssessment from './locales/pt-BR/assessment.json';
+import ptBRQualitativeAssessment from './locales/pt-BR/qualitative-assessment.json';
 import ptBRCharts from './locales/pt-BR/charts.json';
 import ptBRCityDropdown from './locales/pt-BR/city-dropdown.json';
 import ptBRCommon from './locales/pt-BR/common.json';
@@ -37,6 +38,7 @@ import ptBRRiskIntro from './locales/pt-BR/risk-intro.json';
 import ptBRSections from './locales/pt-BR/sections.json';
 import ptBRTooltips from './locales/pt-BR/tooltips.json';
 import ptBRTranslation from './locales/pt-BR/translation.json';
+import ptBRExport from './locales/pt-BR/export.json';
 
 i18n
   .use(LanguageDetector)
@@ -44,7 +46,7 @@ i18n
   .init({
     resources: {
       en: {
-        assessment: enAssessment,
+        'qualitative-assessment': enQualitativeAssessment,
         charts: enCharts,
         'city-dropdown': enCityDropdown,
         common: enCommon,
@@ -59,10 +61,11 @@ i18n
         'risk-intro': enRiskIntro,
         sections: enSections,
         tooltips: enTooltips,
-        translation: enTranslation
+        translation: enTranslation,
+        export: enExport 
       },
       'pt-BR': {
-        assessment: ptBRAssessment,
+        'qualitative-assessment': ptBRQualitativeAssessment,
         charts: ptBRCharts,
         'city-dropdown': ptBRCityDropdown,
         common: ptBRCommon,
@@ -77,13 +80,14 @@ i18n
         'risk-intro': ptBRRiskIntro,
         sections: ptBRSections,
         tooltips: ptBRTooltips,
-        translation: ptBRTranslation
+        translation: ptBRTranslation,
+        export: ptBRExport
       }
     },
     fallbackLng: 'en',
     debug: process.env.NODE_ENV === 'development',
     ns: [
-      'assessment',
+      'qualitative-assessment',
       'charts',
       'city-dropdown',
       'common',
@@ -98,7 +102,8 @@ i18n
       'risk-intro',
       'sections',
       'tooltips',
-      'translation'
+      'translation',
+      'export'
     ],
     defaultNS: 'translation',
     interpolation: {

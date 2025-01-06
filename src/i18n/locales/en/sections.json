@@ -60,6 +60,7 @@
     "title": "Access your data in one click",
     "description": "Export this visualization in the format that best suits your needs",
     "button": "Export as CSV",
+    "pdfButton": "Export as PDF",
     "exporting": "Exporting..."
   }
 }

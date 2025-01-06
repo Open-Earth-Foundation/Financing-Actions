@@ -21,7 +21,8 @@
     "headers": {
       "category": "Categoria",
       "indicator": "Indicador",
-      "score": "Pontuação",
+      "raw_score": "Valor",
+      "normalized_score": "Pontuação normalizada",
       "units": "Unidades",
       "year": "Ano",
       "source": "Fonte"

@@ -1,5 +1,12 @@
 {
   "sections": {
+    "intro": "Introdução",
+    "toprisks": "Principais Riscos",
+    "comparison": "Comparação de Riscos",
+    "projections_": "Projeções Futuras",
+    "table": "Tabela de Avaliação de Riscos",
+    "qualitative": "Avaliação Qualitativa",
+    "export": "Exportar Relatório",
     "top_risks": {
       "title": "Principais riscos para sua cidade",
       "description": "Visão geral dos riscos climáticos mais altos que afetam sua cidade com base em dados atuais e projeções."

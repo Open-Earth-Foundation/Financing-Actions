@@ -1,29 +1,59 @@
 {
-  "title": "Avaliação de Risco das Mudanças Climáticas",
+  "title": "O que você precisa saber sobre o CCRA",
   "description": "Compreenda os riscos climáticos e a vulnerabilidade da sua cidade através de uma análise abrangente",
   "sections": {
     "risk_score": {
       "title": "Pontuação de Risco",
       "description": "Medida combinada de risco, exposição e vulnerabilidade",
-      "tooltip": {
+      "cards": {
         "title": "Entendendo as Pontuações de Risco",
-        "content": "As pontuações de risco combinam probabilidade de risco, níveis de exposição e fatores de vulnerabilidade para fornecer uma medida abrangente do risco."
+        "content": "As pontuações de risco combinam probabilidade de risco, níveis de exposição e fatores de vulnerabilidade para fornecer uma medida abrangente do risco.",
+        "detailsCount": "3",
+        "details": {
+          "0": "A avaliação de riscos considera tanto os dados climáticos atuais quanto as projeções futuras",
+          "1": "A análise de exposição avalia a população e a infraestrutura em risco",
+          "2": "Os fatores de vulnerabilidade incluem condições sociais, econômicas e ambientais"
+        }
       }
     },
     "projections": {
       "title": "Projeções",
       "description": "Cenários futuros e suas implicações",
-      "tooltip": {
+      "cards": {
         "title": "Projeções Climáticas",
-        "content": "Veja como os riscos climáticos podem evoluir em diferentes cenários futuros com base em projeções científicas."
+        "content": "Veja como os riscos climáticos podem evoluir em diferentes cenários futuros com base em projeções científicas.",
+        "detailsCount": "3",
+        "details": {
+          "0": "Projeções de curto prazo (2030) para planejamento imediato",
+          "1": "Cenários de médio prazo (2050) para o desenvolvimento de infraestruturas",
+          "2": "Perspectiva de longo prazo (2100) para o planeamento estratégico"
+        }
       }
     },
     "adaptation": {
       "title": "Adaptação",
       "description": "Ações recomendadas com base em seus riscos",
-      "tooltip": {
+      "cards": {
         "title": "Estratégias de Adaptação",
-        "content": "Obtenha recomendações personalizadas para adaptar e mitigar os riscos climáticos identificados."
+        "content": "Obtenha recomendações personalizadas para adaptar e mitigar os riscos climáticos identificados.",
+        "detailsCount": "3",
+        "details": {
+          "0": "Melhorias em infraestrutura e planejamento urbano",
+          "1": "Envolvimento da comunidade e capacitação",
+          "2": "Desenvolvimento e implementação de políticas"
+        }
+      }
+    },
+    "cards": {
+      "sectionKey": {
+        "title": "Section Title",
+        "mainText": "Main section text",
+        "detailsCount": "3",
+        "details": {
+          "0": "Projeções de curto prazo (2030) para planejamento imediato",
+          "1": "Cenários de médio prazo (2050) para o desenvolvimento de infraestruturas",
+          "2": "Perspectiva de longo prazo (2100) para o planeamento estratégico"
+        }
       }
     }
   }

@@ -60,6 +60,7 @@
     "title": "Acesse seus dados em um clique",
     "description": "Exporte esta visualização no formato que melhor atende às suas necessidades",
     "button": "Exportar como CSV",
+    "pdfButton": "Exportar como PDF",
     "exporting": "Exportando..."
   }
 }

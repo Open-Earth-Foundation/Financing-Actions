@@ -3,15 +3,23 @@
   "sections": {
     "methodology": {
       "title": "Assessment Methodology",
-      "content": "Our CCRA methodology combines climate hazard data, exposure levels, and vulnerability indicators to calculate risk scores. We use data from AdaptaBrasil and apply the C40 risk assessment framework."
+      "content": "Our CCRA methodology combines climate hazard data, exposure levels, and vulnerability indicators to calculate risk scores. We use a three-component model with additional adjustment for resilience factors. The process involves raw score calculation, normalization, and vulnerability adjustment based on resilience measures."
     },
     "calculations": {
       "title": "Risk Score Calculations",
-      "content": "Risk scores are calculated using the formula: Risk = Hazard × Exposure × Vulnerability. Each component is normalized on a 0-1 scale, with higher scores indicating greater risk."
+      "content": "Risk scores use a core formula: Risk = Hazard × Exposure × Vulnerability. Each component is normalized on a 0-1 scale.\n\nThe base components are:\n• Hazard Score: Represents the likelihood and magnitude of a climate threat\n• Exposure Score: Indicates how exposed an area is to the hazard\n• Vulnerability Score: Measures how susceptible the area is to damage\n\nScores are then normalized using: Normalized Score = (Raw Score - Lower Bound) / (Upper Bound - Lower Bound)"
+    },
+    "resilience": {
+      "title": "Resilience Adjustment",
+      "content": "Resilience measures are incorporated through vulnerability adjustment:\n\n• High resilience scores (>0.5) reduce vulnerability\n• Low resilience scores (<0.5) increase vulnerability\n• A resilience score of 0.5 maintains original vulnerability\n\nThe adjustment uses the formula: Adjusted Vulnerability = Original Vulnerability × (1 + (0.5 - Resilience Score))"
+    },
+    "quality": {
+      "title": "Quality Control",
+      "content": "Our quality control measures include:\n\n• Bounds Protection: All scores are constrained between 0.01 and 0.99\n• Error Handling: Missing data returns null rather than incorrect calculations\n• Data Tracking: Original scores are preserved alongside adjusted scores"
     },
     "features": {
       "title": "Key Features",
-      "content": "• Data-driven risk assessment\n• Future climate projections\n• Qualitative assessment integration\n• Sector-specific analysis\n• Customizable reporting"
+      "content": "• Data-driven risk assessment\n• Future climate projections\n• Qualitative assessment integration\n• Sector-specific analysis\n• Customizable reporting\n• Original and adjusted score tracking\n• Resilience factor integration"
     }
   }
 }

@@ -1,26 +1,27 @@
 import React, { useState, forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  Radar,
-  ResponsiveContainer,
-  Tooltip
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer
 } from 'recharts';
 import { capitalize } from '../../utils/textUtils';
 import { RADIAL_COLORS } from '../../constants/radialColors';
 import { formatScore } from '../../constants/riskLevels';
 
-const getRadialColor = (index) => {
-  const colorKeys = ['first', 'second', 'third'];
-  return RADIAL_COLORS[colorKeys[index]]?.base || RADIAL_COLORS.first.base;
-};
-
 const formatKeyImpact = (keyimpact, t) => {
   const translationKey = `common:sectors.${keyimpact.toLowerCase()}`;
   return t(translationKey, { defaultValue: keyimpact });
+};
+
+// Function to truncate text with ellipsis
+const truncateText = (text, maxLength = 30) => {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength) + '...';
 };
 
 const CustomTooltip = ({ active, payload }) => {
@@ -30,7 +31,9 @@ const CustomTooltip = ({ active, payload }) => {
 
   return (
     <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200">
-      <p className="text-sm font-medium text-gray-900 mb-2">{payload[0].payload.name}</p>
+      <p className="text-sm font-medium text-gray-900 mb-2">
+        {payload[0].payload.fullName}
+      </p>
       {payload.map((entry, index) => (
         <div key={index} className="flex items-center gap-2 text-sm">
           <div 
@@ -51,40 +54,31 @@ const RadialComparison = forwardRef(({ riskAssessment }, ref) => {
   const { t } = useTranslation();
 
   const metrics = [
-    { key: "sensitivity_score", label: t('common:metrics.sensitivity') },
-    { key: "exposure_score", label: t('common:metrics.exposure') },
-    { key: "hazard_score", label: t('common:metrics.climate_threat') },
-    { key: "vulnerability_score", label: t('common:metrics.vulnerability') },
-    { key: "risk_score", label: t('common:metrics.risk') }
+    { key: "hazard_score", label: t('common:metrics.climate_threat'), color: RADIAL_COLORS.first.base },
+    { key: "exposure_score", label: t('common:metrics.exposure'), color: RADIAL_COLORS.third.base },
+    { key: "vulnerability_score", label: t('common:metrics.vulnerability'), color: RADIAL_COLORS.second.base }
   ];
 
   const topHazards = [...(riskAssessment || [])]
     .sort((a, b) => b.risk_score - a.risk_score)
     .slice(0, 3)
-    .map(risk => ({
-      id: `${risk.hazard}-${risk.keyimpact}`,
-      hazard: risk.hazard,
-      keyimpact: risk.keyimpact,
-      sensitivity_score: risk.sensitivity_score,
-      exposure_score: risk.exposure_score,
-      hazard_score: risk.hazard_score,
-      vulnerability_score: risk.vulnerability_score,
-      risk_score: risk.risk_score
-    }));
+    .map(risk => {
+      const fullName = `${t(`common:hazards.${risk.hazard.toLowerCase()}`)} (${formatKeyImpact(risk.keyimpact, t)})`;
+      return {
+        id: `${risk.hazard}-${risk.keyimpact}`,
+        fullName,
+        name: truncateText(fullName, 25),
+        hazard: risk.hazard,
+        keyimpact: risk.keyimpact,
+        hazard_score: risk.hazard_score,
+        exposure_score: risk.exposure_score,
+        vulnerability_score: risk.vulnerability_score
+      };
+    });
 
   const [selectedHazards, setSelectedHazards] = useState(
     topHazards.map(hazard => hazard.id)
   );
-
-  const chartData = metrics.map(metric => ({
-    name: metric.label,
-    ...topHazards.reduce((acc, hazard) => {
-      if (selectedHazards.includes(hazard.id)) {
-        acc[hazard.id] = hazard[metric.key];
-      }
-      return acc;
-    }, {})
-  }));
 
   const toggleHazard = (hazardId) => {
     setSelectedHazards(prev =>
@@ -109,75 +103,81 @@ const RadialComparison = forwardRef(({ riskAssessment }, ref) => {
           {t('common:labels.hazards')}:
         </label>
         <div className="flex flex-wrap gap-3">
-          {topHazards.map((hazard, index) => (
+          {topHazards.map((hazard) => (
             <button
               key={hazard.id}
               onClick={() => toggleHazard(hazard.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
-                hover:scale-105 active:scale-95
+                hover:scale-105 active:scale-95 max-w-[250px]
                 ${selectedHazards.includes(hazard.id)
-                  ? 'text-white shadow-sm'
+                  ? 'bg-blue-600 text-white shadow-sm'
                   : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
-              style={{
-                backgroundColor: selectedHazards.includes(hazard.id)
-                  ? getRadialColor(index)
-                  : undefined
-              }}
+              title={hazard.fullName}
             >
-              {`${t(`common:hazards.${hazard.hazard.toLowerCase()}`)} (${formatKeyImpact(hazard.keyimpact, t)})`}
+              <span className="block truncate">
+                {hazard.name}
+              </span>
             </button>
           ))}
         </div>
       </div>
 
-      <div className="flex-1">
-        <ResponsiveContainer width="100%" height={350}>
-          <RadarChart data={chartData} margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
-            <PolarGrid gridType="circle" strokeOpacity={0.2} />
-            <PolarAngleAxis
+      <div className="flex-1 min-h-[350px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={topHazards.filter(hazard => selectedHazards.includes(hazard.id))}
+            margin={{ top: 20, right: 30, bottom: 70, left: 30 }}
+            barGap={10}
+            barSize={35}
+          >
+            <CartesianGrid strokeDasharray="3 3" opacity={0.5} />
+            <XAxis
               dataKey="name"
-              tick={{ fill: '#575757', fontSize: 12, fontFamily: 'Inter' }}
+              tick={{ 
+                fill: '#575757', 
+                fontSize: 12, 
+                fontFamily: 'Inter',
+                width: 150,
+              }}
+              interval={0}
+              angle={-45}
+              textAnchor="end"
+              height={70}
             />
-            <PolarRadiusAxis
-              angle={30}
+            <YAxis
               domain={[0, 1]}
               tickFormatter={value => formatScore(value)}
-              tick={{ fontSize: 10, fontFamily: 'Inter', fill: '#D7D8FA' }}
+              tick={{ fontSize: 10, fontFamily: 'Inter', fill: '#575757' }}
               tickCount={5}
             />
             <Tooltip content={<CustomTooltip />} />
-            {topHazards.map((hazard, index) => (
-              selectedHazards.includes(hazard.id) && (
-                <Radar
-                  key={hazard.id}
-                  name={`${capitalize(t(`common:hazards.${hazard.hazard.toLowerCase()}`))} (${formatKeyImpact(hazard.keyimpact, t)})`}
-                  dataKey={hazard.id}
-                  stroke={getRadialColor(index)}
-                  fill={getRadialColor(index)}
-                  fillOpacity={0.3}
-                  dot={{ fill: getRadialColor(index), radius: 4 }}
-                />
-              )
+            {metrics.map((metric) => (
+              <Bar
+                key={metric.key}
+                dataKey={metric.key}
+                name={capitalize(metric.label)}
+                fill={metric.color}
+                radius={[4, 4, 0, 0]}
+              />
             ))}
-          </RadarChart>
+          </BarChart>
         </ResponsiveContainer>
       </div>
 
-      <div className="m-auto mt-6 flex flex-wrap gap-4">
-        {topHazards.map((hazard, index) => (
-          <div key={hazard.id} className="flex items-center gap-2">
-            <div 
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: getRadialColor(index) }}
-            />
-            <span
-              style={{ color: selectedHazards.includes(hazard.id) ? getRadialColor(index) : '#6B7280' }}
-              className="text-sm font-medium transition-colors"
-            >
-              {`${capitalize(t(`common:hazards.${hazard.hazard.toLowerCase()}`))} (${formatKeyImpact(hazard.keyimpact, t)})`}
-            </span>
-          </div>
-        ))}
+      <div className="mt-6 flex justify-center items-center">
+        <div className="flex flex-wrap gap-4 justify-center">
+          {metrics.map((metric) => (
+            <div key={metric.key} className="flex items-center gap-2">
+              <div 
+                className="w-3 h-3 rounded-full"
+                style={{ backgroundColor: metric.color }}
+              />
+              <span className="text-sm font-medium text-gray-600">
+                {capitalize(metric.label)}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

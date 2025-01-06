@@ -16,19 +16,14 @@ const calculateAdjustedVulnerability = (vulnerability, resilienceScore, indicato
     return Number(vulnerability);
   }
 
-  // Calculate weight based on indicator count for this specific hazard/keyimpact
-  const weight = indicatorCount > 0 ? indicatorCount / (indicatorCount + 1) : 0.5;
+  // Calculate raw vulnerability using the new formula: v2 = v1 + v1(0.5-RS)
+  const rawVulnerability = Number(vulnerability) * (1 + (0.5 - resilienceScore));
 
-  // Calculate adjusted vulnerability using resilience score
-  const adjustedVulnerability = weight * Number(vulnerability) + 
-                               (1 - weight) * (Number(vulnerability) * (1 + (1 - resilienceScore)));
-
-  return Math.max(0, Math.min(1, adjustedVulnerability));
+  // Ensure the result stays within bounds (0.01 to 0.99)
+  return Math.max(0.01, Math.min(0.99, rawVulnerability));
 };
 
 const calculateAdjustedRiskAssessment = (data, resilienceScore, indicatorCounts, bounds) => {
-
-
   if (!data) return null;
 
   try {

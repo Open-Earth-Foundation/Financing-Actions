@@ -1,5 +1,12 @@
 {
   "sections": {
+    "intro": "Introduction",
+    "toprisks": "Top Risks",
+    "comparison": "Risk Comparison",
+    "projections_": "Future Projections",
+    "table": "Risk Assessment Table",
+    "qualitative": "Qualitative Assessment",
+    "export": "Export Report",
     "top_risks": {
       "title": "Top risks for your city",
       "description": "Overview of the highest risk climate hazards affecting your city based on current data and projections."
