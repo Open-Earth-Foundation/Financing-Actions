@@ -185,6 +185,15 @@ const RiskAssessment = forwardRef(({ cityname, region, actor_id, osm_id, onBack 
           />
         </div>
         
+        {/* Projections Section */}
+        <div id="projections" className="scroll-mt-24 bg-white rounded-2xl shadow-sm p-4 sm:p-6">
+          <SectionHeader
+            title={t("sections:projections.title")}
+            description={t("sections:projections.description")}
+            insights={t("sections:projections.insights")}
+          />
+          <HazardProjections projectionData={projectionData} />
+        </div>
 
         {/* Risk Comparisons Section */}
         <div id="comparison" className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
@@ -205,16 +214,6 @@ const RiskAssessment = forwardRef(({ cityname, region, actor_id, osm_id, onBack 
             />
             <RiskDistributionChart riskAssessment={processedRiskData} />
           </div>
-        </div>
-
-        {/* Projections Section */}
-        <div id="projections" className="scroll-mt-24 bg-white rounded-2xl shadow-sm p-4 sm:p-6">
-          <SectionHeader
-            title={t("sections:projections.title")}
-            description={t("sections:projections.description")}
-            insights={t("sections:projections.insights")}
-          />
-          <HazardProjections projectionData={projectionData} />
         </div>
 
         {/* CCRA Table Section */}

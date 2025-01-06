@@ -38,6 +38,11 @@
     "insights": "Compare risk scores and components across different hazards. Pay special attention to the relationship between hazard, exposure, and vulnerability scores to understand what drives each risk level.",
     "description_with_assessment": "Detailed breakdown of risk assessment data showing all analyzed hazards and their components. Values have been adjusted based on Qualitative Assessment results.",
     "no_data": "No risk assessment data available",
+    "filters": {
+      "title": "Filters",
+      "clear": "Clear filters",
+      "active_filters": "Active filters"
+    },
     "columns": {
       "year": "Year",
       "key_impact": "Key Impact",

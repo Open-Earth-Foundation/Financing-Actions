@@ -47,5 +47,14 @@
     "geo-hydrological_disasters": "Desastres Geo-hidrológicos",
     "other": "Outro"
   },
-  "region": "Região"
+  "region": "Região",
+  "filters": {
+    "all": "All",
+    "clear": "Clear filters"
+  },
+  "filter_types": {
+    "key_impact": "Impacto Chave",
+    "hazard": "Risco",
+    "risk_level": "Nivel de Risco"
+  }
 }

@@ -46,5 +46,14 @@
     "agricultural_production": "Agricultural Production",
     "other": "Other"
   },
-  "region": "Region"
+  "region": "Region",
+  "filters": {
+    "all": "All",
+    "clear": "Clear filters"
+  },
+  "filter_types": {
+    "key_impact": "Key Impact",
+    "hazard": "Hazard",
+    "risk_level": "Risk Level"
+  }
 }

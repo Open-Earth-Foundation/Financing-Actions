@@ -38,6 +38,11 @@
     "insights":"Compare pontuações de risco e componentes em diferentes perigos. Preste atenção especial à relação entre pontuações de risco, exposição e vulnerabilidade para entender o que impulsiona cada nível de risco.",
     "description_with_assessment": "Detalhamento dos dados de avaliação de risco mostrando todos os riscos analisados e seus componentes. Valores foram ajustados com base nos resultados da Avaliação Qualitativa.",
     "no_data": "Nenhum dado de avaliação de risco disponível",
+    "filters": {
+      "title": "Filtros",
+      "clear": "Limpar",
+      "active_filters": "Filtros Ativos"
+    },
     "columns": {
       "year": "Ano",
       "key_impact": "Impacto Chave",

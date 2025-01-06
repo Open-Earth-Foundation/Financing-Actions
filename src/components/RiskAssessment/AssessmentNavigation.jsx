@@ -10,8 +10,8 @@ const AssessmentNavigation = () => {
   const sections = [
     { id: 'intro', label: t('risk-assessment:sections.intro') },
     { id: 'top-risks', label: t('risk-assessment:sections.toprisks') },
-    { id: 'comparison', label: t('risk-assessment:sections.comparison') },
     { id: 'projections', label: t('risk-assessment:sections.projections_') },
+    { id: 'comparison', label: t('risk-assessment:sections.comparison') },
     { id: 'table', label: t('risk-assessment:sections.table') },
     { id: 'qualitative', label: t('risk-assessment:sections.qualitative') },
     { id: 'export', label: t('risk-assessment:sections.export') }
