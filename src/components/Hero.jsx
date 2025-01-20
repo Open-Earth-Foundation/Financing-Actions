@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Lightbulb } from 'lucide-react';
 import CityDropdown from './CityDropdown';
 import QuickAccessCities from './QuickAccessCities';
 import DataPointsAnimation from './animations/DataPointsAnimation';
-import { CCRA_TOOLTIPS } from '../constants/tooltipContent';
+import { useData } from '../data/DataContext';
 
 const Hero = ({ onSearch, initialCity }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { cityData } = useData();
+
+  // Determine if we're on the home page
+  const isHomePage = location.pathname === '/';
 
   const handleCitySelect = (cityData) => {
-    onSearch(cityData);
+    if (cityData?.actor_id) {
+      // Call the parent handler for any additional logic
+      onSearch?.(cityData);
+
+      // Navigate to the city route
+      navigate(`/cities/${cityData.actor_id}`);
+    }
   };
+
+  // Effect to handle initial city data
+  useEffect(() => {
+    if (isHomePage && cityData) {
+      // If we're on home page but have city data, we might want to show it
+      handleCitySelect(cityData);
+    }
+  }, [isHomePage, cityData]);
 
   return (
     <div className="hero">
@@ -39,6 +60,7 @@ const Hero = ({ onSearch, initialCity }) => {
             </h2>
             <CityDropdown 
               onCityChange={handleCitySelect}
+              initialCity={cityData} // Pass cityData as initial value
               styles={{
                 control: (base) => ({
                   ...base,

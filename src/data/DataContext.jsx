@@ -21,7 +21,6 @@ const countVulnerabilityIndicators = (indicators) => {
 
   indicators.forEach(indicator => {
     if (!indicator.hazard || !indicator.keyimpact) return;
-
     const key = `${indicator.hazard}_${indicator.keyimpact}`.toLowerCase();
     if (indicator.category?.toLowerCase() === 'vulnerability') {
       counts[key] = (counts[key] || 0) + 1;
@@ -39,11 +38,10 @@ export const DataProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [currentResilienceScore, setCurrentResilienceScore] = useState(null);
+  const [cityData, setCityData] = useState(null);
 
   const processRiskAssessmentData = useCallback((rawData, vulnIndicatorCounts, resilience = null) => {
     if (!rawData || !Array.isArray(rawData)) return [];
-
-    console.log('Processing raw data with resilience:', resilience);
 
     const groupedRisks = rawData.reduce((acc, risk) => {
       const key = `${risk.hazard}_${risk.keyimpact}`.toLowerCase();
@@ -75,23 +73,12 @@ export const DataProvider = ({ children }) => {
   const updateRiskAssessment = useCallback((rawRiskData, vulnIndicatorCounts, resilience = null) => {
     if (!rawRiskData?.length) return;
 
-    console.log('Updating risk assessment:', {
-      riskCount: rawRiskData.length,
-      hasResilience: resilience !== null,
-      resilienceScore: resilience
-    });
-
     const processedData = processRiskAssessmentData(rawRiskData, vulnIndicatorCounts, resilience);
     setRiskAssessment(processedData);
   }, [processRiskAssessmentData]);
 
   const updateResilienceScore = useCallback((resilience) => {
-    console.log('Resilience score update requested:', resilience);
-
-    if (resilience === currentResilienceScore) {
-      console.log('Skipping identical resilience score update');
-      return;
-    }
+    if (resilience === currentResilienceScore) return;
 
     setCurrentResilienceScore(resilience);
 
@@ -114,16 +101,20 @@ export const DataProvider = ({ children }) => {
       setError(null);
       setCurrentResilienceScore(null);
 
-      const indicatorData = await ccraApi.getIndicatorDetails(actor_id, 'current');
-      const vulnCounts = countVulnerabilityIndicators(indicatorData);
-      setIndicatorCounts(vulnCounts);
-      setIndicators(indicatorData);
+      // First fetch city metadata
+      const cityMetadata = await ccraApi.getCityMetadata(actor_id);
+      setCityData(cityMetadata);
 
-      const [currentData, optimisticData, pessimisticData] = await Promise.all([
+      const [indicatorData, currentData, optimisticData, pessimisticData] = await Promise.all([
+        ccraApi.getIndicatorDetails(actor_id, 'current'),
         ccraApi.getRiskAssessment(actor_id, 'current'),
         ccraApi.getRiskAssessment(actor_id, 'optimistic'),
         ccraApi.getRiskAssessment(actor_id, 'pesimistic')
       ]);
+
+      const vulnCounts = countVulnerabilityIndicators(indicatorData);
+      setIndicatorCounts(vulnCounts);
+      setIndicators(indicatorData);
 
       updateRiskAssessment(currentData, vulnCounts, null);
 
@@ -160,6 +151,7 @@ export const DataProvider = ({ children }) => {
       setProjectionData(null);
       setIndicators([]);
       setIndicatorCounts({});
+      setCityData(null);
     } finally {
       setLoading(false);
     }
@@ -171,11 +163,20 @@ export const DataProvider = ({ children }) => {
     indicators,
     loading,
     error,
+    cityData,
+    currentResilienceScore,
     fetchCityData,
     updateResilienceScore,
-    currentResilienceScore,
+    setRiskAssessment,
+    setProjectionData,
+    setIndicators,
+    setIndicatorCounts,
+    setCityData,
+    setCurrentResilienceScore,
     normalizeScore
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 };
+
+export default DataContext;

@@ -1,16 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import Select from 'react-select';
 import ccraApi from '../api/ccraApi';
 import { BRAZILIAN_STATES, getStateName } from '../utils/brazilianStates';
+import { useData } from '../data/DataContext';
 
-const CityDropdown = ({ onCityChange, styles }) => {
+const CityDropdown = ({ onCityChange, styles, initialCity }) => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const { cityData } = useData();
   const [cities, setCities] = useState([]);
   const [selectedCity, setSelectedCity] = useState(null);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Reset selections when location changes to root
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setSelectedCity(null);
+      setSelectedRegion(null);
+    }
+  }, [location]);
+
 
   // Get unique regions from cities with full state names
   const regions = React.useMemo(() => {
@@ -64,6 +77,7 @@ const CityDropdown = ({ onCityChange, styles }) => {
     }));
   }, [filteredCities]);
 
+  // Effect to fetch cities
   useEffect(() => {
     let isSubscribed = true;
 
@@ -104,6 +118,28 @@ const CityDropdown = ({ onCityChange, styles }) => {
     };
   }, [t]);
 
+  // Effect to handle initial city data and URL-based selection
+  useEffect(() => {
+    if (cityData && cities.length > 0) {
+      const city = cities.find(c => c.actor_id === cityData.actor_id);
+      if (city) {
+        const region = regions.find(r => r.originalValue === city.region);
+        if (region) {
+          setSelectedRegion(region);
+          const cityOption = {
+            value: city.actor_id,
+            label: city.cityname,
+            cityname: city.cityname,
+            region: city.region,
+            actor_id: city.actor_id,
+            osm_id: city.osm_id
+          };
+          setSelectedCity(cityOption);
+        }
+      }
+    }
+  }, [cityData, cities, regions]);
+
   const handleRegionChange = (selectedOption) => {
     setSelectedRegion(selectedOption);
     setSelectedCity(null);
@@ -137,7 +173,6 @@ const CityDropdown = ({ onCityChange, styles }) => {
         position: 'static',
       },
     }),
-    // ... (rest of the styles remain unchanged)
   };
 
   if (error) {
