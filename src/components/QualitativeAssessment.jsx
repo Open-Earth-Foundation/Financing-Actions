@@ -15,7 +15,8 @@ const QualitativeAssessment = ({
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
 
-  const questions = Array.from({ length: 5 }, (_, i) => ({
+  // Updated to 8 questions instead of 5
+  const questions = Array.from({ length: 8 }, (_, i) => ({
     id: i + 1,
     text: t(`questions.${i + 1}.text`),
     options: Array.from({ length: 5 }, (_, j) => ({
@@ -35,8 +36,8 @@ const QualitativeAssessment = ({
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
     } else {
-      // Calculate final score only once and update parent
-      const finalScore = Object.values(newAnswers).reduce((sum, val) => sum + val, 0) / 20;
+      // Updated calculation to divide by 32 (8 questions × max score of 4)
+      const finalScore = Object.values(newAnswers).reduce((sum, val) => sum + val, 0) / 32;
       onScoreUpdate(finalScore);
     }
   };

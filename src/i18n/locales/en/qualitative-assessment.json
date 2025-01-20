@@ -1,163 +1,238 @@
-{
-  "title": "Qualitative Assessment",
-  "progress": "Question {{current}} of {{total}}",
-  "buttons": {
-    "back": "Back",
-    "retake": "Retake Assessment",
-    "close": "Close Assessment"
-  },
-  "results": {
-    "title": "Assessment Complete",
-    "resilience_level": "Resilience",
-    "description": "Assessment based on questionnaire responses"
-  },
-  "resilience_levels": {
-    "very_low": {
-      "label": "Very Low",
-      "description": "Limited capacity to respond to climate risks"
-    },
-    "low": {
-      "label": "Low",
-      "description": "Basic awareness and minimal preparedness"
-    },
-    "medium": {
-      "label": "Medium",
-      "description": "Established measures but room for improvement"
-    },
-    "high": {
-      "label": "High",
-      "description": "Strong preparedness and adaptation capacity"
-    },
-    "very_high": {
-      "label": "Very High",
-      "description": "Comprehensive climate resilience measures"
-    }
-  },
-  "questions": {
-    "1": {
-      "text": "Does the city master plan (or other relevant strategy plan) include disaster risk reduction or disaster risk response aspects?",
-      "options": {
-        "0": {
-          "label": "Not addressed at all",
-          "description": "The master plan or any other relevant strategy plan does not mention disaster risk reduction or disaster risk response."
-        },
-        "1": {
-          "label": "Minimally addressed",
-          "description": "Disaster risk reduction or response is briefly mentioned, but there are no concrete actions or detailed strategies."
-        },
-        "2": {
-          "label": "Partially addressed",
-          "description": "The master plan or other strategic plan includes disaster risk reduction or response, but it is limited to a few aspects or sectors without a comprehensive approach."
-        },
-        "3": {
-          "label": "Substantially addressed",
-          "description": "Disaster risk reduction or response is well-covered in the master plan / strategic plan, with defined strategies and actions, but lacks full integration across all sectors or clear implementation mechanisms."
-        },
-        "4": {
-          "label": "Fully integrated and actionable",
-          "description": "Disaster risk reduction or response is fully incorporated into the master plan or other strategic plan, with clear strategies, actions, and implementation plans across all sectors, including monitoring and review mechanisms."
-        }
-      }
-    },
-    "2": {
-      "text": "Is there an agency, secretariat, or institution with appropriate authority and resources for climate risk response and reduction?",
-      "options": {
-        "0": {
-          "label": "No institution exists",
-          "description": "There is no agency, secretariat, or institution responsible for climate risk response and reduction, including entities like the Civil Defense."
-        },
-        "1": {
-          "label": "Exists but lacks authority or resources",
-          "description": "There is an institution, such as the Civil Defense, responsible for some climate risk response tasks, but it lacks either the authority or the necessary resources (staff, funding, equipment) to be effective."
-        },
-        "2": {
-          "label": "Institution exists with limited capacity",
-          "description": "An institution like the Civil Defense is in place with some authority and resources, but it is underfunded or only partially equipped to handle climate risk response and reduction comprehensively."
-        },
-        "3": {
-          "label": "Well-established institution with moderate capacity",
-          "description": "There is a well-functioning institution, such as the Civil Defense, with clear authority and moderate resources to manage climate risk response and reduction, though some areas may still need improvement or additional resources."
-        },
-        "4": {
-          "label": "Fully capable institution",
-          "description": "There is a dedicated institution (e.g., the Civil Defense or similar) with full authority, sufficient resources, and demonstrated capacity to effectively manage and coordinate climate risk response and reduction across sectors, with the ability to scale operations when necessary."
-        }
-      }
-    },
-    "3": {
-      "text": "Does the city have a clear knowledge of its main impacts and areas prone to climate-related risks?",
-      "options": {
-        "0": {
-          "label": "No knowledge or risk mapping",
-          "description": "The city has no understanding of its main climate-related impacts, and no risk mapping or assessment of areas prone to climate-related risks has been conducted."
-        },
-        "1": {
-          "label": "Limited knowledge, no formal mapping",
-          "description": "The city has some awareness of its climate-related impacts, but there is no formal or comprehensive risk mapping of vulnerable areas. Knowledge is based on anecdotal evidence or isolated events."
-        },
-        "2": {
-          "label": "Partial knowledge with basic mapping",
-          "description": "The city has identified some key climate-related risks and has conducted basic risk mapping, but the mapping is incomplete, outdated, or covers only certain regions or impacts."
-        },
-        "3": {
-          "label": "Substantial knowledge with risk mapping",
-          "description": "The city has a good understanding of its main climate-related risks and has conducted detailed risk mapping for most vulnerable areas, although there may be gaps in data or coverage of certain impacts."
-        },
-        "4": {
-          "label": "Comprehensive knowledge with up-to-date risk mapping",
-          "description": "The city has a clear, comprehensive understanding of its climate-related impacts and has developed up-to-date, detailed risk mapping that covers all vulnerable areas and risks. This mapping is regularly reviewed and informs policy and planning decisions."
-        }
-      }
-    },
-    "4": {
-      "text": "Does the city have a defined restricted budget or contingency fund for climate disaster reduction (mitigation, prevention, response, and recovery)?",
-      "options": {
-        "0": {
-          "label": "No budget or contingency fund",
-          "description": "The city has no specific budget or contingency fund allocated for climate disaster reduction, including mitigation, prevention, response, or recovery efforts, so it depends on national or subnational aid."
-        },
-        "1": {
-          "label": "Minimal or informal budget allocation",
-          "description": "The city has some informal or minimal allocation of funds for climate disaster reduction, but it is not clearly defined or restricted specifically for these purposes. National or subnational aid is still very important in case a climate event occur."
-        },
-        "2": {
-          "label": "Partial or inconsistent budget",
-          "description": "The city has a partially defined budget or contingency fund for some aspects of climate disaster reduction (e.g., response and recovery), but the allocation is inconsistent, insufficient, or does not cover all areas such as mitigation and prevention. Aid from national or subnational government can complement the budget, specially in case a climate event occurs."
-        },
-        "3": {
-          "label": "Substantial but non-comprehensive budget",
-          "description": "The city has a well-defined budget or contingency fund for climate disaster reduction, covering most areas (mitigation, prevention, response, recovery), but it may not be fully comprehensive or guaranteed for long-term needs. For extreme events, national or subnational aid will be important."
-        },
-        "4": {
-          "label": "Comprehensive, dedicated budget or contingency fund",
-          "description": "The city has a clearly defined, dedicated budget or contingency fund specifically for climate disaster reduction that covers all aspects (mitigation, prevention, response, recovery). This budget is secure, consistently funded, and adaptable to changing climate risk scenarios."
-        }
-      }
-    },
-    "5": {
-      "text": "Does the population undergo training and know what to do in the event of extreme weather events?",
-      "options": {
-        "0": {
-          "label": "No training or awareness",
-          "description": "The population has not received any training or information on how to respond to extreme weather events, and there is no public awareness of emergency procedures."
-        },
-        "1": {
-          "label": "Limited or informal awareness",
-          "description": "There is minimal public awareness, with some informal information provided, but no formal training programs. Most of the population does not know how to respond to extreme weather events."
-        },
-        "2": {
-          "label": "Basic awareness, limited training",
-          "description": "Some segments of the population have received basic training or information on how to respond to extreme weather events, but the training is not widespread or regularly conducted. Emergency procedures are known to some but not to all."
-        },
-        "3": {
-          "label": "Widespread awareness, occasional training",
-          "description": "A significant portion of the population has undergone training and knows how to respond to extreme weather events. There are established procedures, and training programs are conducted occasionally, though not universally or regularly updated."
-        },
-        "4": {
-          "label": "Comprehensive training and regular drills",
-          "description": "Most of the population regularly undergoes comprehensive training, especially the ones in risk areas, with clear knowledge of emergency procedures for extreme weather events. Regular drills and public awareness campaigns are conducted to ensure preparedness across all sectors of society."
-        }
-      }
-    }
-  }
-}
+          {
+            "title": "Qualitative Assessment",
+            "progress": "Question {{current}} of {{total}}",
+            "buttons": {
+              "back": "Back",
+              "retake": "Retake Assessment",
+              "close": "Close Assessment"
+            },
+            "results": {
+              "title": "Assessment Complete",
+              "resilience_level": "Resilience",
+              "description": "Assessment based on questionnaire responses"
+            },
+            "resilience_levels": {
+              "very_low": {
+                "label": "Very Low",
+                "description": "Limited capacity to respond to climate risks"
+              },
+              "low": {
+                "label": "Low",
+                "description": "Basic awareness and minimal preparedness"
+              },
+              "medium": {
+                "label": "Medium",
+                "description": "Established measures but room for improvement"
+              },
+              "high": {
+                "label": "High",
+                "description": "Strong preparedness and adaptation capacity"
+              },
+              "very_high": {
+                "label": "Very High",
+                "description": "Comprehensive climate resilience measures"
+              }
+            },
+            "questions": {
+              "1": {
+                "text": "Does the city master plan (or other relevant strategy plan) include disaster risk reduction, disaster risk response aspects or adaptation strategies that take climate change into account?",
+                "options": {
+                  "0": {
+                    "label": "Not addressed at all",
+                    "description": "The master plan or any other relevant strategy plan does not mention disaster risk reduction or disaster risk response."
+                  },
+                  "1": {
+                    "label": "Minimally addressed",
+                    "description": "Disaster risk reduction or response is briefly mentioned, but there are no concrete actions or detailed strategies."
+                  },
+                  "2": {
+                    "label": "Partially addressed",
+                    "description": "The master plan includes disaster risk reduction or response, but it is limited to a few aspects or sectors without a comprehensive approach. The strategic document does not use climate projections to define long-term actions."
+                  },
+                  "3": {
+                    "label": "Substantially addressed",
+                    "description": "Disaster risk reduction or response is well-covered in the master plan, with defined strategies and actions, but lacks full integration across all sectors or clear implementation mechanisms. It takes into account aspects of climate change, but without using climate projections."
+                  },
+                  "4": {
+                    "label": "Fully integrated and actionable",
+                    "description": "Disaster risk reduction or response is fully incorporated into the master plan, with clear strategies, long-term actions, and implementation plans across all sectors, including monitoring mechanisms. It uses climate projections to predict how actions should evolve over time."
+                  }
+                }
+              },
+              "2": {
+                "text": "Is there an agency, secretariat, or institution with appropriate authority and resources for Climate Change Adaptation and reduction in the city?",
+                "options": {
+                  "0": {
+                    "label": "No institution exists",
+                    "description": "There is no agency, secretariat, or institution responsible for climate risk response and reduction in the city."
+                  },
+                  "1": {
+                    "label": "Exists but lacks authority or resources",
+                    "description": "There is an institution responsible for some climate risk response tasks, but it lacks either the authority or the necessary resources (staff, funding, equipment) to be effective."
+                  },
+                  "2": {
+                    "label": "Institution exists with limited capacity",
+                    "description": "An institution is in place with some authority and resources, but it is underfunded or only partially equipped to handle climate risk response and reduction comprehensively."
+                  },
+                  "3": {
+                    "label": "Well-established institution with moderate capacity",
+                    "description": "There is a well-functioning institution with clear authority and moderate resources to manage climate risk response and reduction, though some areas may still need improvement."
+                  },
+                  "4": {
+                    "label": "Fully capable institution",
+                    "description": "There is a dedicated institution with full authority, sufficient resources, and demonstrated capacity to effectively manage and coordinate climate risk response and reduction across sectors."
+                  }
+                }
+              },
+              "3": {
+                "text": "Does the city have a defined restricted budget or contingency fund for climate disaster reduction or climate adaptation?",
+                "options": {
+                  "0": {
+                    "label": "No budget or contingency fund",
+                    "description": "The city has no specific budget or contingency fund allocated for climate disaster reduction or adaptation, so it depends on national or subnational aid."
+                  },
+                  "1": {
+                    "label": "Minimal or informal budget allocation",
+                    "description": "The city has some informal or minimal allocation of funds, but it is not clearly defined or restricted specifically for these purposes. National or subnational aid is still very important."
+                  },
+                  "2": {
+                    "label": "Partial or inconsistent budget",
+                    "description": "The city has a partially defined budget for some aspects of climate disaster reduction or adaptation, but the allocation is inconsistent or insufficient."
+                  },
+                  "3": {
+                    "label": "Substantial but non-comprehensive budget",
+                    "description": "The city has a well-defined budget covering most areas, but it may not be fully comprehensive or guaranteed for long-term needs."
+                  },
+                  "4": {
+                    "label": "Comprehensive, dedicated budget",
+                    "description": "The city has a clearly defined, dedicated budget that covers all aspects. This budget is secure, consistently funded, and adaptable to changing climate risk scenarios."
+                  }
+                }
+              },
+              "4": {
+                "text": "Does a coordinated public relations and education campaign exist in the city to ensure hazard, risk and disaster information is properly disseminated to the public?",
+                "options": {
+                  "0": {
+                    "label": "No campaign exists",
+                    "description": "There is no public relations or education campaign in place to disseminate hazard, risk, and disaster information to the public."
+                  },
+                  "1": {
+                    "label": "Minimal effort",
+                    "description": "There are sporadic efforts to inform the public, but no structured or coordinated campaign exists."
+                  },
+                  "2": {
+                    "label": "Basic campaign",
+                    "description": "A public relations and education campaign exists in at least 1 or 2 media channels, but it lacks wide reach to ensure proper dissemination of information."
+                  },
+                  "3": {
+                    "label": "Well-developed campaign",
+                    "description": "A coordinated campaign exists in at least 3 media channels with structured messaging, but it may not fully ensure the information is easily understood by all segments of the public."
+                  },
+                  "4": {
+                    "label": "Comprehensive campaign",
+                    "description": "A fully coordinated campaign exists, with structured messaging and diverse channels that effectively ensure hazard, risk, and disaster information is widely disseminated and understood."
+                  }
+                }
+              },
+              "5": {
+                "text": "Has the city implemented early warning systems for climate-related hazards?",
+                "options": {
+                  "0": {
+                    "label": "No early warning systems",
+                    "description": "The city has not implemented any early warning systems for climate-related hazards. There is no formal mechanism to alert residents of potential risks."
+                  },
+                  "1": {
+                    "label": "Limited systems",
+                    "description": "The city has not implemented early warning systems, although hazards are communicated through some channels. These systems are not comprehensive or widely known by the population."
+                  },
+                  "2": {
+                    "label": "Basic early warning systems",
+                    "description": "The city has basic early warning systems in place for some climate-related hazards. However, these systems have limited coverage or are not regularly updated."
+                  },
+                  "3": {
+                    "label": "Advanced and integrated systems",
+                    "description": "The city has advanced warning systems that are integrated with disaster response plans. These systems cover multiple hazards and provide timely alerts through diverse communication channels."
+                  },
+                  "4": {
+                    "label": "Comprehensive and community-centric systems",
+                    "description": "The city has fully comprehensive warning systems that are well-integrated into its climate adaptation strategies. These systems are inclusive, accessible to all residents, and regularly updated."
+                  }
+                }
+              },
+              "6": {
+                "text": "What level of coordination exists between different municipal departments for climate action?",
+                "options": {
+                  "0": {
+                    "label": "No coordination",
+                    "description": "There is no coordination between municipal departments for climate action. Each department works independently, with no shared goals or communication regarding climate initiatives."
+                  },
+                  "1": {
+                    "label": "Informal coordination",
+                    "description": "Some informal communication exists between departments. However, there are no established processes or dedicated resources to ensure consistent coordination for climate action."
+                  },
+                  "2": {
+                    "label": "Basic coordination",
+                    "description": "The city has established basic mechanisms for coordination, such as periodic meetings or shared reports between departments. These efforts are limited in scope and effectiveness."
+                  },
+                  "3": {
+                    "label": "Integrated coordination",
+                    "description": "The city has a structured framework for interdepartmental coordination, including shared climate action plans and clear roles. Departments work together regularly to align efforts."
+                  },
+                  "4": {
+                    "label": "Comprehensive coordination",
+                    "description": "The city demonstrates high-level, strategic coordination between all relevant departments. Climate action is embedded across municipal policies, with strong leadership and monitoring mechanisms."
+                  }
+                }
+              },
+              "7": {
+                "text": "To what extent does the city involve vulnerable communities in climate adaptation planning and implementation?",
+                "options": {
+                  "0": {
+                    "label": "Minimal engagement",
+                    "description": "The city does not actively involve vulnerable communities in climate adaptation planning or implementation. There is limited awareness of these communities' specific needs."
+                  },
+                  "1": {
+                    "label": "Awareness stage",
+                    "description": "The city acknowledges the importance of involving vulnerable communities but does so sporadically or informally. Engagement is limited to occasional consultations."
+                  },
+                  "2": {
+                    "label": "Basic inclusion",
+                    "description": "The city includes vulnerable communities in planning processes through structured but limited participation. Their input has minor influence on final decisions."
+                  },
+                  "3": {
+                    "label": "Collaborative approach",
+                    "description": "The city actively collaborates with vulnerable communities, ensuring their voices are heard in both planning and implementation phases through advisory councils or partnerships."
+                  },
+                  "4": {
+                    "label": "Community-driven leadership",
+                    "description": "The city empowers vulnerable communities to take a leadership role in climate adaptation planning and implementation. Their input is central to decision-making and resource allocation."
+                  }
+                }
+              },
+              "8": {
+                "text": "Does the city have a disaster response and recovery plan that specifically addresses climate-related events?",
+                "options": {
+                  "0": {
+                    "label": "No plan in place",
+                    "description": "The city does not have a disaster response and recovery plan that specifically addresses climate-related events. Any existing response efforts are reactive."
+                  },
+                  "1": {
+                    "label": "General plan without specific focus",
+                    "description": "The city has a general disaster response plan, but it does not explicitly address climate-related events or their unique challenges."
+                  },
+                  "2": {
+                    "label": "Basic climate considerations",
+                    "description": "The city has a disaster response plan that acknowledges climate-related events, with some measures specifically tailored to these challenges, but lacks detail or regular updates."
+                  },
+                  "3": {
+                    "label": "Comprehensive targeted plan",
+                    "description": "The city has a well-developed disaster response plan that specifically addresses climate-related events, with clear protocols and regular updates based on new climate data."
+                  },
+                  "4": {
+                    "label": "Integrated proactive approach",
+                    "description": "The city has an advanced, climate-specific disaster response plan that is fully integrated with broader adaptation strategies and includes robust implementation mechanisms."
+                  }
+                }
+              }
+            }
+          }
