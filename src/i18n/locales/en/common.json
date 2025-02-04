@@ -32,7 +32,8 @@
     "rainfall": "Rainfall",
     "temperature": "Temperature",
     "diseases": "Diseases",
-    "sea level rise": "Sea level rise"
+    "sea level rise": "Sea level rise",
+    "erosion": "Erosion"
   },
   "sectors": {
     "water_resources": "Water Resources",
@@ -55,5 +56,8 @@
     "key_impact": "Key Impact",
     "hazard": "Hazard",
     "risk_level": "Risk Level"
+  },
+  "actions": {
+    "view_details": "View Details"
   }
 }

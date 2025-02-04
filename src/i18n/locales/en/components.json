@@ -30,6 +30,7 @@
     "description": "Compare how hazard scores are projected to change over time under different climate scenarios. Changes in 2030 are relative to current scores, while changes in 2050 are relative to 2030 projections.",
     "hazards": "Hazards:",
     "scenarios": "Scenarios:",
+    "details": "Details:",
     "current_note": "Current hazard scores based on historical data",
     "changes_2030": "Changes shown relative to current scores",
     "changes_2050": "Changes shown relative to 2030 scores",

@@ -32,7 +32,8 @@
     "rainfall": "Chuva",
     "temperature": "Temperatura",
     "diseases": "Enfermidade",
-    "sea level rise": "Aumento do nível do mar"
+    "sea level rise": "Aumento do nível do mar",
+    "erosion": "Erosão"
   },
   "sectors": {
     "water_resources": "Recursos Hídricos",
@@ -56,5 +57,8 @@
     "key_impact": "Impacto Chave",
     "hazard": "Risco",
     "risk_level": "Nivel de Risco"
+  },
+  "actions": {
+    "view_details": "Ver Detalhes"
   }
 }

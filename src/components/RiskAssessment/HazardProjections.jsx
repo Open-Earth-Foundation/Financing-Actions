@@ -12,6 +12,7 @@ import {
 } from 'recharts';
 import { getHazardColor } from '../../constants/hazardColors';
 import { getRiskLevel, formatScore } from '../../constants/riskLevels';
+import HazardDetailModal from './HazardDetailModal';
 
 const CustomTooltip = ({ active, payload, label }) => {
   const { t } = useTranslation();
@@ -65,6 +66,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
     optimistic: true,
     pessimistic: true
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleHazard = (hazard) => {
     const newSelected = new Set(selectedHazards);
@@ -197,6 +199,17 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
         </div>
       </div>
 
+      <div className="flex justify-end mb-4">
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-800 
+                     bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors
+                     border border-blue-200 hover:border-blue-300"
+        >
+          {t('common:actions.view_details')}
+        </button>
+      </div>
+
       <div className="h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
@@ -260,6 +273,12 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
           </LineChart>
         </ResponsiveContainer>
       </div>
+
+      <HazardDetailModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        hazardData={projectionData}
+      />
     </div>
   );
 });
