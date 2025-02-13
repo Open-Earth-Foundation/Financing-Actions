@@ -25,6 +25,11 @@
     "title": "Projeções Futuras",
     "description": "Estes gráficos mostram como os riscos climáticos podem mudar no futuro sob diferentes cenários.",
     "insights": "Preste atenção aos riscos que apresentam aumentos significativos em cenários futuros — eles podem exigir planejamento de longo prazo e mudanças na infraestrutura.",
+    "modal": {
+      "title": "Detalhe de projeções e pontuaçoes de ameaça",
+      "current" : "Pontuaçao de ameaça atual",
+      "hazard_impact" : "Ameaças"
+    },
     "scenarios": {
       "current": "Condições atuais",
       "optimistic": "RCP 4.5 – Cenário otimista",

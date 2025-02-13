@@ -138,7 +138,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
   ];
 
   return (
-    <div ref={ref} className="space-y-6">
+    <div ref={ref} className="">
       <div>
         <div className="flex justify-between items-start gap-4 mb-6">
           <div className="flex flex-col gap-2">

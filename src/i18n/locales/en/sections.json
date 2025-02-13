@@ -25,6 +25,11 @@
     "title": "Future Projections",
     "description": "These graphs show how climate risks might change in the future under different scenarios.",
     "insights": "Pay attention to risks that are increasing in future scenarios — they may require long-term adaptation",
+    "modal": {
+      "title": "Hazards projections detail",
+      "current" : "Current Hazard Score",
+      "hazard_impact" : "Hazard"
+    },
     "scenarios": {
       "current": "Current conditions",
       "optimistic": "RCP 4.5 – Optimistic scenario",
