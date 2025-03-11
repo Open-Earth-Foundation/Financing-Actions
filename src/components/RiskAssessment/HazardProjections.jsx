@@ -97,7 +97,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
     {
       year: t('sections:projections.scenarios.current'),
       ...Object.keys(projectionData)
-        .filter(hazard => hazard !== "sea level rise")
+        .filter(hazard => hazard !== "sea-level-rise")
         .reduce((acc, hazard) => ({
         ...acc,
         [hazard]: projectionData[hazard].current,
@@ -108,7 +108,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
     {
       year: '2030',
       ...Object.keys(projectionData)
-        .filter(hazard => hazard !== "sea level rise")
+        .filter(hazard => hazard !== "sea-level-rise")
         .reduce((acc, hazard) => ({
         ...acc,
         [hazard]: null,
@@ -123,7 +123,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
     {
       year: '2050',
       ...Object.keys(projectionData)
-        .filter(hazard => hazard !== "sea level rise")
+        .filter(hazard => hazard !== "sea-level-rise")
         .reduce((acc, hazard) => ({
         ...acc,
         [hazard]: null,
@@ -147,7 +147,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
             </label>
             <div className="flex flex-wrap gap-3">
               {Object.keys(projectionData)
-                .filter(hazard => hazard !== "sea level rise") 
+                .filter(hazard => hazard !== "sea-level-rise") 
                 .map(hazard => (
                 <button
                   key={hazard}
@@ -229,7 +229,7 @@ const HazardProjections = forwardRef(({ projectionData }, ref) => {
             <Legend />
 
             {Object.keys(projectionData)
-              .filter(hazard => hazard !== "sea level rise") 
+              .filter(hazard => hazard !== "sea-level-rise") 
               .map(hazard => {
               if (!selectedHazards.has(hazard)) return null;
 

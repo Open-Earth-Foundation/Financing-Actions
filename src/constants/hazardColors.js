@@ -2,13 +2,13 @@
 
 export const HAZARD_COLORS = {
   // Water Scarcity - Red family
-  drought: {
+  droughts: {
     base: '#DC2626', // Red-600
     light: '#F87171', // Red-400
     dark: '#991B1B', // Red-800
   },
   // Temperature - Orange family
-  heatwave: {
+  heatwaves: {
     base: '#EA580C', // Orange-600
     light: '#FB923C', // Orange-400
     dark: '#9A3412', // Orange-800
@@ -20,24 +20,24 @@ export const HAZARD_COLORS = {
     dark: '#5B21B6', // Purple-800
   },
   // Ground Movement - Brown family
-  landslide: {
+  landslides: {
     base: '#854D0E', // Amber-800
     light: '#D97706', // Amber-600
     dark: '#78350F', // Amber-900
   },
-  // General Flooding - Blue family
+  // General floods - Blue family
   floods: {
     base: '#2563EB', // Blue-600
     light: '#60A5FA', // Blue-400
     dark: '#1E40AF', // Blue-800
   },
-  // Rapid Flooding - Indigo family
+  // Rapid floods - Indigo family
   'flash floods': {
     base: '#4F46E5', // Indigo-600
     light: '#818CF8', // Indigo-400
     dark: '#3730A3', // Indigo-800
   },
-  // Coastal/Urban Flooding - Cyan family
+  // Coastal/Urban floods - Cyan family
   inundations: {
     base: '#0891B2', // Cyan-600
     light: '#22D3EE', // Cyan-400
@@ -50,7 +50,7 @@ export const HAZARD_COLORS = {
     dark: '#9F1239', // Rose-800
   },
   // Coastal - Teal family
-  'sea level rise': {
+  'sea-level-rise': {
     base: '#0D9488', // Teal-600
     light: '#2DD4BF', // Teal-400
     dark: '#115E59', // Teal-800
@@ -81,10 +81,10 @@ const normalizeHazardName = (hazard) => {
     'forest fire': 'wildfires',
     'disease': 'diseases',
     'flood': 'floods',
-    'flooding': 'floods',
-    'sea-level-rise': 'sea level rise',
-    'sea-level rise': 'sea level rise',
-    'slr': 'sea level rise'
+    'floods': 'floods',
+    'sea-level-rise': 'sea-level-rise',
+    'sea-level rise': 'sea-level-rise',
+    'slr': 'sea-level-rise'
   };
 
   return mappings[normalized] || normalized;

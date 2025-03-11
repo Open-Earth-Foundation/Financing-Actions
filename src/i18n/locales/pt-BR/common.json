@@ -24,15 +24,15 @@
     "very_high": "Muito Alto"
   },
   "hazards": {
-    "drought": "Seca",
-    "flooding": "Inundação",
+    "droughts": "Seca",
+    "floods": "Inundação",
     "heatwaves": "Onda de Calor",
-    "landslide": "Deslizamento",
+    "landslides": "Deslizamentos",
     "storm": "Tempestade",
     "rainfall": "Chuva",
     "temperature": "Temperatura",
     "diseases": "Arboviroses",
-    "sea level rise": "Aumento do nível do mar",
+    "sea-level-rise": "Aumento do nível do mar",
     "erosion": "Erosão"
   },
   "sectors": {
