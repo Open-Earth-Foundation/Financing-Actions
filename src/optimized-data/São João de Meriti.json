@@ -1,0 +1,89 @@
+{
+  "name": "São João de Meriti",
+  "indices": {
+    "CDD": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 20.88
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX1day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 78.58
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX5day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 188.34
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "TX90p": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 10.88
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tas": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 22.11
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tasmax": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 26.62
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    }
+  }
+}

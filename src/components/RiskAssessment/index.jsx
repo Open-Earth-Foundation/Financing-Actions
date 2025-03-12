@@ -16,6 +16,8 @@ import { exportToCSV, exportToPDF } from "../../utils/exportUtils";
 import RiskAssessmentIntro from "../RiskAssessmentIntro";
 import MultilingualExportButtons from '../MultilingualExportButtons';
 import { DownloadButton, downloadAsPNG } from "../../utils/chartExportUtils.jsx";
+import ClimateProjections from './ClimateProjections';
+
 
 
 const RiskAssessment = forwardRef(({ cityname, region, actor_id, osm_id, onBack }, ref) => {
@@ -33,6 +35,8 @@ const RiskAssessment = forwardRef(({ cityname, region, actor_id, osm_id, onBack 
   const [showQuestionnaireResults, setShowQuestionnaireResults] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [isPdfExporting, setIsPdfExporting] = useState(false);
+  const [useClimateProjections, setUseClimateProjections] = useState(false);
+
 
   useEffect(() => {
     if (cityname && actor_id) {
@@ -192,7 +196,37 @@ const RiskAssessment = forwardRef(({ cityname, region, actor_id, osm_id, onBack 
             description={t("sections:projections.description")}
             insights={t("sections:projections.insights")}
           />
-          <HazardProjections projectionData={projectionData} />
+
+          <div className="mb-4 flex justify-end">
+            <div className="inline-flex rounded-md shadow-sm" role="group">
+              <button
+                type="button"
+                onClick={() => setUseClimateProjections(false)}
+                className={`px-4 py-2 text-sm font-medium border border-r-0 rounded-l-lg 
+                  ${!useClimateProjections
+                    ? 'bg-blue-700 text-white'
+                    : 'bg-white text-gray-900 hover:bg-gray-100 hover:text-blue-700'}`}
+              >
+                {t("sections:projections.hazard_projections")}
+              </button>
+              <button
+                type="button"
+                onClick={() => setUseClimateProjections(true)}
+                className={`px-4 py-2 text-sm font-medium border rounded-r-lg
+                  ${useClimateProjections
+                    ? 'bg-blue-700 text-white'
+                    : 'bg-white text-gray-900 hover:bg-gray-100 hover:text-blue-700'}`}
+              >
+                {t("sections:projections.climate_projections")}
+              </button>
+            </div>
+          </div>
+
+          {!useClimateProjections ? (
+            <HazardProjections projectionData={projectionData} />
+          ) : (
+            <ClimateProjections cityname={cityname} />
+          )}
         </div>
 
         {/* Risk Comparisons Section */}

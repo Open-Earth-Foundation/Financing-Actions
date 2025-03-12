@@ -1,0 +1,42 @@
+{
+  "name": "Jaboatao",
+  "indices": {
+    "dos": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 27.8,
+              "anomaly": 27.8
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 28.64,
+              "anomaly": 28.64
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 28,
+              "anomaly": 28
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 29.33,
+              "anomaly": 29.33
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

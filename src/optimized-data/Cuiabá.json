@@ -1,0 +1,89 @@
+{
+  "name": "Cuiabá",
+  "indices": {
+    "CDD": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 32.23
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX1day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 49.39
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX5day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 123.56
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "TX90p": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 9.77
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tas": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 26.69
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tasmax": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 31.65
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    }
+  }
+}

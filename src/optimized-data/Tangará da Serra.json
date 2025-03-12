@@ -1,0 +1,89 @@
+{
+  "name": "Tangará da Serra",
+  "indices": {
+    "CDD": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 24.62
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX1day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 35.59
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX5day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 85.78
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "TX90p": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 12.08
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tas": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 23.84
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tasmax": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 28.61
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    }
+  }
+}

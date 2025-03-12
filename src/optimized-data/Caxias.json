@@ -1,0 +1,42 @@
+{
+  "name": "Caxias",
+  "indices": {
+    "do": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 24.02,
+              "anomaly": 24.02
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 24.24,
+              "anomaly": 24.24
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 25.15,
+              "anomaly": 25.15
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 24.88,
+              "anomaly": 24.88
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

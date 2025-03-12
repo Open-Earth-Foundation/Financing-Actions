@@ -1,0 +1,42 @@
+{
+  "name": "Boa",
+  "indices": {
+    "Vista": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 35.9,
+              "anomaly": 35.9
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 36.89,
+              "anomaly": 36.89
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 36.7,
+              "anomaly": 36.7
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 38.07,
+              "anomaly": 38.07
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

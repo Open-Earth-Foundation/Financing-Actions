@@ -22,20 +22,42 @@
     "no_data": "Nenhum dado de distribuição por setor disponível"
   },
   "projections": {
-    "title": "Projeções Futuras",
-    "description": "Estes gráficos mostram como os riscos climáticos podem mudar no futuro sob diferentes cenários.",
-    "insights": "Preste atenção aos riscos que apresentam aumentos significativos em cenários futuros — eles podem exigir planejamento de longo prazo e mudanças na infraestrutura.",
-    "modal": {
-      "title": "Detalhe de projeções e pontuaçoes de ameaça",
-      "current" : "Pontuaçao de ameaça atual",
-      "hazard_impact" : "Ameaças"
-    },
+    "title": "Projeções Climáticas",
+    "description": "Visualize como os riscos climáticos podem mudar no futuro",
+    "insights": "Esta seção mostra projeções para indicadores climáticos-chave sob diferentes cenários.",
+    "no_data": "Não há dados de projeção climática disponíveis para esta cidade",
+    "no_indices": "Não há índices climáticos disponíveis para esta cidade",
+    "select_scenario": "Selecione pelo menos um cenário para visualizar",
+    "hazard_projections": "Projeções de Riscos",
+    "climate_projections": "Índices Climáticos",
+    "chart_title": "Projeções de Índices Climáticos",
+    "trend": "Tendência",
     "scenarios": {
-      "current": "Condições atuais",
-      "optimistic": "RCP 4.5 – Cenário otimista",
-      "pessimistic": "RCP 8.5 – Cenário pessimista"
+      "historical": "Histórico",
+      "optimistic": "Otimista",
+      "pessimistic": "Pessimista",
+      "current": "Atual"
     },
-    "no_data": "Nenhum dado de projeção disponível"
+    "significant_change": "{{direction}} de {{percent}}% até {{by2050}}",
+    "increase": "Aumento",
+    "decrease": "Diminuição",
+    "modal": {
+      "title": "Detalhes do Índice Climático",
+      "historical_data": "Linha de Base Histórica",
+      "baseline": "Linha de Base",
+      "no_historical": "Não há dados históricos disponíveis",
+      "projected_changes": "Mudanças Projetadas",
+      "time_period": "Período",
+      "optimistic": "Otimista",
+      "pessimistic": "Pessimista",
+      "no_projections": "Não há dados de projeção disponíveis",
+      "interpretation": "Como Interpretar Estes Dados",
+      "data_explanation": "Essas projeções são baseadas em modelos climáticos e mostram mudanças potenciais em comparação com o período histórico de referência (1980-2005).",
+      "rcp45": "RCP 4.5 (Otimista)",
+      "rcp85": "RCP 8.5 (Pessimista)",
+      "rcp45_explanation": "Assume que as emissões atingem o pico por volta de 2040 e depois diminuem, com esforços moderados de mitigação.",
+      "rcp85_explanation": "Assume emissões altas contínuas ao longo do século com esforços limitados de mitigação."
+    }
   },
   "ccra_table": {
     "title": "Tabela Completa de Avaliação de Risco",

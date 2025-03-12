@@ -59,5 +59,12 @@
   },
   "actions": {
     "view_details": "View Details"
+  },
+  "labels": {
+    "climate_indices": "Climate Indices",
+    "scenarios": "Scenarios"
+  },
+  "actions": {
+    "view_details": "View Details"
   }
 }

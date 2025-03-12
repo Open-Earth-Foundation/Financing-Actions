@@ -1,0 +1,42 @@
+{
+  "name": "Vitoria",
+  "indices": {
+    "de": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 27.77,
+              "anomaly": 27.77
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 28.68,
+              "anomaly": 28.68
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 27.93,
+              "anomaly": 27.93
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 29.38,
+              "anomaly": 29.38
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

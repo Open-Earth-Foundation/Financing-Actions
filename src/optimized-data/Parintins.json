@@ -1,0 +1,269 @@
+{
+  "name": "Parintins",
+  "indices": {
+    "CDD": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 12.5
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 10.48,
+              "anomaly": -2.02
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 13.71,
+              "anomaly": 1.21
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 12.62,
+              "anomaly": 0.12
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 13.52,
+              "anomaly": 1.02
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "RX1day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 40.06
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 36.74,
+              "anomaly": -3.32
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 40.34,
+              "anomaly": 0.28
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 33.96,
+              "anomaly": -6.1
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 40.61,
+              "anomaly": 0.55
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "RX5day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 110.58
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 91.76,
+              "anomaly": -18.82
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 103.15,
+              "anomaly": -7.43
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 89.8,
+              "anomaly": -20.78
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 98.66,
+              "anomaly": -11.92
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "TX90p": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 20.6
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 41.11,
+              "anomaly": 20.51
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 55.65,
+              "anomaly": 35.05
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 58.9,
+              "anomaly": 38.3
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 71.32,
+              "anomaly": 50.72
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "tas": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 25.6
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 26.74,
+              "anomaly": 1.14
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 27.49,
+              "anomaly": 1.89
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 27.62,
+              "anomaly": 2.02
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 28.78,
+              "anomaly": 3.18
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "tasmax": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 30.16
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 31.39,
+              "anomaly": 1.23
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 32.26,
+              "anomaly": 2.1
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 32.55,
+              "anomaly": 2.39
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 33.71,
+              "anomaly": 3.55
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

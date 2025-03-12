@@ -1,0 +1,227 @@
+{
+  "name": "Tarauaca",
+  "indices": {
+    "CDD": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 11.71,
+              "anomaly": 11.71
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 10.71,
+              "anomaly": 10.71
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 10.38,
+              "anomaly": 10.38
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 10.76,
+              "anomaly": 10.76
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "RX1day": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 37.06,
+              "anomaly": 37.06
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 37.73,
+              "anomaly": 37.73
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 40.53,
+              "anomaly": 40.53
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 40.89,
+              "anomaly": 40.89
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "RX5day": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 82.48,
+              "anomaly": 82.48
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 88.67,
+              "anomaly": 88.67
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 85.05,
+              "anomaly": 85.05
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 88.04,
+              "anomaly": 88.04
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "TX90p": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 50.71,
+              "anomaly": 50.71
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 59.56,
+              "anomaly": 59.56
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 65.67,
+              "anomaly": 65.67
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 74.02,
+              "anomaly": 74.02
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "tas": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 25.75,
+              "anomaly": 25.75
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 26.45,
+              "anomaly": 26.45
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 26.53,
+              "anomaly": 26.53
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 27.58,
+              "anomaly": 27.58
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    },
+    "tasmax": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 31.22,
+              "anomaly": 31.22
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 31.91,
+              "anomaly": 31.91
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 32.31,
+              "anomaly": 32.31
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 33.33,
+              "anomaly": 33.33
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Belo",
+  "indices": {
+    "Horizonte": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 27.06,
+              "anomaly": 27.06
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 27.19,
+              "anomaly": 27.19
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 28.41,
+              "anomaly": 28.41
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 28.79,
+              "anomaly": 28.79
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

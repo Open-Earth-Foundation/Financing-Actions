@@ -1,0 +1,42 @@
+{
+  "name": "Ribeirao",
+  "indices": {
+    "das": {
+      "historical": null,
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 28.4,
+              "anomaly": 28.4
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 28.48,
+              "anomaly": 28.48
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 29.79,
+              "anomaly": 29.79
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 30.17,
+              "anomaly": 30.17
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import compression from 'compression';
 import cors from 'cors';
+import climateRouter from './climate-api.js';  // Import the climate API router
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +25,9 @@ app.use((req, res, next) => {
 app.get('/healthz', (req, res) => {
   res.status(200).send('OK');
 });
+
+// Mount the climate API router
+app.use('/api/climate', climateRouter);
 
 // Serve static files from the dist directory
 app.use(express.static('dist'));
