@@ -185,44 +185,6 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
     if (!cityData || !selectedIndex) return [];
     const indexData = cityData.indices[selectedIndex];
     if (!indexData) return [];
-    
-    const data = [];
-    //Process historical data
-    if (selectedScenarios.historical && indexData.historical?.timeSeries) {
-      indexData.historical.timeSeries.forEach(item => {
-        data.push({
-          year: item.year,
-          [`${selectedIndex}_historical`]: item.value
-        });
-      });
-    }
-
-    // Process RCP45 data
-    if (selectedScenarios.rcp45 && indexData.projections?.rcp45?.timeSeries) {
-      indexData.projections.rcp45.timeSeries.forEach(item => {
-        let existingEntry = data.find(entry => entry.year === item.year);
-        if (existingEntry) {
-          existingEntry[`${selectedIndex}_rcp45`] = item.value;
-        } else {
-          data.push({ year: item.year, [`${selectedIndex}_rcp45`]: item.value });
-        }
-      });
-    }
-
-    // Process RCP85 data
-    if (selectedScenarios.rcp85 && indexData.projections?.rcp85?.timeSeries) {
-      indexData.projections.rcp85.timeSeries.forEach(item => {
-        let existingEntry = data.find(entry => entry.year === item.year);
-        if (existingEntry) {
-          existingEntry[`${selectedIndex}_rcp85`] = item.value;
-        } else {
-          data.push({ year: item.year, [`${selectedIndex}_rcp85`]: item.value });
-        }
-      });
-    }
-    
-    // Sort data by year for proper display
-    return data.sort((a, b) => a.year - b.year);
 
     const data = [];
     //Process historical data
@@ -269,21 +231,6 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
       [scenario]: !prev[scenario]
     }));
   };
-  
-  // Format index data for display
-  const formatIndexName = (index) => {
-    // Common climate indices and their readable names
-    const indexMap = {
-      "CDD": t('sections:climate_projections.indices.cdd'),
-      "RX1day": t('sections:climate_projections.indices.rx1day'),
-      "RX5day": t('sections:climate_projections.indices.rx5day'),
-      "TX90p": t('sections:climate_projections.indices.tx90p'),
-      "tas": t('sections:climate_projections.indices.tas'),
-      "tasmax": t('sections:climate_projections.indices.tasmax')
-    };
-    
-    return indexMap[index] || index;
-  };
 
   const handleIndexSelect = (index) => {
     setSelectedIndex(index);
@@ -292,15 +239,8 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   // Get trend information for the selected index
   const trendInfo = useMemo(() => {
     if (!selectedIndex) return null;
-    const trend = getIndexTrend(selectedIndex, i18n.language);
-    if (typeof trend === 'object') {
-      return {
-        direction: trend.negative ? t('sections:projections.decrease') : t('sections:projections.increase'),
-        description: trend.description
-      };
-    }
-    return trend;
-  }, [selectedIndex, i18n.language, t]);
+    return getIndexTrend(selectedIndex, i18n.language);
+  }, [selectedIndex, i18n.language]);
 
   // Determine anomaly direction and significance for 2050 RCP8.5 (worst-case)
   const anomalyInfo = useMemo(() => {
@@ -652,9 +592,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
               <AlertTriangle size={20} className="text-amber-500" />
               <div className="text-sm text-amber-700">
                 <span className="font-medium">{t('sections:projections.trend')}:</span>{' '}
-                {typeof getIndexTrend(selectedIndex, t) === 'object' 
-                  ? (getIndexTrend(selectedIndex, t).negative ? t('sections:projections.decrease') : t('sections:projections.increase')) + ' - ' + getIndexTrend(selectedIndex, t).description
-                  : getIndexTrend(selectedIndex, t)}
+                {getIndexTrend(selectedIndex, t)}
               </div>
             </div>
           )}
