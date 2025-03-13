@@ -31,6 +31,9 @@
     "hazard_projections": "Hazard Projections",
     "climate_projections": "Climate Indices",
     "chart_title": "Climate Index Projections",
+    "time_series_title": "Climate Index Time Series",
+    "summary_view": "Summary View",
+    "time_series": "Time Series",
     "trend": "Trend",
     "no_data_available_try_another": "Climate data is not available for this city. Try selecting another city.",
     "scenarios": {

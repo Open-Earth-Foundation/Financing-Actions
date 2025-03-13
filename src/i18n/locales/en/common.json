@@ -2,12 +2,18 @@
   "labels": {
     "climate_hazard": "Climate Hazard",
     "risk_score": "Risk Score",
-    "hazard_score": "Hazard Score",
+    "hazard_score": "Climate Threat Score",
     "exposure_score": "Exposure Score",
     "vulnerability_score": "Vulnerability Score",
     "hazards": "Hazards",
     "scenarios": "Scenarios",
-    "indicators": "indicators"
+    "indicators": "indicators",
+    "population": "Population",
+    "area": "Area",
+    "climate_zone": "Climate Zone",
+    "climate_index": "Climate Index",
+    "more_statistics": "More Statistics",
+    "year": "Year"
   },
   "metrics": {
     "sensitivity": "Sensitivity",

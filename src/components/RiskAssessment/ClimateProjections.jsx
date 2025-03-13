@@ -78,6 +78,8 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
     rcp85: true
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // State for chart view (summary vs time series)
+  const [showTimeSeries, setShowTimeSeries] = useState(false);
 
   // Effects
   useEffect(() => {
@@ -121,7 +123,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   }, [cityname]);
 
   // Create chart data
-  const chartData = useMemo(() => {
+  const summaryChartData = useMemo(() => {
     if (!cityData || !selectedIndex) return [];
 
     const indexData = cityData.indices[selectedIndex];
@@ -178,6 +180,49 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
 
     return result;
   }, [cityData, selectedIndex, selectedScenarios, t]);
+
+  const timeSeriesData = useMemo(() => {
+    if (!cityData || !selectedIndex) return [];
+    const indexData = cityData.indices[selectedIndex];
+    if (!indexData) return [];
+
+    const data = [];
+    //Process historical data
+    if (selectedScenarios.historical && indexData.historical?.timeSeries) {
+      indexData.historical.timeSeries.forEach(item => {
+        data.push({
+          year: item.year,
+          [`${selectedIndex}_historical`]: item.value
+        });
+      });
+    }
+
+    // Process RCP45 data
+    if (selectedScenarios.rcp45 && indexData.projections?.rcp45?.timeSeries) {
+      indexData.projections.rcp45.timeSeries.forEach(item => {
+        let existingEntry = data.find(entry => entry.year === item.year);
+        if (existingEntry) {
+          existingEntry[`${selectedIndex}_rcp45`] = item.value;
+        } else {
+          data.push({ year: item.year, [`${selectedIndex}_rcp45`]: item.value });
+        }
+      });
+    }
+
+    // Process RCP85 data
+    if (selectedScenarios.rcp85 && indexData.projections?.rcp85?.timeSeries) {
+      indexData.projections.rcp85.timeSeries.forEach(item => {
+        let existingEntry = data.find(entry => entry.year === item.year);
+        if (existingEntry) {
+          existingEntry[`${selectedIndex}_rcp85`] = item.value;
+        } else {
+          data.push({ year: item.year, [`${selectedIndex}_rcp85`]: item.value });
+        }
+      });
+    }
+    return data;
+  }, [cityData, selectedIndex, selectedScenarios]);
+
 
   // Event handlers
   const toggleScenario = (scenario) => {
@@ -271,206 +316,288 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   }
 
   return (
-    <div ref={ref} className="space-y-6">
-      {/* Climate index selector */}
-      <div className="flex flex-col gap-2">
-        <label className="text-sm font-medium text-gray-500">
-          {t('common:labels.climate_indices')}:
-        </label>
-        <div className="flex flex-wrap gap-3">
-          {availableIndices.map(index => {
-            const hazardType = getIndexHazardType(index);
-
-            return (
-              <button
-                key={index}
-                onClick={() => handleIndexSelect(index)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
-                  hover:scale-105 active:scale-95
-                  ${index === selectedIndex 
-                    ? 'text-white shadow-sm' 
-                    : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
-                style={{
-                  backgroundColor: index === selectedIndex 
-                    ? getHazardColor(hazardType) 
-                    : undefined
-                }}
-              >
-                {getIndexLabel(index, i18n.language)}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Scenario toggles */}
-      <div className="flex flex-col gap-2">
-        <label className="text-sm font-medium text-gray-500">
-          {t('common:labels.scenarios')}:
-        </label>
-        <div className="flex flex-wrap gap-4">
-          <button
-            onClick={() => toggleScenario('historical')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
-              hover:scale-105 active:scale-95
-              ${selectedScenarios.historical 
-                ? 'bg-blue-100 text-blue-800 border border-blue-300' 
-                : 'bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-200'}`}
-          >
-            {t('sections:projections.scenarios.historical')}
-          </button>
-          <button
-            onClick={() => toggleScenario('rcp45')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
-              hover:scale-105 active:scale-95
-              ${selectedScenarios.rcp45 
-                ? 'bg-blue-100 text-blue-800 border border-blue-300' 
-                : 'bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-200'}`}
-          >
-            {t('sections:projections.scenarios.optimistic')}
-          </button>
-          <button
-            onClick={() => toggleScenario('rcp85')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
-              hover:scale-105 active:scale-95
-              ${selectedScenarios.rcp85 
-                ? 'bg-blue-100 text-blue-800 border border-blue-300' 
-                : 'bg-gray-100 text-gray-500 border border-gray-200 hover:bg-gray-200'}`}
-          >
-            {t('sections:projections.scenarios.pessimistic')}
-          </button>
-        </div>
-      </div>
-
-      {/* Index description and anomaly alert */}
-      {selectedIndex && (
-        <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 mt-0.5">
-              <Info size={20} className="text-blue-600" />
-            </div>
-            <div>
-              <h4 className="text-sm font-medium text-gray-900">
-                {getIndexLabel(selectedIndex, i18n.language)}
-              </h4>
-              <p className="text-sm text-gray-600 mt-1">
-                {getIndexDescription(selectedIndex, i18n.language)}
-              </p>
-
-              {trendInfo && (
-                <p className="text-sm text-gray-600 mt-2">
-                  <span className="font-medium">{t('sections:projections.trend')}:</span> {trendInfo.description}
-                </p>
-              )}
-
-              {anomalyInfo?.isConcerning && (
-                <div className="flex items-start gap-2 mt-3 p-2 bg-amber-50 border border-amber-200 rounded-md">
-                  <AlertTriangle size={16} className="text-amber-500 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-amber-800">
-                    {t('sections:projections.significant_change', { 
-                      direction: anomalyInfo.isPositive ? t('sections:projections.increase') : t('sections:projections.decrease'),
-                      percent: Math.abs(Math.round(anomalyInfo.percentChange)),
-                      by2050: '2050'
-                    })}
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
+    <div ref={ref} className="flex flex-col space-y-6">
+      {/* Loading state */}
+      {loading && (
+        <div className="flex items-center justify-center h-[300px]">
+          <div className="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full"></div>
         </div>
       )}
 
-      {/* Chart */}
-      <div className="flex justify-between items-center">
-        <h4 className="text-sm font-medium text-gray-900">
-          {t('sections:projections.chart_title')}
-        </h4>
+      {/* Content when not loading */}
+      {!loading && (
+        <>
+          {/* Index selection */}
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <div className="flex-1">
+              <label htmlFor="index-select" className="block text-sm font-medium text-gray-700 mb-1">
+                {t('common:labels.climate_index')}
+              </label>
+              <select
+                id="index-select"
+                value={selectedIndex || ''}
+                onChange={e => handleIndexSelect(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              >
+                {availableIndices.map(index => (
+                  <option key={index} value={index}>
+                    {getIndexLabel(index, t)} ({index})
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-800 
-                    bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors
-                    border border-blue-200 hover:border-blue-300"
-        >
-          {t('common:actions.view_details')}
-        </button>
-      </div>
-
-      <div className="h-[400px]">
-        {chartData.length > 0 ? (
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart 
-              data={chartData} 
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} />
-              <XAxis 
-                dataKey="displayPeriod" 
-                stroke="#6b7280"
-                tick={{ fill: '#6b7280' }}
-              />
-              <YAxis 
-                domain={['auto', 'auto']} 
-                stroke="#6b7280"
-                tick={{ fill: '#6b7280' }}
-                label={{
-                  value: getIndexUnit(selectedIndex),
-                  angle: -90,
-                  position: 'insideLeft',
-                  style: { textAnchor: 'middle', fill: '#6b7280' }
-                }}
-              />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-
-              {selectedScenarios.historical && (
-                <Line
-                  type="monotone"
-                  dataKey={`${selectedIndex}_historical`}
-                  name={getIndexLabel(selectedIndex, i18n.language)}
-                  stroke={getHazardColor(getIndexHazardType(selectedIndex))}
-                  strokeWidth={2}
-                  dot={{ fill: getHazardColor(getIndexHazardType(selectedIndex)), r: 5 }}
-                  activeDot={{ r: 8 }}
-                  connectNulls
-                />
-              )}
-
-              {selectedScenarios.rcp45 && (
-                <Line
-                  type="monotone"
-                  dataKey={`${selectedIndex}_rcp45`}
-                  name={getIndexLabel(selectedIndex, i18n.language)}
-                  stroke={getHazardColor(getIndexHazardType(selectedIndex), 'optimistic')}
-                  strokeDasharray="5 5"
-                  strokeWidth={2}
-                  dot={{ fill: getHazardColor(getIndexHazardType(selectedIndex), 'optimistic'), r: 5 }}
-                  activeDot={{ r: 8 }}
-                  connectNulls
-                />
-              )}
-
-              {selectedScenarios.rcp85 && (
-                <Line
-                  type="monotone"
-                  dataKey={`${selectedIndex}_rcp85`}
-                  name={getIndexLabel(selectedIndex, i18n.language)}
-                  stroke={getHazardColor(getIndexHazardType(selectedIndex), 'pessimistic')}
-                  strokeDasharray="3 3"
-                  strokeWidth={2}
-                  dot={{ fill: getHazardColor(getIndexHazardType(selectedIndex), 'pessimistic'), r: 5 }}
-                  activeDot={{ r: 8 }}
-                  connectNulls
-                />
-              )}
-            </LineChart>
-          </ResponsiveContainer>
-        ) : (
-          <div className="flex items-center justify-center h-full text-gray-500">
-            {t('sections:projections.select_scenario')}
+            <div>
+              <p className="text-sm font-medium text-gray-700 mb-1">
+                {t('common:labels.scenarios')}
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => toggleScenario('historical')}
+                  className={`px-3 py-1 text-xs font-medium rounded-full ${
+                    selectedScenarios.historical
+                      ? 'bg-blue-100 text-blue-800 border border-blue-200'
+                      : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
+                  }`}
+                >
+                  {t('sections:projections.scenarios.historical')}
+                </button>
+                <button
+                  onClick={() => toggleScenario('rcp45')}
+                  className={`px-3 py-1 text-xs font-medium rounded-full ${
+                    selectedScenarios.rcp45
+                      ? 'bg-green-100 text-green-800 border border-green-200'
+                      : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
+                  }`}
+                >
+                  {t('sections:projections.scenarios.optimistic')}
+                </button>
+                <button
+                  onClick={() => toggleScenario('rcp85')}
+                  className={`px-3 py-1 text-xs font-medium rounded-full ${
+                    selectedScenarios.rcp85
+                      ? 'bg-red-100 text-red-800 border border-red-200'
+                      : 'bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200'
+                  }`}
+                >
+                  {t('sections:projections.scenarios.pessimistic')}
+                </button>
+              </div>
+            </div>
           </div>
-        )}
-      </div>
+
+          {/* Index description */}
+          {selectedIndex && (
+            <div className="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <div className="flex-shrink-0 pt-0.5">
+                <Info size={18} className="text-blue-500" />
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-gray-900">
+                  {getIndexLabel(selectedIndex, t)} ({selectedIndex})
+                </h3>
+                <div className="mt-1 text-sm text-gray-700">
+                  <p>{getIndexDescription(selectedIndex, t)}</p>
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="mt-2 text-blue-600 hover:text-blue-800 text-xs font-medium"
+                  >
+                    {t('common:actions.show_details')}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* No selected scenarios warning */}
+          {(Object.values(selectedScenarios).every(v => !v) || !selectedIndex) && (
+            <div className="flex items-center justify-center h-[300px]">
+              <div className="text-gray-500">
+                {t('sections:projections.select_scenario')}
+              </div>
+            </div>
+          )}
+
+          {/* Chart view toggle */}
+          {selectedIndex && Object.values(selectedScenarios).some(v => v) && (timeSeriesData.length > 0 || summaryChartData.length > 0) && (
+            <div className="flex justify-center mb-4">
+              <div className="inline-flex rounded-md shadow-sm" role="group">
+                <button
+                  type="button"
+                  onClick={() => setShowTimeSeries(false)}
+                  className={`px-4 py-2 text-sm font-medium border border-r-0 rounded-l-lg 
+                    ${!showTimeSeries
+                      ? 'bg-blue-700 text-white'
+                      : 'bg-white text-gray-900 hover:bg-gray-100 hover:text-blue-700'}`}
+                >
+                  {t('sections:projections.summary_view')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowTimeSeries(true)}
+                  className={`px-4 py-2 text-sm font-medium border rounded-r-lg
+                    ${showTimeSeries
+                      ? 'bg-blue-700 text-white'
+                      : 'bg-white text-gray-900 hover:bg-gray-100 hover:text-blue-700'}`}
+                >
+                  {t('sections:projections.time_series')}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Summary Chart */}
+          {selectedIndex && Object.values(selectedScenarios).some(v => v) && summaryChartData.length > 0 && !showTimeSeries && (
+            <div className="pb-4">
+              <div className="mb-4 text-center text-sm font-medium text-gray-700">
+                {t('sections:projections.chart_title')}
+              </div>
+              <div className="h-[350px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart
+                    data={summaryChartData}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
+                    <XAxis 
+                      dataKey="displayPeriod"
+                      tick={{ fill: '#6B7280', fontSize: 12 }}
+                    />
+                    <YAxis 
+                      label={{ 
+                        value: getIndexUnit(selectedIndex, t),
+                        angle: -90,
+                        position: 'insideLeft',
+                        style: { textAnchor: 'middle', fill: '#6B7280', fontSize: 12 }
+                      }}
+                      tick={{ fill: '#6B7280', fontSize: 12 }}
+                    />
+                    <Tooltip />
+                    <Legend />
+                    {selectedScenarios.historical && (
+                      <Line
+                        type="monotone"
+                        dataKey={`${selectedIndex}_historical`}
+                        name={t('sections:projections.scenarios.historical')}
+                        stroke="#64748B"
+                        strokeWidth={2}
+                        activeDot={{ r: 8 }}
+                        dot={{ strokeWidth: 2, r: 4 }}
+                      />
+                    )}
+                    {selectedScenarios.rcp45 && (
+                      <Line
+                        type="monotone"
+                        dataKey={`${selectedIndex}_rcp45`}
+                        name={t('sections:projections.scenarios.optimistic')}
+                        stroke="#22C55E"
+                        strokeWidth={2}
+                        activeDot={{ r: 8 }}
+                        dot={{ strokeWidth: 2, r: 4 }}
+                      />
+                    )}
+                    {selectedScenarios.rcp85 && (
+                      <Line
+                        type="monotone"
+                        dataKey={`${selectedIndex}_rcp85`}
+                        name={t('sections:projections.scenarios.pessimistic')}
+                        stroke="#EF4444"
+                        strokeWidth={2}
+                        activeDot={{ r: 8 }}
+                        dot={{ strokeWidth: 2, r: 4 }}
+                      />
+                    )}
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+          )}
+
+          {/* Time Series Chart */}
+          {selectedIndex && Object.values(selectedScenarios).some(v => v) && timeSeriesData.length > 0 && showTimeSeries && (
+            <div className="pb-4">
+              <div className="mb-4 text-center text-sm font-medium text-gray-700">
+                {t('sections:projections.time_series_title')}
+              </div>
+              <div className="h-[350px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart
+                    data={timeSeriesData}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" opacity={0.3} />
+                    <XAxis 
+                      dataKey="year"
+                      tick={{ fill: '#6B7280', fontSize: 12 }}
+                      label={{ 
+                        value: t('common:labels.year'),
+                        position: 'insideBottom',
+                        offset: -10,
+                        style: { textAnchor: 'middle', fill: '#6B7280', fontSize: 12 }
+                      }}
+                    />
+                    <YAxis 
+                      label={{ 
+                        value: getIndexUnit(selectedIndex, t),
+                        angle: -90,
+                        position: 'insideLeft',
+                        style: { textAnchor: 'middle', fill: '#6B7280', fontSize: 12 }
+                      }}
+                      tick={{ fill: '#6B7280', fontSize: 12 }}
+                    />
+                    <Tooltip />
+                    <Legend />
+                    {selectedScenarios.historical && (
+                      <Line
+                        type="monotone"
+                        dataKey={`${selectedIndex}_historical`}
+                        name={t('sections:projections.scenarios.historical')}
+                        stroke="#64748B"
+                        strokeWidth={2}
+                        dot={false}
+                        activeDot={{ r: 5 }}
+                      />
+                    )}
+                    {selectedScenarios.rcp45 && (
+                      <Line
+                        type="monotone"
+                        dataKey={`${selectedIndex}_rcp45`}
+                        name={t('sections:projections.scenarios.optimistic')}
+                        stroke="#22C55E"
+                        strokeWidth={2}
+                        dot={false}
+                        activeDot={{ r: 5 }}
+                      />
+                    )}
+                    {selectedScenarios.rcp85 && (
+                      <Line
+                        type="monotone"
+                        dataKey={`${selectedIndex}_rcp85`}
+                        name={t('sections:projections.scenarios.pessimistic')}
+                        stroke="#EF4444"
+                        strokeWidth={2}
+                        dot={false}
+                        activeDot={{ r: 5 }}
+                      />
+                    )}
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+          )}
+
+          {/* Trend indicator */}
+          {selectedIndex && (
+            <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg border border-amber-200">
+              <AlertTriangle size={20} className="text-amber-500" />
+              <div className="text-sm text-amber-700">
+                <span className="font-medium">{t('sections:projections.trend')}:</span>{' '}
+                {getIndexTrend(selectedIndex, t)}
+              </div>
+            </div>
+          )}
+        </>
+      )}
 
       {/* Detail modal */}
       {selectedIndex && (
