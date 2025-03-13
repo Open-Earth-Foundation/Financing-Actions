@@ -1,0 +1,28 @@
+Fetching climate data for: Caxias_do_Sul
+Fetching climate data from: /api/climate/Caxias_do_Sul
+Response status: 200 OK
+Response headers: 
+Object {access-control-allow-origin: "*", content-encoding: "gzip", content-type: "application/json; charset=utf-8", date: "Thu, 13 Mar 2025 05:18:51 GMT", etag: "W/"c764-TARG1bTz6dO7Yrd3BtGhK+5lKSc"", …}
+Successfully fetched climate data for: Caxias_do_Sul
+Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=object%20with%20keys%20%7Bnegative%2C%20description%7D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+at Yb (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:12814)
+at f (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:14603)
+at v (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:15756)
+at E (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:17834)
+at ws (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:1479)
+at nK (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:45811)
+at XY (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:39819)
+at J0e (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:39745)
+at xw (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:39596)
+at gD (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:35959)
+Minified React error #31; visit https://reactjs.org/docs/error-decoder.html?invariant=31&args[]=object%20with%20keys%20%7Bnegative%2C%20description%7D for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+at Yb (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:12814)
+at f (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:14603)
+at v (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:15756)
+at E (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:38:17834)
+at ws (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:1479)
+at nK (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:45811)
+at XY (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:39819)
+at J0e (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:39745)
+at xw (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:39596)
+at gD (https://61acfc63-f17a-45e0-b1c8-fb6a57ab6fc4-00-6a7cgtmwfcmh.spock.replit.dev/assets/index-df72dc12.js:40:35959)
