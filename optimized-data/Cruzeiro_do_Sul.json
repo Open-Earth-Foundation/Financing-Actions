@@ -1,0 +1,5927 @@
+{
+  "name": "Cruzeiro do Sul",
+  "indices": {
+    "CDD": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": null
+        },
+        "timeseries": []
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 21.86,
+              "anomaly": 21.86
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 19.9,
+              "anomaly": 19.9
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 10,
+              "anomaly": -6.13
+            },
+            {
+              "year": 2007,
+              "value": 9,
+              "anomaly": -7.13
+            },
+            {
+              "year": 2008,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2009,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2010,
+              "value": 15,
+              "anomaly": -1.13
+            },
+            {
+              "year": 2011,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2012,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2013,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2014,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2015,
+              "value": 36,
+              "anomaly": 19.87
+            },
+            {
+              "year": 2016,
+              "value": 63,
+              "anomaly": 46.87
+            },
+            {
+              "year": 2017,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2018,
+              "value": 26,
+              "anomaly": 9.87
+            },
+            {
+              "year": 2019,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2020,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2021,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2022,
+              "value": 27,
+              "anomaly": 10.87
+            },
+            {
+              "year": 2023,
+              "value": 33,
+              "anomaly": 16.87
+            },
+            {
+              "year": 2024,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2025,
+              "value": 33,
+              "anomaly": 16.87
+            },
+            {
+              "year": 2026,
+              "value": 40,
+              "anomaly": 23.87
+            },
+            {
+              "year": 2027,
+              "value": 25,
+              "anomaly": 8.87
+            },
+            {
+              "year": 2028,
+              "value": 25,
+              "anomaly": 8.87
+            },
+            {
+              "year": 2029,
+              "value": 36,
+              "anomaly": 19.87
+            },
+            {
+              "year": 2030,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2031,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2032,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2033,
+              "value": 15,
+              "anomaly": -1.13
+            },
+            {
+              "year": 2034,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2035,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2036,
+              "value": 29,
+              "anomaly": 12.87
+            },
+            {
+              "year": 2037,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2038,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2039,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2040,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2041,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2042,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2043,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2044,
+              "value": 20,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2045,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2046,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2047,
+              "value": 21,
+              "anomaly": 4.87
+            },
+            {
+              "year": 2048,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2049,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2050,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2051,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2052,
+              "value": 25,
+              "anomaly": 8.87
+            },
+            {
+              "year": 2053,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2054,
+              "value": 32,
+              "anomaly": 15.87
+            },
+            {
+              "year": 2055,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2056,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2057,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2058,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2059,
+              "value": 32,
+              "anomaly": 15.87
+            },
+            {
+              "year": 2060,
+              "value": 36,
+              "anomaly": 19.87
+            },
+            {
+              "year": 2061,
+              "value": 29,
+              "anomaly": 12.87
+            },
+            {
+              "year": 2062,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2063,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2064,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2065,
+              "value": 32,
+              "anomaly": 15.87
+            },
+            {
+              "year": 2066,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2067,
+              "value": 21,
+              "anomaly": 4.87
+            },
+            {
+              "year": 2068,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2069,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2070,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2071,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2072,
+              "value": 15,
+              "anomaly": -1.13
+            },
+            {
+              "year": 2073,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2074,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2075,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2076,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2077,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2078,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2079,
+              "value": 25,
+              "anomaly": 8.87
+            },
+            {
+              "year": 2080,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2081,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2082,
+              "value": 21,
+              "anomaly": 4.87
+            },
+            {
+              "year": 2083,
+              "value": 15,
+              "anomaly": -1.13
+            },
+            {
+              "year": 2084,
+              "value": 27,
+              "anomaly": 10.87
+            },
+            {
+              "year": 2085,
+              "value": 32,
+              "anomaly": 15.87
+            },
+            {
+              "year": 2086,
+              "value": 34,
+              "anomaly": 17.87
+            },
+            {
+              "year": 2087,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2088,
+              "value": 32,
+              "anomaly": 15.87
+            },
+            {
+              "year": 2089,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2090,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2091,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2092,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2093,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2094,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2095,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2096,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2097,
+              "value": 21,
+              "anomaly": 4.87
+            },
+            {
+              "year": 2098,
+              "value": 33,
+              "anomaly": 16.87
+            },
+            {
+              "year": 2099,
+              "value": 0,
+              "anomaly": -16.13
+            }
+          ]
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 23,
+              "anomaly": 23
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 19.29,
+              "anomaly": 19.29
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2007,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2008,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2009,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2010,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2011,
+              "value": 36,
+              "anomaly": 19.87
+            },
+            {
+              "year": 2012,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2013,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2014,
+              "value": 12,
+              "anomaly": -4.13
+            },
+            {
+              "year": 2015,
+              "value": 20,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2016,
+              "value": 26,
+              "anomaly": 9.87
+            },
+            {
+              "year": 2017,
+              "value": 33,
+              "anomaly": 16.87
+            },
+            {
+              "year": 2018,
+              "value": 42,
+              "anomaly": 25.87
+            },
+            {
+              "year": 2019,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2020,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2021,
+              "value": 30,
+              "anomaly": 13.87
+            },
+            {
+              "year": 2022,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2023,
+              "value": 30,
+              "anomaly": 13.87
+            },
+            {
+              "year": 2024,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2025,
+              "value": 44,
+              "anomaly": 27.87
+            },
+            {
+              "year": 2026,
+              "value": 51,
+              "anomaly": 34.87
+            },
+            {
+              "year": 2027,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2028,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2029,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2030,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2031,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2032,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2033,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2034,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2035,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2036,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2037,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2038,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2039,
+              "value": 20,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2040,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2041,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2042,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2043,
+              "value": 20,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2044,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2045,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2046,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2047,
+              "value": 21,
+              "anomaly": 4.87
+            },
+            {
+              "year": 2048,
+              "value": 16,
+              "anomaly": -0.13
+            },
+            {
+              "year": 2049,
+              "value": 15,
+              "anomaly": -1.13
+            },
+            {
+              "year": 2050,
+              "value": 10,
+              "anomaly": -6.13
+            },
+            {
+              "year": 2051,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2052,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2053,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2054,
+              "value": 35,
+              "anomaly": 18.87
+            },
+            {
+              "year": 2055,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2056,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2057,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2058,
+              "value": 25,
+              "anomaly": 8.87
+            },
+            {
+              "year": 2059,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2060,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2061,
+              "value": 21,
+              "anomaly": 4.87
+            },
+            {
+              "year": 2062,
+              "value": 20,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2063,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2064,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2065,
+              "value": 26,
+              "anomaly": 9.87
+            },
+            {
+              "year": 2066,
+              "value": 20,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2067,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2068,
+              "value": 31,
+              "anomaly": 14.87
+            },
+            {
+              "year": 2069,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2070,
+              "value": 37,
+              "anomaly": 20.87
+            },
+            {
+              "year": 2071,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2072,
+              "value": 40,
+              "anomaly": 23.87
+            },
+            {
+              "year": 2073,
+              "value": 33,
+              "anomaly": 16.87
+            },
+            {
+              "year": 2074,
+              "value": 26,
+              "anomaly": 9.87
+            },
+            {
+              "year": 2075,
+              "value": 27,
+              "anomaly": 10.87
+            },
+            {
+              "year": 2076,
+              "value": 11,
+              "anomaly": -5.13
+            },
+            {
+              "year": 2077,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2078,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2079,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2080,
+              "value": 43,
+              "anomaly": 26.87
+            },
+            {
+              "year": 2081,
+              "value": 37,
+              "anomaly": 20.87
+            },
+            {
+              "year": 2082,
+              "value": 58,
+              "anomaly": 41.87
+            },
+            {
+              "year": 2083,
+              "value": 24,
+              "anomaly": 7.87
+            },
+            {
+              "year": 2084,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2085,
+              "value": 13,
+              "anomaly": -3.13
+            },
+            {
+              "year": 2086,
+              "value": 17,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2087,
+              "value": 34,
+              "anomaly": 17.87
+            },
+            {
+              "year": 2088,
+              "value": 35,
+              "anomaly": 18.87
+            },
+            {
+              "year": 2089,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2090,
+              "value": 28,
+              "anomaly": 11.87
+            },
+            {
+              "year": 2091,
+              "value": 14,
+              "anomaly": -2.13
+            },
+            {
+              "year": 2092,
+              "value": 18,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2093,
+              "value": 30,
+              "anomaly": 13.87
+            },
+            {
+              "year": 2094,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2095,
+              "value": 22,
+              "anomaly": 5.87
+            },
+            {
+              "year": 2096,
+              "value": 23,
+              "anomaly": 6.87
+            },
+            {
+              "year": 2097,
+              "value": 19,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2098,
+              "value": 42,
+              "anomaly": 25.87
+            },
+            {
+              "year": 2099,
+              "value": 31,
+              "anomaly": 14.87
+            }
+          ]
+        }
+      }
+    },
+    "RX1day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": null
+        },
+        "timeseries": []
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 70.41,
+              "anomaly": 70.41
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 67.96,
+              "anomaly": 67.96
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 53.7,
+              "anomaly": -5.49
+            },
+            {
+              "year": 2007,
+              "value": 59.5,
+              "anomaly": 0.31
+            },
+            {
+              "year": 2008,
+              "value": 50.3,
+              "anomaly": -8.89
+            },
+            {
+              "year": 2009,
+              "value": 58,
+              "anomaly": -1.19
+            },
+            {
+              "year": 2010,
+              "value": 52.7,
+              "anomaly": -6.49
+            },
+            {
+              "year": 2011,
+              "value": 54.8,
+              "anomaly": -4.39
+            },
+            {
+              "year": 2012,
+              "value": 50.7,
+              "anomaly": -8.49
+            },
+            {
+              "year": 2013,
+              "value": 59.8,
+              "anomaly": 0.61
+            },
+            {
+              "year": 2014,
+              "value": 61.4,
+              "anomaly": 2.21
+            },
+            {
+              "year": 2015,
+              "value": 50.6,
+              "anomaly": -8.59
+            },
+            {
+              "year": 2016,
+              "value": 55.6,
+              "anomaly": -3.59
+            },
+            {
+              "year": 2017,
+              "value": 74.8,
+              "anomaly": 15.61
+            },
+            {
+              "year": 2018,
+              "value": 50.7,
+              "anomaly": -8.49
+            },
+            {
+              "year": 2019,
+              "value": 39,
+              "anomaly": -20.19
+            },
+            {
+              "year": 2020,
+              "value": 55.5,
+              "anomaly": -3.69
+            },
+            {
+              "year": 2021,
+              "value": 75.4,
+              "anomaly": 16.21
+            },
+            {
+              "year": 2022,
+              "value": 74.1,
+              "anomaly": 14.91
+            },
+            {
+              "year": 2023,
+              "value": 62,
+              "anomaly": 2.81
+            },
+            {
+              "year": 2024,
+              "value": 46.2,
+              "anomaly": -12.99
+            },
+            {
+              "year": 2025,
+              "value": 64.4,
+              "anomaly": 5.21
+            },
+            {
+              "year": 2026,
+              "value": 33.8,
+              "anomaly": -25.39
+            },
+            {
+              "year": 2027,
+              "value": 45.4,
+              "anomaly": -13.79
+            },
+            {
+              "year": 2028,
+              "value": 66.1,
+              "anomaly": 6.91
+            },
+            {
+              "year": 2029,
+              "value": 64.1,
+              "anomaly": 4.91
+            },
+            {
+              "year": 2030,
+              "value": 89.3,
+              "anomaly": 30.11
+            },
+            {
+              "year": 2031,
+              "value": 53.7,
+              "anomaly": -5.49
+            },
+            {
+              "year": 2032,
+              "value": 64.9,
+              "anomaly": 5.71
+            },
+            {
+              "year": 2033,
+              "value": 88.1,
+              "anomaly": 28.91
+            },
+            {
+              "year": 2034,
+              "value": 59.6,
+              "anomaly": 0.41
+            },
+            {
+              "year": 2035,
+              "value": 66.9,
+              "anomaly": 7.71
+            },
+            {
+              "year": 2036,
+              "value": 92,
+              "anomaly": 32.81
+            },
+            {
+              "year": 2037,
+              "value": 168.1,
+              "anomaly": 108.91
+            },
+            {
+              "year": 2038,
+              "value": 60.5,
+              "anomaly": 1.31
+            },
+            {
+              "year": 2039,
+              "value": 58,
+              "anomaly": -1.19
+            },
+            {
+              "year": 2040,
+              "value": 90.5,
+              "anomaly": 31.31
+            },
+            {
+              "year": 2041,
+              "value": 72.7,
+              "anomaly": 13.51
+            },
+            {
+              "year": 2042,
+              "value": 74.8,
+              "anomaly": 15.61
+            },
+            {
+              "year": 2043,
+              "value": 75,
+              "anomaly": 15.81
+            },
+            {
+              "year": 2044,
+              "value": 67.8,
+              "anomaly": 8.61
+            },
+            {
+              "year": 2045,
+              "value": 74.1,
+              "anomaly": 14.91
+            },
+            {
+              "year": 2046,
+              "value": 70.7,
+              "anomaly": 11.51
+            },
+            {
+              "year": 2047,
+              "value": 49.8,
+              "anomaly": -9.39
+            },
+            {
+              "year": 2048,
+              "value": 63.5,
+              "anomaly": 4.31
+            },
+            {
+              "year": 2049,
+              "value": 89,
+              "anomaly": 29.81
+            },
+            {
+              "year": 2050,
+              "value": 67,
+              "anomaly": 7.81
+            },
+            {
+              "year": 2051,
+              "value": 48.9,
+              "anomaly": -10.29
+            },
+            {
+              "year": 2052,
+              "value": 74.9,
+              "anomaly": 15.71
+            },
+            {
+              "year": 2053,
+              "value": 74.9,
+              "anomaly": 15.71
+            },
+            {
+              "year": 2054,
+              "value": 79.3,
+              "anomaly": 20.11
+            },
+            {
+              "year": 2055,
+              "value": 56.1,
+              "anomaly": -3.09
+            },
+            {
+              "year": 2056,
+              "value": 62.1,
+              "anomaly": 2.91
+            },
+            {
+              "year": 2057,
+              "value": 77.3,
+              "anomaly": 18.11
+            },
+            {
+              "year": 2058,
+              "value": 64,
+              "anomaly": 4.81
+            },
+            {
+              "year": 2059,
+              "value": 32.8,
+              "anomaly": -26.39
+            },
+            {
+              "year": 2060,
+              "value": 61.9,
+              "anomaly": 2.71
+            },
+            {
+              "year": 2061,
+              "value": 65.5,
+              "anomaly": 6.31
+            },
+            {
+              "year": 2062,
+              "value": 100.1,
+              "anomaly": 40.91
+            },
+            {
+              "year": 2063,
+              "value": 60.6,
+              "anomaly": 1.41
+            },
+            {
+              "year": 2064,
+              "value": 61.3,
+              "anomaly": 2.11
+            },
+            {
+              "year": 2065,
+              "value": 51.1,
+              "anomaly": -8.09
+            },
+            {
+              "year": 2066,
+              "value": 90.6,
+              "anomaly": 31.41
+            },
+            {
+              "year": 2067,
+              "value": 53,
+              "anomaly": -6.19
+            },
+            {
+              "year": 2068,
+              "value": 66.5,
+              "anomaly": 7.31
+            },
+            {
+              "year": 2069,
+              "value": 52.2,
+              "anomaly": -6.99
+            },
+            {
+              "year": 2070,
+              "value": 107.2,
+              "anomaly": 48.01
+            },
+            {
+              "year": 2071,
+              "value": 70.2,
+              "anomaly": 11.01
+            },
+            {
+              "year": 2072,
+              "value": 54.5,
+              "anomaly": -4.69
+            },
+            {
+              "year": 2073,
+              "value": 91.3,
+              "anomaly": 32.11
+            },
+            {
+              "year": 2074,
+              "value": 83.3,
+              "anomaly": 24.11
+            },
+            {
+              "year": 2075,
+              "value": 59,
+              "anomaly": -0.19
+            },
+            {
+              "year": 2076,
+              "value": 82.6,
+              "anomaly": 23.41
+            },
+            {
+              "year": 2077,
+              "value": 85,
+              "anomaly": 25.81
+            },
+            {
+              "year": 2078,
+              "value": 78.8,
+              "anomaly": 19.61
+            },
+            {
+              "year": 2079,
+              "value": 48.9,
+              "anomaly": -10.29
+            },
+            {
+              "year": 2080,
+              "value": 55.2,
+              "anomaly": -3.99
+            },
+            {
+              "year": 2081,
+              "value": 65.7,
+              "anomaly": 6.51
+            },
+            {
+              "year": 2082,
+              "value": 55,
+              "anomaly": -4.19
+            },
+            {
+              "year": 2083,
+              "value": 71.6,
+              "anomaly": 12.41
+            },
+            {
+              "year": 2084,
+              "value": 63.4,
+              "anomaly": 4.21
+            },
+            {
+              "year": 2085,
+              "value": 74.5,
+              "anomaly": 15.31
+            },
+            {
+              "year": 2086,
+              "value": 66.8,
+              "anomaly": 7.61
+            },
+            {
+              "year": 2087,
+              "value": 64.7,
+              "anomaly": 5.51
+            },
+            {
+              "year": 2088,
+              "value": 64.4,
+              "anomaly": 5.21
+            },
+            {
+              "year": 2089,
+              "value": 99.2,
+              "anomaly": 40.01
+            },
+            {
+              "year": 2090,
+              "value": 76.2,
+              "anomaly": 17.01
+            },
+            {
+              "year": 2091,
+              "value": 91.6,
+              "anomaly": 32.41
+            },
+            {
+              "year": 2092,
+              "value": 54.9,
+              "anomaly": -4.29
+            },
+            {
+              "year": 2093,
+              "value": 51.2,
+              "anomaly": -7.99
+            },
+            {
+              "year": 2094,
+              "value": 52.9,
+              "anomaly": -6.29
+            },
+            {
+              "year": 2095,
+              "value": 60.8,
+              "anomaly": 1.61
+            },
+            {
+              "year": 2096,
+              "value": 70.6,
+              "anomaly": 11.41
+            },
+            {
+              "year": 2097,
+              "value": 90.5,
+              "anomaly": 31.31
+            },
+            {
+              "year": 2098,
+              "value": 82.1,
+              "anomaly": 22.91
+            },
+            {
+              "year": 2099,
+              "value": 0,
+              "anomaly": -59.19
+            }
+          ]
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 65.3,
+              "anomaly": 65.3
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 70.59,
+              "anomaly": 70.59
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 69.4,
+              "anomaly": 10.21
+            },
+            {
+              "year": 2007,
+              "value": 49.5,
+              "anomaly": -9.69
+            },
+            {
+              "year": 2008,
+              "value": 120.1,
+              "anomaly": 60.91
+            },
+            {
+              "year": 2009,
+              "value": 46.9,
+              "anomaly": -12.29
+            },
+            {
+              "year": 2010,
+              "value": 66.7,
+              "anomaly": 7.51
+            },
+            {
+              "year": 2011,
+              "value": 68.8,
+              "anomaly": 9.61
+            },
+            {
+              "year": 2012,
+              "value": 52.5,
+              "anomaly": -6.69
+            },
+            {
+              "year": 2013,
+              "value": 63.3,
+              "anomaly": 4.11
+            },
+            {
+              "year": 2014,
+              "value": 60.2,
+              "anomaly": 1.01
+            },
+            {
+              "year": 2015,
+              "value": 86.6,
+              "anomaly": 27.41
+            },
+            {
+              "year": 2016,
+              "value": 82.6,
+              "anomaly": 23.41
+            },
+            {
+              "year": 2017,
+              "value": 51.9,
+              "anomaly": -7.29
+            },
+            {
+              "year": 2018,
+              "value": 43.9,
+              "anomaly": -15.29
+            },
+            {
+              "year": 2019,
+              "value": 43.8,
+              "anomaly": -15.39
+            },
+            {
+              "year": 2020,
+              "value": 80.2,
+              "anomaly": 21.01
+            },
+            {
+              "year": 2021,
+              "value": 73.9,
+              "anomaly": 14.71
+            },
+            {
+              "year": 2022,
+              "value": 61.2,
+              "anomaly": 2.01
+            },
+            {
+              "year": 2023,
+              "value": 55.2,
+              "anomaly": -3.99
+            },
+            {
+              "year": 2024,
+              "value": 80.8,
+              "anomaly": 21.61
+            },
+            {
+              "year": 2025,
+              "value": 47.1,
+              "anomaly": -12.09
+            },
+            {
+              "year": 2026,
+              "value": 49.3,
+              "anomaly": -9.89
+            },
+            {
+              "year": 2027,
+              "value": 62.2,
+              "anomaly": 3.01
+            },
+            {
+              "year": 2028,
+              "value": 63.5,
+              "anomaly": 4.31
+            },
+            {
+              "year": 2029,
+              "value": 55.9,
+              "anomaly": -3.29
+            },
+            {
+              "year": 2030,
+              "value": 95.3,
+              "anomaly": 36.11
+            },
+            {
+              "year": 2031,
+              "value": 65.1,
+              "anomaly": 5.91
+            },
+            {
+              "year": 2032,
+              "value": 54.5,
+              "anomaly": -4.69
+            },
+            {
+              "year": 2033,
+              "value": 58.9,
+              "anomaly": -0.29
+            },
+            {
+              "year": 2034,
+              "value": 64,
+              "anomaly": 4.81
+            },
+            {
+              "year": 2035,
+              "value": 71.4,
+              "anomaly": 12.21
+            },
+            {
+              "year": 2036,
+              "value": 71.3,
+              "anomaly": 12.11
+            },
+            {
+              "year": 2037,
+              "value": 69.8,
+              "anomaly": 10.61
+            },
+            {
+              "year": 2038,
+              "value": 62.3,
+              "anomaly": 3.11
+            },
+            {
+              "year": 2039,
+              "value": 67.3,
+              "anomaly": 8.11
+            },
+            {
+              "year": 2040,
+              "value": 62.1,
+              "anomaly": 2.91
+            },
+            {
+              "year": 2041,
+              "value": 63.7,
+              "anomaly": 4.51
+            },
+            {
+              "year": 2042,
+              "value": 79.3,
+              "anomaly": 20.11
+            },
+            {
+              "year": 2043,
+              "value": 80.2,
+              "anomaly": 21.01
+            },
+            {
+              "year": 2044,
+              "value": 60.1,
+              "anomaly": 0.91
+            },
+            {
+              "year": 2045,
+              "value": 86.5,
+              "anomaly": 27.31
+            },
+            {
+              "year": 2046,
+              "value": 74.7,
+              "anomaly": 15.51
+            },
+            {
+              "year": 2047,
+              "value": 95.2,
+              "anomaly": 36.01
+            },
+            {
+              "year": 2048,
+              "value": 67.9,
+              "anomaly": 8.71
+            },
+            {
+              "year": 2049,
+              "value": 71.5,
+              "anomaly": 12.31
+            },
+            {
+              "year": 2050,
+              "value": 67.5,
+              "anomaly": 8.31
+            },
+            {
+              "year": 2051,
+              "value": 62.4,
+              "anomaly": 3.21
+            },
+            {
+              "year": 2052,
+              "value": 58.9,
+              "anomaly": -0.29
+            },
+            {
+              "year": 2053,
+              "value": 72.5,
+              "anomaly": 13.31
+            },
+            {
+              "year": 2054,
+              "value": 57.2,
+              "anomaly": -1.99
+            },
+            {
+              "year": 2055,
+              "value": 62.6,
+              "anomaly": 3.41
+            },
+            {
+              "year": 2056,
+              "value": 59.4,
+              "anomaly": 0.21
+            },
+            {
+              "year": 2057,
+              "value": 47.2,
+              "anomaly": -11.99
+            },
+            {
+              "year": 2058,
+              "value": 102.6,
+              "anomaly": 43.41
+            },
+            {
+              "year": 2059,
+              "value": 76.8,
+              "anomaly": 17.61
+            },
+            {
+              "year": 2060,
+              "value": 74,
+              "anomaly": 14.81
+            },
+            {
+              "year": 2061,
+              "value": 123.3,
+              "anomaly": 64.11
+            },
+            {
+              "year": 2062,
+              "value": 72.9,
+              "anomaly": 13.71
+            },
+            {
+              "year": 2063,
+              "value": 70.4,
+              "anomaly": 11.21
+            },
+            {
+              "year": 2064,
+              "value": 85.4,
+              "anomaly": 26.21
+            },
+            {
+              "year": 2065,
+              "value": 64.2,
+              "anomaly": 5.01
+            },
+            {
+              "year": 2066,
+              "value": 105.9,
+              "anomaly": 46.71
+            },
+            {
+              "year": 2067,
+              "value": 117.3,
+              "anomaly": 58.11
+            },
+            {
+              "year": 2068,
+              "value": 83.5,
+              "anomaly": 24.31
+            },
+            {
+              "year": 2069,
+              "value": 85.6,
+              "anomaly": 26.41
+            },
+            {
+              "year": 2070,
+              "value": 59.6,
+              "anomaly": 0.41
+            },
+            {
+              "year": 2071,
+              "value": 70.4,
+              "anomaly": 11.21
+            },
+            {
+              "year": 2072,
+              "value": 63.8,
+              "anomaly": 4.61
+            },
+            {
+              "year": 2073,
+              "value": 80.9,
+              "anomaly": 21.71
+            },
+            {
+              "year": 2074,
+              "value": 103.3,
+              "anomaly": 44.11
+            },
+            {
+              "year": 2075,
+              "value": 96.3,
+              "anomaly": 37.11
+            },
+            {
+              "year": 2076,
+              "value": 75.1,
+              "anomaly": 15.91
+            },
+            {
+              "year": 2077,
+              "value": 64.7,
+              "anomaly": 5.51
+            },
+            {
+              "year": 2078,
+              "value": 77.9,
+              "anomaly": 18.71
+            },
+            {
+              "year": 2079,
+              "value": 64.5,
+              "anomaly": 5.31
+            },
+            {
+              "year": 2080,
+              "value": 58,
+              "anomaly": -1.19
+            },
+            {
+              "year": 2081,
+              "value": 62.1,
+              "anomaly": 2.91
+            },
+            {
+              "year": 2082,
+              "value": 71.1,
+              "anomaly": 11.91
+            },
+            {
+              "year": 2083,
+              "value": 77.7,
+              "anomaly": 18.51
+            },
+            {
+              "year": 2084,
+              "value": 108.1,
+              "anomaly": 48.91
+            },
+            {
+              "year": 2085,
+              "value": 69.7,
+              "anomaly": 10.51
+            },
+            {
+              "year": 2086,
+              "value": 76.5,
+              "anomaly": 17.31
+            },
+            {
+              "year": 2087,
+              "value": 68.9,
+              "anomaly": 9.71
+            },
+            {
+              "year": 2088,
+              "value": 76,
+              "anomaly": 16.81
+            },
+            {
+              "year": 2089,
+              "value": 76.8,
+              "anomaly": 17.61
+            },
+            {
+              "year": 2090,
+              "value": 113.6,
+              "anomaly": 54.41
+            },
+            {
+              "year": 2091,
+              "value": 69.8,
+              "anomaly": 10.61
+            },
+            {
+              "year": 2092,
+              "value": 86.7,
+              "anomaly": 27.51
+            },
+            {
+              "year": 2093,
+              "value": 107.1,
+              "anomaly": 47.91
+            },
+            {
+              "year": 2094,
+              "value": 62,
+              "anomaly": 2.81
+            },
+            {
+              "year": 2095,
+              "value": 84.2,
+              "anomaly": 25.01
+            },
+            {
+              "year": 2096,
+              "value": 99.3,
+              "anomaly": 40.11
+            },
+            {
+              "year": 2097,
+              "value": 121.8,
+              "anomaly": 62.61
+            },
+            {
+              "year": 2098,
+              "value": 81.1,
+              "anomaly": 21.91
+            },
+            {
+              "year": 2099,
+              "value": 57.9,
+              "anomaly": -1.29
+            }
+          ]
+        }
+      }
+    },
+    "RX5day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": null
+        },
+        "timeseries": []
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 151.53,
+              "anomaly": 151.53
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 167.73,
+              "anomaly": 167.73
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 158.3,
+              "anomaly": 27.49
+            },
+            {
+              "year": 2007,
+              "value": 164.1,
+              "anomaly": 33.29
+            },
+            {
+              "year": 2008,
+              "value": 117.9,
+              "anomaly": -12.91
+            },
+            {
+              "year": 2009,
+              "value": 172.6,
+              "anomaly": 41.79
+            },
+            {
+              "year": 2010,
+              "value": 122.4,
+              "anomaly": -8.41
+            },
+            {
+              "year": 2011,
+              "value": 120.6,
+              "anomaly": -10.21
+            },
+            {
+              "year": 2012,
+              "value": 176.9,
+              "anomaly": 46.09
+            },
+            {
+              "year": 2013,
+              "value": 161.1,
+              "anomaly": 30.29
+            },
+            {
+              "year": 2014,
+              "value": 162.4,
+              "anomaly": 31.59
+            },
+            {
+              "year": 2015,
+              "value": 103.3,
+              "anomaly": -27.51
+            },
+            {
+              "year": 2016,
+              "value": 110.9,
+              "anomaly": -19.91
+            },
+            {
+              "year": 2017,
+              "value": 130.7,
+              "anomaly": -0.11
+            },
+            {
+              "year": 2018,
+              "value": 94.6,
+              "anomaly": -36.21
+            },
+            {
+              "year": 2019,
+              "value": 107.3,
+              "anomaly": -23.51
+            },
+            {
+              "year": 2020,
+              "value": 127.8,
+              "anomaly": -3.01
+            },
+            {
+              "year": 2021,
+              "value": 136.1,
+              "anomaly": 5.29
+            },
+            {
+              "year": 2022,
+              "value": 119.6,
+              "anomaly": -11.21
+            },
+            {
+              "year": 2023,
+              "value": 126.8,
+              "anomaly": -4.01
+            },
+            {
+              "year": 2024,
+              "value": 114.6,
+              "anomaly": -16.21
+            },
+            {
+              "year": 2025,
+              "value": 189.8,
+              "anomaly": 58.99
+            },
+            {
+              "year": 2026,
+              "value": 92.9,
+              "anomaly": -37.91
+            },
+            {
+              "year": 2027,
+              "value": 99.2,
+              "anomaly": -31.61
+            },
+            {
+              "year": 2028,
+              "value": 133,
+              "anomaly": 2.19
+            },
+            {
+              "year": 2029,
+              "value": 137.4,
+              "anomaly": 6.59
+            },
+            {
+              "year": 2030,
+              "value": 175.9,
+              "anomaly": 45.09
+            },
+            {
+              "year": 2031,
+              "value": 179.3,
+              "anomaly": 48.49
+            },
+            {
+              "year": 2032,
+              "value": 121.3,
+              "anomaly": -9.51
+            },
+            {
+              "year": 2033,
+              "value": 147.4,
+              "anomaly": 16.59
+            },
+            {
+              "year": 2034,
+              "value": 161.3,
+              "anomaly": 30.49
+            },
+            {
+              "year": 2035,
+              "value": 219.7,
+              "anomaly": 88.89
+            },
+            {
+              "year": 2036,
+              "value": 166.9,
+              "anomaly": 36.09
+            },
+            {
+              "year": 2037,
+              "value": 221.5,
+              "anomaly": 90.69
+            },
+            {
+              "year": 2038,
+              "value": 145.9,
+              "anomaly": 15.09
+            },
+            {
+              "year": 2039,
+              "value": 149.2,
+              "anomaly": 18.39
+            },
+            {
+              "year": 2040,
+              "value": 216.6,
+              "anomaly": 85.79
+            },
+            {
+              "year": 2041,
+              "value": 140.3,
+              "anomaly": 9.49
+            },
+            {
+              "year": 2042,
+              "value": 197.6,
+              "anomaly": 66.79
+            },
+            {
+              "year": 2043,
+              "value": 153.7,
+              "anomaly": 22.89
+            },
+            {
+              "year": 2044,
+              "value": 157.2,
+              "anomaly": 26.39
+            },
+            {
+              "year": 2045,
+              "value": 136.2,
+              "anomaly": 5.39
+            },
+            {
+              "year": 2046,
+              "value": 140.2,
+              "anomaly": 9.39
+            },
+            {
+              "year": 2047,
+              "value": 183.7,
+              "anomaly": 52.89
+            },
+            {
+              "year": 2048,
+              "value": 147.3,
+              "anomaly": 16.49
+            },
+            {
+              "year": 2049,
+              "value": 165.8,
+              "anomaly": 34.99
+            },
+            {
+              "year": 2050,
+              "value": 209,
+              "anomaly": 78.19
+            },
+            {
+              "year": 2051,
+              "value": 149.3,
+              "anomaly": 18.49
+            },
+            {
+              "year": 2052,
+              "value": 210.2,
+              "anomaly": 79.39
+            },
+            {
+              "year": 2053,
+              "value": 184.7,
+              "anomaly": 53.89
+            },
+            {
+              "year": 2054,
+              "value": 178.4,
+              "anomaly": 47.59
+            },
+            {
+              "year": 2055,
+              "value": 151.3,
+              "anomaly": 20.49
+            },
+            {
+              "year": 2056,
+              "value": 198.7,
+              "anomaly": 67.89
+            },
+            {
+              "year": 2057,
+              "value": 143,
+              "anomaly": 12.19
+            },
+            {
+              "year": 2058,
+              "value": 184.8,
+              "anomaly": 53.99
+            },
+            {
+              "year": 2059,
+              "value": 88.2,
+              "anomaly": -42.61
+            },
+            {
+              "year": 2060,
+              "value": 186.1,
+              "anomaly": 55.29
+            },
+            {
+              "year": 2061,
+              "value": 150.9,
+              "anomaly": 20.09
+            },
+            {
+              "year": 2062,
+              "value": 305.3,
+              "anomaly": 174.49
+            },
+            {
+              "year": 2063,
+              "value": 140.2,
+              "anomaly": 9.39
+            },
+            {
+              "year": 2064,
+              "value": 131.6,
+              "anomaly": 0.79
+            },
+            {
+              "year": 2065,
+              "value": 115.7,
+              "anomaly": -15.11
+            },
+            {
+              "year": 2066,
+              "value": 178.2,
+              "anomaly": 47.39
+            },
+            {
+              "year": 2067,
+              "value": 94.6,
+              "anomaly": -36.21
+            },
+            {
+              "year": 2068,
+              "value": 169.6,
+              "anomaly": 38.79
+            },
+            {
+              "year": 2069,
+              "value": 140.3,
+              "anomaly": 9.49
+            },
+            {
+              "year": 2070,
+              "value": 121.3,
+              "anomaly": -9.51
+            },
+            {
+              "year": 2071,
+              "value": 122.1,
+              "anomaly": -8.71
+            },
+            {
+              "year": 2072,
+              "value": 138.7,
+              "anomaly": 7.89
+            },
+            {
+              "year": 2073,
+              "value": 195.1,
+              "anomaly": 64.29
+            },
+            {
+              "year": 2074,
+              "value": 192.9,
+              "anomaly": 62.09
+            },
+            {
+              "year": 2075,
+              "value": 111.7,
+              "anomaly": -19.11
+            },
+            {
+              "year": 2076,
+              "value": 145.2,
+              "anomaly": 14.39
+            },
+            {
+              "year": 2077,
+              "value": 281.8,
+              "anomaly": 150.99
+            },
+            {
+              "year": 2078,
+              "value": 161.1,
+              "anomaly": 30.29
+            },
+            {
+              "year": 2079,
+              "value": 131.7,
+              "anomaly": 0.89
+            },
+            {
+              "year": 2080,
+              "value": 121.8,
+              "anomaly": -9.01
+            },
+            {
+              "year": 2081,
+              "value": 221.9,
+              "anomaly": 91.09
+            },
+            {
+              "year": 2082,
+              "value": 132.3,
+              "anomaly": 1.49
+            },
+            {
+              "year": 2083,
+              "value": 143.8,
+              "anomaly": 12.99
+            },
+            {
+              "year": 2084,
+              "value": 113.3,
+              "anomaly": -17.51
+            },
+            {
+              "year": 2085,
+              "value": 116.9,
+              "anomaly": -13.91
+            },
+            {
+              "year": 2086,
+              "value": 179.7,
+              "anomaly": 48.89
+            },
+            {
+              "year": 2087,
+              "value": 221.7,
+              "anomaly": 90.89
+            },
+            {
+              "year": 2088,
+              "value": 119.1,
+              "anomaly": -11.71
+            },
+            {
+              "year": 2089,
+              "value": 182.3,
+              "anomaly": 51.49
+            },
+            {
+              "year": 2090,
+              "value": 160.6,
+              "anomaly": 29.79
+            },
+            {
+              "year": 2091,
+              "value": 173.6,
+              "anomaly": 42.79
+            },
+            {
+              "year": 2092,
+              "value": 165.8,
+              "anomaly": 34.99
+            },
+            {
+              "year": 2093,
+              "value": 120.4,
+              "anomaly": -10.41
+            },
+            {
+              "year": 2094,
+              "value": 125.2,
+              "anomaly": -5.61
+            },
+            {
+              "year": 2095,
+              "value": 159.5,
+              "anomaly": 28.69
+            },
+            {
+              "year": 2096,
+              "value": 180.6,
+              "anomaly": 49.79
+            },
+            {
+              "year": 2097,
+              "value": 197,
+              "anomaly": 66.19
+            },
+            {
+              "year": 2098,
+              "value": 146,
+              "anomaly": 15.19
+            },
+            {
+              "year": 2099,
+              "value": 0,
+              "anomaly": -130.81
+            }
+          ]
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 140.78,
+              "anomaly": 140.78
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 147.75,
+              "anomaly": 147.75
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 156.5,
+              "anomaly": 25.69
+            },
+            {
+              "year": 2007,
+              "value": 172.9,
+              "anomaly": 42.09
+            },
+            {
+              "year": 2008,
+              "value": 145.6,
+              "anomaly": 14.79
+            },
+            {
+              "year": 2009,
+              "value": 85,
+              "anomaly": -45.81
+            },
+            {
+              "year": 2010,
+              "value": 164.1,
+              "anomaly": 33.29
+            },
+            {
+              "year": 2011,
+              "value": 91,
+              "anomaly": -39.81
+            },
+            {
+              "year": 2012,
+              "value": 88.5,
+              "anomaly": -42.31
+            },
+            {
+              "year": 2013,
+              "value": 139,
+              "anomaly": 8.19
+            },
+            {
+              "year": 2014,
+              "value": 172.6,
+              "anomaly": 41.79
+            },
+            {
+              "year": 2015,
+              "value": 198.3,
+              "anomaly": 67.49
+            },
+            {
+              "year": 2016,
+              "value": 207.5,
+              "anomaly": 76.69
+            },
+            {
+              "year": 2017,
+              "value": 120.8,
+              "anomaly": -10.01
+            },
+            {
+              "year": 2018,
+              "value": 97.8,
+              "anomaly": -33.01
+            },
+            {
+              "year": 2019,
+              "value": 96.4,
+              "anomaly": -34.41
+            },
+            {
+              "year": 2020,
+              "value": 187.9,
+              "anomaly": 57.09
+            },
+            {
+              "year": 2021,
+              "value": 159.6,
+              "anomaly": 28.79
+            },
+            {
+              "year": 2022,
+              "value": 154.6,
+              "anomaly": 23.79
+            },
+            {
+              "year": 2023,
+              "value": 124.7,
+              "anomaly": -6.11
+            },
+            {
+              "year": 2024,
+              "value": 109.9,
+              "anomaly": -20.91
+            },
+            {
+              "year": 2025,
+              "value": 123.9,
+              "anomaly": -6.91
+            },
+            {
+              "year": 2026,
+              "value": 121.4,
+              "anomaly": -9.41
+            },
+            {
+              "year": 2027,
+              "value": 177.4,
+              "anomaly": 46.59
+            },
+            {
+              "year": 2028,
+              "value": 147,
+              "anomaly": 16.19
+            },
+            {
+              "year": 2029,
+              "value": 152.8,
+              "anomaly": 21.99
+            },
+            {
+              "year": 2030,
+              "value": 123.2,
+              "anomaly": -7.61
+            },
+            {
+              "year": 2031,
+              "value": 105.5,
+              "anomaly": -25.31
+            },
+            {
+              "year": 2032,
+              "value": 152.7,
+              "anomaly": 21.89
+            },
+            {
+              "year": 2033,
+              "value": 143.4,
+              "anomaly": 12.59
+            },
+            {
+              "year": 2034,
+              "value": 129.4,
+              "anomaly": -1.41
+            },
+            {
+              "year": 2035,
+              "value": 175.8,
+              "anomaly": 44.99
+            },
+            {
+              "year": 2036,
+              "value": 150.3,
+              "anomaly": 19.49
+            },
+            {
+              "year": 2037,
+              "value": 111.4,
+              "anomaly": -19.41
+            },
+            {
+              "year": 2038,
+              "value": 125.8,
+              "anomaly": -5.01
+            },
+            {
+              "year": 2039,
+              "value": 137.5,
+              "anomaly": 6.69
+            },
+            {
+              "year": 2040,
+              "value": 142.2,
+              "anomaly": 11.39
+            },
+            {
+              "year": 2041,
+              "value": 151.4,
+              "anomaly": 20.59
+            },
+            {
+              "year": 2042,
+              "value": 151.6,
+              "anomaly": 20.79
+            },
+            {
+              "year": 2043,
+              "value": 164.4,
+              "anomaly": 33.59
+            },
+            {
+              "year": 2044,
+              "value": 128.7,
+              "anomaly": -2.11
+            },
+            {
+              "year": 2045,
+              "value": 187,
+              "anomaly": 56.19
+            },
+            {
+              "year": 2046,
+              "value": 198,
+              "anomaly": 67.19
+            },
+            {
+              "year": 2047,
+              "value": 131.4,
+              "anomaly": 0.59
+            },
+            {
+              "year": 2048,
+              "value": 97,
+              "anomaly": -33.81
+            },
+            {
+              "year": 2049,
+              "value": 138.3,
+              "anomaly": 7.49
+            },
+            {
+              "year": 2050,
+              "value": 166.2,
+              "anomaly": 35.39
+            },
+            {
+              "year": 2051,
+              "value": 124,
+              "anomaly": -6.81
+            },
+            {
+              "year": 2052,
+              "value": 170.5,
+              "anomaly": 39.69
+            },
+            {
+              "year": 2053,
+              "value": 138.6,
+              "anomaly": 7.79
+            },
+            {
+              "year": 2054,
+              "value": 135,
+              "anomaly": 4.19
+            },
+            {
+              "year": 2055,
+              "value": 123.7,
+              "anomaly": -7.11
+            },
+            {
+              "year": 2056,
+              "value": 148.8,
+              "anomaly": 17.99
+            },
+            {
+              "year": 2057,
+              "value": 157.9,
+              "anomaly": 27.09
+            },
+            {
+              "year": 2058,
+              "value": 145.7,
+              "anomaly": 14.89
+            },
+            {
+              "year": 2059,
+              "value": 143.1,
+              "anomaly": 12.29
+            },
+            {
+              "year": 2060,
+              "value": 159.3,
+              "anomaly": 28.49
+            },
+            {
+              "year": 2061,
+              "value": 239.7,
+              "anomaly": 108.89
+            },
+            {
+              "year": 2062,
+              "value": 171.1,
+              "anomaly": 40.29
+            },
+            {
+              "year": 2063,
+              "value": 100,
+              "anomaly": -30.81
+            },
+            {
+              "year": 2064,
+              "value": 162.4,
+              "anomaly": 31.59
+            },
+            {
+              "year": 2065,
+              "value": 147.5,
+              "anomaly": 16.69
+            },
+            {
+              "year": 2066,
+              "value": 189.7,
+              "anomaly": 58.89
+            },
+            {
+              "year": 2067,
+              "value": 176.8,
+              "anomaly": 45.99
+            },
+            {
+              "year": 2068,
+              "value": 241,
+              "anomaly": 110.19
+            },
+            {
+              "year": 2069,
+              "value": 142.4,
+              "anomaly": 11.59
+            },
+            {
+              "year": 2070,
+              "value": 180.2,
+              "anomaly": 49.39
+            },
+            {
+              "year": 2071,
+              "value": 150.1,
+              "anomaly": 19.29
+            },
+            {
+              "year": 2072,
+              "value": 153.5,
+              "anomaly": 22.69
+            },
+            {
+              "year": 2073,
+              "value": 220.6,
+              "anomaly": 89.79
+            },
+            {
+              "year": 2074,
+              "value": 141.9,
+              "anomaly": 11.09
+            },
+            {
+              "year": 2075,
+              "value": 190.3,
+              "anomaly": 59.49
+            },
+            {
+              "year": 2076,
+              "value": 190.5,
+              "anomaly": 59.69
+            },
+            {
+              "year": 2077,
+              "value": 139.2,
+              "anomaly": 8.39
+            },
+            {
+              "year": 2078,
+              "value": 150,
+              "anomaly": 19.19
+            },
+            {
+              "year": 2079,
+              "value": 161.8,
+              "anomaly": 30.99
+            },
+            {
+              "year": 2080,
+              "value": 130.7,
+              "anomaly": -0.11
+            },
+            {
+              "year": 2081,
+              "value": 187.6,
+              "anomaly": 56.79
+            },
+            {
+              "year": 2082,
+              "value": 152.6,
+              "anomaly": 21.79
+            },
+            {
+              "year": 2083,
+              "value": 165.7,
+              "anomaly": 34.89
+            },
+            {
+              "year": 2084,
+              "value": 240.5,
+              "anomaly": 109.69
+            },
+            {
+              "year": 2085,
+              "value": 183.7,
+              "anomaly": 52.89
+            },
+            {
+              "year": 2086,
+              "value": 199.8,
+              "anomaly": 68.99
+            },
+            {
+              "year": 2087,
+              "value": 187.9,
+              "anomaly": 57.09
+            },
+            {
+              "year": 2088,
+              "value": 198.6,
+              "anomaly": 67.79
+            },
+            {
+              "year": 2089,
+              "value": 174,
+              "anomaly": 43.19
+            },
+            {
+              "year": 2090,
+              "value": 178.6,
+              "anomaly": 47.79
+            },
+            {
+              "year": 2091,
+              "value": 225.3,
+              "anomaly": 94.49
+            },
+            {
+              "year": 2092,
+              "value": 167.7,
+              "anomaly": 36.89
+            },
+            {
+              "year": 2093,
+              "value": 234,
+              "anomaly": 103.19
+            },
+            {
+              "year": 2094,
+              "value": 180.1,
+              "anomaly": 49.29
+            },
+            {
+              "year": 2095,
+              "value": 194.7,
+              "anomaly": 63.89
+            },
+            {
+              "year": 2096,
+              "value": 190.8,
+              "anomaly": 59.99
+            },
+            {
+              "year": 2097,
+              "value": 199.6,
+              "anomaly": 68.79
+            },
+            {
+              "year": 2098,
+              "value": 149.1,
+              "anomaly": 18.29
+            },
+            {
+              "year": 2099,
+              "value": 132,
+              "anomaly": 1.19
+            }
+          ]
+        }
+      }
+    },
+    "TX90p": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": null
+        },
+        "timeseries": []
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 25.34,
+              "anomaly": 25.34
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 24.58,
+              "anomaly": 24.58
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 10.6,
+              "anomaly": 0.04
+            },
+            {
+              "year": 2007,
+              "value": 19.4,
+              "anomaly": 8.84
+            },
+            {
+              "year": 2008,
+              "value": 26.9,
+              "anomaly": 16.34
+            },
+            {
+              "year": 2009,
+              "value": 19.4,
+              "anomaly": 8.84
+            },
+            {
+              "year": 2010,
+              "value": 17.8,
+              "anomaly": 7.24
+            },
+            {
+              "year": 2011,
+              "value": 19.4,
+              "anomaly": 8.84
+            },
+            {
+              "year": 2012,
+              "value": 16.7,
+              "anomaly": 6.14
+            },
+            {
+              "year": 2013,
+              "value": 13.3,
+              "anomaly": 2.74
+            },
+            {
+              "year": 2014,
+              "value": 15.6,
+              "anomaly": 5.04
+            },
+            {
+              "year": 2015,
+              "value": 21.9,
+              "anomaly": 11.34
+            },
+            {
+              "year": 2016,
+              "value": 34.7,
+              "anomaly": 24.14
+            },
+            {
+              "year": 2017,
+              "value": 31.7,
+              "anomaly": 21.14
+            },
+            {
+              "year": 2018,
+              "value": 37.2,
+              "anomaly": 26.64
+            },
+            {
+              "year": 2019,
+              "value": 30.8,
+              "anomaly": 20.24
+            },
+            {
+              "year": 2020,
+              "value": 24.4,
+              "anomaly": 13.84
+            },
+            {
+              "year": 2021,
+              "value": 21.1,
+              "anomaly": 10.54
+            },
+            {
+              "year": 2022,
+              "value": 31.7,
+              "anomaly": 21.14
+            },
+            {
+              "year": 2023,
+              "value": 27.2,
+              "anomaly": 16.64
+            },
+            {
+              "year": 2024,
+              "value": 22.5,
+              "anomaly": 11.94
+            },
+            {
+              "year": 2025,
+              "value": 29.7,
+              "anomaly": 19.14
+            },
+            {
+              "year": 2026,
+              "value": 50.6,
+              "anomaly": 40.04
+            },
+            {
+              "year": 2027,
+              "value": 39.7,
+              "anomaly": 29.14
+            },
+            {
+              "year": 2028,
+              "value": 25.8,
+              "anomaly": 15.24
+            },
+            {
+              "year": 2029,
+              "value": 24.7,
+              "anomaly": 14.14
+            },
+            {
+              "year": 2030,
+              "value": 28.3,
+              "anomaly": 17.74
+            },
+            {
+              "year": 2031,
+              "value": 29.2,
+              "anomaly": 18.64
+            },
+            {
+              "year": 2032,
+              "value": 20.3,
+              "anomaly": 9.74
+            },
+            {
+              "year": 2033,
+              "value": 15.8,
+              "anomaly": 5.24
+            },
+            {
+              "year": 2034,
+              "value": 17.5,
+              "anomaly": 6.94
+            },
+            {
+              "year": 2035,
+              "value": 31.7,
+              "anomaly": 21.14
+            },
+            {
+              "year": 2036,
+              "value": 11.1,
+              "anomaly": 0.54
+            },
+            {
+              "year": 2037,
+              "value": 16.9,
+              "anomaly": 6.34
+            },
+            {
+              "year": 2038,
+              "value": 15.6,
+              "anomaly": 5.04
+            },
+            {
+              "year": 2039,
+              "value": 13.3,
+              "anomaly": 2.74
+            },
+            {
+              "year": 2040,
+              "value": 35,
+              "anomaly": 24.44
+            },
+            {
+              "year": 2041,
+              "value": 23.9,
+              "anomaly": 13.34
+            },
+            {
+              "year": 2042,
+              "value": 15.3,
+              "anomaly": 4.74
+            },
+            {
+              "year": 2043,
+              "value": 16.4,
+              "anomaly": 5.84
+            },
+            {
+              "year": 2044,
+              "value": 23.1,
+              "anomaly": 12.54
+            },
+            {
+              "year": 2045,
+              "value": 29.4,
+              "anomaly": 18.84
+            },
+            {
+              "year": 2046,
+              "value": 15.6,
+              "anomaly": 5.04
+            },
+            {
+              "year": 2047,
+              "value": 17.5,
+              "anomaly": 6.94
+            },
+            {
+              "year": 2048,
+              "value": 16.7,
+              "anomaly": 6.14
+            },
+            {
+              "year": 2049,
+              "value": 23.1,
+              "anomaly": 12.54
+            },
+            {
+              "year": 2050,
+              "value": 24.2,
+              "anomaly": 13.64
+            },
+            {
+              "year": 2051,
+              "value": 20,
+              "anomaly": 9.44
+            },
+            {
+              "year": 2052,
+              "value": 22.5,
+              "anomaly": 11.94
+            },
+            {
+              "year": 2053,
+              "value": 23.3,
+              "anomaly": 12.74
+            },
+            {
+              "year": 2054,
+              "value": 19.7,
+              "anomaly": 9.14
+            },
+            {
+              "year": 2055,
+              "value": 15.8,
+              "anomaly": 5.24
+            },
+            {
+              "year": 2056,
+              "value": 33.6,
+              "anomaly": 23.04
+            },
+            {
+              "year": 2057,
+              "value": 19.7,
+              "anomaly": 9.14
+            },
+            {
+              "year": 2058,
+              "value": 13.6,
+              "anomaly": 3.04
+            },
+            {
+              "year": 2059,
+              "value": 50.6,
+              "anomaly": 40.04
+            },
+            {
+              "year": 2060,
+              "value": 57.2,
+              "anomaly": 46.64
+            },
+            {
+              "year": 2061,
+              "value": 51.7,
+              "anomaly": 41.14
+            },
+            {
+              "year": 2062,
+              "value": 31.4,
+              "anomaly": 20.84
+            },
+            {
+              "year": 2063,
+              "value": 35.3,
+              "anomaly": 24.74
+            },
+            {
+              "year": 2064,
+              "value": 30,
+              "anomaly": 19.44
+            },
+            {
+              "year": 2065,
+              "value": 34.2,
+              "anomaly": 23.64
+            },
+            {
+              "year": 2066,
+              "value": 32.8,
+              "anomaly": 22.24
+            },
+            {
+              "year": 2067,
+              "value": 57.5,
+              "anomaly": 46.94
+            },
+            {
+              "year": 2068,
+              "value": 40,
+              "anomaly": 29.44
+            },
+            {
+              "year": 2069,
+              "value": 29.4,
+              "anomaly": 18.84
+            },
+            {
+              "year": 2070,
+              "value": 30,
+              "anomaly": 19.44
+            },
+            {
+              "year": 2071,
+              "value": 30.6,
+              "anomaly": 20.04
+            },
+            {
+              "year": 2072,
+              "value": 34.7,
+              "anomaly": 24.14
+            },
+            {
+              "year": 2073,
+              "value": 29.4,
+              "anomaly": 18.84
+            },
+            {
+              "year": 2074,
+              "value": 31.7,
+              "anomaly": 21.14
+            },
+            {
+              "year": 2075,
+              "value": 40.3,
+              "anomaly": 29.74
+            },
+            {
+              "year": 2076,
+              "value": 27.2,
+              "anomaly": 16.64
+            },
+            {
+              "year": 2077,
+              "value": 17.8,
+              "anomaly": 7.24
+            },
+            {
+              "year": 2078,
+              "value": 21.7,
+              "anomaly": 11.14
+            },
+            {
+              "year": 2079,
+              "value": 36.4,
+              "anomaly": 25.84
+            },
+            {
+              "year": 2080,
+              "value": 30,
+              "anomaly": 19.44
+            },
+            {
+              "year": 2081,
+              "value": 11.7,
+              "anomaly": 1.14
+            },
+            {
+              "year": 2082,
+              "value": 23.3,
+              "anomaly": 12.74
+            },
+            {
+              "year": 2083,
+              "value": 40.8,
+              "anomaly": 30.24
+            },
+            {
+              "year": 2084,
+              "value": 60.3,
+              "anomaly": 49.74
+            },
+            {
+              "year": 2085,
+              "value": 41.9,
+              "anomaly": 31.34
+            },
+            {
+              "year": 2086,
+              "value": 41.1,
+              "anomaly": 30.54
+            },
+            {
+              "year": 2087,
+              "value": 26.7,
+              "anomaly": 16.14
+            },
+            {
+              "year": 2088,
+              "value": 35.8,
+              "anomaly": 25.24
+            },
+            {
+              "year": 2089,
+              "value": 28.6,
+              "anomaly": 18.04
+            },
+            {
+              "year": 2090,
+              "value": 17.5,
+              "anomaly": 6.94
+            },
+            {
+              "year": 2091,
+              "value": 30.3,
+              "anomaly": 19.74
+            },
+            {
+              "year": 2092,
+              "value": 40.3,
+              "anomaly": 29.74
+            },
+            {
+              "year": 2093,
+              "value": 16.9,
+              "anomaly": 6.34
+            },
+            {
+              "year": 2094,
+              "value": 26.9,
+              "anomaly": 16.34
+            },
+            {
+              "year": 2095,
+              "value": 36.7,
+              "anomaly": 26.14
+            },
+            {
+              "year": 2096,
+              "value": 18.6,
+              "anomaly": 8.04
+            },
+            {
+              "year": 2097,
+              "value": 31.4,
+              "anomaly": 20.84
+            },
+            {
+              "year": 2098,
+              "value": 25.6,
+              "anomaly": 15.04
+            },
+            {
+              "year": 2099,
+              "value": 0,
+              "anomaly": -10.56
+            }
+          ]
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 33.12,
+              "anomaly": 33.12
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 29.56,
+              "anomaly": 29.56
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 22.5,
+              "anomaly": 11.94
+            },
+            {
+              "year": 2007,
+              "value": 20,
+              "anomaly": 9.44
+            },
+            {
+              "year": 2008,
+              "value": 27.2,
+              "anomaly": 16.64
+            },
+            {
+              "year": 2009,
+              "value": 26.7,
+              "anomaly": 16.14
+            },
+            {
+              "year": 2010,
+              "value": 19.2,
+              "anomaly": 8.64
+            },
+            {
+              "year": 2011,
+              "value": 23.3,
+              "anomaly": 12.74
+            },
+            {
+              "year": 2012,
+              "value": 10.8,
+              "anomaly": 0.24
+            },
+            {
+              "year": 2013,
+              "value": 12.5,
+              "anomaly": 1.94
+            },
+            {
+              "year": 2014,
+              "value": 11.1,
+              "anomaly": 0.54
+            },
+            {
+              "year": 2015,
+              "value": 20.3,
+              "anomaly": 9.74
+            },
+            {
+              "year": 2016,
+              "value": 22.2,
+              "anomaly": 11.64
+            },
+            {
+              "year": 2017,
+              "value": 37.8,
+              "anomaly": 27.24
+            },
+            {
+              "year": 2018,
+              "value": 40.6,
+              "anomaly": 30.04
+            },
+            {
+              "year": 2019,
+              "value": 33.1,
+              "anomaly": 22.54
+            },
+            {
+              "year": 2020,
+              "value": 41.9,
+              "anomaly": 31.34
+            },
+            {
+              "year": 2021,
+              "value": 23.9,
+              "anomaly": 13.34
+            },
+            {
+              "year": 2022,
+              "value": 28.1,
+              "anomaly": 17.54
+            },
+            {
+              "year": 2023,
+              "value": 51.7,
+              "anomaly": 41.14
+            },
+            {
+              "year": 2024,
+              "value": 40.3,
+              "anomaly": 29.74
+            },
+            {
+              "year": 2025,
+              "value": 57.2,
+              "anomaly": 46.64
+            },
+            {
+              "year": 2026,
+              "value": 51.7,
+              "anomaly": 41.14
+            },
+            {
+              "year": 2027,
+              "value": 24.7,
+              "anomaly": 14.14
+            },
+            {
+              "year": 2028,
+              "value": 28.1,
+              "anomaly": 17.54
+            },
+            {
+              "year": 2029,
+              "value": 35.3,
+              "anomaly": 24.74
+            },
+            {
+              "year": 2030,
+              "value": 33.1,
+              "anomaly": 22.54
+            },
+            {
+              "year": 2031,
+              "value": 25.6,
+              "anomaly": 15.04
+            },
+            {
+              "year": 2032,
+              "value": 22.2,
+              "anomaly": 11.64
+            },
+            {
+              "year": 2033,
+              "value": 34.4,
+              "anomaly": 23.84
+            },
+            {
+              "year": 2034,
+              "value": 32.5,
+              "anomaly": 21.94
+            },
+            {
+              "year": 2035,
+              "value": 36.9,
+              "anomaly": 26.34
+            },
+            {
+              "year": 2036,
+              "value": 15,
+              "anomaly": 4.44
+            },
+            {
+              "year": 2037,
+              "value": 20.3,
+              "anomaly": 9.74
+            },
+            {
+              "year": 2038,
+              "value": 29.4,
+              "anomaly": 18.84
+            },
+            {
+              "year": 2039,
+              "value": 31.4,
+              "anomaly": 20.84
+            },
+            {
+              "year": 2040,
+              "value": 31.9,
+              "anomaly": 21.34
+            },
+            {
+              "year": 2041,
+              "value": 31.7,
+              "anomaly": 21.14
+            },
+            {
+              "year": 2042,
+              "value": 22.2,
+              "anomaly": 11.64
+            },
+            {
+              "year": 2043,
+              "value": 23.6,
+              "anomaly": 13.04
+            },
+            {
+              "year": 2044,
+              "value": 19.4,
+              "anomaly": 8.84
+            },
+            {
+              "year": 2045,
+              "value": 23.1,
+              "anomaly": 12.54
+            },
+            {
+              "year": 2046,
+              "value": 28.6,
+              "anomaly": 18.04
+            },
+            {
+              "year": 2047,
+              "value": 17.2,
+              "anomaly": 6.64
+            },
+            {
+              "year": 2048,
+              "value": 19.2,
+              "anomaly": 8.64
+            },
+            {
+              "year": 2049,
+              "value": 24.4,
+              "anomaly": 13.84
+            },
+            {
+              "year": 2050,
+              "value": 20.3,
+              "anomaly": 9.74
+            },
+            {
+              "year": 2051,
+              "value": 28.3,
+              "anomaly": 17.74
+            },
+            {
+              "year": 2052,
+              "value": 37.2,
+              "anomaly": 26.64
+            },
+            {
+              "year": 2053,
+              "value": 36.4,
+              "anomaly": 25.84
+            },
+            {
+              "year": 2054,
+              "value": 38.3,
+              "anomaly": 27.74
+            },
+            {
+              "year": 2055,
+              "value": 39.4,
+              "anomaly": 28.84
+            },
+            {
+              "year": 2056,
+              "value": 28.3,
+              "anomaly": 17.74
+            },
+            {
+              "year": 2057,
+              "value": 36.1,
+              "anomaly": 25.54
+            },
+            {
+              "year": 2058,
+              "value": 40.3,
+              "anomaly": 29.74
+            },
+            {
+              "year": 2059,
+              "value": 33.1,
+              "anomaly": 22.54
+            },
+            {
+              "year": 2060,
+              "value": 41.7,
+              "anomaly": 31.14
+            },
+            {
+              "year": 2061,
+              "value": 40,
+              "anomaly": 29.44
+            },
+            {
+              "year": 2062,
+              "value": 36.7,
+              "anomaly": 26.14
+            },
+            {
+              "year": 2063,
+              "value": 52.8,
+              "anomaly": 42.24
+            },
+            {
+              "year": 2064,
+              "value": 45.6,
+              "anomaly": 35.04
+            },
+            {
+              "year": 2065,
+              "value": 34.7,
+              "anomaly": 24.14
+            },
+            {
+              "year": 2066,
+              "value": 49.2,
+              "anomaly": 38.64
+            },
+            {
+              "year": 2067,
+              "value": 43.9,
+              "anomaly": 33.34
+            },
+            {
+              "year": 2068,
+              "value": 32.8,
+              "anomaly": 22.24
+            },
+            {
+              "year": 2069,
+              "value": 35.6,
+              "anomaly": 25.04
+            },
+            {
+              "year": 2070,
+              "value": 45,
+              "anomaly": 34.44
+            },
+            {
+              "year": 2071,
+              "value": 49.4,
+              "anomaly": 38.84
+            },
+            {
+              "year": 2072,
+              "value": 53.6,
+              "anomaly": 43.04
+            },
+            {
+              "year": 2073,
+              "value": 51.4,
+              "anomaly": 40.84
+            },
+            {
+              "year": 2074,
+              "value": 58.1,
+              "anomaly": 47.54
+            },
+            {
+              "year": 2075,
+              "value": 40,
+              "anomaly": 29.44
+            },
+            {
+              "year": 2076,
+              "value": 25,
+              "anomaly": 14.44
+            },
+            {
+              "year": 2077,
+              "value": 25.6,
+              "anomaly": 15.04
+            },
+            {
+              "year": 2078,
+              "value": 37.5,
+              "anomaly": 26.94
+            },
+            {
+              "year": 2079,
+              "value": 54.7,
+              "anomaly": 44.14
+            },
+            {
+              "year": 2080,
+              "value": 68.1,
+              "anomaly": 57.54
+            },
+            {
+              "year": 2081,
+              "value": 49.2,
+              "anomaly": 38.64
+            },
+            {
+              "year": 2082,
+              "value": 61.4,
+              "anomaly": 50.84
+            },
+            {
+              "year": 2083,
+              "value": 61.7,
+              "anomaly": 51.14
+            },
+            {
+              "year": 2084,
+              "value": 56.4,
+              "anomaly": 45.84
+            },
+            {
+              "year": 2085,
+              "value": 46.4,
+              "anomaly": 35.84
+            },
+            {
+              "year": 2086,
+              "value": 48.1,
+              "anomaly": 37.54
+            },
+            {
+              "year": 2087,
+              "value": 55.6,
+              "anomaly": 45.04
+            },
+            {
+              "year": 2088,
+              "value": 52.8,
+              "anomaly": 42.24
+            },
+            {
+              "year": 2089,
+              "value": 49.4,
+              "anomaly": 38.84
+            },
+            {
+              "year": 2090,
+              "value": 45.3,
+              "anomaly": 34.74
+            },
+            {
+              "year": 2091,
+              "value": 49.4,
+              "anomaly": 38.84
+            },
+            {
+              "year": 2092,
+              "value": 37.2,
+              "anomaly": 26.64
+            },
+            {
+              "year": 2093,
+              "value": 40.6,
+              "anomaly": 30.04
+            },
+            {
+              "year": 2094,
+              "value": 45,
+              "anomaly": 34.44
+            },
+            {
+              "year": 2095,
+              "value": 50.8,
+              "anomaly": 40.24
+            },
+            {
+              "year": 2096,
+              "value": 42.5,
+              "anomaly": 31.94
+            },
+            {
+              "year": 2097,
+              "value": 43.3,
+              "anomaly": 32.74
+            },
+            {
+              "year": 2098,
+              "value": 52.5,
+              "anomaly": 41.94
+            },
+            {
+              "year": 2099,
+              "value": 58.6,
+              "anomaly": 48.04
+            }
+          ]
+        }
+      }
+    },
+    "tas": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": null
+        },
+        "timeseries": []
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 21.03,
+              "anomaly": 21.03
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 21.32,
+              "anomaly": 21.32
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 19.61,
+              "anomaly": 0.25
+            },
+            {
+              "year": 2007,
+              "value": 20.44,
+              "anomaly": 1.09
+            },
+            {
+              "year": 2008,
+              "value": 20.47,
+              "anomaly": 1.12
+            },
+            {
+              "year": 2009,
+              "value": 20.42,
+              "anomaly": 1.07
+            },
+            {
+              "year": 2010,
+              "value": 20.44,
+              "anomaly": 1.09
+            },
+            {
+              "year": 2011,
+              "value": 20.85,
+              "anomaly": 1.49
+            },
+            {
+              "year": 2012,
+              "value": 20.81,
+              "anomaly": 1.46
+            },
+            {
+              "year": 2013,
+              "value": 20.23,
+              "anomaly": 0.88
+            },
+            {
+              "year": 2014,
+              "value": 20.63,
+              "anomaly": 1.28
+            },
+            {
+              "year": 2015,
+              "value": 21.43,
+              "anomaly": 2.08
+            },
+            {
+              "year": 2016,
+              "value": 21.97,
+              "anomaly": 2.61
+            },
+            {
+              "year": 2017,
+              "value": 21.66,
+              "anomaly": 2.31
+            },
+            {
+              "year": 2018,
+              "value": 21.67,
+              "anomaly": 2.32
+            },
+            {
+              "year": 2019,
+              "value": 21.16,
+              "anomaly": 1.81
+            },
+            {
+              "year": 2020,
+              "value": 20.17,
+              "anomaly": 0.81
+            },
+            {
+              "year": 2021,
+              "value": 20.86,
+              "anomaly": 1.51
+            },
+            {
+              "year": 2022,
+              "value": 21.6,
+              "anomaly": 2.25
+            },
+            {
+              "year": 2023,
+              "value": 20.89,
+              "anomaly": 1.54
+            },
+            {
+              "year": 2024,
+              "value": 20.77,
+              "anomaly": 1.42
+            },
+            {
+              "year": 2025,
+              "value": 21.61,
+              "anomaly": 2.26
+            },
+            {
+              "year": 2026,
+              "value": 22.9,
+              "anomaly": 3.55
+            },
+            {
+              "year": 2027,
+              "value": 22.01,
+              "anomaly": 2.66
+            },
+            {
+              "year": 2028,
+              "value": 21.02,
+              "anomaly": 1.67
+            },
+            {
+              "year": 2029,
+              "value": 20.54,
+              "anomaly": 1.18
+            },
+            {
+              "year": 2030,
+              "value": 20.95,
+              "anomaly": 1.59
+            },
+            {
+              "year": 2031,
+              "value": 21.17,
+              "anomaly": 1.82
+            },
+            {
+              "year": 2032,
+              "value": 20.96,
+              "anomaly": 1.6
+            },
+            {
+              "year": 2033,
+              "value": 20.22,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2034,
+              "value": 20.77,
+              "anomaly": 1.41
+            },
+            {
+              "year": 2035,
+              "value": 21.72,
+              "anomaly": 2.37
+            },
+            {
+              "year": 2036,
+              "value": 20.25,
+              "anomaly": 0.89
+            },
+            {
+              "year": 2037,
+              "value": 20.42,
+              "anomaly": 1.07
+            },
+            {
+              "year": 2038,
+              "value": 20.81,
+              "anomaly": 1.45
+            },
+            {
+              "year": 2039,
+              "value": 20.29,
+              "anomaly": 0.94
+            },
+            {
+              "year": 2040,
+              "value": 21.65,
+              "anomaly": 2.3
+            },
+            {
+              "year": 2041,
+              "value": 20.88,
+              "anomaly": 1.52
+            },
+            {
+              "year": 2042,
+              "value": 19.98,
+              "anomaly": 0.63
+            },
+            {
+              "year": 2043,
+              "value": 20.95,
+              "anomaly": 1.59
+            },
+            {
+              "year": 2044,
+              "value": 20.93,
+              "anomaly": 1.58
+            },
+            {
+              "year": 2045,
+              "value": 21.74,
+              "anomaly": 2.38
+            },
+            {
+              "year": 2046,
+              "value": 20.81,
+              "anomaly": 1.46
+            },
+            {
+              "year": 2047,
+              "value": 20.89,
+              "anomaly": 1.54
+            },
+            {
+              "year": 2048,
+              "value": 21.09,
+              "anomaly": 1.73
+            },
+            {
+              "year": 2049,
+              "value": 21.25,
+              "anomaly": 1.9
+            },
+            {
+              "year": 2050,
+              "value": 21.43,
+              "anomaly": 2.08
+            },
+            {
+              "year": 2051,
+              "value": 20.97,
+              "anomaly": 1.62
+            },
+            {
+              "year": 2052,
+              "value": 21.52,
+              "anomaly": 2.17
+            },
+            {
+              "year": 2053,
+              "value": 21.47,
+              "anomaly": 2.12
+            },
+            {
+              "year": 2054,
+              "value": 21.12,
+              "anomaly": 1.77
+            },
+            {
+              "year": 2055,
+              "value": 20.96,
+              "anomaly": 1.61
+            },
+            {
+              "year": 2056,
+              "value": 22.49,
+              "anomaly": 3.14
+            },
+            {
+              "year": 2057,
+              "value": 21.11,
+              "anomaly": 1.76
+            },
+            {
+              "year": 2058,
+              "value": 20.43,
+              "anomaly": 1.08
+            },
+            {
+              "year": 2059,
+              "value": 22.76,
+              "anomaly": 3.41
+            },
+            {
+              "year": 2060,
+              "value": 23.39,
+              "anomaly": 4.04
+            },
+            {
+              "year": 2061,
+              "value": 22.99,
+              "anomaly": 3.64
+            },
+            {
+              "year": 2062,
+              "value": 21.67,
+              "anomaly": 2.32
+            },
+            {
+              "year": 2063,
+              "value": 22.19,
+              "anomaly": 2.84
+            },
+            {
+              "year": 2064,
+              "value": 21.99,
+              "anomaly": 2.64
+            },
+            {
+              "year": 2065,
+              "value": 21.67,
+              "anomaly": 2.32
+            },
+            {
+              "year": 2066,
+              "value": 22.28,
+              "anomaly": 2.93
+            },
+            {
+              "year": 2067,
+              "value": 23.75,
+              "anomaly": 4.4
+            },
+            {
+              "year": 2068,
+              "value": 22.68,
+              "anomaly": 3.33
+            },
+            {
+              "year": 2069,
+              "value": 22.02,
+              "anomaly": 2.67
+            },
+            {
+              "year": 2070,
+              "value": 21.97,
+              "anomaly": 2.62
+            },
+            {
+              "year": 2071,
+              "value": 21.61,
+              "anomaly": 2.26
+            },
+            {
+              "year": 2072,
+              "value": 21.64,
+              "anomaly": 2.29
+            },
+            {
+              "year": 2073,
+              "value": 22.32,
+              "anomaly": 2.97
+            },
+            {
+              "year": 2074,
+              "value": 22.1,
+              "anomaly": 2.75
+            },
+            {
+              "year": 2075,
+              "value": 22.86,
+              "anomaly": 3.51
+            },
+            {
+              "year": 2076,
+              "value": 21.85,
+              "anomaly": 2.5
+            },
+            {
+              "year": 2077,
+              "value": 20.91,
+              "anomaly": 1.56
+            },
+            {
+              "year": 2078,
+              "value": 21.88,
+              "anomaly": 2.53
+            },
+            {
+              "year": 2079,
+              "value": 22.33,
+              "anomaly": 2.97
+            },
+            {
+              "year": 2080,
+              "value": 22.14,
+              "anomaly": 2.79
+            },
+            {
+              "year": 2081,
+              "value": 20.57,
+              "anomaly": 1.22
+            },
+            {
+              "year": 2082,
+              "value": 21.9,
+              "anomaly": 2.54
+            },
+            {
+              "year": 2083,
+              "value": 22.96,
+              "anomaly": 3.61
+            },
+            {
+              "year": 2084,
+              "value": 24.12,
+              "anomaly": 4.77
+            },
+            {
+              "year": 2085,
+              "value": 22.82,
+              "anomaly": 3.46
+            },
+            {
+              "year": 2086,
+              "value": 22.31,
+              "anomaly": 2.96
+            },
+            {
+              "year": 2087,
+              "value": 21.41,
+              "anomaly": 2.06
+            },
+            {
+              "year": 2088,
+              "value": 22.03,
+              "anomaly": 2.68
+            },
+            {
+              "year": 2089,
+              "value": 21.66,
+              "anomaly": 2.31
+            },
+            {
+              "year": 2090,
+              "value": 21.07,
+              "anomaly": 1.72
+            },
+            {
+              "year": 2091,
+              "value": 21.86,
+              "anomaly": 2.51
+            },
+            {
+              "year": 2092,
+              "value": 22.94,
+              "anomaly": 3.59
+            },
+            {
+              "year": 2093,
+              "value": 20.58,
+              "anomaly": 1.22
+            },
+            {
+              "year": 2094,
+              "value": 22.02,
+              "anomaly": 2.67
+            },
+            {
+              "year": 2095,
+              "value": 22.24,
+              "anomaly": 2.89
+            },
+            {
+              "year": 2096,
+              "value": 21,
+              "anomaly": 1.65
+            },
+            {
+              "year": 2097,
+              "value": 21.81,
+              "anomaly": 2.45
+            },
+            {
+              "year": 2098,
+              "value": 21.83,
+              "anomaly": 2.47
+            },
+            {
+              "year": 2099,
+              "value": 22.47,
+              "anomaly": 3.12
+            }
+          ]
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 21.75,
+              "anomaly": 21.75
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 21.8,
+              "anomaly": 21.8
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 20.38,
+              "anomaly": 1.03
+            },
+            {
+              "year": 2007,
+              "value": 20.1,
+              "anomaly": 0.75
+            },
+            {
+              "year": 2008,
+              "value": 21.03,
+              "anomaly": 1.68
+            },
+            {
+              "year": 2009,
+              "value": 20.49,
+              "anomaly": 1.14
+            },
+            {
+              "year": 2010,
+              "value": 20.46,
+              "anomaly": 1.11
+            },
+            {
+              "year": 2011,
+              "value": 20.33,
+              "anomaly": 0.97
+            },
+            {
+              "year": 2012,
+              "value": 19.88,
+              "anomaly": 0.53
+            },
+            {
+              "year": 2013,
+              "value": 20,
+              "anomaly": 0.65
+            },
+            {
+              "year": 2014,
+              "value": 19.7,
+              "anomaly": 0.35
+            },
+            {
+              "year": 2015,
+              "value": 21.21,
+              "anomaly": 1.86
+            },
+            {
+              "year": 2016,
+              "value": 20.94,
+              "anomaly": 1.58
+            },
+            {
+              "year": 2017,
+              "value": 22.11,
+              "anomaly": 2.76
+            },
+            {
+              "year": 2018,
+              "value": 22.28,
+              "anomaly": 2.92
+            },
+            {
+              "year": 2019,
+              "value": 21.2,
+              "anomaly": 1.84
+            },
+            {
+              "year": 2020,
+              "value": 22.1,
+              "anomaly": 2.75
+            },
+            {
+              "year": 2021,
+              "value": 21.17,
+              "anomaly": 1.82
+            },
+            {
+              "year": 2022,
+              "value": 21.07,
+              "anomaly": 1.72
+            },
+            {
+              "year": 2023,
+              "value": 23.22,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2024,
+              "value": 21.75,
+              "anomaly": 2.4
+            },
+            {
+              "year": 2025,
+              "value": 23.14,
+              "anomaly": 3.79
+            },
+            {
+              "year": 2026,
+              "value": 22.67,
+              "anomaly": 3.32
+            },
+            {
+              "year": 2027,
+              "value": 21.31,
+              "anomaly": 1.95
+            },
+            {
+              "year": 2028,
+              "value": 21.19,
+              "anomaly": 1.84
+            },
+            {
+              "year": 2029,
+              "value": 21.67,
+              "anomaly": 2.32
+            },
+            {
+              "year": 2030,
+              "value": 21.61,
+              "anomaly": 2.26
+            },
+            {
+              "year": 2031,
+              "value": 21.19,
+              "anomaly": 1.84
+            },
+            {
+              "year": 2032,
+              "value": 20.93,
+              "anomaly": 1.58
+            },
+            {
+              "year": 2033,
+              "value": 21.89,
+              "anomaly": 2.54
+            },
+            {
+              "year": 2034,
+              "value": 21.91,
+              "anomaly": 2.56
+            },
+            {
+              "year": 2035,
+              "value": 22.37,
+              "anomaly": 3.02
+            },
+            {
+              "year": 2036,
+              "value": 20.55,
+              "anomaly": 1.19
+            },
+            {
+              "year": 2037,
+              "value": 21.53,
+              "anomaly": 2.17
+            },
+            {
+              "year": 2038,
+              "value": 21.53,
+              "anomaly": 2.18
+            },
+            {
+              "year": 2039,
+              "value": 22.03,
+              "anomaly": 2.68
+            },
+            {
+              "year": 2040,
+              "value": 21.83,
+              "anomaly": 2.48
+            },
+            {
+              "year": 2041,
+              "value": 21.37,
+              "anomaly": 2.02
+            },
+            {
+              "year": 2042,
+              "value": 20.8,
+              "anomaly": 1.44
+            },
+            {
+              "year": 2043,
+              "value": 21.3,
+              "anomaly": 1.95
+            },
+            {
+              "year": 2044,
+              "value": 20.61,
+              "anomaly": 1.26
+            },
+            {
+              "year": 2045,
+              "value": 21.64,
+              "anomaly": 2.29
+            },
+            {
+              "year": 2046,
+              "value": 22.02,
+              "anomaly": 2.67
+            },
+            {
+              "year": 2047,
+              "value": 20.38,
+              "anomaly": 1.03
+            },
+            {
+              "year": 2048,
+              "value": 21.1,
+              "anomaly": 1.75
+            },
+            {
+              "year": 2049,
+              "value": 21.42,
+              "anomaly": 2.07
+            },
+            {
+              "year": 2050,
+              "value": 21.08,
+              "anomaly": 1.72
+            },
+            {
+              "year": 2051,
+              "value": 21.92,
+              "anomaly": 2.57
+            },
+            {
+              "year": 2052,
+              "value": 22.69,
+              "anomaly": 3.34
+            },
+            {
+              "year": 2053,
+              "value": 22.42,
+              "anomaly": 3.07
+            },
+            {
+              "year": 2054,
+              "value": 22.5,
+              "anomaly": 3.14
+            },
+            {
+              "year": 2055,
+              "value": 22.58,
+              "anomaly": 3.23
+            },
+            {
+              "year": 2056,
+              "value": 21.95,
+              "anomaly": 2.6
+            },
+            {
+              "year": 2057,
+              "value": 22.17,
+              "anomaly": 2.82
+            },
+            {
+              "year": 2058,
+              "value": 22.83,
+              "anomaly": 3.47
+            },
+            {
+              "year": 2059,
+              "value": 22.15,
+              "anomaly": 2.8
+            },
+            {
+              "year": 2060,
+              "value": 22.96,
+              "anomaly": 3.61
+            },
+            {
+              "year": 2061,
+              "value": 22.7,
+              "anomaly": 3.35
+            },
+            {
+              "year": 2062,
+              "value": 22.56,
+              "anomaly": 3.2
+            },
+            {
+              "year": 2063,
+              "value": 23.36,
+              "anomaly": 4.01
+            },
+            {
+              "year": 2064,
+              "value": 23.13,
+              "anomaly": 3.78
+            },
+            {
+              "year": 2065,
+              "value": 22.6,
+              "anomaly": 3.25
+            },
+            {
+              "year": 2066,
+              "value": 23.33,
+              "anomaly": 3.98
+            },
+            {
+              "year": 2067,
+              "value": 22.87,
+              "anomaly": 3.52
+            },
+            {
+              "year": 2068,
+              "value": 22.75,
+              "anomaly": 3.4
+            },
+            {
+              "year": 2069,
+              "value": 22.62,
+              "anomaly": 3.26
+            },
+            {
+              "year": 2070,
+              "value": 23.1,
+              "anomaly": 3.74
+            },
+            {
+              "year": 2071,
+              "value": 23.52,
+              "anomaly": 4.17
+            },
+            {
+              "year": 2072,
+              "value": 23.57,
+              "anomaly": 4.22
+            },
+            {
+              "year": 2073,
+              "value": 23.85,
+              "anomaly": 4.5
+            },
+            {
+              "year": 2074,
+              "value": 24.59,
+              "anomaly": 5.24
+            },
+            {
+              "year": 2075,
+              "value": 23.12,
+              "anomaly": 3.76
+            },
+            {
+              "year": 2076,
+              "value": 22.7,
+              "anomaly": 3.35
+            },
+            {
+              "year": 2077,
+              "value": 22.2,
+              "anomaly": 2.85
+            },
+            {
+              "year": 2078,
+              "value": 23.03,
+              "anomaly": 3.68
+            },
+            {
+              "year": 2079,
+              "value": 24.61,
+              "anomaly": 5.25
+            },
+            {
+              "year": 2080,
+              "value": 25.82,
+              "anomaly": 6.46
+            },
+            {
+              "year": 2081,
+              "value": 24.14,
+              "anomaly": 4.79
+            },
+            {
+              "year": 2082,
+              "value": 25.07,
+              "anomaly": 5.72
+            },
+            {
+              "year": 2083,
+              "value": 24.78,
+              "anomaly": 5.43
+            },
+            {
+              "year": 2084,
+              "value": 24.8,
+              "anomaly": 5.45
+            },
+            {
+              "year": 2085,
+              "value": 24.05,
+              "anomaly": 4.7
+            },
+            {
+              "year": 2086,
+              "value": 24.45,
+              "anomaly": 5.1
+            },
+            {
+              "year": 2087,
+              "value": 24.7,
+              "anomaly": 5.35
+            },
+            {
+              "year": 2088,
+              "value": 24.41,
+              "anomaly": 5.06
+            },
+            {
+              "year": 2089,
+              "value": 24.34,
+              "anomaly": 4.99
+            },
+            {
+              "year": 2090,
+              "value": 23.86,
+              "anomaly": 4.5
+            },
+            {
+              "year": 2091,
+              "value": 24.12,
+              "anomaly": 4.77
+            },
+            {
+              "year": 2092,
+              "value": 23.07,
+              "anomaly": 3.72
+            },
+            {
+              "year": 2093,
+              "value": 23.45,
+              "anomaly": 4.1
+            },
+            {
+              "year": 2094,
+              "value": 24.11,
+              "anomaly": 4.76
+            },
+            {
+              "year": 2095,
+              "value": 24.55,
+              "anomaly": 5.2
+            },
+            {
+              "year": 2096,
+              "value": 23.71,
+              "anomaly": 4.35
+            },
+            {
+              "year": 2097,
+              "value": 23.56,
+              "anomaly": 4.21
+            },
+            {
+              "year": 2098,
+              "value": 24.59,
+              "anomaly": 5.24
+            },
+            {
+              "year": 2099,
+              "value": 25.17,
+              "anomaly": 5.82
+            }
+          ]
+        }
+      }
+    },
+    "tasmax": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": null
+        },
+        "timeseries": []
+      },
+      "projections": {
+        "rcp45": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 26.75,
+              "anomaly": 26.75
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 26.91,
+              "anomaly": 26.91
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 25.25,
+              "anomaly": 0.29
+            },
+            {
+              "year": 2007,
+              "value": 26,
+              "anomaly": 1.05
+            },
+            {
+              "year": 2008,
+              "value": 26.54,
+              "anomaly": 1.58
+            },
+            {
+              "year": 2009,
+              "value": 26.11,
+              "anomaly": 1.15
+            },
+            {
+              "year": 2010,
+              "value": 25.96,
+              "anomaly": 1
+            },
+            {
+              "year": 2011,
+              "value": 26.13,
+              "anomaly": 1.17
+            },
+            {
+              "year": 2012,
+              "value": 26.41,
+              "anomaly": 1.46
+            },
+            {
+              "year": 2013,
+              "value": 25.6,
+              "anomaly": 0.64
+            },
+            {
+              "year": 2014,
+              "value": 25.75,
+              "anomaly": 0.8
+            },
+            {
+              "year": 2015,
+              "value": 26.9,
+              "anomaly": 1.94
+            },
+            {
+              "year": 2016,
+              "value": 28.18,
+              "anomaly": 3.22
+            },
+            {
+              "year": 2017,
+              "value": 27.37,
+              "anomaly": 2.41
+            },
+            {
+              "year": 2018,
+              "value": 27.74,
+              "anomaly": 2.78
+            },
+            {
+              "year": 2019,
+              "value": 27.56,
+              "anomaly": 2.6
+            },
+            {
+              "year": 2020,
+              "value": 25.79,
+              "anomaly": 0.83
+            },
+            {
+              "year": 2021,
+              "value": 26.51,
+              "anomaly": 1.56
+            },
+            {
+              "year": 2022,
+              "value": 27.17,
+              "anomaly": 2.21
+            },
+            {
+              "year": 2023,
+              "value": 26.43,
+              "anomaly": 1.47
+            },
+            {
+              "year": 2024,
+              "value": 26.86,
+              "anomaly": 1.9
+            },
+            {
+              "year": 2025,
+              "value": 27.79,
+              "anomaly": 2.83
+            },
+            {
+              "year": 2026,
+              "value": 29.94,
+              "anomaly": 4.98
+            },
+            {
+              "year": 2027,
+              "value": 28.53,
+              "anomaly": 3.58
+            },
+            {
+              "year": 2028,
+              "value": 26.74,
+              "anomaly": 1.79
+            },
+            {
+              "year": 2029,
+              "value": 26.2,
+              "anomaly": 1.25
+            },
+            {
+              "year": 2030,
+              "value": 26.32,
+              "anomaly": 1.36
+            },
+            {
+              "year": 2031,
+              "value": 26.98,
+              "anomaly": 2.02
+            },
+            {
+              "year": 2032,
+              "value": 26.39,
+              "anomaly": 1.44
+            },
+            {
+              "year": 2033,
+              "value": 25.67,
+              "anomaly": 0.72
+            },
+            {
+              "year": 2034,
+              "value": 26.18,
+              "anomaly": 1.22
+            },
+            {
+              "year": 2035,
+              "value": 27.34,
+              "anomaly": 2.38
+            },
+            {
+              "year": 2036,
+              "value": 25.52,
+              "anomaly": 0.57
+            },
+            {
+              "year": 2037,
+              "value": 25.75,
+              "anomaly": 0.79
+            },
+            {
+              "year": 2038,
+              "value": 26.22,
+              "anomaly": 1.26
+            },
+            {
+              "year": 2039,
+              "value": 25.62,
+              "anomaly": 0.67
+            },
+            {
+              "year": 2040,
+              "value": 27.77,
+              "anomaly": 2.81
+            },
+            {
+              "year": 2041,
+              "value": 27.08,
+              "anomaly": 2.12
+            },
+            {
+              "year": 2042,
+              "value": 25.51,
+              "anomaly": 0.55
+            },
+            {
+              "year": 2043,
+              "value": 26.26,
+              "anomaly": 1.31
+            },
+            {
+              "year": 2044,
+              "value": 26.29,
+              "anomaly": 1.33
+            },
+            {
+              "year": 2045,
+              "value": 27.44,
+              "anomaly": 2.49
+            },
+            {
+              "year": 2046,
+              "value": 26.03,
+              "anomaly": 1.07
+            },
+            {
+              "year": 2047,
+              "value": 26.11,
+              "anomaly": 1.16
+            },
+            {
+              "year": 2048,
+              "value": 26.19,
+              "anomaly": 1.23
+            },
+            {
+              "year": 2049,
+              "value": 26.51,
+              "anomaly": 1.56
+            },
+            {
+              "year": 2050,
+              "value": 26.99,
+              "anomaly": 2.03
+            },
+            {
+              "year": 2051,
+              "value": 26.53,
+              "anomaly": 1.57
+            },
+            {
+              "year": 2052,
+              "value": 27.09,
+              "anomaly": 2.14
+            },
+            {
+              "year": 2053,
+              "value": 26.82,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2054,
+              "value": 26.55,
+              "anomaly": 1.59
+            },
+            {
+              "year": 2055,
+              "value": 26.24,
+              "anomaly": 1.29
+            },
+            {
+              "year": 2056,
+              "value": 27.82,
+              "anomaly": 2.86
+            },
+            {
+              "year": 2057,
+              "value": 26.53,
+              "anomaly": 1.58
+            },
+            {
+              "year": 2058,
+              "value": 25.36,
+              "anomaly": 0.41
+            },
+            {
+              "year": 2059,
+              "value": 29.6,
+              "anomaly": 4.64
+            },
+            {
+              "year": 2060,
+              "value": 30.47,
+              "anomaly": 5.52
+            },
+            {
+              "year": 2061,
+              "value": 29.4,
+              "anomaly": 4.45
+            },
+            {
+              "year": 2062,
+              "value": 27.6,
+              "anomaly": 2.65
+            },
+            {
+              "year": 2063,
+              "value": 27.88,
+              "anomaly": 2.93
+            },
+            {
+              "year": 2064,
+              "value": 27.51,
+              "anomaly": 2.55
+            },
+            {
+              "year": 2065,
+              "value": 27.47,
+              "anomaly": 2.52
+            },
+            {
+              "year": 2066,
+              "value": 27.72,
+              "anomaly": 2.77
+            },
+            {
+              "year": 2067,
+              "value": 30.09,
+              "anomaly": 5.14
+            },
+            {
+              "year": 2068,
+              "value": 28.66,
+              "anomaly": 3.7
+            },
+            {
+              "year": 2069,
+              "value": 27.49,
+              "anomaly": 2.54
+            },
+            {
+              "year": 2070,
+              "value": 27.34,
+              "anomaly": 2.39
+            },
+            {
+              "year": 2071,
+              "value": 27.29,
+              "anomaly": 2.33
+            },
+            {
+              "year": 2072,
+              "value": 27.55,
+              "anomaly": 2.59
+            },
+            {
+              "year": 2073,
+              "value": 27.83,
+              "anomaly": 2.87
+            },
+            {
+              "year": 2074,
+              "value": 27.6,
+              "anomaly": 2.64
+            },
+            {
+              "year": 2075,
+              "value": 28.66,
+              "anomaly": 3.71
+            },
+            {
+              "year": 2076,
+              "value": 27.16,
+              "anomaly": 2.21
+            },
+            {
+              "year": 2077,
+              "value": 26.19,
+              "anomaly": 1.24
+            },
+            {
+              "year": 2078,
+              "value": 27.06,
+              "anomaly": 2.1
+            },
+            {
+              "year": 2079,
+              "value": 27.89,
+              "anomaly": 2.93
+            },
+            {
+              "year": 2080,
+              "value": 27.56,
+              "anomaly": 2.6
+            },
+            {
+              "year": 2081,
+              "value": 25.66,
+              "anomaly": 0.7
+            },
+            {
+              "year": 2082,
+              "value": 27.38,
+              "anomaly": 2.43
+            },
+            {
+              "year": 2083,
+              "value": 28.28,
+              "anomaly": 3.33
+            },
+            {
+              "year": 2084,
+              "value": 30.81,
+              "anomaly": 5.86
+            },
+            {
+              "year": 2085,
+              "value": 28.79,
+              "anomaly": 3.84
+            },
+            {
+              "year": 2086,
+              "value": 28.3,
+              "anomaly": 3.34
+            },
+            {
+              "year": 2087,
+              "value": 26.98,
+              "anomaly": 2.03
+            },
+            {
+              "year": 2088,
+              "value": 27.86,
+              "anomaly": 2.9
+            },
+            {
+              "year": 2089,
+              "value": 27.21,
+              "anomaly": 2.26
+            },
+            {
+              "year": 2090,
+              "value": 26.5,
+              "anomaly": 1.55
+            },
+            {
+              "year": 2091,
+              "value": 27.47,
+              "anomaly": 2.52
+            },
+            {
+              "year": 2092,
+              "value": 28.63,
+              "anomaly": 3.68
+            },
+            {
+              "year": 2093,
+              "value": 25.84,
+              "anomaly": 0.88
+            },
+            {
+              "year": 2094,
+              "value": 27.58,
+              "anomaly": 2.63
+            },
+            {
+              "year": 2095,
+              "value": 27.89,
+              "anomaly": 2.93
+            },
+            {
+              "year": 2096,
+              "value": 26.38,
+              "anomaly": 1.42
+            },
+            {
+              "year": 2097,
+              "value": 27.04,
+              "anomaly": 2.08
+            },
+            {
+              "year": 2098,
+              "value": 27.17,
+              "anomaly": 2.22
+            },
+            {
+              "year": 2099,
+              "value": 27.84,
+              "anomaly": 2.88
+            }
+          ]
+        },
+        "rcp85": {
+          "periods": {
+            "near": {
+              "period": "2020-2040",
+              "value": 27.76,
+              "anomaly": 27.76
+            },
+            "mid": {
+              "period": "2040-2060",
+              "value": 27.45,
+              "anomaly": 27.45
+            }
+          },
+          "timeseriesStart": 2006,
+          "timeseriesEnd": 2099,
+          "timeseries": [
+            {
+              "year": 2006,
+              "value": 26.6,
+              "anomaly": 1.64
+            },
+            {
+              "year": 2007,
+              "value": 26.17,
+              "anomaly": 1.22
+            },
+            {
+              "year": 2008,
+              "value": 27.3,
+              "anomaly": 2.34
+            },
+            {
+              "year": 2009,
+              "value": 26.97,
+              "anomaly": 2.02
+            },
+            {
+              "year": 2010,
+              "value": 25.82,
+              "anomaly": 0.87
+            },
+            {
+              "year": 2011,
+              "value": 26.22,
+              "anomaly": 1.27
+            },
+            {
+              "year": 2012,
+              "value": 25.37,
+              "anomaly": 0.41
+            },
+            {
+              "year": 2013,
+              "value": 25.59,
+              "anomaly": 0.63
+            },
+            {
+              "year": 2014,
+              "value": 25.13,
+              "anomaly": 0.17
+            },
+            {
+              "year": 2015,
+              "value": 26.59,
+              "anomaly": 1.63
+            },
+            {
+              "year": 2016,
+              "value": 26.7,
+              "anomaly": 1.74
+            },
+            {
+              "year": 2017,
+              "value": 28.33,
+              "anomaly": 3.37
+            },
+            {
+              "year": 2018,
+              "value": 28.83,
+              "anomaly": 3.88
+            },
+            {
+              "year": 2019,
+              "value": 27.21,
+              "anomaly": 2.26
+            },
+            {
+              "year": 2020,
+              "value": 28.64,
+              "anomaly": 3.68
+            },
+            {
+              "year": 2021,
+              "value": 27.04,
+              "anomaly": 2.09
+            },
+            {
+              "year": 2022,
+              "value": 26.92,
+              "anomaly": 1.96
+            },
+            {
+              "year": 2023,
+              "value": 29.76,
+              "anomaly": 4.8
+            },
+            {
+              "year": 2024,
+              "value": 28.29,
+              "anomaly": 3.34
+            },
+            {
+              "year": 2025,
+              "value": 30.62,
+              "anomaly": 5.66
+            },
+            {
+              "year": 2026,
+              "value": 29.7,
+              "anomaly": 4.75
+            },
+            {
+              "year": 2027,
+              "value": 27.17,
+              "anomaly": 2.21
+            },
+            {
+              "year": 2028,
+              "value": 27.07,
+              "anomaly": 2.11
+            },
+            {
+              "year": 2029,
+              "value": 27.78,
+              "anomaly": 2.82
+            },
+            {
+              "year": 2030,
+              "value": 27.54,
+              "anomaly": 2.59
+            },
+            {
+              "year": 2031,
+              "value": 26.83,
+              "anomaly": 1.87
+            },
+            {
+              "year": 2032,
+              "value": 26.42,
+              "anomaly": 1.46
+            },
+            {
+              "year": 2033,
+              "value": 27.72,
+              "anomaly": 2.76
+            },
+            {
+              "year": 2034,
+              "value": 27.76,
+              "anomaly": 2.8
+            },
+            {
+              "year": 2035,
+              "value": 28.13,
+              "anomaly": 3.17
+            },
+            {
+              "year": 2036,
+              "value": 25.88,
+              "anomaly": 0.93
+            },
+            {
+              "year": 2037,
+              "value": 26.94,
+              "anomaly": 1.99
+            },
+            {
+              "year": 2038,
+              "value": 27.37,
+              "anomaly": 2.41
+            },
+            {
+              "year": 2039,
+              "value": 27.71,
+              "anomaly": 2.75
+            },
+            {
+              "year": 2040,
+              "value": 27.61,
+              "anomaly": 2.65
+            },
+            {
+              "year": 2041,
+              "value": 27.4,
+              "anomaly": 2.45
+            },
+            {
+              "year": 2042,
+              "value": 26.53,
+              "anomaly": 1.57
+            },
+            {
+              "year": 2043,
+              "value": 27.09,
+              "anomaly": 2.13
+            },
+            {
+              "year": 2044,
+              "value": 26.21,
+              "anomaly": 1.25
+            },
+            {
+              "year": 2045,
+              "value": 27.12,
+              "anomaly": 2.16
+            },
+            {
+              "year": 2046,
+              "value": 27.37,
+              "anomaly": 2.42
+            },
+            {
+              "year": 2047,
+              "value": 25.73,
+              "anomaly": 0.77
+            },
+            {
+              "year": 2048,
+              "value": 26.49,
+              "anomaly": 1.54
+            },
+            {
+              "year": 2049,
+              "value": 26.76,
+              "anomaly": 1.8
+            },
+            {
+              "year": 2050,
+              "value": 26.37,
+              "anomaly": 1.41
+            },
+            {
+              "year": 2051,
+              "value": 27.54,
+              "anomaly": 2.59
+            },
+            {
+              "year": 2052,
+              "value": 28.67,
+              "anomaly": 3.72
+            },
+            {
+              "year": 2053,
+              "value": 28.17,
+              "anomaly": 3.21
+            },
+            {
+              "year": 2054,
+              "value": 28.25,
+              "anomaly": 3.3
+            },
+            {
+              "year": 2055,
+              "value": 28.08,
+              "anomaly": 3.13
+            },
+            {
+              "year": 2056,
+              "value": 27.46,
+              "anomaly": 2.5
+            },
+            {
+              "year": 2057,
+              "value": 28.07,
+              "anomaly": 3.12
+            },
+            {
+              "year": 2058,
+              "value": 28.65,
+              "anomaly": 3.69
+            },
+            {
+              "year": 2059,
+              "value": 27.79,
+              "anomaly": 2.84
+            },
+            {
+              "year": 2060,
+              "value": 29.06,
+              "anomaly": 4.11
+            },
+            {
+              "year": 2061,
+              "value": 28.58,
+              "anomaly": 3.62
+            },
+            {
+              "year": 2062,
+              "value": 28.15,
+              "anomaly": 3.19
+            },
+            {
+              "year": 2063,
+              "value": 29.97,
+              "anomaly": 5.01
+            },
+            {
+              "year": 2064,
+              "value": 29.14,
+              "anomaly": 4.18
+            },
+            {
+              "year": 2065,
+              "value": 28.12,
+              "anomaly": 3.16
+            },
+            {
+              "year": 2066,
+              "value": 29.51,
+              "anomaly": 4.55
+            },
+            {
+              "year": 2067,
+              "value": 28.8,
+              "anomaly": 3.85
+            },
+            {
+              "year": 2068,
+              "value": 28.2,
+              "anomaly": 3.25
+            },
+            {
+              "year": 2069,
+              "value": 28.28,
+              "anomaly": 3.32
+            },
+            {
+              "year": 2070,
+              "value": 29.05,
+              "anomaly": 4.1
+            },
+            {
+              "year": 2071,
+              "value": 29.85,
+              "anomaly": 4.89
+            },
+            {
+              "year": 2072,
+              "value": 30.2,
+              "anomaly": 5.25
+            },
+            {
+              "year": 2073,
+              "value": 30.27,
+              "anomaly": 5.31
+            },
+            {
+              "year": 2074,
+              "value": 30.85,
+              "anomaly": 5.89
+            },
+            {
+              "year": 2075,
+              "value": 28.8,
+              "anomaly": 3.84
+            },
+            {
+              "year": 2076,
+              "value": 27.63,
+              "anomaly": 2.67
+            },
+            {
+              "year": 2077,
+              "value": 27.42,
+              "anomaly": 2.46
+            },
+            {
+              "year": 2078,
+              "value": 28.33,
+              "anomaly": 3.37
+            },
+            {
+              "year": 2079,
+              "value": 30.17,
+              "anomaly": 5.22
+            },
+            {
+              "year": 2080,
+              "value": 32.56,
+              "anomaly": 7.61
+            },
+            {
+              "year": 2081,
+              "value": 29.66,
+              "anomaly": 4.71
+            },
+            {
+              "year": 2082,
+              "value": 31.24,
+              "anomaly": 6.29
+            },
+            {
+              "year": 2083,
+              "value": 31.19,
+              "anomaly": 6.23
+            },
+            {
+              "year": 2084,
+              "value": 30.82,
+              "anomaly": 5.86
+            },
+            {
+              "year": 2085,
+              "value": 29.52,
+              "anomaly": 4.56
+            },
+            {
+              "year": 2086,
+              "value": 29.55,
+              "anomaly": 4.6
+            },
+            {
+              "year": 2087,
+              "value": 30.76,
+              "anomaly": 5.8
+            },
+            {
+              "year": 2088,
+              "value": 30.32,
+              "anomaly": 5.36
+            },
+            {
+              "year": 2089,
+              "value": 30.07,
+              "anomaly": 5.11
+            },
+            {
+              "year": 2090,
+              "value": 29.72,
+              "anomaly": 4.77
+            },
+            {
+              "year": 2091,
+              "value": 29.91,
+              "anomaly": 4.95
+            },
+            {
+              "year": 2092,
+              "value": 28.29,
+              "anomaly": 3.33
+            },
+            {
+              "year": 2093,
+              "value": 28.83,
+              "anomaly": 3.87
+            },
+            {
+              "year": 2094,
+              "value": 29.48,
+              "anomaly": 4.53
+            },
+            {
+              "year": 2095,
+              "value": 30.08,
+              "anomaly": 5.13
+            },
+            {
+              "year": 2096,
+              "value": 29.16,
+              "anomaly": 4.2
+            },
+            {
+              "year": 2097,
+              "value": 28.69,
+              "anomaly": 3.74
+            },
+            {
+              "year": 2098,
+              "value": 30.07,
+              "anomaly": 5.12
+            },
+            {
+              "year": 2099,
+              "value": 31.25,
+              "anomaly": 6.29
+            }
+          ]
+        }
+      }
+    }
+  }
+}

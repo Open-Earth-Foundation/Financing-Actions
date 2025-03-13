@@ -1,0 +1,1286 @@
+[
+  {
+    "id": "Abaetetuba",
+    "name": "Abaetetuba",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Altamira",
+    "name": "Altamira",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Alto_Alegre_dos_Parecis",
+    "name": "Alto Alegre dos Parecis",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Alto_Alegre_dos_Parecis",
+    "name": "Alto Alegre dos Parecis",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Amontada",
+    "name": "Amontada",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Aracruz",
+    "name": "Aracruz",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Arapiraca",
+    "name": "Arapiraca",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Barcarena",
+    "name": "Barcarena",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Belo_Horizonte",
+    "name": "Belo Horizonte",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Belo_Horizonte",
+    "name": "Belo Horizonte",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Boa_Vista",
+    "name": "Boa Vista",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Boa_Vista",
+    "name": "Boa Vista",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Caceres",
+    "name": "Caceres",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cajazeiras",
+    "name": "Cajazeiras",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Camaragibe",
+    "name": "Camaragibe",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cameta",
+    "name": "Cameta",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cametá",
+    "name": "Cametá",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Campinas",
+    "name": "Campinas",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Campo_Grande",
+    "name": "Campo Grande",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Campo_Largo",
+    "name": "Campo Largo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Campo_Grande",
+    "name": "Campo Grande",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Campo_Largo",
+    "name": "Campo Largo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Caracarai",
+    "name": "Caracarai",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Caracaraí",
+    "name": "Caracaraí",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cariacica",
+    "name": "Cariacica",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Caxias_do_Sul",
+    "name": "Caxias do Sul",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Caxias_do_Sul",
+    "name": "Caxias do Sul",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cáceres",
+    "name": "Cáceres",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Contagem",
+    "name": "Contagem",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Coxim",
+    "name": "Coxim",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Crato",
+    "name": "Crato",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cruzeiro_do_Sul",
+    "name": "Cruzeiro do Sul",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cruzeiro_do_Sul",
+    "name": "Cruzeiro do Sul",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cuiaba",
+    "name": "Cuiaba",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Cuiabá",
+    "name": "Cuiabá",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Estancia",
+    "name": "Estancia",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Estância",
+    "name": "Estância",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Formosa",
+    "name": "Formosa",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Fortaleza",
+    "name": "Fortaleza",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Goiania",
+    "name": "Goiania",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Goiânia",
+    "name": "Goiânia",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Gravatai",
+    "name": "Gravatai",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Gravataí",
+    "name": "Gravataí",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Ilheus",
+    "name": "Ilheus",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Ilhéus",
+    "name": "Ilhéus",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Itapipoca",
+    "name": "Itapipoca",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Jaboatao_dos_Guararapes",
+    "name": "Jaboatao dos Guararapes",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Jaboatão_dos_Guararapes",
+    "name": "Jaboatão dos Guararapes",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Ji-Parana",
+    "name": "Ji-Parana",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Ji-Paraná",
+    "name": "Ji-Paraná",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Jordao",
+    "name": "Jordao",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Jordão",
+    "name": "Jordão",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Juazeiro_do_Norte",
+    "name": "Juazeiro do Norte",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Juazeiro",
+    "name": "Juazeiro",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Juazeiro_do_Norte",
+    "name": "Juazeiro do Norte",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Lucas_do_Rio_Verde",
+    "name": "Lucas do Rio Verde",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Lucas_do_Rio_Verde",
+    "name": "Lucas do Rio Verde",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Mage",
+    "name": "Mage",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Magé",
+    "name": "Magé",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Manaus",
+    "name": "Manaus",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Marechal_Thaumaturgo",
+    "name": "Marechal Thaumaturgo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Marechal_Thaumaturgo",
+    "name": "Marechal Thaumaturgo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Miranda",
+    "name": "Miranda",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Montes_Claros",
+    "name": "Montes Claros",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Montes_Claros",
+    "name": "Montes Claros",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Mossoro",
+    "name": "Mossoro",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Mossoró",
+    "name": "Mossoró",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Niteroi",
+    "name": "Niteroi",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Niterói",
+    "name": "Niterói",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Osasco",
+    "name": "Osasco",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Palmas",
+    "name": "Palmas",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Palmeira_dos_Índios",
+    "name": "Palmeira dos Índios",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Palmeira_dos_Indios",
+    "name": "Palmeira dos Indios",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Parintins",
+    "name": "Parintins",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Petropolis",
+    "name": "Petropolis",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Petrópolis",
+    "name": "Petrópolis",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Porto_Alegre",
+    "name": "Porto Alegre",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Porto_Alegre",
+    "name": "Porto Alegre",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Recife",
+    "name": "Recife",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Ribeirao_das_Neves",
+    "name": "Ribeirao das Neves",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Ribeirão_das_Neves",
+    "name": "Ribeirão das Neves",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Rio_de_Janeiro",
+    "name": "Rio de Janeiro",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Rio_de_Janeiro",
+    "name": "Rio de Janeiro",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Santo_André",
+    "name": "Santo André",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Santo_Andre",
+    "name": "Santo Andre",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sao_Cristovao",
+    "name": "Sao Cristovao",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sao_Joao_de_Meriti",
+    "name": "Sao Joao de Meriti",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sao_Leopoldo",
+    "name": "Sao Leopoldo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sao_Luis",
+    "name": "Sao Luis",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sao_Paulo",
+    "name": "Sao Paulo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "São_Cristóvão",
+    "name": "São Cristóvão",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "São_João_de_Meriti",
+    "name": "São João de Meriti",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "São_Leopoldo",
+    "name": "São Leopoldo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "São_Luís",
+    "name": "São Luís",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "São_Paulo",
+    "name": "São Paulo",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sinop",
+    "name": "Sinop",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sobral",
+    "name": "Sobral",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Sorocaba",
+    "name": "Sorocaba",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Tangara_da_Serra",
+    "name": "Tangara da Serra",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Tangará_da_Serra",
+    "name": "Tangará da Serra",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Tarauaca",
+    "name": "Tarauaca",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Tarauacá",
+    "name": "Tarauacá",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Uberaba",
+    "name": "Uberaba",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Varzea_Grande",
+    "name": "Varzea Grande",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Várzea_Grande",
+    "name": "Várzea Grande",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Vitoria_de_Santo_Antao",
+    "name": "Vitoria de Santo Antao",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  },
+  {
+    "id": "Vitória_de_Santo_Antão",
+    "name": "Vitória de Santo Antão",
+    "indices": [
+      "CDD",
+      "RX1day",
+      "RX5day",
+      "TX90p",
+      "tas",
+      "tasmax"
+    ]
+  }
+]

@@ -1,0 +1,1181 @@
+{
+  "name": "Ribeirão das Neves",
+  "indices": {
+    "CDD": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 43.12
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005,
+        "timeseries": [
+          {
+            "year": 1961,
+            "value": 25
+          },
+          {
+            "year": 1962,
+            "value": 26
+          },
+          {
+            "year": 1963,
+            "value": 20
+          },
+          {
+            "year": 1964,
+            "value": 40
+          },
+          {
+            "year": 1965,
+            "value": 27
+          },
+          {
+            "year": 1966,
+            "value": 56
+          },
+          {
+            "year": 1967,
+            "value": 45
+          },
+          {
+            "year": 1968,
+            "value": 100
+          },
+          {
+            "year": 1969,
+            "value": 105
+          },
+          {
+            "year": 1970,
+            "value": 183
+          },
+          {
+            "year": 1971,
+            "value": 129
+          },
+          {
+            "year": 1972,
+            "value": 72
+          },
+          {
+            "year": 1973,
+            "value": 34
+          },
+          {
+            "year": 1974,
+            "value": 31
+          },
+          {
+            "year": 1975,
+            "value": 84
+          },
+          {
+            "year": 1976,
+            "value": 62
+          },
+          {
+            "year": 1977,
+            "value": 25
+          },
+          {
+            "year": 1978,
+            "value": 48
+          },
+          {
+            "year": 1979,
+            "value": 52
+          },
+          {
+            "year": 1980,
+            "value": 46
+          },
+          {
+            "year": 1981,
+            "value": 27
+          },
+          {
+            "year": 1982,
+            "value": 34
+          },
+          {
+            "year": 1983,
+            "value": 17
+          },
+          {
+            "year": 1984,
+            "value": 15
+          },
+          {
+            "year": 1985,
+            "value": 36
+          },
+          {
+            "year": 1986,
+            "value": 29
+          },
+          {
+            "year": 1987,
+            "value": 47
+          },
+          {
+            "year": 1988,
+            "value": 37
+          },
+          {
+            "year": 1989,
+            "value": 25
+          },
+          {
+            "year": 1990,
+            "value": 46
+          },
+          {
+            "year": 1991,
+            "value": 33
+          },
+          {
+            "year": 1992,
+            "value": 21
+          },
+          {
+            "year": 1993,
+            "value": 19
+          },
+          {
+            "year": 1994,
+            "value": 44
+          },
+          {
+            "year": 1995,
+            "value": 37
+          },
+          {
+            "year": 1996,
+            "value": 34
+          },
+          {
+            "year": 1997,
+            "value": 48
+          },
+          {
+            "year": 1998,
+            "value": 22
+          },
+          {
+            "year": 1999,
+            "value": 63
+          },
+          {
+            "year": 2000,
+            "value": 55
+          },
+          {
+            "year": 2001,
+            "value": 43
+          },
+          {
+            "year": 2002,
+            "value": 56
+          },
+          {
+            "year": 2003,
+            "value": 152
+          },
+          {
+            "year": 2004,
+            "value": 64
+          },
+          {
+            "year": 2005,
+            "value": 71
+          }
+        ]
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX1day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 64.04
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005,
+        "timeseries": [
+          {
+            "year": 1961,
+            "value": 79.9
+          },
+          {
+            "year": 1962,
+            "value": 67.7
+          },
+          {
+            "year": 1963,
+            "value": 64.7
+          },
+          {
+            "year": 1964,
+            "value": 76.9
+          },
+          {
+            "year": 1965,
+            "value": 80.8
+          },
+          {
+            "year": 1966,
+            "value": 71.2
+          },
+          {
+            "year": 1967,
+            "value": 35.7
+          },
+          {
+            "year": 1968,
+            "value": 41.7
+          },
+          {
+            "year": 1969,
+            "value": 44
+          },
+          {
+            "year": 1970,
+            "value": 45.4
+          },
+          {
+            "year": 1971,
+            "value": 46
+          },
+          {
+            "year": 1972,
+            "value": 31.5
+          },
+          {
+            "year": 1973,
+            "value": 40.2
+          },
+          {
+            "year": 1974,
+            "value": 24.6
+          },
+          {
+            "year": 1975,
+            "value": 42.8
+          },
+          {
+            "year": 1976,
+            "value": 35.1
+          },
+          {
+            "year": 1977,
+            "value": 46.7
+          },
+          {
+            "year": 1978,
+            "value": 70.5
+          },
+          {
+            "year": 1979,
+            "value": 45.8
+          },
+          {
+            "year": 1980,
+            "value": 58.3
+          },
+          {
+            "year": 1981,
+            "value": 72.4
+          },
+          {
+            "year": 1982,
+            "value": 58.7
+          },
+          {
+            "year": 1983,
+            "value": 69.5
+          },
+          {
+            "year": 1984,
+            "value": 68.8
+          },
+          {
+            "year": 1985,
+            "value": 81.7
+          },
+          {
+            "year": 1986,
+            "value": 93.2
+          },
+          {
+            "year": 1987,
+            "value": 48.7
+          },
+          {
+            "year": 1988,
+            "value": 84.6
+          },
+          {
+            "year": 1989,
+            "value": 54.7
+          },
+          {
+            "year": 1990,
+            "value": 55.4
+          },
+          {
+            "year": 1991,
+            "value": 71.6
+          },
+          {
+            "year": 1992,
+            "value": 83
+          },
+          {
+            "year": 1993,
+            "value": 61.7
+          },
+          {
+            "year": 1994,
+            "value": 77
+          },
+          {
+            "year": 1995,
+            "value": 50.1
+          },
+          {
+            "year": 1996,
+            "value": 41.1
+          },
+          {
+            "year": 1997,
+            "value": 47.8
+          },
+          {
+            "year": 1998,
+            "value": 73
+          },
+          {
+            "year": 1999,
+            "value": 75.6
+          },
+          {
+            "year": 2000,
+            "value": 39.5
+          },
+          {
+            "year": 2001,
+            "value": 81.1
+          },
+          {
+            "year": 2002,
+            "value": 56.4
+          },
+          {
+            "year": 2003,
+            "value": 57
+          },
+          {
+            "year": 2004,
+            "value": 62.8
+          },
+          {
+            "year": 2005,
+            "value": 41.3
+          }
+        ]
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "RX5day": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 171.83
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005,
+        "timeseries": [
+          {
+            "year": 1961,
+            "value": 226.1
+          },
+          {
+            "year": 1962,
+            "value": 169.4
+          },
+          {
+            "year": 1963,
+            "value": 184.8
+          },
+          {
+            "year": 1964,
+            "value": 143.3
+          },
+          {
+            "year": 1965,
+            "value": 168.4
+          },
+          {
+            "year": 1966,
+            "value": 169.2
+          },
+          {
+            "year": 1967,
+            "value": 83.4
+          },
+          {
+            "year": 1968,
+            "value": 98.6
+          },
+          {
+            "year": 1969,
+            "value": 94.2
+          },
+          {
+            "year": 1970,
+            "value": 132.2
+          },
+          {
+            "year": 1971,
+            "value": 138.7
+          },
+          {
+            "year": 1972,
+            "value": 109
+          },
+          {
+            "year": 1973,
+            "value": 110.4
+          },
+          {
+            "year": 1974,
+            "value": 73.7
+          },
+          {
+            "year": 1975,
+            "value": 139.8
+          },
+          {
+            "year": 1976,
+            "value": 74.2
+          },
+          {
+            "year": 1977,
+            "value": 116.5
+          },
+          {
+            "year": 1978,
+            "value": 129
+          },
+          {
+            "year": 1979,
+            "value": 147
+          },
+          {
+            "year": 1980,
+            "value": 167
+          },
+          {
+            "year": 1981,
+            "value": 217.6
+          },
+          {
+            "year": 1982,
+            "value": 147.4
+          },
+          {
+            "year": 1983,
+            "value": 261
+          },
+          {
+            "year": 1984,
+            "value": 145.5
+          },
+          {
+            "year": 1985,
+            "value": 240.6
+          },
+          {
+            "year": 1986,
+            "value": 259.4
+          },
+          {
+            "year": 1987,
+            "value": 124.8
+          },
+          {
+            "year": 1988,
+            "value": 151.9
+          },
+          {
+            "year": 1989,
+            "value": 142.5
+          },
+          {
+            "year": 1990,
+            "value": 150.7
+          },
+          {
+            "year": 1991,
+            "value": 204.1
+          },
+          {
+            "year": 1992,
+            "value": 174.5
+          },
+          {
+            "year": 1993,
+            "value": 202.2
+          },
+          {
+            "year": 1994,
+            "value": 206.8
+          },
+          {
+            "year": 1995,
+            "value": 149.6
+          },
+          {
+            "year": 1996,
+            "value": 111.3
+          },
+          {
+            "year": 1997,
+            "value": 156.6
+          },
+          {
+            "year": 1998,
+            "value": 233.7
+          },
+          {
+            "year": 1999,
+            "value": 150.1
+          },
+          {
+            "year": 2000,
+            "value": 120.7
+          },
+          {
+            "year": 2001,
+            "value": 178.4
+          },
+          {
+            "year": 2002,
+            "value": 101.1
+          },
+          {
+            "year": 2003,
+            "value": 153.6
+          },
+          {
+            "year": 2004,
+            "value": 187.3
+          },
+          {
+            "year": 2005,
+            "value": 129.3
+          }
+        ]
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "TX90p": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 8.42
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005,
+        "timeseries": [
+          {
+            "year": 1961,
+            "value": 1.6
+          },
+          {
+            "year": 1962,
+            "value": 0.8
+          },
+          {
+            "year": 1963,
+            "value": 9.1
+          },
+          {
+            "year": 1964,
+            "value": 4
+          },
+          {
+            "year": 1965,
+            "value": 2.5
+          },
+          {
+            "year": 1966,
+            "value": 4.7
+          },
+          {
+            "year": 1967,
+            "value": 8.8
+          },
+          {
+            "year": 1968,
+            "value": 21.2
+          },
+          {
+            "year": 1969,
+            "value": 24.4
+          },
+          {
+            "year": 1970,
+            "value": 8.9
+          },
+          {
+            "year": 1971,
+            "value": 11.3
+          },
+          {
+            "year": 1972,
+            "value": 3.7
+          },
+          {
+            "year": 1973,
+            "value": 27.3
+          },
+          {
+            "year": 1974,
+            "value": 16.1
+          },
+          {
+            "year": 1975,
+            "value": 10.2
+          },
+          {
+            "year": 1976,
+            "value": 26.5
+          },
+          {
+            "year": 1977,
+            "value": 24.7
+          },
+          {
+            "year": 1978,
+            "value": 22.7
+          },
+          {
+            "year": 1979,
+            "value": 31.5
+          },
+          {
+            "year": 1980,
+            "value": 8.7
+          },
+          {
+            "year": 1981,
+            "value": 3.9
+          },
+          {
+            "year": 1982,
+            "value": 4.3
+          },
+          {
+            "year": 1983,
+            "value": 0.8
+          },
+          {
+            "year": 1984,
+            "value": 2.5
+          },
+          {
+            "year": 1985,
+            "value": 0.7
+          },
+          {
+            "year": 1986,
+            "value": 2.1
+          },
+          {
+            "year": 1987,
+            "value": 22.6
+          },
+          {
+            "year": 1988,
+            "value": 9.1
+          },
+          {
+            "year": 1989,
+            "value": 5
+          },
+          {
+            "year": 1990,
+            "value": 5.9
+          },
+          {
+            "year": 1991,
+            "value": 4.4
+          },
+          {
+            "year": 1992,
+            "value": 0.3
+          },
+          {
+            "year": 1993,
+            "value": 6.4
+          },
+          {
+            "year": 1994,
+            "value": 9.4
+          },
+          {
+            "year": 1995,
+            "value": 12.5
+          },
+          {
+            "year": 1996,
+            "value": 9.4
+          },
+          {
+            "year": 1997,
+            "value": 9.2
+          },
+          {
+            "year": 1998,
+            "value": 3.1
+          },
+          {
+            "year": 1999,
+            "value": 3.6
+          },
+          {
+            "year": 2000,
+            "value": 32.5
+          },
+          {
+            "year": 2001,
+            "value": 6.9
+          },
+          {
+            "year": 2002,
+            "value": 20.8
+          },
+          {
+            "year": 2003,
+            "value": 15.8
+          },
+          {
+            "year": 2004,
+            "value": 15.8
+          },
+          {
+            "year": 2005,
+            "value": 3.1
+          }
+        ]
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tas": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 20.4
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005,
+        "timeseries": [
+          {
+            "year": 1961,
+            "value": 19.5
+          },
+          {
+            "year": 1962,
+            "value": 19.56
+          },
+          {
+            "year": 1963,
+            "value": 20.47
+          },
+          {
+            "year": 1964,
+            "value": 19.96
+          },
+          {
+            "year": 1965,
+            "value": 19.65
+          },
+          {
+            "year": 1966,
+            "value": 19.71
+          },
+          {
+            "year": 1967,
+            "value": 20.04
+          },
+          {
+            "year": 1968,
+            "value": 20.98
+          },
+          {
+            "year": 1969,
+            "value": 20.5
+          },
+          {
+            "year": 1970,
+            "value": 20.3
+          },
+          {
+            "year": 1971,
+            "value": 20.24
+          },
+          {
+            "year": 1972,
+            "value": 19.22
+          },
+          {
+            "year": 1973,
+            "value": 20.99
+          },
+          {
+            "year": 1974,
+            "value": 20.59
+          },
+          {
+            "year": 1975,
+            "value": 20.36
+          },
+          {
+            "year": 1976,
+            "value": 20.98
+          },
+          {
+            "year": 1977,
+            "value": 21.32
+          },
+          {
+            "year": 1978,
+            "value": 20.84
+          },
+          {
+            "year": 1979,
+            "value": 21.26
+          },
+          {
+            "year": 1980,
+            "value": 20.24
+          },
+          {
+            "year": 1981,
+            "value": 20.17
+          },
+          {
+            "year": 1982,
+            "value": 20
+          },
+          {
+            "year": 1983,
+            "value": 19.45
+          },
+          {
+            "year": 1984,
+            "value": 20.23
+          },
+          {
+            "year": 1985,
+            "value": 19.8
+          },
+          {
+            "year": 1986,
+            "value": 19.48
+          },
+          {
+            "year": 1987,
+            "value": 21.3
+          },
+          {
+            "year": 1988,
+            "value": 20.53
+          },
+          {
+            "year": 1989,
+            "value": 20.4
+          },
+          {
+            "year": 1990,
+            "value": 20.24
+          },
+          {
+            "year": 1991,
+            "value": 20.14
+          },
+          {
+            "year": 1992,
+            "value": 19.53
+          },
+          {
+            "year": 1993,
+            "value": 20.43
+          },
+          {
+            "year": 1994,
+            "value": 20.26
+          },
+          {
+            "year": 1995,
+            "value": 21.05
+          },
+          {
+            "year": 1996,
+            "value": 20.81
+          },
+          {
+            "year": 1997,
+            "value": 20.8
+          },
+          {
+            "year": 1998,
+            "value": 20.43
+          },
+          {
+            "year": 1999,
+            "value": 20.48
+          },
+          {
+            "year": 2000,
+            "value": 21.84
+          },
+          {
+            "year": 2001,
+            "value": 20.75
+          },
+          {
+            "year": 2002,
+            "value": 20.94
+          },
+          {
+            "year": 2003,
+            "value": 20.52
+          },
+          {
+            "year": 2004,
+            "value": 20.93
+          },
+          {
+            "year": 2005,
+            "value": 19.78
+          }
+        ]
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    },
+    "tasmax": {
+      "historical": {
+        "baseline": {
+          "period": "1980-2005",
+          "value": 25.51
+        },
+        "timeseriesStart": 1961,
+        "timeseriesEnd": 2005,
+        "timeseries": [
+          {
+            "year": 1961,
+            "value": 24.07
+          },
+          {
+            "year": 1962,
+            "value": 24.46
+          },
+          {
+            "year": 1963,
+            "value": 25.7
+          },
+          {
+            "year": 1964,
+            "value": 24.9
+          },
+          {
+            "year": 1965,
+            "value": 24.65
+          },
+          {
+            "year": 1966,
+            "value": 24.99
+          },
+          {
+            "year": 1967,
+            "value": 25.47
+          },
+          {
+            "year": 1968,
+            "value": 27.03
+          },
+          {
+            "year": 1969,
+            "value": 26.76
+          },
+          {
+            "year": 1970,
+            "value": 26.12
+          },
+          {
+            "year": 1971,
+            "value": 25.98
+          },
+          {
+            "year": 1972,
+            "value": 24.58
+          },
+          {
+            "year": 1973,
+            "value": 26.92
+          },
+          {
+            "year": 1974,
+            "value": 26.53
+          },
+          {
+            "year": 1975,
+            "value": 26.02
+          },
+          {
+            "year": 1976,
+            "value": 27
+          },
+          {
+            "year": 1977,
+            "value": 27.01
+          },
+          {
+            "year": 1978,
+            "value": 26.94
+          },
+          {
+            "year": 1979,
+            "value": 27.2
+          },
+          {
+            "year": 1980,
+            "value": 25.44
+          },
+          {
+            "year": 1981,
+            "value": 25.14
+          },
+          {
+            "year": 1982,
+            "value": 25.15
+          },
+          {
+            "year": 1983,
+            "value": 23.89
+          },
+          {
+            "year": 1984,
+            "value": 24.77
+          },
+          {
+            "year": 1985,
+            "value": 24.74
+          },
+          {
+            "year": 1986,
+            "value": 24.6
+          },
+          {
+            "year": 1987,
+            "value": 27.11
+          },
+          {
+            "year": 1988,
+            "value": 25.45
+          },
+          {
+            "year": 1989,
+            "value": 25.14
+          },
+          {
+            "year": 1990,
+            "value": 25.35
+          },
+          {
+            "year": 1991,
+            "value": 24.99
+          },
+          {
+            "year": 1992,
+            "value": 24
+          },
+          {
+            "year": 1993,
+            "value": 25.08
+          },
+          {
+            "year": 1994,
+            "value": 25.35
+          },
+          {
+            "year": 1995,
+            "value": 26.28
+          },
+          {
+            "year": 1996,
+            "value": 25.95
+          },
+          {
+            "year": 1997,
+            "value": 25.97
+          },
+          {
+            "year": 1998,
+            "value": 24.96
+          },
+          {
+            "year": 1999,
+            "value": 25.39
+          },
+          {
+            "year": 2000,
+            "value": 27.8
+          },
+          {
+            "year": 2001,
+            "value": 25.7
+          },
+          {
+            "year": 2002,
+            "value": 26.85
+          },
+          {
+            "year": 2003,
+            "value": 26.59
+          },
+          {
+            "year": 2004,
+            "value": 26.59
+          },
+          {
+            "year": 2005,
+            "value": 24.93
+          }
+        ]
+      },
+      "projections": {
+        "rcp45": null,
+        "rcp85": null
+      }
+    }
+  }
+}

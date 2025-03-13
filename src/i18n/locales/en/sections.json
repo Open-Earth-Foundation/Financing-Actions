@@ -32,6 +32,7 @@
     "climate_projections": "Climate Indices",
     "chart_title": "Climate Index Projections",
     "trend": "Trend",
+    "no_data_available_try_another": "Climate data is not available for this city. Try selecting another city.",
     "scenarios": {
       "historical": "Historical",
       "optimistic": "Optimistic",

@@ -60,5 +60,11 @@
   },
   "actions": {
     "view_details": "Ver Detalhes"
-  }
+  },
+  "loading": "Carregando...",
+  "error": "Erro: {{error}}",
+  "sectors": {
+    "public_health": "Saúde Pública"
+  },
+  "indicators": "Indicadores"
 }

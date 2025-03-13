@@ -16,7 +16,7 @@ export const CLIMATE_INDEX_MAP = {
     },
     unit: 'days',
     increasing: {
-      negative: false, // Is increasing value negative for this index?
+      negative: true, // Is increasing value negative for this index?
       description: {
         en: 'Longer periods without rain can lead to drought conditions',
         'pt-BR': 'Períodos mais longos sem chuva podem levar a condições de seca'

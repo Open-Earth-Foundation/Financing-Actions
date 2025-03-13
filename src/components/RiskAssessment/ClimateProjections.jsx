@@ -88,17 +88,30 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
       setError(null);
 
       try {
-        const data = await fetchCityClimateData(cityname);
+        // Replace spaces with underscores in city name for the API
+        const formattedCityName = cityname.replace(/\s+/g, '_');
+
+        console.log(`Fetching climate data for: ${formattedCityName}`);
+        const data = await fetchCityClimateData(formattedCityName);
+
+        if (!data) {
+          throw new Error('No data returned from API');
+        }
+
         setCityData(data);
 
         // Set the first available index as default selection
-        const availableIndices = Object.keys(data.indices);
+        const availableIndices = Object.keys(data.indices || {});
         if (availableIndices.length > 0) {
           setSelectedIndex(availableIndices[0]);
+        } else {
+          console.warn(`No climate indices found for ${cityname}`);
         }
       } catch (err) {
         console.error("Error fetching climate data:", err);
-        setError(err.message);
+        setError(err.message || 'Failed to fetch climate data');
+        setCityData(null);
+        setSelectedIndex(null);
       } finally {
         setLoading(false);
       }
@@ -224,8 +237,11 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   // Error state
   if (error) {
     return (
-      <div className="flex items-center justify-center h-[400px]">
-        <div className="text-red-500">{t('common:error')}: {error}</div>
+      <div className="flex flex-col items-center justify-center h-[400px] p-4 bg-red-50 border border-red-100 rounded-lg">
+        <div className="text-red-500 mb-2 font-medium">{t('common:error', { error })}</div>
+        <div className="text-sm text-gray-600">
+          {t('sections:projections.no_data_available_try_another')}
+        </div>
       </div>
     );
   }

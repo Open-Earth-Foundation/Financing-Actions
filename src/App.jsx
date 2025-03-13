@@ -5,6 +5,7 @@ import i18n from "./i18n";
 import CityRoute from "./components/CityRoute";
 import LanguageSelector from './components/LanguageSelector';
 import { DataProvider } from "./data/DataContext";
+import DebugTool from './components/DebugTool';
 import "./index.css";
 
 const AppContent = () => {
@@ -40,6 +41,11 @@ const AppContent = () => {
         <Route path="/" element={<CityRoute />} />
         <Route path="/cities/:cityId" element={<CityRoute />} />
       </Routes>
+
+      {/* Debug Tool - will appear on all pages */}
+      <div className="container mx-auto my-8 px-4">
+        <DebugTool />
+      </div>
 
       <footer className="bg-gray-100 py-4 mt-auto">
         <div className="container mx-auto px-4 text-center text-gray-600 text-sm">

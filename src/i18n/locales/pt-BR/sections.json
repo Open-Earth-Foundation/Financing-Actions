@@ -32,6 +32,7 @@
     "climate_projections": "Índices Climáticos",
     "chart_title": "Projeções de Índices Climáticos",
     "trend": "Tendência",
+    "no_data_available_try_another": "Dados climáticos não disponíveis para esta cidade. Tente selecionar outra cidade.",
     "scenarios": {
       "historical": "Histórico",
       "optimistic": "Otimista",
