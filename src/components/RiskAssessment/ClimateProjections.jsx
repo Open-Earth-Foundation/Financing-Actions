@@ -292,8 +292,15 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   // Get trend information for the selected index
   const trendInfo = useMemo(() => {
     if (!selectedIndex) return null;
-    return getIndexTrend(selectedIndex, i18n.language);
-  }, [selectedIndex, i18n.language]);
+    const trend = getIndexTrend(selectedIndex, i18n.language);
+    if (typeof trend === 'object') {
+      return {
+        direction: trend.negative ? t('sections:projections.decrease') : t('sections:projections.increase'),
+        description: trend.description
+      };
+    }
+    return trend;
+  }, [selectedIndex, i18n.language, t]);
 
   // Determine anomaly direction and significance for 2050 RCP8.5 (worst-case)
   const anomalyInfo = useMemo(() => {
@@ -645,7 +652,9 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
               <AlertTriangle size={20} className="text-amber-500" />
               <div className="text-sm text-amber-700">
                 <span className="font-medium">{t('sections:projections.trend')}:</span>{' '}
-                {getIndexTrend(selectedIndex, t)}
+                {typeof getIndexTrend(selectedIndex, t) === 'object' 
+                  ? (getIndexTrend(selectedIndex, t).negative ? t('sections:projections.decrease') : t('sections:projections.increase')) + ' - ' + getIndexTrend(selectedIndex, t).description
+                  : getIndexTrend(selectedIndex, t)}
               </div>
             </div>
           )}
