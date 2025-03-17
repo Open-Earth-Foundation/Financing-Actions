@@ -5,6 +5,8 @@ import Select from 'react-select';
 import ccraApi from '../api/ccraApi';
 import { BRAZILIAN_STATES, getStateName } from '../utils/brazilianStates';
 import { useData } from '../data/DataContext';
+// Import allowed cities list
+import { ALLOWED_CITIES } from '../constants/allowedCities';
 
 const CityDropdown = ({ onCityChange, styles, initialCity }) => {
   const { t } = useTranslation();
@@ -38,9 +40,6 @@ const CityDropdown = ({ onCityChange, styles, initialCity }) => {
       originalValue: region
     }));
   }, [cities]);
-
-  // Import allowed cities list
-  import { ALLOWED_CITIES } from '../constants/allowedCities';
 
   // Filter cities by selected region and allowed list
   const filteredCities = React.useMemo(() => {
