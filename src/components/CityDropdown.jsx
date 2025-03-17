@@ -39,14 +39,18 @@ const CityDropdown = ({ onCityChange, styles, initialCity }) => {
     }));
   }, [cities]);
 
-  // Filter cities by selected region
+  // Import allowed cities list
+  import { ALLOWED_CITIES } from '../constants/allowedCities';
+
+  // Filter cities by selected region and allowed list
   const filteredCities = React.useMemo(() => {
     if (!selectedRegion || !cities?.length) return [];
 
     return cities
       .filter(city => 
         city.region === selectedRegion.originalValue && 
-        city.cityname
+        city.cityname &&
+        ALLOWED_CITIES.includes(city.cityname)
       )
       .map(city => ({
         value: city.actor_id,
