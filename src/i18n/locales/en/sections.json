@@ -35,11 +35,13 @@
     "summary_view": "Summary View",
     "time_series": "Time Series",
     "trend": "Trend",
+    "trend_lines": "Trend Lines",
     "no_data_available_try_another": "Climate data is not available for this city. Try selecting another city.",
     "scenarios": {
       "historical": "Historical",
       "optimistic": "Optimistic",
       "pessimistic": "Pessimistic",
+      "trend_lines": "Trend Lines",
       "current": "Current"
     },
     "significant_change": "{{direction}} of {{percent}}% by {{by2050}}",
