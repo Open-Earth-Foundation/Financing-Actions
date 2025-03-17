@@ -47,13 +47,7 @@ export default defineConfig({
     optimizedDataPlugin()
   ],
   server: {
-    port: 3000,
     host: '0.0.0.0',
-    hmr: {
-      protocol: 'wss',
-      port: 443,
-      clientPort: 443,
-      host: process.env.REPL_SLUG + '.' + process.env.REPL_OWNER + '.repl.co'
-    }
+    port: 3000
   }
 });
