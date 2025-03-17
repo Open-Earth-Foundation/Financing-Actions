@@ -46,7 +46,8 @@
     "urban_infrastructure": "Infraestrutura Urbana",
     "agricultural_production": "Produção Agrícola",
     "geo-hydrological_disasters": "Desastres Geo-hidrológicos",
-    "other": "Outro"
+    "other": "Outro",
+    "public_health": "Saúde Pública"
   },
   "region": "Região",
   "filters": {
@@ -63,8 +64,14 @@
   },
   "loading": "Carregando...",
   "error": "Erro: {{error}}",
-  "sectors": {
-    "public_health": "Saúde Pública"
-  },
-  "indicators": "Indicadores"
+  "indicators": "Indicadores",
+  "risk_changes": {
+    "significant_decrease": "Diminuição significativa no risco",
+    "moderate_decrease": "Diminuição moderada no risco",
+    "slight_decrease": "Leve diminuição no risco",
+    "no_change": "Sem mudança significativa",
+    "slight_increase": "Leve aumento no risco",
+    "moderate_increase": "Aumento moderado no risco",
+    "significant_increase": "Aumento significativo no risco"
+  }
 }

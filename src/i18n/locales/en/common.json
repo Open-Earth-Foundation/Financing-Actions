@@ -78,5 +78,21 @@
   "sectors": {
     "public_health": "Public Health"
   },
-  "indicators": "Indicators"
+  "indicators": "Indicators",
+  "risk_levels": {
+    "very_low": "Very Low",
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "very_high": "Very High"
+  },
+  "risk_changes": {
+    "significant_decrease": "Significant decrease in risk",
+    "moderate_decrease": "Moderate decrease in risk",
+    "slight_decrease": "Slight decrease in risk",
+    "no_change": "No significant change",
+    "slight_increase": "Slight increase in risk",
+    "moderate_increase": "Moderate increase in risk",
+    "significant_increase": "Significant increase in risk"
+  }
 }

@@ -5,7 +5,7 @@ import { getRiskLevel, formatScore, getRiskChangeDescription } from '../../const
 import InfoTooltip from '../InfoTooltip';
 
 const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'sections']);
 
   const topRisks = useMemo(() => {
     if (!riskAssessment || riskAssessment.length === 0) return [];
