@@ -1,3 +1,4 @@
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
@@ -49,12 +50,10 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
-    host: '0.0.0.0', // This is necessary for Replit
+    host: '0.0.0.0',
     hmr: {
-      // Replit WebView uses port 443 (HTTPS) to access your app
       clientPort: 443,
-      // Use the public subdomain Replit provides
-      host: new URL(process.env.REPL_SLUG + '.' + process.env.REPL_OWNER + '.repl.co').host,
+      host: process.env.REPL_SLUG ? `${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co` : '0.0.0.0'
     }
   }
 });
