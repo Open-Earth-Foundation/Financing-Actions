@@ -7,13 +7,7 @@
     "vulnerability_score": "Vulnerability Score",
     "hazards": "Hazards",
     "scenarios": "Scenarios",
-    "indicators": "indicators",
-    "population": "Population",
-    "area": "Area",
-    "climate_zone": "Climate Zone",
-    "climate_index": "Climate Index",
-    "more_statistics": "More Statistics",
-    "year": "Year"
+    "indicators": "indicators"
   },
   "metrics": {
     "sensitivity": "Sensitivity",
@@ -51,7 +45,8 @@
     "coastal_zones": "Coastal Zones",
     "urban_infrastructure": "Urban Infrastructure",
     "agricultural_production": "Agricultural Production",
-    "other": "Other"
+    "other": "Other",
+    "public_health": "Public Health"
   },
   "region": "Region",
   "filters": {
@@ -66,26 +61,9 @@
   "actions": {
     "view_details": "View Details"
   },
-  "labels": {
-    "climate_indices": "Climate Indices",
-    "scenarios": "Scenarios"
-  },
-  "actions": {
-    "view_details": "View Details"
-  },
   "loading": "Loading...",
   "error": "Error: {{error}}",
-  "sectors": {
-    "public_health": "Public Health"
-  },
   "indicators": "Indicators",
-  "risk_levels": {
-    "very_low": "Very Low",
-    "low": "Low",
-    "medium": "Medium",
-    "high": "High",
-    "very_high": "Very High"
-  },
   "risk_changes": {
     "significant_decrease": "Significant decrease in risk",
     "moderate_decrease": "Moderate decrease in risk",
