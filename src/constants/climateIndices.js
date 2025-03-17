@@ -46,7 +46,7 @@ export const CLIMATE_INDEX_MAP = {
     hazardType: 'floods',
     label: {
       en: 'Max 5-day Precipitation',
-      'pt-BR': 'Precipitação Máxima em 5 Dias'
+      pt: 'Precipitação Máxima em 5 Dias'
     },
     description: {
       en: 'Annual maximum 5-day precipitation',
