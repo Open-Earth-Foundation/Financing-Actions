@@ -56,7 +56,7 @@ const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
 
             {/* Hazard Name */}
             <div className="mb-6">
-              <h4 className="text-2xl font-semibold text-gray-900">
+              <h4 className="text-2xl font-semibold capitalize text-gray-900">
                 {t(`hazards:${risk.hazard}.name`, { defaultValue: risk.hazard })}
               </h4>
               <span className="text-gray-500 text-sm">
