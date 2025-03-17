@@ -10,6 +10,38 @@
     "rcp_45": "RCP 4.5: Cenário otimista - Menor caminho de emissões",
     "rcp_85": "RCP 8.5: Cenário pessimista - Maior caminho de emissões"
   },
+  "climateProjections": {
+    "title": "Projeções Climáticas",
+    "summary": "Resumo",
+    "timeSeries": "Série Temporal",
+    "selectScenario": "Selecione o cenário",
+    "dataExplanation": "Estas projeções mostram mudanças potenciais em comparação com a linha base histórica",
+    "noData": "Dados climáticos não disponíveis",
+    "modelData": "Dados do Modelo",
+    "interpretation": "Como Interpretar Estes Dados",
+    "range": "Intervalo",
+    "trendLine": "Linha de Tendência"
+  },
+  "climateDetail": {
+    "title": "Detalhes do Índice Climático",
+    "historicalData": "Dados Históricos",
+    "baseline": "Período Base",
+    "modelData": "Dados do Modelo",
+    "projectedChanges": "Mudanças Projetadas",
+    "periods": {
+      "near": "Curto prazo (2021-2040)",
+      "mid": "Médio prazo (2041-2060)",
+      "far": "Longo prazo (2061-2080)"
+    },
+    "value": "Valor",
+    "anomaly": "Anomalia",
+    "range": "Intervalo",
+    "mean": "Média",
+    "scenarios": {
+      "rcp45": "RCP 4.5 - Cenário intermediário",
+      "rcp85": "RCP 8.5 - Cenário de altas emissões"
+    }
+  },
   "radialComparison": {
     "title": "Comparação de Riscos",
     "no_data": "Dados de comparação de risco não disponíveis",

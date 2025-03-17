@@ -37,6 +37,38 @@
     "rcp_45": "RCP 4.5: Optimistic scenario - Lower emissions pathway",
     "rcp_85": "RCP 8.5: Pessimistic scenario - Higher emissions pathway"
   },
+  "climateProjections": {
+    "title": "Climate Projections",
+    "summary": "Summary",
+    "timeSeries": "Time Series",
+    "selectScenario": "Select scenario",
+    "dataExplanation": "These projections show potential changes compared to historical baseline",
+    "noData": "No climate data available",
+    "modelData": "Model Data",
+    "interpretation": "How to Interpret This Data",
+    "range": "Range",
+    "trendLine": "Trend Line"
+  },
+  "climateDetail": {
+    "title": "Climate Index Details",
+    "historicalData": "Historical Data",
+    "baseline": "Baseline Period",
+    "modelData": "Model Data",
+    "projectedChanges": "Projected Changes",
+    "periods": {
+      "near": "Near term (2021-2040)",
+      "mid": "Mid term (2041-2060)",
+      "far": "Far term (2061-2080)"
+    },
+    "value": "Value",
+    "anomaly": "Anomaly",
+    "range": "Range",
+    "mean": "Mean",
+    "scenarios": {
+      "rcp45": "RCP 4.5 - Intermediate scenario",
+      "rcp85": "RCP 8.5 - High emissions scenario"
+    }
+  },
   "radialComparison": {
     "title": "Hazard Comparison",
     "no_data": "No risk comparison data available",
