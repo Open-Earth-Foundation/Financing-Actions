@@ -23,6 +23,7 @@
   },
   "projections": {
     "range": "Intervalo",
+    "trend_line": "Linha de tendência",
     "title": "Projeções Climáticas",
     "description": "Visualize como os riscos climáticos podem mudar no futuro",
     "insights": "Esta seção mostra projeções para indicadores climáticos-chave sob diferentes cenários.",

@@ -26,6 +26,12 @@
     "very_high": "Muito Alto"
   },
   "hazards": {
+    "Deslizamentos": "Deslizamentos",
+    "Inundação": "Inundação", 
+    "Arboviroses": "Arboviroses",
+    "Seca": "Seca",
+    "Onda de Calor": "Onda de Calor",
+    "Aumento do nível do mar": "Aumento do nível do mar",
     "droughts": "Seca",
     "floods": "Inundação",
     "heatwaves": "Onda de Calor",
