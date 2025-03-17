@@ -426,7 +426,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
                       : undefined,
                 }}
               >
-                {getDescriptiveIndexLabel(index, i18n.language)}
+                {t(`climate_indices:${index}`)}
               </button>
             );
           })}
