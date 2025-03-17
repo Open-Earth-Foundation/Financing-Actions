@@ -6,24 +6,22 @@
   "top_risks": {
     "title": "Principais Riscos para Sua Cidade",
     "description": "Estes são os riscos climáticos que representam a maior ameaça para sua cidade. São calculados combinando probabilidade de risco, exposição e pontuações de vulnerabilidade.",
-    "insights": "Foque nos riscos marcados como 'Alto' ou 'Muito Alto' pois requerem atenção imediata. Considere tanto a pontuação geral de risco quanto os componentes individuais ao planejar respostas.",
-    "no_data": "Nenhum dado de risco disponível"
+    "insights": "Concentre-se nos riscos marcados como 'Alto' ou 'Muito Alto', pois requerem atenção imediata. Considere tanto a pontuação geral de risco quanto os componentes individuais ao planejar respostas.",
+    "no_data": "Não há dados de risco disponíveis"
   },
   "hazard_comparison": {
     "title": "Comparação de Riscos",
-    "description": "Este gráfico mostra como diferentes aspectos de risco contribuem para a pontuação geral de risco de sua cidade para cada ameaça climática.",
-    "insights": "Procure padrões no que impulsiona seus riscos - é alta probabilidade de risco, exposição ou vulnerabilidade? Isso ajuda a direcionar suas estratégias de adaptação efetivamente.",
-    "no_data": "Nenhum dado de comparação disponível"
+    "description": "Este gráfico mostra como diferentes aspectos do risco contribuem para a pontuação geral de risco da sua cidade para cada ameaça climática.",
+    "insights": "Procure padrões no que impulsiona seus riscos - é alta probabilidade de risco, exposição ou vulnerabilidade? Isso ajuda a direcionar suas estratégias de adaptação de forma eficaz.",
+    "no_data": "Não há dados de comparação de risco disponíveis"
   },
   "sector_distribution": {
     "title": "Distribuição por Setor",
-    "description": "Esta visualização mostra como os riscos climáticos estão distribuídos entre diferentes setores de sua cidade.",
+    "description": "Esta visualização mostra como os riscos climáticos estão distribuídos entre diferentes setores da sua cidade.",
     "insights": "Identifique quais setores enfrentam múltiplos riscos altos - estes podem precisar de estratégias de adaptação transversais.",
-    "no_data": "Nenhum dado de distribuição por setor disponível"
+    "no_data": "Não há dados de distribuição por setor disponíveis"
   },
   "projections": {
-    "range": "Intervalo",
-    "trend_line": "Linha de tendência",
     "title": "Projeções Climáticas",
     "description": "Visualize como os riscos climáticos podem mudar no futuro",
     "insights": "Esta seção mostra projeções para indicadores climáticos-chave sob diferentes cenários.",
@@ -33,12 +31,19 @@
     "hazard_projections": "Projeções de Riscos",
     "climate_projections": "Índices Climáticos",
     "chart_title": "Projeções de Índices Climáticos",
+    "time_series_title": "Série Temporal de Índices Climáticos",
+    "summary_view": "Visão Resumida",
+    "time_series": "Série Temporal",
     "trend": "Tendência",
+    "trend_line": "Linha de tendência",
+    "trend_lines": "Linhas de tendência",
+    "range": "Intervalo",
     "no_data_available_try_another": "Dados climáticos não disponíveis para esta cidade. Tente selecionar outra cidade.",
     "scenarios": {
       "historical": "Histórico",
       "optimistic": "Otimista",
       "pessimistic": "Pessimista",
+      "trend_lines": "Linhas de tendência",
       "current": "Atual"
     },
     "significant_change": "{{direction}} de {{percent}}% até {{by2050}}",
@@ -55,11 +60,7 @@
       "pessimistic": "Pessimista",
       "no_projections": "Não há dados de projeção disponíveis",
       "interpretation": "Como Interpretar Estes Dados",
-      "data_explanation": "Essas projeções são baseadas em modelos climáticos e mostram mudanças potenciais em comparação com o período histórico de referência (1980-2005).",
-      "rcp45": "RCP 4.5 (Otimista)",
-      "rcp85": "RCP 8.5 (Pessimista)",
-      "rcp45_explanation": "Assume que as emissões atingem o pico por volta de 2040 e depois diminuem, com esforços moderados de mitigação.",
-      "rcp85_explanation": "Assume emissões altas contínuas ao longo do século com esforços limitados de mitigação."
+      "data_explanation": "Os dados mostram mudanças projetadas em relação à linha de base histórica. Um aumento significa que o índice está se tornando mais frequente ou intenso."
     }
   },
   "ccra_table": {

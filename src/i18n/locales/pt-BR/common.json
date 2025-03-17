@@ -7,8 +7,8 @@
     "vulnerability_score": "Pontuação de Vulnerabilidade",
     "hazards": "Riscos",
     "scenarios": "Cenários",
-    "indicators": "indicadores",
-    "climate_indices": "índices climáticos",
+    "indicators": "Indicadores",
+    "climate_indices": "Índices climáticos",
     "year": "Ano"
   },
   "metrics": {
@@ -27,7 +27,7 @@
   },
   "hazards": {
     "Deslizamentos": "Deslizamentos",
-    "Inundação": "Inundação", 
+    "Inundação": "Inundação",
     "Arboviroses": "Arboviroses",
     "Seca": "Seca",
     "Onda de Calor": "Onda de Calor",
@@ -70,7 +70,7 @@
       "public health": "Saúde Pública"
     },
     "labels": {
-      "climate_indices": "índices climáticos",
+      "climate_indices": "Índices climáticos",
       "year": "Ano"
     }
   },
@@ -93,7 +93,7 @@
     "view_details": "Ver Detalhes"
   },
   "loading": "Carregando...",
-  "error": "Erro: {{error}}",
+  "error": "Erro",
   "indicators": "Indicadores",
   "risk_changes": {
     "significant_decrease": "Diminuição significativa no risco",
