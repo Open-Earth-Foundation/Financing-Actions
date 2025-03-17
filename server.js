@@ -195,8 +195,9 @@ app.use((err, req, res, next) => {
   console.error('Server error:', err.stack);
   res.status(500).json({
     error: 'Server error',
-    message: err.message,
-    path: req.path
+    message: err.message || 'An unknown error occurred',
+    path: req.path,
+    timestamp: new Date().toISOString()
   });
 });
 
