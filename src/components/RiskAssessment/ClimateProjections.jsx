@@ -395,7 +395,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   }
 
   return (
-    <div ref={ref} className="space-y-6">
+    <div ref={ref} className="">
       {/* Explanation of Climate Indices */}
       {getClimateIndicesExplanation(t)}
 
@@ -585,7 +585,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-4 py-4 text-sm font-medium text-blue-600 hover:text-blue-800 
+          className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-800 
                     bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors
                     border border-blue-200 hover:border-blue-300"
         >
@@ -699,7 +699,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
                       type="linear"
                       dataKey="rcp45_trend"
                       data={trendLineData.rcp45}
-                      name={`${t("sections:projections.scenarios.optimistic")} ${t("sections:projections.trend_line")}`}
+                      name={`${t("sections:projections.scenarios.optimistic")} ${t("sections:projections.trend_lines")}`}
                       stroke={getHazardColor(
                         getIndexHazardType(selectedIndex),
                         "optimistic",
