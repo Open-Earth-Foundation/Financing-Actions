@@ -1,0 +1,38 @@
+{
+  "landslides": {
+    "name": "Deslizamentos"
+  },
+  "floods": {
+    "name": "Inundações"
+  },
+  "public health": {
+    "name": "Saúde pública"
+  },
+  "climate_indices": {
+    "name": "Índices climáticos"
+  },
+  "year": {
+    "name": "Ano"
+  },
+  "projections": {
+    "range": "Faixa de projeções"
+  },
+  "Deslizamentos": {
+    "name": "Deslizamentos"
+  },
+  "Inundação": {
+    "name": "Inundação"
+  },
+  "Arboviroses": {
+    "name": "Arboviroses"
+  },
+  "Seca": {
+    "name": "Seca"
+  },
+  "Onda de Calor": {
+    "name": "Onda de calor"
+  },
+  "Aumento do nível do mar": {
+    "name": "Aumento do nível do mar"
+  }
+}

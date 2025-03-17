@@ -22,6 +22,7 @@
     "no_data": "Nenhum dado de distribuição por setor disponível"
   },
   "projections": {
+    "range": "Intervalo",
     "title": "Projeções Climáticas",
     "description": "Visualize como os riscos climáticos podem mudar no futuro",
     "insights": "Esta seção mostra projeções para indicadores climáticos-chave sob diferentes cenários.",

@@ -7,7 +7,9 @@
     "vulnerability_score": "Pontuação de Vulnerabilidade",
     "hazards": "Riscos",
     "scenarios": "Cenários",
-    "indicators": "indicadores"
+    "indicators": "indicadores",
+    "climate_indices": "índices climáticos",
+    "year": "Ano"
   },
   "metrics": {
     "sensitivity": "Sensibilidade",
@@ -49,15 +51,37 @@
     "other": "Outro",
     "public_health": "Saúde Pública"
   },
+  "common": {
+    "hazards": {
+      "Deslizamentos": "Deslizamentos",
+      "Inundação": "Inundação",
+      "Arboviroses": "Arboviroses",
+      "Seca": "Seca",
+      "Onda de Calor": "Onda de Calor",
+      "Aumento do nível do mar": "Aumento do nível do mar"
+    },
+    "sectors": {
+      "public health": "Saúde Pública"
+    },
+    "labels": {
+      "climate_indices": "índices climáticos",
+      "year": "Ano"
+    }
+  },
+  "sections": {
+    "projections": {
+      "range": "Faixa"
+    }
+  },
   "region": "Região",
   "filters": {
-    "all": "All",
-    "clear": "Clear filters"
+    "all": "Todos",
+    "clear": "Limpar filtros"
   },
   "filter_types": {
     "key_impact": "Impacto Chave",
     "hazard": "Risco",
-    "risk_level": "Nivel de Risco"
+    "risk_level": "Nível de Risco"
   },
   "actions": {
     "view_details": "Ver Detalhes"
