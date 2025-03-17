@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import Select from 'react-select';
 import { useData } from '../data/DataContext';
-import { ccraApi } from '../api';
+import ccraApi from '../api/ccraApi';
 import { ALLOWED_CITIES } from '../constants/allowedCities';
 
 const CityDropdown = ({ onCityChange, styles, initialCity }) => {

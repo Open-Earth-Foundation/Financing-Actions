@@ -395,7 +395,7 @@ const ClimateProjections = forwardRef(({ cityname }, ref) => {
   }
 
   return (
-    <div ref={ref} className="">
+    <div ref={ref} className="space-y-6">
       {/* Explanation of Climate Indices */}
       {getClimateIndicesExplanation(t)}
 
