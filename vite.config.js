@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import { resolve } from 'path';
 
-// For development: simple way to serve the optimized-data in dev mode
 const optimizedDataPlugin = () => {
   return {
     name: 'optimized-data-plugin',
@@ -51,11 +50,10 @@ export default defineConfig({
     port: 3000,
     host: '0.0.0.0',
     hmr: {
-      protocol: 'ws',
+      protocol: 'wss',
       port: 443,
       clientPort: 443,
-      timeout: 5000,
-      overlay: false
+      host: process.env.REPL_SLUG + '.' + process.env.REPL_OWNER + '.repl.co'
     }
   }
 });
