@@ -107,16 +107,10 @@ const getClimateIndicesExplanation = (t) => {
   return (
     <div className="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6">
       <h3 className="font-medium text-blue-800 mb-2">
-        What are Climate Indices?
+        {t("components:climateIndices.explanation.title")}
       </h3>
       <p className="text-sm text-blue-700">
-        Climate indices are simple measurements that help us track and
-        understand complex climate patterns. They convert complicated weather
-        data into numbers that show how our climate is changing over time. Each
-        index tracks a specific aspect of climate, such as extreme rainfall
-        events, dry periods, or temperature highs. These measurements help city
-        planners prepare for climate change impacts like floods, droughts, and
-        heat waves.
+        {t("components:climateIndices.explanation.description")}
       </p>
     </div>
   );

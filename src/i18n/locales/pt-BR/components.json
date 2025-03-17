@@ -107,5 +107,30 @@
         "placeholder": "Falha ao carregar cidades..."
       }
     }
+  },
+  "climateIndices": {
+    "explanation": {
+      "title": "O que são Índices Climáticos?",
+      "description": "Índices climáticos são medições simples que nos ajudam a acompanhar e entender padrões climáticos complexos. Eles convertem dados meteorológicos complicados em números que mostram como nosso clima está mudando ao longo do tempo. Cada índice monitora um aspecto específico do clima, como eventos de chuva extrema, períodos secos ou temperaturas altas. Essas medições ajudam planejadores urbanos a se prepararem para impactos das mudanças climáticas como inundações, secas e ondas de calor."
+    },
+    "labels": {
+      "CDD": "Dias Secos Consecutivos (Índice de Seca)",
+      "R95p": "Dias de Precipitação Intensa (Chuva Extrema)",
+      "RX1day": "Precipitação Máxima em 1 Dia (Precipitação Extrema)",
+      "RX5day": "Precipitação Máxima em 5 Dias (Chuva Intensa Prolongada)",
+      "SPI": "Índice de Precipitação Padronizado (Condições Secas/Úmidas)",
+      "WSDI": "Índice de Duração de Períodos Quentes (Duração de Ondas de Calor)",
+      "TXx": "Temperatura Máxima (Dia Mais Quente)",
+      "TNn": "Temperatura Mínima (Noite Mais Fria)",
+      "TR": "Noites Tropicais (Temperatura Mínima Alta)",
+      "FD": "Dias de Geada (Risco de Frio)",
+      "GTx": "Duração da Estação de Crescimento (Agricultura)",
+      "PRCPTOT": "Precipitação Anual Total (Volume de Chuva)",
+      "TN90p": "Noites Quentes (Calor Noturno)",
+      "TX90p": "Dias Quentes (Calor Diurno)",
+      "SPEI": "Índice de Precipitação-Evaporação (Balanço Hídrico)",
+      "tasmax": "Temperatura Máxima (Alta Diária)",
+      "tas": "Temperatura Média (Média Diária)"
+    }
   }
 }

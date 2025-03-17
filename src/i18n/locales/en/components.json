@@ -108,5 +108,30 @@
       "exposure": "Exposure Score",
       "vulnerability": "Vulnerability Score"
     }
+  },
+  "climateIndices": {
+    "explanation": {
+      "title": "What are Climate Indices?",
+      "description": "Climate indices are simple measurements that help us track and understand complex climate patterns. They convert complicated weather data into numbers that show how our climate is changing over time. Each index tracks a specific aspect of climate, such as extreme rainfall events, dry periods, or temperature highs. These measurements help city planners prepare for climate change impacts like floods, droughts, and heat waves."
+    },
+    "labels": {
+      "CDD": "Consecutive Dry Days (Drought Index)",
+      "R95p": "Heavy Precipitation Days (Extreme Rainfall)",
+      "RX1day": "Maximum 1-Day Rainfall (Extreme Precipitation)",
+      "RX5day": "Maximum 5-Day Rainfall (Prolonged Heavy Rain)",
+      "SPI": "Standardized Precipitation Index (Drought/Wet Conditions)",
+      "WSDI": "Warm Spell Duration Index (Heatwave Length)",
+      "TXx": "Maximum Temperature (Hottest Day)",
+      "TNn": "Minimum Temperature (Coldest Night)",
+      "TR": "Tropical Nights (High Minimum Temperature)",
+      "FD": "Frost Days (Cold Risk)",
+      "GTx": "Growing Season Length (Agriculture)",
+      "PRCPTOT": "Total Annual Precipitation (Rainfall Amount)",
+      "TN90p": "Warm Nights (Nighttime Heat)",
+      "TX90p": "Hot Days (Daytime Heat)",
+      "SPEI": "Precipitation-Evaporation Index (Water Balance)",
+      "tasmax": "Maximum Temperature (Daily High)",
+      "tas": "Average Temperature (Daily Mean)"
+    }
   }
 }

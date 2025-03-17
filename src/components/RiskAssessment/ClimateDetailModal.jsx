@@ -12,30 +12,8 @@ import { getHazardColor } from "../../constants/hazardColors";
 
 // Helper function to get descriptive labels for climate indices - same as in ClimateProjections
 const getDescriptiveIndexLabel = (indexCode, language) => {
-  const baseLabel = getIndexLabel(indexCode, language);
-
-  // Map of index codes to more descriptive, user-friendly names
-  const descriptiveLabels = {
-    'CDD': 'Consecutive Dry Days (Drought Index)',
-    'R95p': 'Heavy Precipitation Days (Extreme Rainfall)',
-    'RX1day': 'Maximum 1-Day Rainfall (Extreme Precipitation)',
-    'RX5day': 'Maximum 5-Day Rainfall (Prolonged Heavy Rain)',
-    'SPI': 'Standardized Precipitation Index (Drought/Wet Conditions)',
-    'WSDI': 'Warm Spell Duration Index (Heatwave Length)',
-    'TXx': 'Maximum Temperature (Hottest Day)',
-    'TNn': 'Minimum Temperature (Coldest Night)',
-    'TR': 'Tropical Nights (High Minimum Temperature)',
-    'FD': 'Frost Days (Cold Risk)',
-    'GTx': 'Growing Season Length (Agriculture)',
-    'PRCPTOT': 'Total Annual Precipitation (Rainfall Amount)',
-    'TN90p': 'Warm Nights (Nighttime Heat)',
-    'TX90p': 'Percentage of Days Above 90th Percentile (Hot Days)',
-    'SPEI': 'Precipitation-Evaporation Index (Water Balance)',
-    'tasmax': 'Maximum Temperature (Daily High)',
-    'tas': 'Average Temperature (Daily Mean)'
-  };
-
-  return descriptiveLabels[indexCode] || baseLabel;
+  const { t } = useTranslation();
+  return t(`components:climateIndices.labels.${indexCode}`) || getIndexLabel(indexCode, language);
 };
 
 // Helper function to get detailed explanation of climate indices
