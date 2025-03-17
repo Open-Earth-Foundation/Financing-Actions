@@ -35,6 +35,23 @@ const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
           getRiskChangeDescription(risk.original_risk_score, risk.risk_score) : null;
 
         return (
+          <div key={index} className="flex-1 bg-white rounded-lg shadow-sm p-4">
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-medium text-gray-900">
+                  {t(`hazards:${risk.climate_hazard}.name`)}
+                </h3>
+                <div className="mt-4 space-y-2">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-600">{t('components:topRisks.component_scores.hazard')}</span>
+                    <span className="font-medium text-gray-900">{formatScore(risk.hazard_score)}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-600">{t('components:topRisks.component_scores.exposure')}</span>
+                    <span className="font-medium text-gray-900">{formatScore(risk.exposure_score)}</span>
+                  </div>
+
+        return (
           
           <div 
             key={`${risk.hazard}-${risk.keyimpact}-${index}`}
@@ -125,7 +142,7 @@ const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
                 </div>
 
                 <div className="flex justify-between items-center text-sm">
-                  <span className="text-gray-600">{t('common:labels.vulnerability_score')}</span>
+                  <span className="text-gray-600">{t('components:topRisks.component_scores.vulnerability')}</span>
                   <div className="flex items-baseline gap-2">
                     {resilienceScore !== null && (
                       <span className="text-gray-500 text-xs">
