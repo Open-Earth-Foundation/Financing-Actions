@@ -50,9 +50,12 @@ export default defineConfig({
   server: {
     port: 3000,
     host: '0.0.0.0',
-    hmr: process.env.REPL_SLUG && process.env.REPL_OWNER ? {
+    hmr: {
+      protocol: 'ws',
+      port: 443,
       clientPort: 443,
-      host: `${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
-    } : true
+      timeout: 5000,
+      overlay: false
+    }
   }
 });
