@@ -32,7 +32,6 @@ localPort = 5174
 localPort = 5175
 
 [workflows]
-runButton = "Dev"
 
 [[workflows.workflow]]
 name = "Dev"
