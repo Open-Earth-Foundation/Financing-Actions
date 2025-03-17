@@ -1,11 +1,9 @@
 import React, { useMemo, forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { capitalize } from '../../utils/textUtils';
 import { getRiskLevel, formatScore, getRiskChangeDescription } from '../../constants/riskLevels';
-import InfoTooltip from '../InfoTooltip';
 
 const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
-  const { t } = useTranslation(['common', 'sections']);
+  const { t } = useTranslation(['common', 'sections', 'hazards', 'components']);
 
   const topRisks = useMemo(() => {
     if (!riskAssessment || riskAssessment.length === 0) return [];
@@ -43,7 +41,7 @@ const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
             <div className="flex items-center justify-between mb-4">
               <div className="uppercase text-gray-600 text-xs font-semibold tracking-wider">
                 
-                {capitalize(t(`common:sectors.${risk.keyimpact.toLowerCase()}`, { defaultValue: risk.keyimpact }))}
+                {t(`common:sectors.${risk.keyimpact}`, { defaultValue: risk.keyimpact })}
               </div>
               <span
                 className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
@@ -59,10 +57,10 @@ const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
             {/* Hazard Name */}
             <div className="mb-6">
               <h4 className="text-2xl font-semibold text-gray-900">
-                {capitalize(t(`common:hazards.${risk.hazard.toLowerCase()}`, { defaultValue: risk.hazard }))}
+                {t(`hazards:${risk.hazard}.name`, { defaultValue: risk.hazard })}
               </h4>
               <span className="text-gray-500 text-sm">
-                {t('common:labels.climate_hazard')}
+                {t('components:topRisks.climate_hazard')}
               </span>
             </div>
 
@@ -70,7 +68,7 @@ const TopRisks = forwardRef(({ riskAssessment, resilienceScore }, ref) => {
             <div className="space-y-4">
               <div className="flex justify-between items-baseline">
                 <span className="text-gray-600 text-sm font-medium">
-                  {t('common:labels.risk_score')}
+                  {t('components:topRisks.risk_score')}
                 </span>
                 <div className="flex items-baseline gap-2">
                   {resilienceScore !== null && (
