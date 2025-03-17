@@ -10,7 +10,6 @@ const optimizedDataPlugin = () => {
     name: 'optimized-data-plugin',
     configureServer(server) {
       server.middlewares.use('/api/climate', (req, res, next) => {
-        // Extract city name from path like /api/climate/city-data/florianopolis
         const match = req.url.match(/\/city-data\/([^\/]+)/);
         if (!match) {
           res.statusCode = 404;
@@ -51,9 +50,9 @@ export default defineConfig({
   server: {
     port: 3000,
     host: '0.0.0.0',
-    hmr: {
+    hmr: process.env.REPL_SLUG && process.env.REPL_OWNER ? {
       clientPort: 443,
-      host: process.env.REPL_SLUG ? `${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co` : '0.0.0.0'
-    }
+      host: `${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
+    } : true
   }
 });
