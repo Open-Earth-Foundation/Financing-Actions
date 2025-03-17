@@ -1,10 +1,8 @@
 // src/api/climateDataApi.js
 
 /**
- * Client for the Climate Data API
+ * Client for the Climate Data (direct from public folder)
  */
-
-const API_BASE = '';  // Empty for relative URLs
 
 /**
  * Fetch a list of available cities and their climate indices
@@ -12,14 +10,12 @@ const API_BASE = '';  // Empty for relative URLs
  */
 export const fetchClimateDataCities = async () => {
   try {
-    console.log('Fetching climate data cities from:', `${API_BASE}/api/climate/cities`);
-    const response = await fetch(`${API_BASE}/api/climate/cities`);
+    console.log('Fetching climate data cities from public folder');
+    const response = await fetch('/data/cities.json');
 
     if (!response.ok) {
       console.error('Non-OK response:', response.status, response.statusText);
-      const errorText = await response.text();
-      console.error('Error response from server:', errorText);
-      throw new Error(`Server responded with ${response.status}: ${response.statusText}`);
+      throw new Error(`Failed to fetch cities list: ${response.status}`);
     }
 
     return await response.json();
@@ -38,23 +34,18 @@ export const fetchCityClimateData = async (city) => {
   try {
     // Ensure city is in the correct format (replace spaces with underscores)
     const formattedCity = city.replace(/\s+/g, '_');
-    const url = `${API_BASE}/api/climate/${encodeURIComponent(formattedCity)}`;
+    const url = `/data/${encodeURIComponent(formattedCity)}.json`;
 
     console.log('Fetching climate data from:', url);
     const response = await fetch(url);
 
     // Log detailed info about the response
     console.log('Response status:', response.status, response.statusText);
-    console.log('Response headers:', Object.fromEntries([...response.headers.entries()]));
 
     if (!response.ok) {
       if (response.status === 404) {
         throw new Error(`City not found: ${city}`);
       }
-
-      // For any non-404 errors, try to get more information about the error
-      const errorText = await response.text();
-      console.error('Error response from server:', errorText);
       throw new Error(`Server responded with ${response.status}: ${response.statusText}`);
     }
 
@@ -63,6 +54,14 @@ export const fetchCityClimateData = async (city) => {
     return data;
   } catch (error) {
     console.error(`Error fetching climate data for ${city}:`, error);
+
+    // For testing/demonstration with mock data if file is not found
+    // Uncomment this to use mock data instead of real files
+    /*
+    console.log('Using mock data for demonstration');
+    return mockClimateData(city);
+    */
+
     throw error;
   }
 };
@@ -75,30 +74,89 @@ export const fetchCityClimateData = async (city) => {
  */
 export const fetchClimateIndexData = async (city, index) => {
   try {
-    // Ensure city is in the correct format (replace spaces with underscores)
-    const formattedCity = city.replace(/\s+/g, '_');
-    const url = `${API_BASE}/api/climate/${encodeURIComponent(formattedCity)}/${encodeURIComponent(index)}`;
+    // Get the full city data and extract just the requested index
+    const cityData = await fetchCityClimateData(city);
 
-    console.log('Fetching climate index data from:', url);
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      if (response.status === 404) {
-        if (response.statusText.includes('City not found')) {
-          throw new Error(`City not found: ${city}`);
-        } else {
-          throw new Error(`Index not found: ${index}`);
-        }
-      }
-
-      const errorText = await response.text();
-      console.error('Error response from server:', errorText);
-      throw new Error(`Server responded with ${response.status}: ${response.statusText}`);
+    if (!cityData.indices || !cityData.indices[index]) {
+      throw new Error(`Index not found: ${index}`);
     }
 
-    return await response.json();
+    return {
+      city: cityData.name || city,
+      index: index,
+      data: cityData.indices[index]
+    };
   } catch (error) {
     console.error(`Error fetching climate data for ${city}/${index}:`, error);
     throw error;
   }
+};
+
+/**
+ * Generate mock climate data for testing
+ * @param {string} city - The city name
+ * @returns {Object} Mock climate data
+ */
+export const mockClimateData = (city) => {
+  console.log(`Generating mock climate data for: ${city}`);
+
+  return {
+    name: city,
+    indices: {
+      'CDD': {
+        historical: {
+          baseline: { value: 32.5 }
+        },
+        projections: {
+          rcp45: {
+            periods: {
+              near: { value: 38.2, anomaly: 5.7 },
+              mid: { value: 42.1, anomaly: 9.6 }
+            },
+            timeseries: Array.from({length: 94}, (_, i) => ({
+              year: 2006 + i,
+              value: 32.5 + (Math.random() * 15) + (i * 0.15)
+            }))
+          },
+          rcp85: {
+            periods: {
+              near: { value: 39.8, anomaly: 7.3 },
+              mid: { value: 48.7, anomaly: 16.2 }
+            },
+            timeseries: Array.from({length: 94}, (_, i) => ({
+              year: 2006 + i,
+              value: 32.5 + (Math.random() * 20) + (i * 0.25)
+            }))
+          }
+        }
+      },
+      'WSDI': {
+        historical: {
+          baseline: { value: 12.3 }
+        },
+        projections: {
+          rcp45: {
+            periods: {
+              near: { value: 18.7, anomaly: 6.4 },
+              mid: { value: 25.2, anomaly: 12.9 }
+            },
+            timeseries: Array.from({length: 94}, (_, i) => ({
+              year: 2006 + i,
+              value: 12.3 + (Math.random() * 10) + (i * 0.2)
+            }))
+          },
+          rcp85: {
+            periods: {
+              near: { value: 22.1, anomaly: 9.8 },
+              mid: { value: 35.6, anomaly: 23.3 }
+            },
+            timeseries: Array.from({length: 94}, (_, i) => ({
+              year: 2006 + i,
+              value: 12.3 + (Math.random() * 15) + (i * 0.3)
+            }))
+          }
+        }
+      }
+    }
+  };
 };
