@@ -34,6 +34,8 @@
     "time_series_title": "Série Temporal de Índices Climáticos",
     "summary_view": "Visão Resumida",
     "time_series": "Série Temporal",
+    "explanations_title": "O que são esses índices?",
+    "explanations": "Os índices climáticos são medidas simples que nos ajudam a acompanhar e entender padrões climáticos complexos. Eles transformam dados meteorológicos complicados em números que mostram como o nosso clima está mudando ao longo do tempo. Cada índice monitora um aspecto específico do clima, como eventos de chuva extrema, períodos de seca ou temperaturas elevadas. Essas informações ajudam gestores públicos e planejadores urbanos a se preparar para os impactos das mudanças climáticas, como enchentes, secas e ondas de calor.",
     "trend": "Tendência",
     "trend_line": "Linha de tendência",
     "trend_lines": "Linhas de tendência",
@@ -60,7 +62,9 @@
       "pessimistic": "Pessimista",
       "no_projections": "Não há dados de projeção disponíveis",
       "interpretation": "Como Interpretar Estes Dados",
-      "data_explanation": "Os dados mostram mudanças projetadas em relação à linha de base histórica. Um aumento significa que o índice está se tornando mais frequente ou intenso."
+      "data_explanation": "Os dados mostram mudanças projetadas em relação à linha de base histórica. Um aumento significa que o índice está se tornando mais frequente ou intenso.",
+      "what_is_index": "O que é um índice climático?",
+      "warning_icon_note": "Alterações significativas nesses cenários são simbolizadas por este ícone"
     }
   },
   "ccra_table": {

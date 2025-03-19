@@ -72,5 +72,11 @@
     "slight_increase": "Slight increase in risk",
     "moderate_increase": "Moderate increase in risk",
     "significant_increase": "Significant increase in risk"
+  },
+  "scenarios": {
+    "optimistic": "Optimistic (RCP4.5)",
+    "pessimistic": "Pessimistic (RCP8.5)",
+    "optimistic_trend": "Optimistic Trend",
+    "pessimistic_trend": "Pessimistic Trend"
   }
 }
