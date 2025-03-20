@@ -1,0 +1,21 @@
+.custom-select {
+  background-color: #2351DC;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-select option {
+  background-color: #2351DC;
+  color: white;
+}
+
+.custom-select:focus,
+.custom-select:hover {
+  background-color: #2351DC;
+  color: white;
+}
