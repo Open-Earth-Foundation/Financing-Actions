@@ -16,7 +16,7 @@ function SurveyComponent({setAnswers, answers}: QuestionnaireProps) {
     const selectedLanguage = i18n.language;
 console.log('Selected language:', selectedLanguage);
     const survey = new Model(json);
-    survey.locale = "pt-BR";
+    survey.locale = selectedLanguage;
     survey.onComplete.add((sender, options) => {
         console.log(JSON.stringify(sender.data, null, 3));
         console.log("options", JSON.stringify(options, null, 2)) // TODO NINA

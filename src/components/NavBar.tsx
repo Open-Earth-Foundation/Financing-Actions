@@ -1,11 +1,15 @@
-import LanguageSelector from "./LanguageSelect/LanguageSelect.jsx";
+import LanguageSelector from "./LanguageSelect/LanguageSelect.tsx";
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { Text, HStack, VStack } from "@chakra-ui/react";
-import type { TFunction } from "i18next";
+import {useTranslation} from "react-i18next";
+import {Text, HStack, VStack} from "@chakra-ui/react";
+import type {TFunction} from "i18next";
 
-export function NavBar() {
-    const { t } : {t: TFunction}= useTranslation('translation');
+interface NavBarProps {
+    onLanguageChange: (newLanguage: string) => void
+}
+
+export function NavBar({onLanguageChange}: NavBarProps) {
+    const {t}: { t: TFunction } = useTranslation('translation');
 
     return (
         <HStack
@@ -20,12 +24,12 @@ export function NavBar() {
             zIndex="1000"
         >
             <VStack alignItems="flex-start">
-                <Text as="h1" size="sm" textAlign="left" >
-                    {t("navbar.title"  as any)}
+                <Text as="h1" size="sm" textAlign="left">
+                    {t("navbar.title" as any)}
                 </Text>
-                <Text as="h2" size="md" textAlign="left">{t("navbar.subtitle"  as any)}</Text>
+                <Text as="h2" size="md" textAlign="left">{t("navbar.subtitle" as any)}</Text>
             </VStack>
-            <LanguageSelector />
+            <LanguageSelector onLanguageChange={onLanguageChange}/>
         </HStack>
     );
 }

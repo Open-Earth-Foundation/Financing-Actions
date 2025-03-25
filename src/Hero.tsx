@@ -2,6 +2,7 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {Button, HStack, VStack} from '@chakra-ui/react';
 import type {TFunction} from "i18next";
+import {Link} from 'react-router-dom';
 
 const Hero = () => {
     const {t}: TFunction = useTranslation();
@@ -12,9 +13,11 @@ const Hero = () => {
                 <p>{t('hero.description')}</p>
             </VStack>
             <VStack width={"50%"}>
-                <Button backgroundColor="#2351DC" size="lg">
-                {t('hero.CTA')}
-            </Button>
+                <Link to="/questionnaire">
+                    <Button backgroundColor="#2351DC" size="lg">
+                        {t('hero.CTA')}
+                    </Button>
+                </Link>
             </VStack>
         </HStack>
     );
