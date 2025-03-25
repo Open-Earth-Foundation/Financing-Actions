@@ -15,7 +15,6 @@ interface QuestionnaireProps {
 
 function SurveyComponent({setAnswers, answers}: QuestionnaireProps) {
     const selectedLanguage = i18n.language;
-console.log('Selected language:', selectedLanguage);
     const survey = new Model(json);
     survey.locale = selectedLanguage;
     survey.css = {
@@ -38,7 +37,7 @@ console.log('Selected language:', selectedLanguage);
         console.log(JSON.stringify(sender.data, null, 3));
         console.log("options", JSON.stringify(options, null, 2)) // TODO NINA
     });
-    return (<Survey model={survey}/>);
+    return (<Box width={"100vw"}><Survey model={survey}/></Box>);
 }
 
 export default SurveyComponent;
