@@ -2,11 +2,7 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import './LanguageSelect.css';
 
-interface LanguageSelectProps {
-    onLanguageChange: (newLanguage: string) => void
-}
-
-export function LanguageSelect({onLanguageChange}: LanguageSelectProps) {
+export function LanguageSelect() {
     const {i18n} = useTranslation();
 
     const languages = [
@@ -16,20 +12,14 @@ export function LanguageSelect({onLanguageChange}: LanguageSelectProps) {
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedLanguage = e.target.value;
-        console.log("Selected language:", selectedLanguage);
-
-        // Change the language  
-        i18n.changeLanguage(selectedLanguage).then(() => {
-            console.log("Language changed to:", i18n.language);
-            onLanguageChange(selectedLanguage);
-        });
+        i18n.changeLanguage(selectedLanguage)
     };
 
     return (
         <div className="relative">
             <select
                 className="custom-select"
-                value={i18n.language} // Directly use i18n.language as the value  
+                value={i18n.language}
                 onChange={handleChange}
             >
                 {languages.map((lang) => (

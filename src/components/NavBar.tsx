@@ -4,11 +4,7 @@ import {useTranslation} from "react-i18next";
 import {Text, HStack, VStack} from "@chakra-ui/react";
 import type {TFunction} from "i18next";
 
-interface NavBarProps {
-    onLanguageChange: (newLanguage: string) => void
-}
-
-export function NavBar({onLanguageChange}: NavBarProps) {
+export function NavBar() {
     const {t}: { t: TFunction } = useTranslation('translation');
 
     return (
@@ -29,7 +25,7 @@ export function NavBar({onLanguageChange}: NavBarProps) {
                 </Text>
                 <Text as="h2" size="md" textAlign="left">{t("navbar.subtitle" as any)}</Text>
             </VStack>
-            <LanguageSelector onLanguageChange={onLanguageChange}/>
+            <LanguageSelector/>
         </HStack>
     );
 }
