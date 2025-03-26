@@ -8,10 +8,11 @@ import {I18nextProvider, useTranslation} from "react-i18next";
 import {NavBar} from "./components/NavBar.tsx";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {SurveyAnswers} from "./types.ts";
 
 function App() {
     const {i18n} = useTranslation();
-        const [answers, setAnswers] = useState({});
+        const [answers, setAnswers] = useState<SurveyAnswers | {}>({});
 
     useEffect(() => {
         const storedData = localStorage.getItem('surveyAnswers');

@@ -256,21 +256,21 @@ export const json = {
           "isRequired": true,
           "choices": [
             {
-              "value": 0,
+              "value": "A",
               "text": {
                 "default": "The project is being conceived. The project is still in the idea stage, with no formal planning or feasibility studies conducted",
                 "pt": "O projeto está sendo concebido. O projeto ainda está em fase de ideia, sem planejamento formal ou estudos de viabilidade realizados"
               }
             },
             {
-              "value": 0,
+              "value": "B",
               "text": {
                 "default": "The project is being structured/Planned. The project is in the initial planning phase, with feasibility studies, risk assessments, and financial models being developed",
                 "pt": "O projeto está sendo estruturado/planejado. O projeto está em fase inicial de planejamento, com estudos de viabilidade, avaliações de risco e modelos financeiros sendo desenvolvidos"
               }
             },
             {
-              "value": 2,
+              "value": "C",
               "text": {
                 "default": "The project is structured. The project has a clear structure, including feasibility studies, technical documentation, and financial planning, making it ready for funding and implementation",
                 "pt": "O projeto está estruturado. O projeto tem uma estrutura clara, incluindo estudos de viabilidade, documentação técnica e planejamento financeiro, tornando-o pronto para financiamento e implementação"
@@ -403,28 +403,28 @@ export const json = {
           "isRequired": true,
           "choices": [
             {
-              "value": 1,
+              "value": "A",
               "text": {
                 "default": "A – High payment capacity (low fiscal risk). The municipality has strong solvency, stable revenues, and a solid liquidity position, posing minimal credit risk to the National Treasury.",
                 "pt": "A – Alta capacidade de pagamento (baixo risco fiscal). O município tem forte solvência, receitas estáveis e uma sólida posição de liquidez, representando um risco de crédito mínimo para o Tesouro Nacional."
               }
             },
             {
-              "value": 2,
+              "value": "B",
               "text": {
                 "default": "B – Medium payment capacity (moderate fiscal risk). The municipality has a balanced financial situation but may face some constraints in taking on new debt.",
                 "pt": "B – Capacidade de pagamento média (risco fiscal moderado). O município tem uma situação financeira equilibrada, mas pode enfrentar algumas restrições para assumir novas dívidas."
               }
             },
             {
-              "value": 3,
+              "value": "C",
               "text": {
                 "default": "C – Low payment capacity (high fiscal risk). The municipality has financial vulnerabilities, with limited ability to sustain new debt without increasing fiscal pressure.",
                 "pt": "C – Baixa capacidade de pagamento (alto risco fiscal). O município tem vulnerabilidades financeiras, com capacidade limitada de sustentar novas dívidas sem aumentar a pressão fiscal."
               }
             },
             {
-              "value": 4,
+              "value": "D",
               "text": {
                 "default": "D – Critical fiscal situation (high risk of default). The municipality faces significant fiscal instability, making it a high credit risk for the National Treasury.",
                 "pt": "D – Situação fiscal crítica (alto risco de inadimplência). O município enfrenta uma instabilidade fiscal significativa, tornando-se um alto risco de crédito para o Tesouro Nacional."
@@ -487,9 +487,10 @@ export const json = {
   ],
   "showTitle": false,
   "navigateToUrl": "http://localhost:5173/results",
+  "showQuestionNumbers": "on",
   "showProgressBar": true,
   "progressBarLocation": "bottom",
-  "progressBarType": "questions",
+  "progressBarType": "requiredQuestions",
   "autoAdvanceEnabled": true,
   "questionsOnPageMode": "questionPerPage",
   "headerView": "advanced"

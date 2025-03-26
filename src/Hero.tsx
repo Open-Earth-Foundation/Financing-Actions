@@ -3,15 +3,14 @@ import {useTranslation} from 'react-i18next';
 import {Button, HStack, VStack} from '@chakra-ui/react';
 import type {TFunction} from "i18next";
 import {Link} from 'react-router-dom';
-import {Answer} from "./types.ts";
+import {SurveyAnswers} from "./types.ts";
 
 interface HeroProps {
-    answers: Answer | {}
+    answers: SurveyAnswers | {}
 }
 
 const Hero = ({answers}: HeroProps) => {
 
-    console.log("answers", JSON.stringify(answers, null, 2)) // TODO NINA
     const {t}: TFunction = useTranslation();
     return (
         <HStack style={{textAlign: 'left'}} width={"100%"}>
