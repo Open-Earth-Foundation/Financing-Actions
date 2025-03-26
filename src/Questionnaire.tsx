@@ -32,6 +32,7 @@ function SurveyComponent() {
 
     survey.onComplete.add((sender, _options) => {
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
+        window.location.href = '/results';
     });
     return (<Box width={"100vw"}><Survey model={survey}/></Box>);
 }

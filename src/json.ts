@@ -487,7 +487,7 @@ export const json = {
   ],
   "showTitle": false,
   // "navigateToUrl": "http://localhost:5173/results",
-  "navigateToUrl": "https://city-catalyst-maturity-assessment.replit.app/results",
+  // "navigateToUrl": "https://city-catalyst-maturity-assessment.replit.app/results",
   "showQuestionNumbers": "on",
   "showProgressBar": true,
   "progressBarLocation": "bottom",
