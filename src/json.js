@@ -26,6 +26,7 @@ export const json = {
             "default": "Does the municipality have a climate action plan or strategy for mitigation and adaptation to climate change?",
             "pt": "O município possui um plano ou estratégia de ação climática para mitigação e adaptação às mudanças climáticas?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 2,
@@ -50,6 +51,7 @@ export const json = {
             "default": "Is there an agency, secretariat, or team responsible for the climate agenda locally?",
             "pt": "Existe uma agência, secretaria ou equipe responsável pela agenda climática localmente?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 2,
@@ -74,6 +76,7 @@ export const json = {
             "default": "Have discussions/relationships been established with the departments and/or stakeholders that should be involved?",
             "pt": "Foram estabelecidas discussões/relacionamentos com os departamentos e/ou partes interessadas que devem ser envolvidos?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -111,6 +114,7 @@ export const json = {
             "default": "Does the municipality have trained technicians to develop and monitor climate projects?",
             "pt": "O município possui técnicos capacitados para desenvolver e monitorar projetos climáticos?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 2,
@@ -135,6 +139,7 @@ export const json = {
             "default": "Is there experience in raising and executing external resources for climate projects?",
             "pt": "Existe experiência na captação e execução de recursos externos para projetos climáticos?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -159,6 +164,7 @@ export const json = {
             "default": "Is the municipality in contact with State and National Governments departments regarding potential funds from\ndevelopment banks?",
             "pt": "O município está em contato com os governos estadual e nacional sobre possíveis recursos de\nbancos de desenvolvimento?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -183,6 +189,7 @@ export const json = {
             "default": "Does the municipality have technicians with knowledge on the legislation for loans and financing processes?",
             "pt": "O município possui técnicos com conhecimento sobre a legislação para empréstimos e processos de financiamento?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 2,
@@ -220,6 +227,7 @@ export const json = {
             "default": "Is there a project or portfolio of projects corresponding to the selected mitigation and adaptation actions?",
             "pt": "Existe um projeto ou portfólio de projetos correspondente às ações de mitigação e adaptação selecionadas?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 3,
@@ -245,6 +253,7 @@ export const json = {
             "default": "How developed is the project in terms of planning and structuring, considering that more advanced projects have",
             "pt": "Quão desenvolvido é o projeto em termos de planejamento e estruturação, considerando que projetos mais avançados têm"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 0,
@@ -277,6 +286,7 @@ export const json = {
             "default": "Is the project aligned with the municipal ordinance (Master Plan, climate goals, sectoral plans, legislation, etc.)?",
             "pt": "O projeto está alinhado com a portaria municipal (Plano Diretor, metas climáticas, planos setoriais, legislação, etc.)?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 2,
@@ -302,6 +312,7 @@ export const json = {
             "default": "Does the project outline the expected changes (theory of change) related to the outcomes?s, sectoral plans, legislation, etc.)?",
             "pt": "O projeto descreve as mudanças esperadas (teoria da mudança) relacionadas aos resultados, planos setoriais, legislação, etc.)?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -326,6 +337,7 @@ export const json = {
             "default": "Is there experience in the preparation of technical and financial proposals for external fundraising?",
             "pt": "Existe experiência na elaboração de propostas técnicas e financeiras para captação de recursos externos?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -350,6 +362,7 @@ export const json = {
             "default": "Does the municipality have any software or system for financial project management?",
             "pt": "O município possui algum software ou sistema para gerenciamento financeiro de projetos?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -387,30 +400,31 @@ export const json = {
             "default": "What is the municipality's CAPAG (Payment Capacity) rating, which evaluates its fiscal situation and ability to take on\nnew loans guaranteed by the Union, based on indebtedness, current savings, and liquidity ratio?",
             "pt": "Qual é a classificação CAPAG (Capacidade de Pagamento) do município, que avalia sua situação fiscal e capacidade de assumir\nnovos empréstimos garantidos pela União, com base no endividamento, poupança corrente e índice de liquidez?"
           },
+          "isRequired": true,
           "choices": [
             {
-              "value": 3,
+              "value": 1,
               "text": {
                 "default": "A – High payment capacity (low fiscal risk). The municipality has strong solvency, stable revenues, and a solid liquidity position, posing minimal credit risk to the National Treasury.",
                 "pt": "A – Alta capacidade de pagamento (baixo risco fiscal). O município tem forte solvência, receitas estáveis e uma sólida posição de liquidez, representando um risco de crédito mínimo para o Tesouro Nacional."
               }
             },
             {
-              "value": 3,
+              "value": 2,
               "text": {
                 "default": "B – Medium payment capacity (moderate fiscal risk). The municipality has a balanced financial situation but may face some constraints in taking on new debt.",
                 "pt": "B – Capacidade de pagamento média (risco fiscal moderado). O município tem uma situação financeira equilibrada, mas pode enfrentar algumas restrições para assumir novas dívidas."
               }
             },
             {
-              "value": 0,
+              "value": 3,
               "text": {
                 "default": "C – Low payment capacity (high fiscal risk). The municipality has financial vulnerabilities, with limited ability to sustain new debt without increasing fiscal pressure.",
                 "pt": "C – Baixa capacidade de pagamento (alto risco fiscal). O município tem vulnerabilidades financeiras, com capacidade limitada de sustentar novas dívidas sem aumentar a pressão fiscal."
               }
             },
             {
-              "value": 0,
+              "value": 4,
               "text": {
                 "default": "D – Critical fiscal situation (high risk of default). The municipality faces significant fiscal instability, making it a high credit risk for the National Treasury.",
                 "pt": "D – Situação fiscal crítica (alto risco de inadimplência). O município enfrenta uma instabilidade fiscal significativa, tornando-se um alto risco de crédito para o Tesouro Nacional."
@@ -425,6 +439,7 @@ export const json = {
             "default": "Is there a need for technical assistance for project development or improvement?",
             "pt": "Há necessidade de assistência técnica para desenvolvimento ou melhoria de projetos?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -449,6 +464,7 @@ export const json = {
             "default": "Has the municipality already accessed or tried to access sources of climate financing, such as the Climate Fund, the \nGCF (Green Climate Fund), development banks (e.g. BNDES) or the PAC (Programa de Aceleração do Crescimento - \nGrowth Acceleration Program)?",
             "pt": "O município já acessou ou tentou acessar fontes de financiamento climático, como o Fundo Clima, o \nGCF (Fundo Verde para o Clima), bancos de desenvolvimento (por exemplo, BNDES) ou o PAC (Programa de Aceleração do Crescimento - \nPrograma de Aceleração do Crescimento)?"
           },
+          "isRequired": true,
           "choices": [
             {
               "value": 1,
@@ -470,8 +486,12 @@ export const json = {
     }
   ],
   "showTitle": false,
+  "navigateToUrl": "http://localhost:5173/results",
   "showProgressBar": true,
+  "progressBarLocation": "bottom",
+  "progressBarType": "requiredQuestions",
   "questionsOnPageMode": "questionPerPage",
   "showPreviewBeforeComplete": true,
+  "previewMode": "answeredQuestions",
   "headerView": "advanced"
 }

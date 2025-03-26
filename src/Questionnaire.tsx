@@ -33,9 +33,8 @@ function SurveyComponent({setAnswers, answers}: QuestionnaireProps) {
         }
     }, []);
 
-    survey.onComplete.add((sender, options) => {
-        console.log(JSON.stringify(sender.data, null, 3));
-        console.log("options", JSON.stringify(options, null, 2)) // TODO NINA
+    survey.onComplete.add((sender, _options) => {
+        setAnswers(sender.data);
     });
     return (<Box width={"100vw"}><Survey model={survey}/></Box>);
 }

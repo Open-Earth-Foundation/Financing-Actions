@@ -1,14 +1,44 @@
 import LanguageSelector from "./LanguageSelect/LanguageSelect.tsx";
-import React from "react";
-import {useTranslation} from "react-i18next";
-import {Text, HStack, VStack} from "@chakra-ui/react";
-import type {TFunction} from "i18next";
+import React, { useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Text, HStack, VStack } from "@chakra-ui/react";
+import type { TFunction } from "i18next";
 
 export function NavBar() {
-    const {t}: { t: TFunction } = useTranslation('translation');
+    const { t }: { t: TFunction } = useTranslation('translation');
+    const navbarRef = useRef(null);
+
+    useEffect(() => {
+        const updateNavbarHeight = () => {
+            if (navbarRef.current) {
+                const height = navbarRef.current.offsetHeight;
+                document.documentElement.style.setProperty('--navbar-height', `${height}px`);
+            }
+        };
+
+        // Call once on component mount
+        updateNavbarHeight();
+
+        // Set up resize observer to detect changes in navbar height
+        const resizeObserver = new ResizeObserver(updateNavbarHeight);
+        if (navbarRef.current) {
+            resizeObserver.observe(navbarRef.current);
+        }
+
+        // Also handle window resize events
+        window.addEventListener('resize', updateNavbarHeight);
+
+        return () => {
+            if (navbarRef.current) {
+                resizeObserver.unobserve(navbarRef.current);
+            }
+            window.removeEventListener('resize', updateNavbarHeight);
+        };
+    }, []);
 
     return (
         <HStack
+            ref={navbarRef}
             position="fixed"
             top="0"
             width="100%"

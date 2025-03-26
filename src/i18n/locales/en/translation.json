@@ -7,5 +7,13 @@
   "navbar": {
     "title": "CityCatalyst Finance Readiness Assessment",
     "subtitle": "by I Care + Brisa + Open Earth"
+  },
+  "results": {
+    "title": "Assessment Complete",
+    "breakdown": "Breakdown by Maturity Level Category",
+    "climate-governance-and-planning":"Climate Governance and Planning",
+    "technical-and-institutional-capacity": "Technical and Institutional Capacity",
+    "projects-structuring": "Projects Structuring",
+    "funding-and-fundraising": "Funding and fundraising"
   }
 }

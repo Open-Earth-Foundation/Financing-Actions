@@ -1,8 +1,9 @@
 import './App.css';
-import {ChakraProvider, Heading, VStack} from "@chakra-ui/react";
+import { ChakraProvider, VStack } from "@chakra-ui/react";
 import { theme } from "./theme.ts";
 import Hero from "./Hero.tsx";
-import Questionnaire from "./Questionaire.tsx";
+import Questionnaire from "./Questionnaire.tsx";
+import Results from "./Results.tsx";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { NavBar } from "./components/NavBar.tsx";
 import { useState } from "react";
@@ -13,15 +14,21 @@ function App() {
     const { i18n } = useTranslation();
     const [answers, setAnswers] = useState<Question[]>();
 
-     return (
+    return (
         <I18nextProvider i18n={i18n}>
             <ChakraProvider value={theme}>
                 <Router>
                     <NavBar />
-                    <VStack justifyContent="space-between" width="100%" height="100vh" paddingTop="150px">
+                    <VStack
+                        justifyContent="space-between"
+                        width="100%"
+                        height="100vh"
+                        paddingTop="var(--navbar-height)" // Use the CSS variable here
+                    >
                         <Routes>
                             <Route path="/" element={<Hero />} />
-                            <Route path="/questionnaire" element={<Questionnaire setAnswers={setAnswers} answers={answers} />} />
+                            <Route path="/questionnaire" element={<Questionnaire setAnswers={setAnswers} />} />
+                            <Route path="/results" element={<Results answers={answers} />} />
                         </Routes>
                     </VStack>
                 </Router>

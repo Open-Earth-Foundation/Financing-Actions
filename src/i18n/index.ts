@@ -18,7 +18,7 @@ i18n
                 translation: translationPt,
             }
         },
-        fallbackLng: 'pt',
+        fallbackLng: 'en',
         // debug: process.env.NODE_ENV === 'development',
         ns: [
             'translation',
