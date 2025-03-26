@@ -6,11 +6,12 @@ import "./index.css";
 import {json} from "./json.ts";
 import i18n from "i18next";
 import {Box} from "@chakra-ui/react";
+import {useNavigate} from "react-router-dom";
 
 function SurveyComponent() {
-    const selectedLanguage = i18n.language;
+    const navigate = useNavigate();
     const survey = new Model(json);
-    survey.locale = selectedLanguage;
+    survey.locale = i18n.language;
     survey.css = {
         root: "survey-custom-centered",
         container: "survey-container-centered"
@@ -32,7 +33,7 @@ function SurveyComponent() {
 
     survey.onComplete.add((sender, _options) => {
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
-        window.location.href = '/results';
+        navigate('/results');
     });
     return (<Box width={"100vw"}><Survey model={survey}/></Box>);
 }
