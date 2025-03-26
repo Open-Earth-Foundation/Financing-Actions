@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import {useEffect} from "react";
 import {Model} from "survey-core";
 import {Survey} from "survey-react-ui";
 import "survey-core/survey-core.min.css";
 import "./index.css";
-import {json} from "./json.js";
+import {json} from "./json.ts";
 import i18n from "i18next";
 import {Box} from "@chakra-ui/react";
 
@@ -21,8 +21,11 @@ function SurveyComponent() {
         // Find the main survey element and apply styles
         const surveyMain = document.querySelector('.sv_main');
         if (surveyMain) {
+            // @ts-expect-error Element doesn't have style property in TS type definitions
             surveyMain.style.margin = '0 auto';
+            // @ts-expect-error Element doesn't have style property in TS type definitions
             surveyMain.style.maxWidth = '800px';
+            // @ts-expect-error Element doesn't have style property in TS type definitions
             surveyMain.style.width = '100%';
         }
     }, []);

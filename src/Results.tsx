@@ -1,17 +1,17 @@
 import {useTranslation} from "react-i18next";
 import {Box, Button, Flex, Heading, HStack, Table, Tag} from "@chakra-ui/react";
-import {MATURITY, SurveyAnswers} from "./types.ts";
+import {Answers, CATEGORIES, MATURITY, SurveyAnswers} from "./types.ts";
 import {Link} from "react-router-dom";
 
 function normalizeAnswers(answers: SurveyAnswers) {
-    const mappedAnswers: { [key: number]: number | string } = {};
+    const mappedAnswers: { [key: number]: number } = {};
     Object.entries(answers).forEach(([key, value]) => {
-        mappedAnswers[(key.split('question')[1]) - 1] = value
+        mappedAnswers[parseInt((key.split('question')[1])) - 1] = value
     });
 
     // questions 9 and 14 are multiple choice, so we need to map them to a numeric value
-    mappedAnswers[8] = ["C"].includes(mappedAnswers[13] as string) ? 2 : 0;
-    mappedAnswers[13] = ["A", "B"].includes(mappedAnswers[13] as string) ? 3 : 0;
+    mappedAnswers[8] = ["C"].includes(mappedAnswers[13] as unknown as string) ? 2 : 0;
+    mappedAnswers[13] = ["A", "B"].includes(mappedAnswers[13] as unknown as string) ? 3 : 0;
 
     return mappedAnswers;
 }
@@ -25,10 +25,10 @@ const sumQuestions = (answers: SurveyAnswers) => {
     };
 
     const categories = {
-        'climate-governance-and-planning': questionsPerCategory[0],
-        'technical-and-institutional-capacity': questionsPerCategory[1],
-        'projects-structuring': questionsPerCategory[2],
-        'funding-and-fundraising': questionsPerCategory[3]
+        [CATEGORIES.governance]: questionsPerCategory[0],
+        [CATEGORIES.capacity]: questionsPerCategory[1],
+        [CATEGORIES.structuring]: questionsPerCategory[2],
+        [CATEGORIES.funding]: questionsPerCategory[3]
     };
 
     return Object.entries(categories).reduce((result, [category, questions]) => {
@@ -48,13 +48,25 @@ const calculateMaturity = (score: number, rule: number[]) => {
     return MATURITY.advanced
 }
 
-const calculateResults = (answers: Record<String, number>) => {
-    const answersWithScore: Record<String, number> = sumQuestions(answers);
+const calculateResults = (answers: Record<string, number>) => {
+    const answersWithScore: Record<string, number> = sumQuestions(answers);
     return {
-        "climate-governance-and-planning": {score: answersWithScore["climate-governance-and-planning"], maturity: calculateMaturity(answersWithScore["climate-governance-and-planning"], between2and5)},
-        "technical-and-institutional-capacity": {score: answersWithScore["technical-and-institutional-capacity"], maturity: calculateMaturity(answersWithScore["technical-and-institutional-capacity"], between2and5)},
-        "projects-structuring": {score: answersWithScore["projects-structuring"], maturity: calculateMaturity(answersWithScore["projects-structuring"], between3and8)},
-        "funding-and-fundraising": {score: answersWithScore["funding-and-fundraising"], maturity: calculateMaturity(answersWithScore["funding-and-fundraising"], between2and5)},
+        [CATEGORIES.governance]: {
+            score: answersWithScore[CATEGORIES.governance] as number,
+            maturity: calculateMaturity(answersWithScore["climate-governance-and-planning"], between2and5)
+        },
+        [CATEGORIES.capacity]: {
+            score: answersWithScore[CATEGORIES.capacity] as number,
+            maturity: calculateMaturity(answersWithScore["technical-and-institutional-capacity"], between2and5)
+        },
+        [CATEGORIES.structuring]: {
+            score: answersWithScore[CATEGORIES.structuring] as number,
+            maturity: calculateMaturity(answersWithScore["projects-structuring"], between3and8)
+        },
+        [CATEGORIES.funding]: {
+            score: answersWithScore[CATEGORIES.funding] as number,
+            maturity: calculateMaturity(answersWithScore["funding-and-fundraising"], between2and5)
+        },
     }
 }
 
@@ -64,7 +76,7 @@ interface ResultsProps {
 }
 
 export default function Results({answers}: ResultsProps) {
-    const results = calculateResults(answers);
+    const results: Answers = calculateResults(answers);
     const {t} = useTranslation('translation');
     const getColorPalette = (maturity: MATURITY) => {
         switch (maturity) {
@@ -92,12 +104,12 @@ export default function Results({answers}: ResultsProps) {
                         ))}
                     </Table.Body>
                 </Table.Root>
-                    <Link to="/recommendations">
-                        <Button width={"400px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
-                            {t('results.recommendations' as any)}
-                        </Button>
-                    </Link>
-                <HStack  justifyContent="center" width="100%" my={"10px"}>
+                <Link to="/recommendations">
+                    <Button width={"400px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
+                        {t('results.recommendations' as any)}
+                    </Button>
+                </Link>
+                <HStack justifyContent="center" width="100%" my={"10px"}>
                     <Link to="/questionnaire">
                         <Button width={"200px"} backgroundColor="#dbeafe" color="#2146aa" size="md">
                             {t('results.retake' as any)}

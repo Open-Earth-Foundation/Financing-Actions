@@ -7,7 +7,7 @@ interface ChakraProviderProps {
 
 export function ChakraProvider({ children }: ChakraProviderProps) {
   return (
-    <BaseChakraProvider theme={theme}>
+    <BaseChakraProvider value={theme}>
       {children}
     </BaseChakraProvider>
   )

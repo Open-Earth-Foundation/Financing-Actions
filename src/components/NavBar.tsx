@@ -1,12 +1,12 @@
 import LanguageSelector from "./LanguageSelect/LanguageSelect.tsx";
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Text, HStack, VStack } from "@chakra-ui/react";
 import type { TFunction } from "i18next";
 
 export function NavBar() {
     const { t }: { t: TFunction } = useTranslation('translation');
-    const navbarRef = useRef(null);
+    const navbarRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const updateNavbarHeight = () => {
@@ -50,10 +50,10 @@ export function NavBar() {
             zIndex="1000"
         >
             <VStack alignItems="flex-start">
-                <Text as="h1" size="sm" textAlign="left" fontSize="1.5rem">
+                <Text as="h1" textAlign="left" fontSize="1.5rem">
                     {t("navbar.title" as any)}
                 </Text>
-                <Text as="h2" size="md" textAlign="left">{t("navbar.subtitle" as any)}</Text>
+                <Text as="h2" textAlign="left">{t("navbar.subtitle" as any)}</Text>
             </VStack>
             <LanguageSelector/>
         </HStack>
