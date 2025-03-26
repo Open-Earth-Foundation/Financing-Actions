@@ -1,11 +1,23 @@
 {
   "hero": {
-    "title": "PTGS Finance readiness assessment",
-    "description": "PTGS Take the finance readiness questionnaire to determine your maturity level to raise funds for financing your climate mitigation and adaptation actions",
-    "CTA": "PTGS Take the assessment"
+    "title": "Avaliação de prontidão financeira",
+    "description": "Faça o questionário de prontidão financeira para determinar seu nível de maturidade para levantar fundos para financiar suas ações de mitigação e adaptação climática",
+    "CTA": "Faça a avaliação",
+    "CTA2": "Ver resultados"
   },
   "navbar": {
-    "title": "PTGS CityCatalyst Finance Readiness Assessment",
-    "subtitle": "PTGS by I Care + Brisa + Open Earth"
+    "title": "Avaliação de Prontidão Financeira do CityCatalyst",
+    "subtitle": "por I Care + Brisa + Open Earth"
+  },
+  "results": {
+    "title": "Avaliação Completa",
+    "breakdown": "Divisão por Categoria de Nível de Maturidade",
+    "climate-governance-and-planning": "Governança e Planejamento Climático",
+    "technical-and-institutional-capacity": "Capacidade Técnica e Institucional",
+    "projects-structuring": "Estruturação de Projetos",
+    "funding-and-fundraising": "Financiamento e Captação de Recursos",
+    "recommendations": "Recomendações para Melhorar os Níveis de Maturidade",
+    "retake": "Refazer avaliação",
+    "close": "Fechar Avaliação"
   }
 }
