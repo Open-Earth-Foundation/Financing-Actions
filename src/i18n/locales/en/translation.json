@@ -2,7 +2,8 @@
   "hero": {
     "title": "Finance readiness assessment",
     "description": "Take the finance readiness questionnaire to determine your maturity level to raise funds for financing your climate mitigation and adaptation actions",
-    "CTA": "Take the assessment"
+    "CTA": "Take the assessment",
+    "CTA2": "View results"
   },
   "navbar": {
     "title": "CityCatalyst Finance Readiness Assessment",
@@ -11,9 +12,12 @@
   "results": {
     "title": "Assessment Complete",
     "breakdown": "Breakdown by Maturity Level Category",
-    "climate-governance-and-planning":"Climate Governance and Planning",
+    "climate-governance-and-planning": "Climate Governance and Planning",
     "technical-and-institutional-capacity": "Technical and Institutional Capacity",
     "projects-structuring": "Projects Structuring",
-    "funding-and-fundraising": "Funding and fundraising"
+    "funding-and-fundraising": "Funding and fundraising",
+    "recommendations": "Recommendations to Improve Maturity Levels",
+    "retake": "Retake assessment",
+    "close": "Close Assessment"
   }
 }

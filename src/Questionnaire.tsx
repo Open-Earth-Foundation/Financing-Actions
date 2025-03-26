@@ -4,16 +4,10 @@ import {Survey} from "survey-react-ui";
 import "survey-core/survey-core.min.css";
 import "./index.css";
 import {json} from "./json.js";
-import {Question} from "./types.ts";
 import i18n from "i18next";
 import {Box} from "@chakra-ui/react";
 
-interface QuestionnaireProps {
-    setAnswers: (value: (((prevState: (Question[] | undefined)) => (Question[] | undefined)) | Question[] | undefined)) => void,
-    answers: Question[] | undefined
-}
-
-function SurveyComponent({setAnswers, answers}: QuestionnaireProps) {
+function SurveyComponent() {
     const selectedLanguage = i18n.language;
     const survey = new Model(json);
     survey.locale = selectedLanguage;
@@ -34,7 +28,7 @@ function SurveyComponent({setAnswers, answers}: QuestionnaireProps) {
     }, []);
 
     survey.onComplete.add((sender, _options) => {
-        setAnswers(sender.data);
+        localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
     });
     return (<Box width={"100vw"}><Survey model={survey}/></Box>);
 }

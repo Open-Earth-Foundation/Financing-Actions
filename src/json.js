@@ -489,9 +489,8 @@ export const json = {
   "navigateToUrl": "http://localhost:5173/results",
   "showProgressBar": true,
   "progressBarLocation": "bottom",
-  "progressBarType": "requiredQuestions",
+  "progressBarType": "questions",
+  "autoAdvanceEnabled": true,
   "questionsOnPageMode": "questionPerPage",
-  "showPreviewBeforeComplete": true,
-  "previewMode": "answeredQuestions",
   "headerView": "advanced"
 }

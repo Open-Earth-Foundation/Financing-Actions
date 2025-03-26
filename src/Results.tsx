@@ -1,13 +1,7 @@
 import {useTranslation} from "react-i18next";
-import {Box, Flex, Heading, Text} from "@chakra-ui/react";
-
-type Answer = {
-    [question: string]: number
-}
-
-interface ResultsProps {
-    answers: Answer
-}
+import {Box, Button, Flex, Heading, HStack, Table, Tag} from "@chakra-ui/react";
+import {Answer} from "./types.ts";
+import {Link} from "react-router-dom";
 
 const sumQuestions = (answers: Answer) => {
     const mappedAnswers: { [key: number]: number } = {};
@@ -44,24 +38,7 @@ const calculateMaturity = (score: number, rule: number[]) => {
     return 'advanced'
 }
 
-const calculateResults = (_answers: Answer) => {
-    // console.log("answers", JSON.stringify(answers, null, 2)) // TODO NINA
-    const answers = {
-        question1: 1,
-        question2: 1,
-        question3: 1,
-        question4: 1,
-        question5: 2,
-        question6: 2,
-        question7: 2,
-        question8: 2,
-        question11: 3,
-        question12: 3,
-        question13: 3,
-        question14: 3,
-        question15: 3,
-        question16: 3,
-    }
+const calculateResults = (answers) => {
     const points = sumQuestions(answers);
     return {
         "climate-governance-and-planning": calculateMaturity(points["climate-governance-and-planning"], between2and5),
@@ -71,20 +48,57 @@ const calculateResults = (_answers: Answer) => {
     }
 }
 
-export default function Results({answers}: ResultsProps) {
-    const results = calculateResults(answers || []);
-    const {t} = useTranslation('translation');
 
+interface ResultsProps {
+    answers: Answer | {}
+}
+
+export default function Results({answers}: ResultsProps) {
+    const results = calculateResults(answers);
+    const {t} = useTranslation('translation');
+    const getColorPalette = (maturity: string) => {
+        switch (maturity) {
+            case 'initial':
+                return 'red'
+            case 'intermediate':
+                return 'yellow'
+            default:
+                return 'green'
+        }
+    }
     return (
         <Flex alignItems={'center'} justifyContent={'center'} width={'100vw'} my={"5%"}>
             <Box width={'70%'}>
                 <Heading>{t('results.title' as any)}</Heading>
                 <Heading fontSize={"16px"}>{t('results.breakdown' as any)}</Heading>
-                {Object.entries(results).map(([key, value]) => (
-                    <Text key={key}>
-                        {t(`results.${key}` as any)}: {value}
-                    </Text>
-                ))}
+                <Table.Root size="sm">
+                    <Table.Body>
+                        {Object.entries(results).map(([key, value]) => (
+                            <Table.Row key={key}>
+                                <Table.Cell>{t(`results.${key}` as any)}</Table.Cell>
+                                <Table.Cell><Tag.Root colorPalette={getColorPalette(value)}>
+                                    <Tag.Label>{value}</Tag.Label></Tag.Root></Table.Cell>
+                            </Table.Row>
+                        ))}
+                    </Table.Body>
+                </Table.Root>
+                    <Link to="/recommendations">
+                        <Button width={"400px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
+                            {t('results.recommendations' as any)}
+                        </Button>
+                    </Link>
+                <HStack  justifyContent="center" width="100%" my={"10px"}>
+                    <Link to="/questionnaire">
+                        <Button width={"200px"} backgroundColor="#dbeafe" color="#2146aa" size="md">
+                            {t('results.retake' as any)}
+                        </Button>
+                    </Link>
+                    <Link to="/">
+                        <Button width={"200px"} backgroundColor="#fee2e2" color="#ba5b5b" size="md">
+                            {t('results.close' as any)}
+                        </Button>
+                    </Link>
+                </HStack>
             </Box>
         </Flex>
     );

@@ -50,7 +50,7 @@ export function NavBar() {
             zIndex="1000"
         >
             <VStack alignItems="flex-start">
-                <Text as="h1" size="sm" textAlign="left">
+                <Text as="h1" size="sm" textAlign="left" fontSize="1.5rem">
                     {t("navbar.title" as any)}
                 </Text>
                 <Text as="h2" size="md" textAlign="left">{t("navbar.subtitle" as any)}</Text>
