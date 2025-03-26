@@ -99,24 +99,24 @@ export default function Results({answers}: ResultsProps) {
                             <Table.Row key={key}>
                                 <Table.Cell>{`${t(`results.${key}` as any)}: ${score}`}</Table.Cell>
                                 <Table.Cell><Tag.Root colorPalette={getColorPalette(maturity)}>
-                                    <Tag.Label>{maturity}</Tag.Label></Tag.Root></Table.Cell>
+                                    <Tag.Label>{t(`maturity.${maturity}` as any )}</Tag.Label></Tag.Root></Table.Cell>
                             </Table.Row>
                         ))}
                     </Table.Body>
                 </Table.Root>
                 <Link to="/recommendations">
-                    <Button width={"400px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
+                    <Button width={"440px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
                         {t('results.recommendations' as any)}
                     </Button>
                 </Link>
                 <HStack justifyContent="center" width="100%" my={"10px"}>
                     <Link to="/questionnaire">
-                        <Button width={"200px"} backgroundColor="#dbeafe" color="#2146aa" size="md">
+                        <Button width={"215px"} backgroundColor="#dbeafe" color="#2146aa" size="md">
                             {t('results.retake' as any)}
                         </Button>
                     </Link>
                     <Link to="/">
-                        <Button width={"200px"} backgroundColor="#fee2e2" color="#ba5b5b" size="md">
+                        <Button width={"215px"} backgroundColor="#fee2e2" color="#ba5b5b" size="md">
                             {t('results.close' as any)}
                         </Button>
                     </Link>

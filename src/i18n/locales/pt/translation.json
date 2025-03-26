@@ -19,5 +19,10 @@
     "recommendations": "Recomendações para Melhorar os Níveis de Maturidade",
     "retake": "Refazer avaliação",
     "close": "Fechar Avaliação"
+  },
+  "maturity": {
+    "initial": "Inicial",
+    "intermediate": "Intermediário",
+    "advanced": "Avançado"
   }
 }

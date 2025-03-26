@@ -19,5 +19,10 @@
     "recommendations": "Recommendations to Improve Maturity Levels",
     "retake": "Retake assessment",
     "close": "Close Assessment"
+  },
+  "maturity": {
+    "initial": "Initial",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
   }
 }
