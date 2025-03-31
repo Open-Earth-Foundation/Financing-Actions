@@ -7,10 +7,13 @@ import {json} from "./json.ts";
 import i18n from "i18next";
 import {Box} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
+import "survey-core/survey.i18n";
+import './questionnaire.css';
 
 function SurveyComponent() {
     const navigate = useNavigate();
     const survey = new Model(json);
+
     survey.locale = i18n.language;
     survey.css = {
         root: "survey-custom-centered",
@@ -35,7 +38,7 @@ function SurveyComponent() {
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
         navigate('/results');
     });
-    return (<Box width={"100vw"}><Survey model={survey}/></Box>);
+    return (<Box  ><Survey model={survey}/></Box>);
 }
 
 export default SurveyComponent;

@@ -1,0 +1,28 @@
+/* Target the question titles */  
+.sd-question__title {
+  text-align: left !important;  
+}  
+
+/* Target the question content (answers, input fields, etc.) */  
+.sd-question__content {
+  text-align: left !important;  
+}  
+
+/* If you also want to align other elements */  
+.sd-question__description {
+  text-align: left !important;  
+}
+
+.sd-description {
+    width: 100vw;
+}
+
+.survey-custom-centered {
+    width: 50vw;
+}
+.sd-progress--requiredQuestions{
+    width: 50vw;
+}
+.sd-root-modern--full-container {
+    width: 50vw;
+}
