@@ -26,3 +26,10 @@
 .sd-root-modern--full-container {
     width: 50vw;
 }
+
+.sd-description,
+.sd-page__description {
+    width: 50vw;
+text-align: left
+}
+

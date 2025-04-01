@@ -5,10 +5,11 @@ import "survey-core/survey-core.min.css";
 import "./index.css";
 import {json} from "./json.ts";
 import i18n from "i18next";
-import {Box} from "@chakra-ui/react";
+import {AbsoluteCenter, Box, Center} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
 import "survey-core/survey.i18n";
 import './questionnaire.css';
+import  themeJson  from "./survey_theme.json";
 
 function SurveyComponent() {
     const navigate = useNavigate();
@@ -38,7 +39,27 @@ function SurveyComponent() {
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
         navigate('/results');
     });
-    return (<Box  ><Survey model={survey}/></Box>);
+
+    survey.applyTheme(themeJson);
+
+     return (
+        <Box
+            width="100%"
+            minHeight="100vh"
+            bg="gray.100" // Set this to match your desired gray color
+            py={8} // Add some padding
+        >
+            <Center>
+                <Box
+                    width="100%"
+                    maxWidth="800px"
+                    bg="gray.100" // Same as parent
+                >
+                    <Survey model={survey} />
+                </Box>
+            </Center>
+        </Box>
+    );
 }
 
 export default SurveyComponent;

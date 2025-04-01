@@ -28,7 +28,7 @@ function App() {
                     <VStack
                         justifyContent="space-between"
                         width="100%"
-                        height="100vh"
+                        height="100%"
                         paddingTop="var(--navbar-height)"
                     >
                         <Routes>
