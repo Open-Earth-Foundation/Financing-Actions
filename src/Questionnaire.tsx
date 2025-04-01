@@ -5,11 +5,10 @@ import "survey-core/survey-core.min.css";
 import "./index.css";
 import {json} from "./json.ts";
 import i18n from "i18next";
-import {AbsoluteCenter, Box, Center} from "@chakra-ui/react";
+import {Box, Center} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
 import "survey-core/survey.i18n";
 import './questionnaire.css';
-import  themeJson  from "./survey_theme.json";
 
 function SurveyComponent() {
     const navigate = useNavigate();
@@ -39,8 +38,6 @@ function SurveyComponent() {
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
         navigate('/results');
     });
-
-    survey.applyTheme(themeJson);
 
      return (
         <Box
