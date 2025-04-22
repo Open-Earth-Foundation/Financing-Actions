@@ -9,6 +9,8 @@ import {Box, Center} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
 import "survey-core/survey.i18n";
 import './questionnaire.css';
+import { AnswersAndScoresPerCategory } from "./types.ts";
+import { calculateResults } from "./surveyHelper.ts";
 
 function SurveyComponent() {
     const navigate = useNavigate();
@@ -35,7 +37,9 @@ function SurveyComponent() {
     }, []);
 
     survey.onComplete.add((sender, _options) => {
+        const results: AnswersAndScoresPerCategory = calculateResults(sender.data);
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
+        localStorage.setItem('surveyResults', JSON.stringify(results));
         navigate('/results');
     });
 

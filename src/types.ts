@@ -4,13 +4,19 @@ export enum MATURITY {
     'advanced' = 'advanced'
 }
 
-export type SurveyAnswers = { [question: string]: number }
+export type SurveyAnswers = { [question: string]: number | string }
 
-export type Answers = {
-    [CATEGORIES.governance]: { score: number, maturity: MATURITY },
-    [CATEGORIES.capacity]: { score: number, maturity: MATURITY }
-    [CATEGORIES.structuring]: { score: number, maturity: MATURITY }
-    [CATEGORIES.funding]: { score: number, maturity: MATURITY }
+interface AnswersAndScores {
+    score: number
+    maturity: MATURITY
+    answers: SurveyAnswers
+}
+
+export type AnswersAndScoresPerCategory = {
+    [CATEGORIES.governance]: AnswersAndScores,
+    [CATEGORIES.capacity]: AnswersAndScores,
+    [CATEGORIES.structuring]: AnswersAndScores,
+    [CATEGORIES.funding]: AnswersAndScores
 }
 
 export enum CATEGORIES {
