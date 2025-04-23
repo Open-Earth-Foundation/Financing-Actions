@@ -1,10 +1,12 @@
-import { CATEGORIES, MATURITY, SurveyAnswers } from "./types";
+import { CATEGORIES, CategoryRecommendations, MATURITY, Recommendation, SurveyAnswers } from "./types";
+import { recommendationsData } from './recommendationsData';
 
 
 function normalizeAnswers(answers: SurveyAnswers) {
     const mappedAnswers: { [key: number]: number } = {};
     Object.entries(answers).forEach(([key, value]) => {
-        mappedAnswers[parseInt((key.split('question')[1])) - 1] = value
+        const numericValue = typeof value === 'string' ? parseInt(value) : value;
+        mappedAnswers[parseInt((key.split('question')[1])) - 1] = numericValue;
     });
 
     // questions 9 and 14 are multiple choice, so we need to map them to a numeric value
@@ -79,3 +81,73 @@ export const calculateResults = (answers: SurveyAnswers) => {
         },
     }
 }
+
+export function getRecommendations(answers: SurveyAnswers): CategoryRecommendations[] {
+    const results = calculateResults(answers);
+    const recommendations: CategoryRecommendations[] = [];
+
+    Object.entries(results).forEach(([category, {score, maturity, answers: categoryAnswers}]) => {
+        // Find the category data - remove toLowerCase() since categories are exact matches
+        const categoryData = recommendationsData.find(c => c.category === category);
+        if (!categoryData) {
+            console.log(`Category not found: ${category}`);
+            return;
+        }
+
+        const categoryRecs: Recommendation[] = Object.entries(categoryAnswers)
+            .filter(([_, answer]) => answer !== undefined)
+            .map(([questionKey, answer]) => {
+                // Extract question number from key (e.g., "question1" -> 1)
+                const questionNumber = parseInt(questionKey.replace('question', ''));
+                const questionData = categoryData.questions.find(q => q.number === questionNumber);
+                
+                if (!questionData) {
+                    console.log(`Question not found: ${questionNumber} in category ${category}`);
+                    return {
+                        question: questionKey,
+                        answer: answer?.toString() ?? '',
+                        recommendations: [],
+                        references: []
+                    };
+                }
+
+                // Calculate score value based on answer
+                let scoreValue = 0;
+                if (questionNumber === 9) {
+                    // For question 9, "C" gives score 2
+                    scoreValue = answer === "C" ? 2 : 0;
+                } else if (questionNumber === 14) {
+                    // For question 14, "A" or "B" gives score 3
+                    scoreValue = ["A", "B"].includes(answer as string) ? 3 : 0;
+                } else {
+                    // For other questions, "Yes" gives score 1, "No" gives 0
+                    scoreValue = answer === "Yes" ? 1 : 0;
+                }
+
+                console.log(`Question ${questionNumber}: answer=${answer}, scoreValue=${scoreValue}`);
+
+                const answerData = questionData.answers.find(a => a.score === scoreValue);
+                
+                if (!answerData) {
+                    console.log(`Answer data not found for question ${questionNumber} with score ${scoreValue}`);
+                }
+
+                return {
+                    question: questionKey,
+                    answer: answer?.toString() ?? '',
+                    recommendations: answerData?.recommendations ?? [],
+                    references: answerData?.references ?? []
+                };
+            });
+
+        recommendations.push({
+            category,
+            maturity,
+            score,
+            recommendations: categoryRecs
+        });
+    });
+
+    return recommendations;
+}
+
