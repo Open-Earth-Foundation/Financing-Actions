@@ -24,5 +24,23 @@
     "initial": "Inicial",
     "intermediate": "Intermediário",
     "advanced": "Avançado"
+  },
+  "questions": {
+    "question1": "O município possui um plano ou estratégia de ação climática para mitigação e adaptação às mudanças climáticas?",
+    "question2": "Existe uma agência, secretaria ou equipe responsável pela agenda climática localmente?",
+    "question3": "Foram estabelecidas discussões/relacionamentos com os departamentos e/ou partes interessadas que devem ser envolvidos?",
+    "question4": "O município possui técnicos capacitados para desenvolver e monitorar projetos climáticos?",
+    "question5": "Existe experiência na captação e execução de recursos externos para projetos climáticos?",
+    "question6": "O município está em contato com os governos estadual e nacional sobre possíveis recursos de bancos de desenvolvimento?",
+    "question7": "O município possui técnicos com conhecimento sobre a legislação para empréstimos e processos de financiamento?",
+    "question8": "Existe um projeto ou portfólio de projetos correspondente às ações de mitigação e adaptação selecionadas?",
+    "question9": "Quão desenvolvido é o projeto em termos de planejamento e estruturação, considerando que projetos mais avançados têm",
+    "question10": "O projeto está alinhado com a portaria municipal (Plano Diretor, metas climáticas, planos setoriais, legislação, etc.)?",
+    "question11": "O projeto descreve as mudanças esperadas (teoria da mudança) relacionadas aos resultados, planos setoriais, legislação, etc.)?",
+    "question12": "Existe experiência na elaboração de propostas técnicas e financeiras para captação de recursos externos?",
+    "question13": "O município possui algum software ou sistema para gerenciamento financeiro de projetos?",
+    "question14": "Qual é a classificação CAPAG (Capacidade de Pagamento) do município, que avalia sua situação fiscal e capacidade de assumir novos empréstimos garantidos pela União, com base no endividamento, poupança corrente e índice de liquidez?",
+    "question15": "Há necessidade de assistência técnica para desenvolvimento ou melhoria de projetos?",
+    "question16": "O município já acessou ou tentou acessar fontes de financiamento climático, como o Fundo Clima, o GCF (Fundo Verde para o Clima), bancos de desenvolvimento (por exemplo, BNDES) ou o PAC (Programa de Aceleração do Crescimento - Programa de Aceleração do Crescimento)?"
   }
 }

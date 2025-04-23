@@ -322,7 +322,7 @@ export const json = {
               }
             },
             {
-              "value": "Item 2",
+              "value": "0",
               "text": {
                 "default": "No. The project does not outline the expected changes (theory of change) related to the outcomes.",
                 "pt": "Não. O projeto não descreve as mudanças esperadas (teoria da mudança) relacionadas aos resultados."

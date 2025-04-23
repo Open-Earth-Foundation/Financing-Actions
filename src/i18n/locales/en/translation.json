@@ -24,5 +24,23 @@
     "initial": "Initial",
     "intermediate": "Intermediate",
     "advanced": "Advanced"
+  },
+  "questions": {
+    "question1": "Does the municipality have a climate action plan or strategy for mitigation and adaptation to climate change?",
+    "question2": "Is there an agency, secretariat, or team responsible for the climate agenda locally?",
+    "question3": "Have discussions/relationships been established with the departments and/or stakeholders that should be involved?",
+    "question4": "Does the municipality have trained technicians to develop and monitor climate projects?",
+    "question5": "Is there experience in raising and executing external resources for climate projects?",
+    "question6": "Is the municipality in contact with State and National Governments departments regarding potential funds from development banks?",
+    "question7": "Does the municipality have technicians with knowledge on the legislation for loans and financing processes?",
+    "question8": "Is there a project or portfolio of projects corresponding to the selected mitigation and adaptation actions?",
+    "question9": "How developed is the project in terms of planning and structuring, considering that more advanced projects have",
+    "question10": "Is the project aligned with the municipal ordinance (Master Plan, climate goals, sectoral plans, legislation, etc.)?",
+    "question11": "Does the project outline the expected changes (theory of change) related to the outcomes?s, sectoral plans, legislation, etc.)?",
+    "question12": "Is there experience in the preparation of technical and financial proposals for external fundraising?",
+    "question13": "Does the municipality have any software or system for financial project management?",
+    "question14": "What is the municipality's CAPAG (Payment Capacity) rating, which evaluates its fiscal situation and ability to take on new loans guaranteed by the Union, based on indebtedness, current savings, and liquidity ratio?",
+    "question15": "Is there a need for technical assistance for project development or improvement?",
+    "question16": "Has the municipality already accessed or tried to access sources of climate financing, such as the Climate Fund, the GCF (Green Climate Fund), development banks (e.g. BNDES) or the PAC (Programa de Aceleração do Crescimento - Growth Acceleration Program)?"
   }
 }

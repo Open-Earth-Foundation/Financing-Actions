@@ -40,7 +40,7 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                         {categoryRecs.map((rec, index) => (
                                             <Box key={index} mb={6} p={4} bg="gray.50" borderRadius="md">
                                                 <Text fontWeight="bold" mb={3} fontSize="lg">
-                                                    {t(`questions.${rec.question}` as any)}: {rec.answer}
+                                                    {t(`questions.${rec.question}` as any)}
                                                 </Text>
                                                 {rec.recommendations.length > 0 && (
                                                     <Box mb={4}>
