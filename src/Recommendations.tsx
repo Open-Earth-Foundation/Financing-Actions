@@ -15,8 +15,19 @@ export default function Recommendations({ answers }: RecommendationsProps) {
     const { t } = useTranslation('translation');
 
     return (
-        <Flex alignItems={'center'} justifyContent={'center'} width={'100vw'} my={"3%"}>
-            <Box width={'70%'}>
+        <Flex
+            alignItems={'center'}
+            justifyContent={'center'}
+            width={'100%'}
+            minWidth={'100%'}
+            my={"3%"}
+        >
+            <Box
+                width={'100%'}
+                maxWidth={'1200px'}
+                px={4}
+                mx="auto"
+            >
                 <Heading mb={4}>{t('recommendations.title' as any)}</Heading>
                 <Heading fontSize={"16px"} mb={6}>{t('recommendations.breakdown' as any)}</Heading>
 

@@ -1,19 +1,19 @@
 import './App.css';
-import {ChakraProvider, VStack} from "@chakra-ui/react";
-import {theme} from "./theme.ts";
+import { ChakraProvider, VStack } from "@chakra-ui/react";
+import { theme } from "./theme.ts";
 import Hero from "./Hero.tsx";
 import Questionnaire from "./Questionnaire.tsx";
 import Results from "./Results.tsx";
 import Recommendations from "./Recommendations.tsx";
-import {I18nextProvider, useTranslation} from "react-i18next";
-import {NavBar} from "./components/NavBar.tsx";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {SurveyAnswers} from "./types.ts";
+import { I18nextProvider, useTranslation } from "react-i18next";
+import { NavBar } from "./components/NavBar.tsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { SurveyAnswers } from "./types.ts";
 
 function App() {
-    const {i18n} = useTranslation();
-        const [answers, setAnswers] = useState<SurveyAnswers | {}>({});
+    const { i18n } = useTranslation();
+    const [answers, setAnswers] = useState<SurveyAnswers | {}>({});
 
     useEffect(() => {
         const storedData = localStorage.getItem('surveyAnswers');
@@ -25,19 +25,20 @@ function App() {
         <I18nextProvider i18n={i18n}>
             <ChakraProvider value={theme}>
                 <Router>
-                    <NavBar/>
+                    <NavBar />
                     <VStack
-                        justifyContent="space-between"
+                        gap={0}
+                        alignItems="stretch"
                         width="100%"
-                        height="100%"
-                        paddingTop="var(--navbar-height)"
+                        minW="100%"
+                        minH={`calc(100vh - var(--navbar-height))`}
+                        pt="var(--navbar-height)"
                     >
                         <Routes>
-                            <Route path="/" element={<Hero answers={answers}/>}/>
-                            <Route path="/questionnaire" element={<Questionnaire/>}/>
-                            <Route path="/results" element={<Results answers={answers}/>}/>
-                            <Route path="/recommendations" element={<Recommendations answers={answers}/>}/>
-
+                            <Route path="/" element={<Hero answers={answers} />} />
+                            <Route path="/questionnaire" element={<Questionnaire />} />
+                            <Route path="/results" element={<Results answers={answers} />} />
+                            <Route path="/recommendations" element={<Recommendations answers={answers} />} />
                         </Routes>
                     </VStack>
                 </Router>

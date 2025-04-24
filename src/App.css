@@ -1,9 +1,17 @@
-:root {  
-  --navbar-height: 100px; /* Default value */  
-}  
+:root {
+  --navbar-height: 100px;
+  /* Default value */
+}
 
-#root {  
-  max-width: 1280px;  
-  margin: 0 0;  
-  text-align: center;  
-}  
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
