@@ -1,5 +1,3 @@
-import { Recommendation } from "./types"
-
 export enum MATURITY {
     'initial' = 'initial',
     'intermediate' = 'intermediate',

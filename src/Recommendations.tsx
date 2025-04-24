@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Box, Button, Flex, Heading, HStack, Text, Link as ChakraLink, Icon, Span } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, HStack, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Accordion } from "@chakra-ui/react";
 import { SurveyAnswers } from "./types.ts";
 import { Link } from "react-router-dom";
