@@ -49,7 +49,7 @@ const calculateMaturity = (score: number, rule: number[]) => {
 }
 export const calculateResults = (answers: SurveyAnswers) => {
     const answersWithScore: Record<string, number> = sumQuestions(answers);
-    
+
     const getCategoryAnswers = (categoryQuestions: number[]) => {
         return categoryQuestions.reduce((acc, questionIndex) => {
             const questionKey = `question${questionIndex + 1}`;
@@ -86,7 +86,7 @@ export function getRecommendations(answers: SurveyAnswers): CategoryRecommendati
     const results = calculateResults(answers);
     const recommendations: CategoryRecommendations[] = [];
 
-    Object.entries(results).forEach(([category, {score, maturity, answers: categoryAnswers}]) => {
+    Object.entries(results).forEach(([category, { score, maturity, answers: categoryAnswers }]) => {
         // Find the category data - remove toLowerCase() since categories are exact matches
         const categoryData = recommendationsData.find(c => c.category === category);
         if (!categoryData) {
@@ -100,7 +100,7 @@ export function getRecommendations(answers: SurveyAnswers): CategoryRecommendati
                 // Extract question number from key (e.g., "question1" -> 1)
                 const questionNumber = parseInt(questionKey.replace('question', ''));
                 const questionData = categoryData.questions.find(q => q.number === questionNumber);
-                
+
                 if (!questionData) {
                     console.log(`Question not found: ${questionNumber} in category ${category}`);
                     return {
@@ -111,25 +111,12 @@ export function getRecommendations(answers: SurveyAnswers): CategoryRecommendati
                     };
                 }
 
-                // Calculate score value based on answer
-                let scoreValue = 0;
-                if (questionNumber === 9) {
-                    // For question 9, "C" gives score 2
-                    scoreValue = answer === "C" ? 2 : 0;
-                } else if (questionNumber === 14) {
-                    // For question 14, "A" or "B" gives score 3
-                    scoreValue = ["A", "B"].includes(answer as string) ? 3 : 0;
-                } else {
-                    // For other questions, "Yes" gives score 1, "No" gives 0
-                    scoreValue = answer === "Yes" ? 1 : 0;
-                }
+                console.log(`Question ${questionNumber}: answer=${answer}`);
 
-                console.log(`Question ${questionNumber}: answer=${answer}, scoreValue=${scoreValue}`);
+                const answerData = questionData.answers.find(a => a.answer === answer);
 
-                const answerData = questionData.answers.find(a => a.score === scoreValue);
-                
                 if (!answerData) {
-                    console.log(`Answer data not found for question ${questionNumber} with score ${scoreValue}`);
+                    console.log(`Answer data not found for question ${questionNumber} with answer ${answer}`);
                 }
 
                 return {

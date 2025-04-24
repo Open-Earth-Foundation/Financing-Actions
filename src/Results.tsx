@@ -1,4 +1,4 @@
-import { Accordion, Box, Button, Flex, Heading, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, HStack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import MaturityTag from "./components/MaturityTag.tsx";

@@ -21,7 +21,7 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                 <Heading fontSize={"16px"} mb={6}>{t('recommendations.breakdown' as any)}</Heading>
 
                 <Accordion.Root collapsible mt={4}>
-                    {recommendations.map(({ category, maturity, score, recommendations: categoryRecs }) => (
+                    {recommendations.map(({ category, maturity, recommendations: categoryRecs }) => (
                         <Accordion.Item key={category} value={category}>
                             <Accordion.ItemTrigger>
                                 <Box flex="1" textAlign="left" p={4} bg="gray.50" borderRadius="md">

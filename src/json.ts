@@ -442,14 +442,14 @@ export const json = {
           "isRequired": true,
           "choices": [
             {
-              "value": 1,
+              "value": 0,
               "text": {
                 "default": "Yes. There is a need for technical assistance for project development or improvement",
                 "pt": "Sim. Há necessidade de assistência técnica para desenvolvimento ou melhoria de projetos"
               }
             },
             {
-              "value": 0,
+              "value": 1,
               "text": {
                 "default": "No. There is no need for technical assistance for project development or improvement",
                 "pt": "Não. Não há necessidade de assistência técnica para desenvolvimento ou melhoria de projetos"

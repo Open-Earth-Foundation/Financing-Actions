@@ -1,8 +1,7 @@
 import { CATEGORIES } from "./types";
 
 export interface AnswerRecommendation {
-    answer: string;
-    score: number;
+    answer: string | number;
     recommendations: string[];
     references: string[];
 }
@@ -20,26 +19,31 @@ export interface CategoryRecommendation {
     questions: QuestionRecommendation[];
 }
 
+const q14RecommendationsForYes = [
+    "Strengthen current savings.",
+    "Improve liquidity.",
+    "Reduce debt levels.",
+    "Reach out to targeted cities for a peer exchange on specific themes."
+]
+
 export const recommendationsData: CategoryRecommendation[] = [
     {
         category: CATEGORIES.governance,
         questions: [
             {
                 number: 1,
-                question: "Does the municipality have a climate action plan or strategy for mitigation and adaptation to climate change?",
+                question: "question.question1",
                 weight: 2,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Map possible financing sources to the plan's actions."
                         ],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Secure political and institutional commitment to climate action.",
                             "Align strategies with international climate goals.",
@@ -55,20 +59,18 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 2,
-                question: "Is there an agency, secretariat, or team responsible for the climate agenda locally?",
+                question: "question.question2",
                 weight: 2,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Check whether the team is adequately trained in the climate agenda and whether the municipality has already verified the need for training."
                         ],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Map relevant staff roles and responsibilities related to climate action.",
                             "Establish clear institutional roles and responsibilities for climate governance.",
@@ -82,20 +84,18 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 3,
-                question: "Have discussions/relationships been established with the departments and/or stakeholders that should be involved?",
+                question: "question.question3",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "It is advisable to evaluate the possibility of creating a governance space to strengthen the links, by means of a legal regulation, so that the group can be consulted on an ongoing basis."
                         ],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Leverage key knowledge references.",
                             "Invite them to participate in an initial dialogue about local climate risks and opportunities - always have in mind applicable theory of change (problem identification, possible solutions and impact)."
@@ -111,20 +111,18 @@ export const recommendationsData: CategoryRecommendation[] = [
         questions: [
             {
                 number: 4,
-                question: "Does the municipality have trained technicians to develop and manage climate projects?",
+                question: "question.question4",
                 weight: 2,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Reach out to targeted cities for a peer exchange on specific themes."
                         ],
                         references: ["https://unfccc.int/topics/capacity-building/resources/capacity-building-portal/history-of-the-portal/capacity-building-e-learning?utm_source=chatgpt.com"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps.",
                             "Enroll municipal staff in climate governance and project management training.",
@@ -137,12 +135,11 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 5,
-                question: "Is there experience in raising and executing external resources for climate projects?",
+                question: "question.question5",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Organize lessons learned from previous financed projects.",
                             "Maintain a centralized and regularly updated repository with key data, including sources, approval processes, and lessons learned.",
@@ -151,8 +148,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps.",
                             "Leverage key knowledge references.",
@@ -164,18 +160,16 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 6,
-                question: "Has the municipality initiated any articulation with State and National Governments departments regarding potential funds from development banks?",
+                question: "question.question6",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [],
                         references: ["C40 Cities Climate Leadership Group, ICLEI – Local Governments for Sustainability, Global Covenant of Mayors for Climate & Energy (GCoM), Rede Nossa São Paulo / Programa Cidades Sustentáveis, Rede de Governança Climática da FNP (Frente Nacional de Prefeitos)."]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Leverage key knowledge references.",
                             "Reinforce relationships with city networks and national programs."
@@ -186,12 +180,11 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 7,
-                question: "Does the municipality have technicians with knowledge on the legislation for loans and financing processes?",
+                question: "question.question7",
                 weight: 2,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Organize lessons learned from previous financed projects.",
                             "Maintain a centralized and regularly updated repository with key data, including sources, approval processes, and lessons learned.",
@@ -200,8 +193,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps.",
                             "Leverage key knowledge references.",
@@ -218,12 +210,11 @@ export const recommendationsData: CategoryRecommendation[] = [
         questions: [
             {
                 number: 8,
-                question: "Is there a project or portfolio of projects corresponding to the selected mitigation and adaptation actions?",
+                question: "question.question8",
                 weight: 3,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Review local legislation, master plans, and policy frameworks (e.g., Climate Action Plan, Waste, Sanitation, and Energy Plans).",
                             "Ensure project compliance with urban planning regulations and municipal strategic priorities.",
@@ -247,8 +238,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Define a long-term vision for sustainable and resilient urban development.",
                             "Set science-based targets for emissions reduction and climate resilience.",
@@ -261,12 +251,16 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 9,
-                question: "Stage in which the projects to be considered for the forwarding of actions are:",
+                question: "question.question9",
                 weight: 2,
                 answers: [
                     {
-                        answer: "The project is being conceived",
-                        score: 0,
+                        answer: "A",
+                        recommendations: [],
+                        references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
+                    },
+                    {
+                        answer: "B",
                         recommendations: [
                             "Design or enhance a consistent theory of change (problem identification, possible solutions and impact).",
                             "(afterwards, follow recommendations for the next stage)"
@@ -274,8 +268,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "The project is being structured/planned",
-                        score: 1,
+                        answer: "C",
                         recommendations: [
                             "Review local legislation, master plans, and policy frameworks (e.g., Climate Action Plan, Waste, Sanitation, and Energy Plans).",
                             "Ensure project compliance with urban planning regulations and municipal strategic priorities.",
@@ -299,8 +292,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "The project is structured",
-                        score: 2,
+                        answer: "D",
                         recommendations: [],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     }
@@ -309,20 +301,18 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 10,
-                question: "Is the project aligned with the municipal ordinance (Master Plan, climate goals, sectoral plans, legislation, etc.)?",
+                question: "question.question10",
                 weight: 2,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Work on developing KPIs (Key Performance Indicators) for monitoring and evaluating actions."
                         ],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Review local legislation, master plans, and policy frameworks (e.g., Climate Action Plan, Waste, Sanitation, and Energy Plans).",
                             "Ensure project compliance with urban planning regulations and municipal strategic priorities.",
@@ -335,18 +325,16 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 11,
-                question: "Does the project outline the expected changes (theory of change) related to the outcomes?",
+                question: "question.question11",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [],
                         references: []
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Design a consistent theory of change (problem identification, possible solutions and impact)."
                         ],
@@ -357,18 +345,16 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 12,
-                question: "Is there experience in the preparation of technical and financial proposals for external fundraising?",
+                question: "question.question12",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps.",
                             "Leverage key knowledge references.",
@@ -380,18 +366,16 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 13,
-                question: "Does the municipality have any software or system for financial project management?",
+                question: "question.question13",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [],
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps.",
                             "Identify technicians and/or teams to lead this process internally, with attention to sustainability strategies.",
@@ -409,37 +393,41 @@ export const recommendationsData: CategoryRecommendation[] = [
         questions: [
             {
                 number: 14,
-                question: "CAPAG (Payment capacity)",
+                question: "question.question14",
                 weight: 3,
                 answers: [
                     {
-                        answer: "A – High payment capacity (low tax risk)",
-                        score: 1,
-                        recommendations: [],
-                        references: ["https://www.tesourotransparente.gov.br/temas/estados-e-municipios/capacidade-de-pagamento-capag"]
+                        answer: "A",
+                        recommendations: [
+                            "Identify opportunities to knowledge strengthening.",
+                            "Engange on a peer exchange to contribute with other cities, universities, key experts."
+                        ],
+                        references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "B, C or D",
-                        score: 0,
-                        recommendations: [
-                            "Strengthen current savings.",
-                            "Improve liquidity.",
-                            "Reduce debt levels.",
-                            "Reach out to targeted cities for a peer exchange on specific themes."
-                        ],
-                        references: ["https://www.tesourotransparente.gov.br/temas/estados-e-municipios/capacidade-de-pagamento-capag"]
+                        answer: "B",
+                        recommendations: q14RecommendationsForYes,
+                        references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
+                    },
+                    {
+                        answer: "C",
+                        recommendations: q14RecommendationsForYes,
+                        references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
+                    },
+                    {
+                        answer: "D",
+                        recommendations: q14RecommendationsForYes,
+                        references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     }
-                ],
-                observation: "Add note: The analysis of the payment capacity ascertains the fiscal situation of Subnational Entities that want to take on new loans guaranteed by the Union. CAPAG's purpose is to present in a simple and transparent way whether a new indebtedness represents a credit risk for the National Treasury. The calculation methodology is composed of three indicators: indebtedness, current savings and liquidity ratio. Therefore, it evaluates the degree of solvency, the relationship between current revenues and expenses, and the cash situation."
+                ]
             },
             {
                 number: 15,
-                question: "Is there a need for technical assistance for project development or improvement?",
+                question: "question.question15",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps.",
                             "Leverage key knowledge references.",
@@ -449,8 +437,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 1,
+                        answer: 0,
                         recommendations: [
                             "Identify existing knowledge gaps."
                         ],
@@ -460,12 +447,11 @@ export const recommendationsData: CategoryRecommendation[] = [
             },
             {
                 number: 16,
-                question: "Has the municipality already accessed or tried to access sources of climate financing, such as the Climate Fund, the GCF (Green Climate Fund), development banks (e.g. BNDES) or the PAC (Programa de Aceleração do Crescimento - Growth Acceleration Program)?",
+                question: "question.question16",
                 weight: 1,
                 answers: [
                     {
-                        answer: "Yes",
-                        score: 1,
+                        answer: 1,
                         recommendations: [
                             "Organize lessons learned from previous financed projects.",
                             "Maintain a centralized and regularly updated repository with key data, including sources, approval processes, and lessons learned.",
@@ -474,8 +460,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                         references: ["https://www.c40knowledgehub.org/s/guide-home?language=en_US&guideId=a3t1Q0000007lEWQAY"]
                     },
                     {
-                        answer: "No",
-                        score: 0,
+                        answer: 0,
                         recommendations: [
                             "Leverage key knowledge references.",
                             "Invite them to participate in an initial dialogue about local climate risks and opportunities - always have in mind applicable theory of change (problem identification, possible solutions and impact)."
