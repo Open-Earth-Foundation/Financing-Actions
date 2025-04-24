@@ -42,5 +42,10 @@
     "question14": "What is the municipality's CAPAG (Payment Capacity) rating, which evaluates its fiscal situation and ability to take on new loans guaranteed by the Union, based on indebtedness, current savings, and liquidity ratio?",
     "question15": "Is there a need for technical assistance for project development or improvement?",
     "question16": "Has the municipality already accessed or tried to access sources of climate financing, such as the Climate Fund, the GCF (Green Climate Fund), development banks (e.g. BNDES) or the PAC (Programa de Aceleração do Crescimento - Growth Acceleration Program)?"
+  },
+  "recommendations": {
+    "title": "Recommendations to Improve Maturity Level",
+    "breakdown": "Detailed breakdown of recommended actions to take to improve your maturity level for each Question",
+    "recommendations": "Recommendations"
   }
 }

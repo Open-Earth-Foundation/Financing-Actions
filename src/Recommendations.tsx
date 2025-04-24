@@ -39,12 +39,13 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                     <Box p={6} bg="white" borderRadius="md" boxShadow="sm">
                                         {categoryRecs.map((rec, index) => (
                                             <Box key={index} mb={6} p={4} bg="gray.50" borderRadius="md">
-                                                <Text fontWeight="bold" mb={3} fontSize="lg">
+                                                <Text fontWeight="bold" mb={3} fontSize="lg" textAlign="left">
                                                     {t(`questions.${rec.question}` as any)}
                                                 </Text>
                                                 {rec.recommendations.length > 0 && (
                                                     <Box mb={4}>
-                                                        <Text fontWeight="semibold" mb={2} color="gray.700">
+                                                        <Text fontWeight="semibold" mb={2} color="gray.700" textAlign="left">
+                                                            {/* TODO TRANSLATE {t(recommendations.recommendations)}: */}
                                                             Recommendations:
                                                         </Text>
                                                         <Box as="ul" listStyleType="none" margin={0} padding={0}>
@@ -59,7 +60,7 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                                 )}
                                                 {rec.references && rec.references.length > 0 && (
                                                     <Box>
-                                                        <Text fontWeight="semibold" mb={2} color="gray.700">
+                                                        <Text fontWeight="semibold" mb={2} color="gray.700" textAlign="left">
                                                             References:
                                                         </Text>
                                                         {rec.references.map((ref, refIndex) => (
@@ -70,6 +71,7 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                                                 rel="noopener noreferrer"
                                                                 color="blue.500"
                                                                 fontSize="sm"
+                                                                textAlign="left"
                                                                 display="block"
                                                                 mb={1}
                                                                 _hover={{ textDecoration: 'underline' }}
