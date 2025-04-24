@@ -36,7 +36,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                 weight: 2,
                 answers: [
                     {
-                        answer: 1,
+                        answer: 2,
                         recommendations: [
                             "Map possible financing sources to the plan's actions."
                         ],
@@ -63,7 +63,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                 weight: 2,
                 answers: [
                     {
-                        answer: 1,
+                        answer: 2,
                         recommendations: [
                             "Check whether the team is adequately trained in the climate agenda and whether the municipality has already verified the need for training."
                         ],
@@ -115,7 +115,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                 weight: 2,
                 answers: [
                     {
-                        answer: 1,
+                        answer: 2,
                         recommendations: [
                             "Reach out to targeted cities for a peer exchange on specific themes."
                         ],
@@ -184,7 +184,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                 weight: 2,
                 answers: [
                     {
-                        answer: 1,
+                        answer: 2,
                         recommendations: [
                             "Organize lessons learned from previous financed projects.",
                             "Maintain a centralized and regularly updated repository with key data, including sources, approval processes, and lessons learned.",
@@ -214,7 +214,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                 weight: 3,
                 answers: [
                     {
-                        answer: 1,
+                        answer: 3,
                         recommendations: [
                             "Review local legislation, master plans, and policy frameworks (e.g., Climate Action Plan, Waste, Sanitation, and Energy Plans).",
                             "Ensure project compliance with urban planning regulations and municipal strategic priorities.",
@@ -305,7 +305,7 @@ export const recommendationsData: CategoryRecommendation[] = [
                 weight: 2,
                 answers: [
                     {
-                        answer: 1,
+                        answer: 2,
                         recommendations: [
                             "Work on developing KPIs (Key Performance Indicators) for monitoring and evaluating actions."
                         ],
