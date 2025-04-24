@@ -14,13 +14,16 @@ import { SurveyAnswers } from "./types.ts";
 function App() {
     const { i18n } = useTranslation();
     const [answers, setAnswers] = useState<SurveyAnswers | {}>({});
-
-    useEffect(() => {
+    const updateData = () => {
         const storedData = localStorage.getItem('surveyAnswers');
         if (storedData) {
             setAnswers(JSON.parse(storedData));
         }
+    }
+    useEffect(() => {
+        updateData();
     }, []);
+
     return (
         <I18nextProvider i18n={i18n}>
             <ChakraProvider value={theme}>
@@ -36,7 +39,7 @@ function App() {
                     >
                         <Routes>
                             <Route path="/" element={<Hero answers={answers} />} />
-                            <Route path="/questionnaire" element={<Questionnaire />} />
+                            <Route path="/questionnaire" element={<Questionnaire updateData={updateData} />} />
                             <Route path="/results" element={<Results answers={answers} />} />
                             <Route path="/recommendations" element={<Recommendations answers={answers} />} />
                         </Routes>

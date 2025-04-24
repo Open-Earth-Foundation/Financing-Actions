@@ -1,18 +1,18 @@
-import {useEffect} from "react";
-import {Model} from "survey-core";
-import {Survey} from "survey-react-ui";
+import { useEffect } from "react";
+import { Model } from "survey-core";
+import { Survey } from "survey-react-ui";
 import "survey-core/survey-core.min.css";
 import "./index.css";
-import {json} from "./json.ts";
+import { json } from "./json.ts";
 import i18n from "i18next";
-import {Box, Center} from "@chakra-ui/react";
-import {useNavigate} from "react-router-dom";
+import { Box, Center } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import "survey-core/survey.i18n";
 import './questionnaire.css';
 import { AnswersAndScoresPerCategory } from "./types.ts";
 import { calculateResults } from "./surveyHelper.ts";
 
-function SurveyComponent() {
+function SurveyComponent({ updateData }: { updateData: () => void }) {
     const navigate = useNavigate();
     const survey = new Model(json);
 
@@ -40,10 +40,11 @@ function SurveyComponent() {
         const results: AnswersAndScoresPerCategory = calculateResults(sender.data);
         localStorage.setItem('surveyAnswers', JSON.stringify(sender.data));
         localStorage.setItem('surveyResults', JSON.stringify(results));
+        updateData();
         navigate('/results');
     });
 
-     return (
+    return (
         <Box
             width="100%"
             minHeight="100vh"
