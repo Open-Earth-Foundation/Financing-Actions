@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Box, Button, Flex, Heading, HStack, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Accordion } from "@chakra-ui/react";
-import { SurveyAnswers, MATURITY } from "./types.ts";
+import { Language, SurveyAnswers } from "./types.ts";
 import { Link } from "react-router-dom";
 import { getRecommendations } from "./surveyHelper.ts";
 import MaturityTag from "./components/MaturityTag.tsx";
@@ -10,26 +10,10 @@ interface RecommendationsProps {
     answers: SurveyAnswers
 }
 
-type Language = 'en' | 'pt';
-
-interface Recommendation {
-    question: string;
-    recommendations: {
-        [key in Language]: string[];
-    };
-    references?: string[];
-}
-
-interface CategoryRecommendation {
-    category: string;
-    maturity: MATURITY;
-    recommendations: Recommendation[];
-}
-
 export default function Recommendations({ answers }: RecommendationsProps) {
-    const recommendations = getRecommendations(answers) as unknown as CategoryRecommendation[];
     const { t, i18n } = useTranslation('translation');
     const currentLanguage = i18n.language as Language;
+    const recommendations = getRecommendations(answers, currentLanguage);
 
     return (
         <Flex
@@ -70,13 +54,13 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                                 <Text fontWeight="bold" mb={3} fontSize="lg" textAlign="left">
                                                     {t(`questions.${rec.question}` as any)}
                                                 </Text>
-                                                {rec.recommendations[currentLanguage]?.length > 0 && (
+                                                {rec.recommendations.length > 0 && (
                                                     <Box mb={4}>
                                                         <Text fontWeight="semibold" mb={2} color="gray.700" textAlign="left">
                                                             {t("recommendations.recommendations")}:
                                                         </Text>
                                                         <Box as="ul" listStyleType="none" margin={0} padding={0}>
-                                                            {rec.recommendations[currentLanguage].map((recommendation: string, recIndex: number) => (
+                                                            {rec.recommendations.map((recommendation: string, recIndex: number) => (
                                                                 <Box as="li" key={recIndex} display="flex" alignItems="flex-start" mb={2}>
                                                                     <Text as="span" mr={2}>•</Text>
                                                                     <Text textAlign="left">{recommendation}</Text>

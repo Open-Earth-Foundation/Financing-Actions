@@ -1,4 +1,4 @@
-import { CATEGORIES, CategoryRecommendations, MATURITY, Recommendation, SurveyAnswers } from "./types";
+import { CATEGORIES, CategoryRecommendations, Language, MATURITY, Recommendation, SurveyAnswers } from "./types";
 import { recommendationsData } from './recommendationsData';
 
 
@@ -90,7 +90,7 @@ export const calculateResults = (answers: SurveyAnswers) => {
     }
 }
 
-export function getRecommendations(answers: SurveyAnswers): CategoryRecommendations[] {
+export function getRecommendations(answers: SurveyAnswers, language: Language): CategoryRecommendations[] {
     const results = calculateResults(answers);
     const recommendations: CategoryRecommendations[] = [];
 
@@ -127,10 +127,12 @@ export function getRecommendations(answers: SurveyAnswers): CategoryRecommendati
                     console.log(`Answer data not found for question ${questionNumber} with answer ${answer}`);
                 }
 
+                const recommendations = answerData?.recommendations[language] ?? [];
+
                 return {
                     question: questionKey,
                     answer: answer?.toString() ?? '',
-                    recommendations: answerData?.recommendations ?? [],
+                    recommendations,
                     references: answerData?.references ?? []
                 };
             });

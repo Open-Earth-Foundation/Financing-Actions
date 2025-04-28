@@ -52,4 +52,5 @@ export interface QuestionRecommendation {
     observation?: string;
     references: string[];
 }
+export type Language = 'en' | 'pt';
 
