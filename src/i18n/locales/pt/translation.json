@@ -1,18 +1,28 @@
 {
   "hero": {
-    "title": "Avaliação de Prontidão Financeira para Ação Climática",
-    "description": "Esta ferramenta foi desenvolvida para ajudar os municípios a avaliar sua prontidão para acessar financiamento climático. Ao responder a 16 perguntas, você receberá uma avaliação de maturidade em quatro categorias principais: Governança, Capacidade, Estruturação e Financiamento.",
-    "startButton": "Iniciar Avaliação"
+    "title": "Avaliação de Prontidão Financeira",
+    "description": "Realize o questionário de prontidão financeira para determinar seu nível de maturidade para captar recursos para financiar suas ações de mitigação e adaptação climática",
+    "CTA": "Realizar a avaliação",
+    "CTA2": "Ver resultados"
   },
   "navbar": {
     "title": "Avaliação de Prontidão Financeira",
+    "subtitle": "por I Care + Brisa + Open Earth",
     "language": "Idioma"
   },
   "results": {
-    "title": "Resultados da Avaliação",
+    "title": "Avaliação Concluída",
     "description": "Aqui está uma visão geral dos seus resultados em cada categoria. Clique em uma categoria para ver recomendações detalhadas.",
+    "breakdown": "Detalhamento por Nível de Maturidade",
+    "climate-governance-and-planning": "Governança e Planejamento Climático",
+    "technical-and-institutional-capacity": "Capacidade Técnica e Institucional",
+    "projects-structuring": "Estruturação de Projetos",
+    "funding-and-fundraising": "Financiamento e Captação de Recursos",
+    "recommendations": "Recomendações para Melhorar os Níveis de Maturidade",
     "viewRecommendations": "Ver Recomendações",
-    "backToResults": "Voltar aos Resultados"
+    "backToResults": "Voltar aos Resultados",
+    "retake": "Refazer avaliação",
+    "close": "Fechar Avaliação"
   },
   "maturity": {
     "initial": "Inicial",
