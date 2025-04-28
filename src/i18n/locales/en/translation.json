@@ -45,7 +45,9 @@
   },
   "recommendations": {
     "title": "Recommendations to Improve Maturity Level",
-    "breakdown": "Detailed breakdown of recommended actions to take to improve your maturity level for each Question",
-    "recommendations": "Recommendations"
-  }
+    "breakdown": "Detailed breakdown of recommended actions to take to improve your maturity level for each question",
+    "recommendations": "Recommendations",
+    "references": "References"
+  },
+  "score": "Score"
 }

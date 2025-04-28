@@ -1,29 +1,29 @@
 {
   "hero": {
-    "title": "Avaliação de prontidão financeira",
-    "description": "Faça o questionário de prontidão financeira para determinar seu nível de maturidade para levantar fundos para financiar suas ações de mitigação e adaptação climática",
-    "CTA": "Faça a avaliação",
-    "CTA2": "Ver resultados"
+    "title": "Avaliação de Prontidão Financeira para Ação Climática",
+    "description": "Esta ferramenta foi desenvolvida para ajudar os municípios a avaliar sua prontidão para acessar financiamento climático. Ao responder a 16 perguntas, você receberá uma avaliação de maturidade em quatro categorias principais: Governança, Capacidade, Estruturação e Financiamento.",
+    "startButton": "Iniciar Avaliação"
   },
   "navbar": {
-    "title": "Avaliação de Prontidão Financeira do CityCatalyst",
-    "subtitle": "por I Care + Brisa + Open Earth"
+    "title": "Avaliação de Prontidão Financeira",
+    "language": "Idioma"
   },
   "results": {
-    "title": "Avaliação Completa",
-    "breakdown": "Divisão por Categoria de Nível de Maturidade",
-    "climate-governance-and-planning": "Governança e Planejamento Climático",
-    "technical-and-institutional-capacity": "Capacidade Técnica e Institucional",
-    "projects-structuring": "Estruturação de Projetos",
-    "funding-and-fundraising": "Financiamento e Captação de Recursos",
-    "recommendations": "Recomendações para Melhorar os Níveis de Maturidade",
-    "retake": "Refazer avaliação",
-    "close": "Fechar Avaliação"
+    "title": "Resultados da Avaliação",
+    "description": "Aqui está uma visão geral dos seus resultados em cada categoria. Clique em uma categoria para ver recomendações detalhadas.",
+    "viewRecommendations": "Ver Recomendações",
+    "backToResults": "Voltar aos Resultados"
   },
   "maturity": {
     "initial": "Inicial",
     "intermediate": "Intermediário",
     "advanced": "Avançado"
+  },
+  "recommendations": {
+    "title": "Recomendações para Melhorar o Nível de Maturidade",
+    "breakdown": "Detalhamento das ações recomendadas para melhorar seu nível de maturidade para cada pergunta",
+    "recommendations": "Recomendações",
+    "references": "Referências"
   },
   "questions": {
     "question1": "O município possui um plano ou estratégia de ação climática para mitigação e adaptação às mudanças climáticas?",
@@ -42,5 +42,6 @@
     "question14": "Qual é a classificação CAPAG (Capacidade de Pagamento) do município, que avalia sua situação fiscal e capacidade de assumir novos empréstimos garantidos pela União, com base no endividamento, poupança corrente e índice de liquidez?",
     "question15": "Há necessidade de assistência técnica para desenvolvimento ou melhoria de projetos?",
     "question16": "O município já acessou ou tentou acessar fontes de financiamento climático, como o Fundo Clima, o GCF (Fundo Verde para o Clima), bancos de desenvolvimento (por exemplo, BNDES) ou o PAC (Programa de Aceleração do Crescimento - Programa de Aceleração do Crescimento)?"
-  }
+  },
+  "score": "Pontuação"
 }
