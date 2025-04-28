@@ -5,13 +5,24 @@ import { recommendationsData } from './recommendationsData';
 function normalizeAnswers(answers: SurveyAnswers) {
     const mappedAnswers: { [key: number]: number } = {};
     Object.entries(answers).forEach(([key, value]) => {
-        const numericValue = typeof value === 'string' ? parseInt(value) : value;
-        mappedAnswers[parseInt((key.split('question')[1])) - 1] = numericValue;
+        const questionNumber = parseInt(key.split('question')[1]);
+        // For questions 9 and 14, we want to keep the letter value
+        if (questionNumber === 9 || questionNumber === 14) {
+            mappedAnswers[questionNumber - 1] = value as unknown as number;
+        } else {
+            const numericValue = typeof value === 'string' ? parseInt(value) : value;
+            mappedAnswers[questionNumber - 1] = numericValue;
+        }
     });
 
-    // questions 9 and 14 are multiple choice, so we need to map them to a numeric value
-    mappedAnswers[8] = ["C"].includes(mappedAnswers[13] as unknown as string) ? 2 : 0;
-    mappedAnswers[13] = ["A", "B"].includes(mappedAnswers[13] as unknown as string) ? 3 : 0;
+    // Map letter values to numeric scores for questions 9 and 14
+    if (typeof mappedAnswers[8] === 'string') {
+        mappedAnswers[8] = ["C"].includes(mappedAnswers[8] as unknown as string) ? 2 : 0;
+    }
+
+    if (typeof mappedAnswers[13] === 'string') {
+        mappedAnswers[13] = ["A", "B"].includes(mappedAnswers[13] as unknown as string) ? 3 : 0;
+    }
 
     return mappedAnswers;
 }

@@ -492,7 +492,7 @@ export const json = {
   "showProgressBar": true,
   "progressBarLocation": "bottom",
   "progressBarType": "requiredQuestions",
-  "autoAdvanceEnabled": false,
+  // "autoAdvanceEnabled": true,
   "questionsOnPageMode": "questionPerPage",
   "headerView": "advanced"
 }
