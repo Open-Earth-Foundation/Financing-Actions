@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Box, Button, Flex, Heading, HStack, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Accordion } from "@chakra-ui/react";
-import { SurveyAnswers } from "./types.ts";
+import { SurveyAnswers, MATURITY } from "./types.ts";
 import { Link } from "react-router-dom";
 import { getRecommendations } from "./surveyHelper.ts";
 import MaturityTag from "./components/MaturityTag.tsx";
@@ -10,9 +10,26 @@ interface RecommendationsProps {
     answers: SurveyAnswers
 }
 
+type Language = 'en' | 'pt';
+
+interface Recommendation {
+    question: string;
+    recommendations: {
+        [key in Language]: string[];
+    };
+    references?: string[];
+}
+
+interface CategoryRecommendation {
+    category: string;
+    maturity: MATURITY;
+    recommendations: Recommendation[];
+}
+
 export default function Recommendations({ answers }: RecommendationsProps) {
-    const recommendations = getRecommendations(answers);
-    const { t } = useTranslation('translation');
+    const recommendations = getRecommendations(answers) as unknown as CategoryRecommendation[];
+    const { t, i18n } = useTranslation('translation');
+    const currentLanguage = i18n.language as Language;
 
     return (
         <Flex
@@ -53,17 +70,16 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                                 <Text fontWeight="bold" mb={3} fontSize="lg" textAlign="left">
                                                     {t(`questions.${rec.question}` as any)}
                                                 </Text>
-                                                {rec.recommendations.length > 0 && (
+                                                {rec.recommendations[currentLanguage]?.length > 0 && (
                                                     <Box mb={4}>
                                                         <Text fontWeight="semibold" mb={2} color="gray.700" textAlign="left">
-                                                            {/* TODO TRANSLATE {t(recommendations.recommendations)}: */}
-                                                            Recommendations:
+                                                            {t("recommendations.recommendations")}:
                                                         </Text>
                                                         <Box as="ul" listStyleType="none" margin={0} padding={0}>
-                                                            {rec.recommendations.map((recommendation, recIndex) => (
+                                                            {rec.recommendations[currentLanguage].map((recommendation: string, recIndex: number) => (
                                                                 <Box as="li" key={recIndex} display="flex" alignItems="flex-start" mb={2}>
                                                                     <Text as="span" mr={2}>•</Text>
-                                                                    <Text>{recommendation}</Text>
+                                                                    <Text textAlign="left">{recommendation}</Text>
                                                                 </Box>
                                                             ))}
                                                         </Box>
@@ -72,7 +88,7 @@ export default function Recommendations({ answers }: RecommendationsProps) {
                                                 {rec.references && rec.references.length > 0 && (
                                                     <Box>
                                                         <Text fontWeight="semibold" mb={2} color="gray.700" textAlign="left">
-                                                            References:
+                                                            {t("recommendations.references")}:
                                                         </Text>
                                                         {rec.references.map((ref, refIndex) => (
                                                             <ChakraLink

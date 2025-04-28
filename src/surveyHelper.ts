@@ -40,8 +40,6 @@ const sumQuestions = (answers: SurveyAnswers) => {
     const calculateCategoryScore = (categoryQuestions: number[]) => {
         return categoryQuestions.reduce((acc, curr) => acc + (normalizedAnswers[curr] || 0), 0);
     };
-
-
     return Object.entries(categories).reduce((result, [category, questions]) => {
         result[category] = calculateCategoryScore(questions);
         return result;
@@ -60,7 +58,6 @@ const calculateMaturity = (score: number, rule: number[]) => {
 }
 export const calculateResults = (answers: SurveyAnswers) => {
     const answersWithScore: Record<string, number> = sumQuestions(answers);
-
     const getCategoryAnswers = (categoryQuestions: number[]) => {
         return categoryQuestions.reduce((acc, questionIndex) => {
             const questionKey = `question${questionIndex + 1}`;

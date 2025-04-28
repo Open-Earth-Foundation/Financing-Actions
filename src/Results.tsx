@@ -19,17 +19,17 @@ export default function Results({ answers }: ResultsProps) {
                 <Heading mb={4}>{t('results.title' as any)}</Heading>
                 <Heading fontSize={"16px"} mb={6}>{t('results.breakdown' as any)}</Heading>
 
-                    {Object.entries(results).map(([category, { maturity, score }]) => (
-                                <Box flex="1" textAlign="left" p={4} bg="gray.50" borderRadius="md">
-                                    <HStack justify="space-between">
-                                        <HStack>
-                                            <Text fontWeight="bold">{t(`results.${category}` as any)}</Text>
-                                            <MaturityTag maturity={maturity} />
-                                            <Text fontSize="sm" color="gray.600">Score: {score}</Text>
-                                        </HStack>
-                                    </HStack>
-                                </Box>
-                    ))}
+                {Object.entries(results).map(([category, { maturity, score }]) => (
+                    <Box flex="1" textAlign="left" p={4} bg="gray.50" borderRadius="md">
+                        <HStack justify="space-between">
+                            <HStack>
+                                <Text fontWeight="bold">{t(`results.${category}` as any)}</Text>
+                                <MaturityTag maturity={maturity} />
+                                <Text fontSize="sm" color="gray.600">{t('score')}: {score}</Text>
+                            </HStack>
+                        </HStack>
+                    </Box>
+                ))}
 
                 <HStack justifyContent="center" width="100%" my={8} gap={4}>
                     <Link to="/questionnaire">
