@@ -64,7 +64,8 @@
     "link": "Link",
     "chooseSource": "Choose Source",
     "seeMoreDetails": "See More Details",
-    "linkToAccessTheFund": "Link to Access the Fund"
+    "linkToAccessTheFund": "Link to Access the Fund",
+    "downloadPDF": "Download as PDF"
   },
   "goBack": "Go Back"
 }
