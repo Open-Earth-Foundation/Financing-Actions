@@ -19,8 +19,8 @@ export default function Results({ answers }: ResultsProps) {
                 <Heading mb={4}>{t('results.title' as any)}</Heading>
                 <Heading fontSize={"16px"} mb={6}>{t('results.breakdown' as any)}</Heading>
 
-                {Object.entries(results).map(([category, { maturity, score }]) => (
-                    <Box flex="1" textAlign="left" p={4} bg="gray.50" borderRadius="md">
+                {Object.entries(results).map(([category, { maturity, score }], index) => (
+                    <Box key={index} flex="1" textAlign="left" p={4} bg="gray.50" borderRadius="md">
                         <HStack justify="space-between">
                             <HStack>
                                 <Text fontWeight="bold">{t(`results.${category}` as any)}</Text>
@@ -31,7 +31,7 @@ export default function Results({ answers }: ResultsProps) {
                     </Box>
                 ))}
 
-                <HStack justifyContent="center" width="100%" my={8} gap={4}>
+                <HStack justifyContent="center" width="100%" my={4} gap={4}>
                     <Link to="/questionnaire">
                         <Button width={"215px"} backgroundColor="#dbeafe" color="#2146aa" size="md" _hover={{ bg: '#bfdbfe' }}>
                             {t('results.retake' as any)}
@@ -42,11 +42,16 @@ export default function Results({ answers }: ResultsProps) {
                             {t('results.close' as any)}
                         </Button>
                     </Link>
-                    
+
                 </HStack>
                 <Link to="/recommendations">
-                    <Button width={"440px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
+                    <Button width={"440px"} backgroundColor="#fef9c3" color="#724c2d" size="lg" my={"10px"}>
                         {t('results.recommendations' as any)}
+                    </Button>
+                </Link>
+                <Link to="/funding">
+                    <Button width={"440px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
+                        {t('results.funding' as any)}
                     </Button>
                 </Link>
             </Box>
