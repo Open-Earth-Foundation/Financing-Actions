@@ -5,6 +5,7 @@ import Hero from "./Hero.tsx";
 import Questionnaire from "./Questionnaire.tsx";
 import Results from "./Results.tsx";
 import Recommendations from "./Recommendations.tsx";
+import Funding from "./Funding.tsx";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { NavBar } from "./components/NavBar.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -42,6 +43,7 @@ function App() {
                             <Route path="/questionnaire" element={<Questionnaire updateData={updateData} />} />
                             <Route path="/results" element={<Results answers={answers} />} />
                             <Route path="/recommendations" element={<Recommendations answers={answers} />} />
+                            <Route path="/funding" element={<Funding />} />
                         </Routes>
                     </VStack>
                 </Router>

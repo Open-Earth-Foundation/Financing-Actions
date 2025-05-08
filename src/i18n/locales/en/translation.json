@@ -49,5 +49,22 @@
     "recommendations": "Recommendations",
     "references": "References"
   },
-  "score": "Score"
+  "score": "Score",
+  "funding": {
+    "title": "Explore Relevant Funding Options",
+    "breakdown": "Review and select the funding option that works best for your city",
+    "region": "Region",
+    "currency": "Currency",
+    "scope": "Scope",
+    "priorityThemes": "Priority Themes",
+    "typesOfFunding": "Types of Funding",
+    "eligibility": "Eligibility",
+    "fundedProjectExample": "Funded Project Example",
+    "eligibilityRequirements": "Eligibility Requirements",
+    "link": "Link",
+    "chooseSource": "Choose Source",
+    "seeMoreDetails": "See More Details",
+    "linkToAccessTheFund": "Link to Access the Fund"
+  },
+  "goBack": "Go Back"
 }
