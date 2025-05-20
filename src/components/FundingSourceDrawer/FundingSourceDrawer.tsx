@@ -1,6 +1,6 @@
 import { DrawerRoot, DrawerBackdrop, DrawerContent, DrawerBody } from "./drawer";
 import { ButtonMedium } from "../Texts/Button";
-import { Heading, Stack, VStack, HStack, Text, Badge, Link, Icon, Button, Separator } from "@chakra-ui/react";
+import { Heading, Stack, VStack, HStack, Text, Badge, Icon, Button, Separator } from "@chakra-ui/react";
 import { MdArrowBack } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { FundingSource } from "./fundingSources";

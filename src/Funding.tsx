@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Box, Button, Flex, Heading, Separator, Text, Link as ChakraLink, Card, CardHeader, CardBody, Grid, CardFooter, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, Card, CardHeader, CardBody, Grid, CardFooter, VStack } from "@chakra-ui/react";
 import { Language } from "./types.ts";
 import { FundingSource, fundingSources } from "./components/FundingSourceDrawer/fundingSources.ts";
-import { ButtonMedium } from "./components/Texts/Button.tsx";
 import { useState } from "react";
 import { FundingSourceDrawer } from "./components/FundingSourceDrawer/FundingSourceDrawer.tsx";
 
