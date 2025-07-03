@@ -20,14 +20,6 @@ export default function Finance() {
   const [selectedFundingSourceForDetails, setSelectedFundingSource] = useState<
     any | null
   >(null);
-  const [chosenSourceId, setChosenSourceId] = useState<string | null>(
-    localStorage.getItem("chosenSourceId")
-  );
-
-  const onSourceChosen = (source: any) => {
-    localStorage.setItem("chosenSourceId", source.sourceKey);
-    setChosenSourceId(source.sourceKey);
-  };
 
   const onSourceSelected = (source: any) => {
     setSelectedFundingSource(source);
@@ -40,10 +32,6 @@ export default function Finance() {
           isOpen={!!selectedFundingSourceForDetails}
           onClose={() => setSelectedFundingSource(null)}
           fundingSource={selectedFundingSourceForDetails}
-          isChosenSource={
-            chosenSourceId === selectedFundingSourceForDetails.sourceKey
-          }
-          setChosenSource={onSourceChosen}
         />
       )}
 

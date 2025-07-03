@@ -22,16 +22,12 @@ interface FundingSourceDrawerProps {
   isOpen: boolean;
   onClose: () => void;
   fundingSource: FundingSource | null;
-  isChosenSource?: boolean;
-  setChosenSource?: (chosenSource: FundingSource) => void;
 }
 
 export function FundingSourceDrawer({
   isOpen,
   onClose,
   fundingSource,
-  isChosenSource = false,
-  setChosenSource = () => {},
 }: FundingSourceDrawerProps) {
   const { t } = useTranslation("translation");
   const [isNextStepsDrawerOpen, setIsNextStepsDrawerOpen] = useState(false);
@@ -191,15 +187,9 @@ export function FundingSourceDrawer({
                     fontSize="md"
                     width={"auto"}
                     _hover={{ bg: "#1741b6" }}
-                    onClick={() =>
-                      isChosenSource
-                        ? handleOpenNextStepsDrawer(fundingSource)
-                        : setChosenSource(fundingSource)
-                    }
+                    onClick={() => handleOpenNextStepsDrawer(fundingSource)}
                   >
-                    {isChosenSource
-                      ? t("funding.seeNextSteps")
-                      : t("funding.chooseSource")}
+                    {t("funding.seeNextSteps")}
                   </Button>
                   <Button
                     bg="#2456E6"
