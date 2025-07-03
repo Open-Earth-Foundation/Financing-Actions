@@ -23,8 +23,22 @@ export const DisplayMedium = ({ children, ...props }: HeadingProps) => (
   <Heading
     as="h1"
     color="content.alternative"
-    fontSize="display.md"
+    fontSize="45"
     lineHeight="52"
+    fontWeight="600"
+    fontStyle="normal"
+    {...props}
+  >
+    {children}
+  </Heading>
+);
+
+export const DisplayLarge = ({ children, ...props }: HeadingProps) => (
+  <Heading
+    as="h1"
+    color="content.alternative"
+    fontSize="57"
+    lineHeight="64"
     fontWeight="600"
     fontStyle="normal"
     {...props}

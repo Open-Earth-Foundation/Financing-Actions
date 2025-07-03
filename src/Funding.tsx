@@ -1,74 +1,145 @@
 import { useTranslation } from "react-i18next";
-import { Box, Button, Flex, Heading, Text, Card, CardHeader, CardBody, Grid, CardFooter, VStack } from "@chakra-ui/react";
-import { Language } from "./types.ts";
-import { FundingSource, fundingSources } from "./components/FundingSourceDrawer/fundingSources.ts";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Text,
+  Accordion,
+  HStack,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
+
+import { institutions } from "./components/institutions";
 import { useState } from "react";
 import { FundingSourceDrawer } from "./components/FundingSourceDrawer/FundingSourceDrawer.tsx";
 
 export default function Finance() {
-    const { t, i18n } = useTranslation('translation');
-    const currentLanguage = i18n.language as Language;
-    const [selectedFundingSource, setSelectedFundingSource] = useState<FundingSource | null>(fundingSources[0]);
-    return (<>
-        {selectedFundingSource && <FundingSourceDrawer isOpen={!!selectedFundingSource} onClose={() => setSelectedFundingSource(null)} fundingSource={selectedFundingSource} />}
-        <Flex
-            alignItems={'center'}
-            justifyContent={'center'}
-            width={'100%'}
-            minWidth={'100%'}
-            my={"3%"}
-        >
-            <Box
-                width={'100%'}
-                maxWidth={'1200px'}
-                px={4}
-                mx="auto"
-            >
-                <Heading mb={4}>{t('funding.title' as any)}</Heading>
-                <Heading fontSize={"16px"} mb={6}>{t('funding.breakdown' as any)}</Heading>
-                <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={4}>
-                    {fundingSources.map((source) => (
-                        <Card.Root key={source.id}>
-                            <CardHeader>
-                                <Heading>{source.translations[currentLanguage].title}</Heading>
-                            </CardHeader>
-                            <CardBody>
-                                <Text
-                                    style={{
-                                        display: '-webkit-box',
-                                        WebkitLineClamp: 7,
-                                        WebkitBoxOrient: 'vertical',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                    }}
-                                >
-                                    {source.translations[currentLanguage].description}
-                                </Text>
-                            </CardBody>
-                            <CardFooter alignItems={"center"} justifyContent={"center"}>
-                                <VStack>
-                                    <div className="flex justify-between items-center pt-4">
-                                        <Button
-                                            variant={"plain"}
-                                            onClick={() => setSelectedFundingSource(source)}
-                                            className="text-primary hover:text-primary-dark font-semibold underline"
-                                        >
-                                            {t('funding.seeMoreDetails')}
-                                        </Button>
+  const { t } = useTranslation("translation");
+  const [selectedFundingSourceForDetails, setSelectedFundingSource] = useState<
+    any | null
+  >(null);
+  const [chosenSourceId, setChosenSourceId] = useState<string | null>(
+    localStorage.getItem("chosenSourceId")
+  );
 
-                                    </div>
-                                    {/* <Button> TODO NINA ADD BUTTON WHEN WE HAVE NEXT STEPS
-                                        <ButtonMedium color="white">
-                                            {t('funding.chooseSource')}
-                                        </ButtonMedium>
-                                    </Button> */}
-                                </VStack>
-                            </CardFooter>
-                        </Card.Root>
-                    ))}
-                </Grid>
-            </Box >
-        </Flex >
+  const onSourceChosen = (source: any) => {
+    localStorage.setItem("chosenSourceId", source.sourceKey);
+    setChosenSourceId(source.sourceKey);
+  };
+
+  const onSourceSelected = (source: any) => {
+    setSelectedFundingSource(source);
+  };
+
+  return (
+    <>
+      {selectedFundingSourceForDetails && (
+        <FundingSourceDrawer
+          isOpen={!!selectedFundingSourceForDetails}
+          onClose={() => setSelectedFundingSource(null)}
+          fundingSource={selectedFundingSourceForDetails}
+          isChosenSource={
+            chosenSourceId === selectedFundingSourceForDetails.sourceKey
+          }
+          setChosenSource={onSourceChosen}
+        />
+      )}
+
+      <Flex
+        alignItems={"center"}
+        justifyContent={"center"}
+        width={"100%"}
+        minWidth={"100%"}
+        my={"3%"}
+      >
+        <Box width={"100%"} maxWidth={"1200px"} px={4} mx="auto">
+          <Heading mb={4}>{t("funding.title" as any)}</Heading>
+          <Heading fontSize={"16px"} mb={6}>
+            {t("funding.breakdown" as any)}
+          </Heading>
+          <Accordion.Root collapsible>
+            {institutions.map((institution) => (
+              <Accordion.Item key={institution.id} value={institution.id}>
+                <Accordion.ItemTrigger>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    p={4}
+                    bg="gray.50"
+                    borderRadius="md"
+                  >
+                    <HStack justify="space-between">
+                      <Box>
+                        <Heading size="md">{t(`${institution.name}`)}</Heading>
+                        <Text fontSize="sm" color="gray.600">
+                          {t(`${institution.description}`)}
+                        </Text>
+                      </Box>
+                      <Accordion.ItemIndicator />
+                    </HStack>
+                  </Box>
+                </Accordion.ItemTrigger>
+                <Accordion.ItemContent>
+                  <Accordion.ItemBody>
+                    <Box
+                      overflowX="auto"
+                      width="100%"
+                      alignSelf="center"
+                      justifySelf="center"
+                    >
+                      {/* Table Rows */}
+                      {institution.fundingSources
+                        .filter(Boolean)
+                        .map((source, idx) => {
+                          if (!source) return null;
+                          return (
+                            <Grid
+                              key={source["Fund Name"] + idx}
+                              templateColumns="3fr 1fr"
+                              p={4}
+                              alignItems="center"
+                            >
+                              <GridItem>
+                                <Text
+                                  fontWeight="medium"
+                                  alignSelf="center"
+                                  justifySelf="center"
+                                  width="100%"
+                                  textAlign="left"
+                                >
+                                  {source["Fund Name"]}
+                                </Text>
+                              </GridItem>
+                              <GridItem>
+                                <Button
+                                  mx={0}
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() =>
+                                    onSourceSelected({
+                                      id: source["Fund Name"],
+                                      institutionId: institution.id,
+                                      sourceKey: source.sourceKey,
+                                    })
+                                  }
+                                  colorScheme="blue"
+                                >
+                                  {t("funding.seeMoreDetails")}
+                                </Button>
+                              </GridItem>
+                            </Grid>
+                          );
+                        })}
+                    </Box>
+                  </Accordion.ItemBody>
+                </Accordion.ItemContent>
+              </Accordion.Item>
+            ))}
+          </Accordion.Root>
+        </Box>
+      </Flex>
     </>
-    );
+  );
 }

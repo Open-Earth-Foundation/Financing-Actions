@@ -1,77 +1,84 @@
-import jsPDF from "jspdf";
-import { Language } from "../../types";
 import { FundingSource } from "./fundingSources";
 
-export function handleDownloadPDF(
-    data: FundingSource["translations"][Language],
-    t: (key: string) => string
+export async function handleDownloadPDF(
+  fundingSource: FundingSource,
+  t: (key: string) => string
 ) {
-    const pdf = new jsPDF({ orientation: "p", unit: "pt", format: "a4" });
-    const left = 40;
-    const top = 40;
-    const lineHeight = 20;
-    const maxWidth = 520;
-    const pageHeight = pdf.internal.pageSize.getHeight();
-    let y = top;
+  const { institutionId, sourceKey } = fundingSource;
+  const get = (field: string) =>
+    t(`fundingSources.${institutionId}.sources.${sourceKey}.${field}`);
 
-    function getBlockHeight(texts: string[], fontStyle: "bold" | "normal" = "normal") {
-        pdf.setFont("helvetica", fontStyle);
-        let lines = 0;
-        for (const text of texts) {
-            lines += (pdf.splitTextToSize(text, maxWidth) as string[]).length;
-        }
-        return lines * lineHeight;
-    }
+  const data = {
+    name: get("name"),
+    description: get("description"),
+    instrumentType: get("instrumentType"),
+    eligibleBorrowers: get("eligibleBorrowers"),
+    prioritySectors: get("prioritySectors"),
+    ticketWindow: get("ticketWindow"),
+    financingShare: get("financingShare"),
+    financialCost: get("financialCost"),
+    tenor: get("tenor"),
+    safeguards: get("safeguards"),
+    applicationChannel: get("applicationChannel"),
+    officialLink: get("officialLink"),
+  };
 
-    function addSectionWithTitle(title: string, content: string[], fontStyle: "bold" | "normal" = "normal") {
-        const titleHeight = getBlockHeight([title], "bold");
-        const contentHeight = getBlockHeight(content, fontStyle);
-        const totalHeight = titleHeight + contentHeight;
-        if (y + totalHeight > pageHeight - top) {
-            pdf.addPage();
-            y = top;
-        }
-        // Add title
-        pdf.setFont("helvetica", "bold");
-        const titleLines = pdf.splitTextToSize(title, maxWidth) as string[];
-        for (const line of titleLines) {
-            pdf.text(line, left, y);
-            y += lineHeight;
-        }
-        // Add content
-        pdf.setFont("helvetica", fontStyle);
-        for (const text of content) {
-            const lines = pdf.splitTextToSize(text, maxWidth) as string[];
-            for (const line of lines) {
-                pdf.text(line, left, y);
-                y += lineHeight;
-            }
-        }
-        y += lineHeight; // spacing after section
-    }
+  // Helper to create a section with title and content
+  function section(
+    title: string,
+    content: string | string[],
+    options: any = {}
+  ) {
+    const arr = Array.isArray(content) ? content : [content];
+    return [
+      { text: title, style: "sectionTitle", ...options },
+      ...arr.map((line) => ({ text: line, style: "sectionContent" })),
+      { text: "\n" },
+    ];
+  }
 
-    pdf.setFontSize(18);
-    addSectionWithTitle(data.title, [], "bold");
-
-    pdf.setFontSize(12);
-    addSectionWithTitle(
-        `${t('funding.region')}, ${t('funding.currency')}, ${t('funding.scope')}`,
+  const docDefinition = {
+    pageSize: "A4",
+    pageMargins: [40, 40, 40, 40],
+    content: [
+      // Main Title
+      { text: data.name, style: "mainTitle" },
+      { text: "\n" },
+      // Instrument type and ticket window
+      ...section(
+        `${t("funding.instrumentType")}, ${t("funding.ticketWindow")}`,
         [
-            `${t('funding.region')}: ${data.region}`,
-            `${t('funding.currency')}: ${data.currency}`,
-            `${t('funding.scope')}: ${data.scope}`
+          `${t("funding.instrumentType")}: ${data.instrumentType}`,
+          `${t("funding.ticketWindow")}: ${data.ticketWindow}`,
         ]
-    );
+      ),
+      ...section(t("funding.description"), data.description),
+      ...section(t("funding.prioritySectors"), data.prioritySectors),
+      ...section(t("funding.eligibleBorrowers"), data.eligibleBorrowers),
+      ...section(t("funding.financingShare"), data.financingShare),
+      ...section(t("funding.financialCost"), data.financialCost),
+      ...section(t("funding.tenor"), data.tenor),
+      ...section(t("funding.safeguards"), data.safeguards),
+      ...section(t("funding.applicationChannel"), data.applicationChannel),
+      ...section(t("funding.linkToAccessTheFund"), data.officialLink),
+    ],
+    styles: {
+      mainTitle: {
+        fontSize: 18,
+        bold: true,
+        margin: [0, 0, 0, 16],
+      },
+      sectionTitle: {
+        fontSize: 13,
+        bold: true,
+        margin: [0, 8, 0, 2],
+      },
+      sectionContent: {
+        fontSize: 12,
+        margin: [0, 0, 0, 2],
+      },
+    },
+  };
 
-    addSectionWithTitle(t('Description'), [data.description]);
-    addSectionWithTitle(t('Priority Themes'), data.priorityThemes.map(theme => `• ${theme}`));
-    addSectionWithTitle(t('Types of Funding'), data.typesOfFunding.map(type => `• ${type}`));
-    addSectionWithTitle(
-        t('Funded Project Example'),
-        [`${data.fundedProjectExample.title}: ${data.fundedProjectExample.description}`]
-    );
-    addSectionWithTitle(t('Eligibility Requirements'), data.eligibilityRequirements.map(req => `• ${req}`));
-    addSectionWithTitle(t('funding.linkToAccessTheFund'), [data.link]);
-
-    pdf.save(data.title + '.pdf');
-} 
+  (window as any).pdfMake.createPdf(docDefinition).download(`${data.name}.pdf`);
+}

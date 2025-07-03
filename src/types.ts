@@ -54,3 +54,36 @@ export interface QuestionRecommendation {
 }
 export type Language = 'en' | 'pt';
 
+export interface NextStep {
+  title: string;
+  subtitle?: string;
+  items: string[];
+  note?: string;
+  timeline?: string;
+}
+
+export interface FundingSource {
+  sourceKey: string;
+  Intitution: string;
+  Description: string;
+  "Fund Name": string;
+  "Instrument Type": string;
+  "Eligible Borrowers": string;
+  "Priority Sectors": string;
+  "Ticket Window": string;
+  "Financing Share": string;
+  "Financial Cost": string;
+  Tenor: string;
+  Safeguards: string;
+  "Application Channel": string;
+  "Official Link": string;
+  nextSteps?: NextStep[];
+}
+
+export interface Institution {
+  id: string;
+  name: string;
+  description: string;
+  fundingSources: FundingSource[];
+}
+

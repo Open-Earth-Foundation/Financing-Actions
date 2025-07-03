@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import MaturityTag from "./components/MaturityTag.tsx";
@@ -44,16 +44,18 @@ export default function Results({ answers }: ResultsProps) {
                     </Link>
 
                 </HStack>
-                <Link to="/recommendations">
-                    <Button width={"440px"} backgroundColor="#fef9c3" color="#724c2d" size="lg" my={"10px"}>
-                        {t('results.recommendations' as any)}
-                    </Button>
-                </Link>
-                <Link to="/funding">
-                    <Button width={"440px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
-                        {t('results.funding' as any)}
-                    </Button>
-                </Link>
+                <VStack>
+                    <Link to="/recommendations">
+                        <Button width={"440px"} backgroundColor="#fef9c3" color="#724c2d" size="lg" my={"10px"}>
+                            {t('results.recommendations' as any)}
+                        </Button>
+                    </Link>
+                    <Link to="/funding">
+                        <Button width={"440px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
+                            {t('results.funding' as any)}
+                        </Button>
+                    </Link>
+                </VStack>
             </Box>
         </Flex>
     );

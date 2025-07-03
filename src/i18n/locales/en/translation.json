@@ -67,7 +67,470 @@
     "chooseSource": "Choose Source",
     "seeMoreDetails": "See More Details",
     "linkToAccessTheFund": "Link to Access the Fund",
-    "downloadPDF": "Download as PDF"
+    "downloadPDF": "Download as PDF",
+    "nextStepsDialogTitle": "Confirmation of Chosen Fund",
+    "nextStepsTitle": "You've chosen",
+    "nextStepsDescription": "Click the button below to see next steps for this fund",
+    "nextSteps": {
+      "title": "Next Steps for {{fundingSource}}"
+    },
+    "generateNextSteps": "Generate Fund Next Steps",
+    "seeNextSteps": "See Next Steps",
+    "prioritySectors": "Priority Sectors",
+    "instrumentType": "Instrument Type",
+    "eligibleBorrowers": "Eligible Borrowers",
+    "ticketWindow": "Ticket Window",
+    "financingShare": "Financing Share",
+    "financialCost": "Financial Cost",
+    "tenor": "Tenor",
+    "safeguards": "Safeguards",
+    "applicationChannel": "Application Channel",
+    "financialDetails": "Financial Details",
+    "description": "Description"
   },
-  "goBack": "Go Back"
+  "close": "Close",
+  "goBack": "Go Back",
+  "fundingSources": {
+    "MMA": {
+      "name": "MMA",
+      "description": "Ministry of the Environment leads Brazil's national environmental policy and oversees programs like the National Climate Fund (FNMC).",
+      "sources": {
+        "nationalClimateFundGrants": {
+          "name": "National Climate Fund (FNMC) – Grants",
+          "description": "Non-repayable funds from Brazil's Environment Ministry for cities, states, or NGOs to prepare climate plans, pilot adaptation measures, monitoring systems, or training programs. Requires at least a 5 % local counterpart. Paid through the TransfereGov platform.",
+          "instrumentType": "Non‑reimbursable grant",
+          "eligibleBorrowers": "Municipal & state governments, public consortia, CSOs",
+          "prioritySectors": "Climate mitigation & adaptation studies, pilots, risk information systems",
+          "ticketWindow": "R$ 2 m – R$ 20 m (set by each PAAR call)",
+          "financingShare": "Grant; local counterpart ≥ 5 %",
+          "financialCost": "N/A (grant)",
+          "tenor": "According to project schedule",
+          "safeguards": "Licences + municipal decree establishing project team",
+          "applicationChannel": "TransfereGov / SICONV platform",
+          "officialLink": "https://www.gov.br/mma/pt-br/composicao/secex/dfre/fundo-nacional-sobre-mudanca-do-clima",
+          "nextSteps": {
+            "II": {
+              "title": "MMA Funding Line: National Climate Fund (FNMC) – Grants",
+              "items": {
+                "1": "Check the PAAR public notice. Visit the MMA website (typically published between March and May).",
+                "2": "Update your SICONV profile. Ensure the municipality is registered as a 'Fornecedor' and holds a valid CND (tax-debt certificate).",
+                "3": "Prepare your proposal (max 20 pages). Include Clear objectives, Timeline, and a 5% counterpart funding line in the budget.",
+                "4": "Upload required attachments on TransfereGov: Mayor's decree establishing the project, Environmental license (if pilot involves works), Simplified procurement plan.",
+                "5": "Submit and track your application. Use the TransfereGov dashboard to follow scoring and status."
+              },
+              "note": "Missed the PAAR window? Place the project on standby or migrate to a BNDES Automatic loan (≤ R$ 10 million) instead."
+            }
+          }
+        }
+      }
+    },
+    "IDB": {
+      "name": "IDB - Interamerican Development Bank",
+      "description": "The IDB provides financial and technical support for development projects across Latin America and the Caribbean.",
+      "nextSteps": {
+        "title": "General Prerequisites for All IDB Lines",
+        "items": {
+          "1": "Set up a Project Implementation Unit (PIU) — even a small team (2–3 people) is enough, but it must be formalized by a mayoral decree.",
+          "2": "Ensure your CAPAG rating is \"B\" or higher — if it's \"C\" or \"D\", focus on FNMC grants or small BNDES Automatic loans (≤ R$ 10 million).",
+          "3": "Estimate your project cost and components — a rough calculation (±30%) is sufficient at this stage.",
+          "4": "Identify your environmental licensing requirements — even if the license hasn't been issued yet."
+        },
+        "note": "All lenders will ask for this during initial due diligence."
+      },
+      "sources": {
+        "specificInvestmentLoan": {
+          "name": "IDB Specific Investment Loan (ESP)",
+          "description": "The IDB's flagship loan for public works: BRT corridors, wastewater plants, solar parks, resilient hospitals. Needs a federal guarantee and Senate approval. Up to 25 years to repay, with a 0.80 % spread over SOFR and solid technical support.",
+          "instrumentType": "Sovereign‑guaranteed investment loan",
+          "eligibleBorrowers": "Federal, state or municipal governments (with sovereign guarantee)",
+          "prioritySectors": "Energy transition, resilient transport, water & sanitation, AFOLU, health, DRR",
+          "ticketWindow": "≥ US$ 30 m (project‑driven)",
+          "financingShare": "Negotiated; typically up to 80 %",
+          "financialCost": "SOFR + 0.80 % spread + 0.41 % funding margin + 0.50 % commitment fee",
+          "tenor": "Up to 25 years / 5.5 years grace (WAL ≤ 15.25 y)",
+          "safeguards": "IDB ESPS 2020 + MICI grievance mechanism",
+          "applicationChannel": "IDB Brazil Office (Brasília)",
+          "officialLink": "https://www.iadb.org/en/how-we-can-work-together/public-sector/investment-lending",
+          "nextSteps": {
+            "I": {
+              "title": "General Prerequisites for All IDB Lines",
+              "items": {
+                "1": "Set up a Project Implementation Unit (PIU) — even a small team (2–3 people) is enough, but it must be formalized by a mayoral decree.",
+                "2": "Ensure your CAPAG rating is 'B' or higher — if it's 'C' or 'D', focus on FNMC grants or small BNDES Automatic loans (≤ R$ 10 million).",
+                "3": "Estimate your project cost and components — a rough calculation (±30%) is sufficient at this stage.",
+                "4": "Identify your environmental licensing requirements — even if the license hasn't been issued yet."
+              },
+              "note": "All lenders will ask for this during initial due diligence."
+            },
+            "II": {
+              "title": "IDB Funding Line 1: Specific Investment Loan (ESP)",
+              "timeline": "9–12 months (add 3–4 months for Senate approval)",
+              "items": {
+                "1": "Sovereign guarantee required → Request a support letter from the Ministry of Finance early in the process.",
+                "2": "Senate approval required → Draft the resolution text and submit it to your legal advisor for review.",
+                "3": "ESPS pre-screening required → Fill out the 10-question form on the IDB website.",
+                "4": "Draft a 2-page Project Profile and email it to the IDB Brasília office to request feedback."
+              }
+            }
+          }
+        },
+        "policyBasedLoan": {
+          "name": "IDB Policy‑Based Loan (PBL)",
+          "description": "Loan for passing or reforming laws and regulations (e.g., a waste-fee ordinance or citywide emissions law). Money disburses directly to the treasury once reforms are enacted.",
+          "instrumentType": "Sovereign‑guaranteed loan for policy reforms",
+          "eligibleBorrowers": "Governments with sovereign guarantee (Senate approval)",
+          "prioritySectors": "Macro or sector policy reforms (including climate)",
+          "ticketWindow": "Project‑driven; no hard ceiling",
+          "financingShare": "Disbursed in tranches upon policy milestones",
+          "financialCost": "SOFR + 0.80 % spread + funding margin + 0.50 % commitment fee",
+          "tenor": "20 years / 5.5 years grace (WAL ≤ 12.75 y)",
+          "safeguards": "IDB ESPS 2020 + MICI",
+          "applicationChannel": "IDB Brazil Office",
+          "officialLink": "https://www.iadb.org/en/how-we-can-work-together/public-sector/policy-based-loan",
+          "nextSteps": {
+            "II": {
+              "title": "IDB Funding Line 2: Policy-Based Loan (PBL)",
+              "items": {
+                "1": "Identify the legal reforms or by-laws your municipality plans to implement.",
+                "2": "Create a timeline with key milestones, such as ordinance publication dates.",
+                "3": "Send this information to IDB to help them build a Policy Matrix.",
+                "4": "Sovereign guarantee required → Request a support letter from the Ministry of Finance early in the process.",
+                "5": "Senate approval required → Draft the resolution text and submit it to your legal advisor for review."
+              }
+            }
+          }
+        },
+        "contingentCreditFacility": {
+          "name": "IDB Contingent Credit Facility for Disasters (CCF)",
+          "description": "Pre-approved line that releases up to US$ 300 million within 48 hours of a declared disaster (floods, epidemics). No commitment fee until funds are drawn; contract sits 'on the shelf' until a parametric trigger is hit.",
+          "instrumentType": "Pre‑approved credit line that triggers after a disaster",
+          "eligibleBorrowers": "Federal government (may on‑lend)",
+          "prioritySectors": "Emergency response and recovery",
+          "ticketWindow": "US$ 300 m or 2 % GDP (Mod I) / US$ 100 m (Mod II)",
+          "financingShare": "100 % of eligible emergency expenses",
+          "financialCost": "SOFR + 0.80 % spread; no commitment fee until drawn",
+          "tenor": "25 years / 5.5 years grace",
+          "safeguards": "IDB ESPS 2020",
+          "applicationChannel": "IDB Brazil Office",
+          "officialLink": "https://www.iadb.org/en/project/DR-X1003",
+          "nextSteps": {
+            "II": {
+              "title": "IDB Funding Line 3: Contingent Credit Facility for Disaster (CCF)",
+              "items": {
+                "1": "Draft a Catastrophe Risk Management Plan. Use the official template available on the IDB website.",
+                "2": "Define disbursement triggers (parametric index or WHO emergency declaration). Agree on risk thresholds with IDB.",
+                "3": "Obtain a presidential decree authorizing the contract signature. Required because only the Union can legally borrow for this credit line."
+              }
+            }
+          }
+        }
+      }
+    },
+    "CAF": {
+      "name": "CAF – Development Bank of Latin America and the Caribbean",
+      "description": "CAF provides financial and technical support to strengthen sustainable development across Latin America.",
+      "nextSteps": {
+        "title": "General Prerequisites for All CAF Lines",
+        "items": {
+          "1": "Set up a Project Implementation Unit (PIU) — even a small team (2–3 people) is enough, but it must be formalized by a mayoral decree.",
+          "2": "Ensure your CAPAG rating is \"B\" or higher — if it's \"C\" or \"D\", focus on FNMC grants or small BNDES Automatic loans (≤ R$ 10 million).",
+          "3": "Estimate your project cost and components — a rough calculation (±30%) is sufficient at this stage.",
+          "4": "Identify your environmental licensing requirements — even if the license hasn't been issued yet."
+        },
+        "note": "All lenders will ask for this during initial due diligence."
+      },
+      "sources": {
+        "environmentClimateChangeCreditWindow": {
+          "name": "CAF Environment & Climate‑Change Credit Window",
+          "description": "Sovereign or sub-sovereign loan that can be blended with grants from the GEF or the Green Climate Fund to cut interest costs. Suits large low-carbon infrastructure or conservation projects with social co-benefits.",
+          "instrumentType": "Sovereign / sub‑sovereign loan (blended possible)",
+          "eligibleBorrowers": "National & sub‑national governments; PPP SPVs with public guarantee",
+          "prioritySectors": "Low‑carbon infrastructure, biodiversity conservation, climate adaptation",
+          "ticketWindow": "US$ 20 m – US$ 300 m",
+          "financingShare": "Negotiated",
+          "financialCost": "≈ SOFR + 1.10 % (net of any grant element)",
+          "tenor": "Up to 20 years / 5 years grace",
+          "safeguards": "MGAS 2025 + MRAS grievance mechanism",
+          "applicationChannel": "CAF Brazil Office (Brasília)",
+          "officialLink": "https://www.caf.com/es/areas-de-accion/ambiente-y-cambio-climatico/",
+          "nextSteps": {
+            "II": {
+              "title": "CAF Funding Line 1: Environmental & Climate-Change Credit Window",
+              "items": {
+                "1": "Email the Ficha de Operación (CAF template). Include a project snapshot, total cost, and requested funding amount.",
+                "2": "Attach the MGAS Screening form. Complete all 12 questions.",
+                "3": "Provide CAPAG rating and STN fiscal data",
+                "4": "Await eligibility letter from CAF. Once received, begin preparing your detailed feasibility package."
+              }
+            }
+          }
+        },
+        "climateAdaptationWindow": {
+          "name": "CAF Climate Adaptation Window (with Adaptation Fund blend)",
+          "description": "Combines a CAF loan with up to 25 % grant money. Perfect for slope-stabilisation works, coastal defenses, or mangrove restoration. Uses the MGAS safeguard system.",
+          "instrumentType": "Loan blended with Adaptation Fund grant (≤ 25 %)",
+          "eligibleBorrowers": "States, large municipalities",
+          "prioritySectors": "Climate adaptation infrastructure, ecosystem‑based adaptation",
+          "ticketWindow": "US$ 20 m – US$ 150 m",
+          "financingShare": "Loan + grant; grant lowers effective cost",
+          "financialCost": "CAF curve (≈ SOFR + 1.10 %) net of grant element",
+          "tenor": "20 years / 5 years grace",
+          "safeguards": "MGAS 2025 + MRAS",
+          "applicationChannel": "CAF Brazil Office",
+          "officialLink": "https://www.caf.com/es/areas-de-accion/ambiente-y-cambio-climatico/proyectos-fondo-de-adaptacion/",
+          "nextSteps": {
+            "II": {
+              "title": "CAF Funding Line 2: Adaptation Window (with Adaptation Fund)",
+              "items": {
+                "1": "Prepare a brief proposal (max 5 pages). Focus on climate-risk data and clearly highlight the adaptation benefits."
+              }
+            }
+          }
+        }
+      }
+    },
+    "FONPLATA": {
+      "name": "FONPLATA – Financial Fund for the Development of the River Plate Basin",
+      "description": "FONPLATA supports inclusive and sustainable development in member countries by financing investment projects.",
+      "nextSteps": {
+        "title": "General Prerequisites for All FONPLATA Lines",
+        "items": {
+          "1": "Set up a Project Implementation Unit (PIU) — even a small team (2–3 people) is enough, but it must be formalized by a mayoral decree.",
+          "2": "Ensure your CAPAG rating is \"B\" or higher — if it's \"C\" or \"D\", focus on FNMC grants or small BNDES Automatic loans (≤ R$ 10 million).",
+          "3": "Estimate your project cost and components — a rough calculation (±30%) is sufficient at this stage.",
+          "4": "Identify your environmental licensing requirements — even if the license hasn't been issued yet."
+        },
+        "note": "All lenders will ask for this during initial due diligence."
+      },
+      "sources": {
+        "greenLineInvestmentLoan": {
+          "name": "FONPLATA Green Line – Investment Loan",
+          "description": "Targets cities in the Plata Basin that need clean mobility, drainage, or urban green space. Typical tickets of US$ 20–60 million, 15-year terms, and streamlined safeguard rules.",
+          "instrumentType": "Sovereign / sub‑sovereign infrastructure loan",
+          "eligibleBorrowers": "Federal, state, municipal governments in Plata Basin",
+          "prioritySectors": "Urban mobility, water, flood control, green spaces, small hydro",
+          "ticketWindow": "US$ 20 m – US$ 60 m",
+          "financingShare": "Negotiated",
+          "financialCost": "SOFR + ~1.50 % + 0.50 % commitment fee",
+          "tenor": "15 years / 4 years grace",
+          "safeguards": "FONPLATA E&S policy + simplified ESMP",
+          "applicationChannel": "FONPLATA Country Coordinator (São Paulo)",
+          "officialLink": "https://www.fonplata.org/en/financing/types-financing",
+          "nextSteps": {
+            "II": {
+              "title": "FONPLATA Funding Line 1: Green Investment Loan",
+              "items": {
+                "1": "Confirm the project is located in a Plata Basin state. If not, this funding line is not available.",
+                "2": "Check the project size: US$ 10–60 million. If below US$ 10 million, consider applying for a Pre-Investment Loan first.",
+                "3": "Complete the Perfil (one-page summary). Email the Perfil to the FONPLATA Country Coordinator."
+              }
+            }
+          }
+        },
+        "preInvestmentTechnicalLoan": {
+          "name": "FONPLATA Pre‑Investment Technical Loan",
+          "description": "Pays for feasibility studies, basic designs, and EIAs that precede a larger works loan. Saves cities from using scarce local funds while preparing a bigger package for IDB or BNDES approval.",
+          "instrumentType": "Loan for feasibility studies and project design",
+          "eligibleBorrowers": "Same as FONPLATA investment loan",
+          "prioritySectors": "Feasibility and environmental studies for infrastructure",
+          "ticketWindow": "US$ 5 m – US$ 15 m",
+          "financingShare": "Negotiated",
+          "financialCost": "SOFR + ~1.50 %; WAL ≤ 10 years",
+          "tenor": "10 years / 3 years grace",
+          "safeguards": "FONPLATA ES policy; outputs follow Guia de Execução",
+          "applicationChannel": "FONPLATA Country Coordinator",
+          "officialLink": "https://www.fonplata.org/en/financing/types-financing",
+          "nextSteps": {
+            "II": {
+              "title": "FONPLATA Funding Line 2: Pre-Investment Technical Loan",
+              "items": {
+                "1": "Complete the Perfil (one-page summary), focus on planned studies such as Environmental Impact Assessments (EIA) and detailed engineering.",
+                "2": "Attach Terms of Reference (TORs) for each consulting contract. Clearly outline objectives, deliverables, and timelines."
+              }
+            }
+          }
+        }
+      }
+    },
+    "BNDES": {
+      "name": "BNDES – National Bank for Economic and Social Development",
+      "description": "BNDES is Brazil's federal development bank, offering tailored financing and technical support.",
+      "sources": {
+        "fundoClimaIndustriaVerde": {
+          "name": "BNDES Fundo Clima – Indústria Verde",
+          "description": "Long-term loan that helps companies upgrade factories, swap inefficient boilers, install energy-efficiency measures, or develop bio-based inputs. Finances up to 80 % of costs, with fixed concessional rates and a five-year grace period.",
+          "instrumentType": "Direct reimbursable loan",
+          "eligibleBorrowers": "Brazilian private corporations",
+          "prioritySectors": "Industrial energy efficiency, bioeconomy, advanced biofuels, low‑carbon industrial upgrades",
+          "ticketWindow": "R$ 20 m – R$ 500 m per economic group / 12 months",
+          "financingShare": "Up to 80 %",
+          "financialCost": "6.5 % p.a. financial cost + ≥ 1.3 % BNDES spread",
+          "tenor": "192 months / 60 months grace",
+          "safeguards": "Brazilian EIA/RIMA + BNDES ESG policy",
+          "applicationChannel": "BNDES Client Portal",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-industria-verde"
+        },
+        "fundoClimaAutomaticProjects": {
+          "name": "BNDES Fundo Clima – Automatic Projects of Investment",
+          "description": "Indirect line handled by local banks (Caixa, Banco do Brasil, co-ops). Fast approval for amounts up to R$ 150 million, financing up to 100 % of LED streetlights, landfill upgrades, bike lanes, and urban reforestation.",
+          "instrumentType": "Indirect automatic loan via accredited banks",
+          "eligibleBorrowers": "Municipalities, states (≠ Union), private firms, rural producers",
+          "prioritySectors": "Urban resilience, waste, EE, logistics, reforestation",
+          "ticketWindow": "R$ 10 m (forests) or R$ 150 m (others) / 12 months",
+          "financingShare": "Up to 100 %",
+          "financialCost": "1 % / 6.15 % / 8 % + BNDES 0.9%/1.4 % + agent ≤ 2.5 %",
+          "tenor": "16–25 years / 5–8 years",
+          "safeguards": "Environmental licences + BNDES ESG",
+          "applicationChannel": "Accredited public bank or cooperative",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-automatico-projetos-de-investimento"
+        },
+        "fundoClimaAutomaticMachines": {
+          "name": "BNDES Fundo Clima – Automatic Machines & Equipment",
+          "description": "Finame credit to buy electric buses, gas trucks, LED fixtures, ILPF tractors. The item must appear in the Green Finame Catalogue; the loan can cover all costs over up to 16 years.",
+          "instrumentType": "Indirect Finame loan for green equipment",
+          "eligibleBorrowers": "Public & private entities, individual entrepreneurs",
+          "prioritySectors": "LED lighting, electric buses/trucks, solar kits, ILPF machinery",
+          "ticketWindow": "Up to R$ 150 m / 12 months",
+          "financingShare": "Up to 100 %",
+          "financialCost": "6.15 % or 8 % + BNDES 0.9%/1.4 % + agent ≤ 2.5 %",
+          "tenor": "16 years / 5 years grace",
+          "safeguards": "Equipment must be in Green Finame Catalogue",
+          "applicationChannel": "Finame‑accredited bank / cooperative",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-automatico-maquinas-equipamentos",
+          "nextSteps": {
+            "II": {
+              "title": "BNDES Funding Line 1: Fundo Clima – Automatic Machines & Equipment",
+              "items": {
+                "1": "Confirm desired equipment appears in the Green Finame Catalogue. Search by model code on the official platform. Take a screenshot to include in your project file.",
+                "2": "Identify the final borrower. Specify whether it's the municipal fleet or a private concessionaire. Provide the entity's CNPJ and balance sheet.",
+                "3": "Demonstrate repayment capacity. Submit the last 3 years of budget execution or concessionaire cash flow."
+              }
+            }
+          }
+        },
+        "fundoClimaGreenMachines": {
+          "name": "BNDES Fundo Clima – Green Machines (Direct)",
+          "description": "Direct version of Finame for bigger tickets (> R$ 150 m) or when the borrower is a state or city. BNDES can cover 80 % of purchase costs for large fleets or public-lighting programs.",
+          "instrumentType": "Direct Finame‑type loan",
+          "eligibleBorrowers": "States, DF, municipalities, private companies",
+          "prioritySectors": "Same equipment list as Automatic Finame, larger tickets",
+          "ticketWindow": "No formal cap; BNDES up to 80 %",
+          "financingShare": "Up to 80 %",
+          "financialCost": "9.5 % p.a. financial cost + ≥ 1.3 % BNDES spread",
+          "tenor": "16 years / 5 years grace",
+          "safeguards": "Must follow BNDES ESG",
+          "applicationChannel": "BNDES Client Portal",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-maquinas-verdes",
+          "nextSteps": {
+            "II": {
+              "title": "BNDES Funding Line 2: Fundo Clima – Green Machines (direct)",
+              "subtitle": "For tickets > R$150 million or when City Hall is the borrower",
+              "items": {
+                "1": "Access the Portal do Cliente and complete the short 'Pré-Cadastro' form.",
+                "2": "Attach required documents: Supplier budget, Equipment specifications.",
+                "3": "Upload the municipal CAPAG report.",
+                "4": "Await BNDES analyst call (≈ 2 weeks)"
+              }
+            }
+          }
+        },
+        "fundoClimaEnergyTransition": {
+          "name": "BNDES Fundo Clima – Energy Transition",
+          "description": "Direct loan for solar or wind farms, batteries, smart grids, or green hydrogen. Can finance 100 % of the project at a fixed 9.5 % financial-cost rate with a five-year grace period.",
+          "instrumentType": "Direct loan for renewable energy and grids",
+          "eligibleBorrowers": "Public entities (≠ Union) & private companies",
+          "prioritySectors": "Solar, wind, storage, smart grids, green hydrogen",
+          "ticketWindow": "≥ R$ 20 m (up to 100 %)",
+          "financingShare": "Up to 100 %",
+          "financialCost": "9.5 % p.a. financial cost + ≥ 1.3 % BNDES spread",
+          "tenor": "16 years / 60 months grace",
+          "safeguards": "BNDES ESG policy",
+          "applicationChannel": "BNDES Client Portal",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-transicao-energetica",
+          "nextSteps": {
+            "II": {
+              "title": "BNDES Funding Line 3: Fundo Clima – Energy Transition",
+              "items": {
+                "1": "Draft a 6-page Concept Note. Include: Clear problem statement, Proposed solution, Cost estimate, Project location map",
+                "2": "Request a letter from the Municipal Environment Secretariat confirming the current stage of environmental licensing.",
+                "3": "Prepare a Fiscal Impact Memo. Ensure projected annual debt service is ≤ 8% of Net Current Revenue.",
+                "4": "Upload all documents to the BNDES Portal do Cliente. You'll receive a Project ID (protocol number) upon submission."
+              }
+            }
+          }
+        },
+        "fundoClimaNativeForests": {
+          "name": "BNDES Fundo Clima – Native Forests & Water Resources",
+          "description": "The most concessional loan in the portfolio (1 % financial cost). Supports river-basin restoration, payment for ecosystem services, and nurseries. Comes with a 25-year tenor—ideal when revenue arrives slowly via carbon credits.",
+          "instrumentType": "Direct loan for restoration and conservation",
+          "eligibleBorrowers": "Public entities (≠ Union) & private companies",
+          "prioritySectors": "Forest restoration, conservation, water resource management, payment for ecosystem services",
+          "ticketWindow": "R$ 10 m – R$ 100 m",
+          "financingShare": "Up to 100 %",
+          "financialCost": "1 % p.a. financial cost + 1.2‑1.3 % BNDES spread",
+          "tenor": "25 years / 8 years grace",
+          "safeguards": "Strict environmental licensing + BNDES ESG",
+          "applicationChannel": "BNDES Client Portal",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-florestas-nativas-recursos-hidricos",
+          "nextSteps": {
+            "II": {
+              "title": "BNDES Funding Line 4: Fundo Clima – Native Forests & Water Resources",
+              "items": {
+                "1": "Draft a 6-page Concept Note. Include: Clear problem statement, Proposed solution, Cost estimate, Project location map",
+                "2": "Request a letter from the Municipal Environment Secretariat confirming the current stage of environmental licensing.",
+                "3": "Prepare a Fiscal Impact Memo. Ensure projected annual debt service is ≤ 8% of Net Current Revenue.",
+                "4": "Upload all documents to the BNDES Portal do Cliente. You'll receive a Project ID (protocol number) upon submission."
+              }
+            }
+          }
+        },
+        "fundoClimaUrbanResilient": {
+          "name": "BNDES Fundo Clima – Urban Resilient & Sustainable Development",
+          "description": "Funds parks, drainage, energy efficiency in public buildings, waste plants, and risk-reduction works. Minimum ticket R$ 20 m; BNDES pays up to 80 % over 16 years, aligned with resilient master-plan actions.",
+          "instrumentType": "Direct loan for urban climate projects",
+          "eligibleBorrowers": "Public entities (≠ Union) & private companies",
+          "prioritySectors": "Energy efficiency in public buildings, solid-waste management, urban parks, drainage, disaster risk reduction",
+          "ticketWindow": "≥ R$ 20 m; BNDES up to 80 %",
+          "financingShare": "Up to 80 %",
+          "financialCost": "6.5 % p.a. financial cost + 1.2‑1.3 % BNDES spread",
+          "tenor": "16 years / 5 years grace",
+          "safeguards": "BNDES ESG policy + local licences",
+          "applicationChannel": "BNDES Client Portal",
+          "officialLink": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/fundo-clima/fundo-clima-desenvolvimento-urbano-resiliente-sustentavel",
+          "nextSteps": {
+            "II": {
+              "title": "BNDES Funding Line 5: Fundo Clima – Urban Resilient & Sustainable Development",
+              "items": {
+                "1": "Draft a 6-page Concept Note. Include: Clear problem statement, Proposed solution, Cost estimate, Project location map",
+                "2": "Request a letter from the Municipal Environment Secretariat confirming the current stage of environmental licensing.",
+                "3": "Prepare a Fiscal Impact Memo. Ensure projected annual debt service is ≤ 8% of Net Current Revenue.",
+                "4": "Upload all documents to the BNDES Portal do Cliente. You'll receive a Project ID (protocol number) upon submission."
+              }
+            }
+          }
+        }
+      },
+      "bndesConceptNoteSteps": {
+        "items": {
+          "1": "Draft a 6-page Concept Note. Include: Clear problem statement, Proposed solution, Cost estimate, Project location map",
+          "2": "Request a letter from the Municipal Environment Secretariat confirming the current stage of environmental licensing.",
+          "3": "Prepare a Fiscal Impact Memo. Ensure projected annual debt service is ≤ 8% of Net Current Revenue.",
+          "4": "Upload all documents to the BNDES Portal do Cliente. You'll receive a Project ID (protocol number) upon submission."
+        }
+      }
+    },
+    "generalNextSteps": {
+      "title": "General Prerequisites for All Funding Lines",
+      "items": {
+        "1": "Set up a Project Implementation Unit (PIU) — even a small team (2–3 people) is enough, but it must be formalized by a mayoral decree.",
+        "2": "Ensure your CAPAG rating is \"B\" or higher — if it's \"C\" or \"D\", focus on FNMC grants or small BNDES Automatic loans (≤ R$ 10 million).",
+        "3": "Estimate your project cost and components — a rough calculation (±30%) is sufficient at this stage.",
+        "4": "Identify your environmental licensing requirements — even if the license hasn't been issued yet."
+      },
+      "note": "All lenders will ask for this during initial due diligence."
+    }
+  },
+  "nextSteps": {
+    "title": "Next steps to access {{fundingSource}}"
+  }
 }

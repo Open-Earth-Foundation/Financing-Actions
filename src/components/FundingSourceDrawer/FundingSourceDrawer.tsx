@@ -1,121 +1,232 @@
 import { DrawerRoot, DrawerBackdrop, DrawerContent, DrawerBody } from "./drawer";
 import { ButtonMedium } from "../Texts/Button";
-import { Heading, Stack, VStack, HStack, Text, Badge, Icon, Button, Separator } from "@chakra-ui/react";
+import {
+  Heading,
+  Stack,
+  VStack,
+  Text,
+  Icon,
+  Button,
+  Separator,
+  Box,
+} from "@chakra-ui/react";
 import { MdArrowBack } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { FundingSource } from "./fundingSources";
-import { Language } from "../../types";
 import { handleDownloadPDF } from "./handleDownloadPDF";
 
+import { NextStepsDrawer } from "../NextStepsDrawer/NextStepsDrawer";
+import { useState } from "react";
+
 interface FundingSourceDrawerProps {
-    isOpen: boolean;
-    onClose: () => void;
-    fundingSource: FundingSource | null;
+  isOpen: boolean;
+  onClose: () => void;
+  fundingSource: FundingSource | null;
+  isChosenSource?: boolean;
+  setChosenSource?: (chosenSource: FundingSource) => void;
 }
 
-export function FundingSourceDrawer({ isOpen, onClose, fundingSource }: FundingSourceDrawerProps) {
-    const { i18n, t } = useTranslation('translation');
-    const currentLanguage = i18n.language as Language;
+export function FundingSourceDrawer({
+  isOpen,
+  onClose,
+  fundingSource,
+  isChosenSource = false,
+  setChosenSource = () => {},
+}: FundingSourceDrawerProps) {
+  const { t } = useTranslation("translation");
+  const [isNextStepsDrawerOpen, setIsNextStepsDrawerOpen] = useState(false);
+  const [
+    selectedFundingSourceForNextSteps,
+    setSelectedFundingSourceForNextSteps,
+  ] = useState<FundingSource | null>(null);
 
-    if (!fundingSource) return null;
-    const data = fundingSource.translations[currentLanguage];
+  console.log("fundingSource", JSON.stringify(fundingSource)); // TODO NINA
+  if (!fundingSource) return null;
+  const { institutionId, sourceKey } = fundingSource;
 
-    return (
-        <DrawerRoot open={isOpen} placement="end" onExitComplete={onClose} size="xl">
-            <DrawerBackdrop />
-            <DrawerContent>
-                <DrawerBody>
-                    <Stack px={4} py={10}>
-                        <ButtonMedium
-                            as="button"
-                            color="content.link"
-                            alignSelf="flex-start"
-                            onClick={onClose}
-                            px={6}
-                            py={4}
-                            mb={6}
-                        >
-                            <Icon as={MdArrowBack} boxSize={4} mr={2} />
-                            {t("goBack")}
-                        </ButtonMedium>
-                        <Stack gap={6} id="funding-source-info">
-                            <Heading size="lg">{data.title}</Heading>
-                            <HStack gap={4} flexWrap="wrap">
-                                <Badge colorPalette="default" variant="outline" color="black">{t('funding.region')}: {data.region}</Badge>
-                                <Badge colorPalette="default" variant="outline" color="black">{t('funding.currency')}: {data.currency}</Badge>
-                                <Badge colorPalette="default" variant="outline" color="black">{t('funding.scope')}: {data.scope}</Badge>
-                            </HStack>
-                            <Text
-                                style={{
-                                    display: '-webkit-box',
-                                    WebkitLineClamp: 7,
-                                    WebkitBoxOrient: 'vertical',
-                                    overflow: 'hidden',
-                                    textOverflow: 'ellipsis',
-                                }}
-                            >
-                                {data.description}
-                            </Text>
-                            <VStack align="start" gap={2}>
-                                <Heading size="md">{t('funding.priorityThemes')}</Heading>
-                                <ul style={{ listStyleType: "disc", paddingLeft: 20 }}>
-                                    {data.priorityThemes.map((theme) => (
-                                        <li key={theme}><Text as="span">{theme}</Text></li>
-                                    ))}
-                                </ul>
-                            </VStack>
-                            <VStack align="start" gap={2}>
-                                <Heading size="md">{t('funding.typesOfFunding')}</Heading>
-                                <ul style={{ listStyleType: "disc", paddingLeft: 20 }}>
-                                    {data.typesOfFunding.map((type) => (
-                                        <li key={type}><Text as="span">{type}</Text></li>
-                                    ))}
-                                </ul>
-                            </VStack>
+  const handleOpenNextStepsDrawer = (source: FundingSource) => {
+    setSelectedFundingSourceForNextSteps(source);
+    setIsNextStepsDrawerOpen(true);
+  };
 
-                            <VStack align="start" gap={2}>
-                                <Heading size="md">{t('funding.fundedProjectExample')}</Heading>
-                                <Text>
-                                    <b>{data.fundedProjectExample.title} -</b> {data.fundedProjectExample.description}
-                                </Text>
-                            </VStack>
+  const handleCloseNextStepsDrawer = () => {
+    setIsNextStepsDrawerOpen(false);
+    setSelectedFundingSourceForNextSteps(null);
+  };
 
-                            <VStack align="start" gap={2} backgroundColor="#D7D8FAC9" padding={4} borderRadius={8}>
-                                <Heading size="md" color="#2351DC">{t('funding.eligibilityRequirements')}</Heading>
-                                <ol style={{ marginLeft: 16, listStyleType: "decimal" }}>
-                                    {data.eligibilityRequirements.map((item) => (
-                                        <li key={item}><Text as="span">{item}</Text></li>
-                                    ))}
-                                </ol>
-                                {/* <Text> TODO NINA ADD LINKS WHEN WE HAVE THEM
-                                    <b>{t('funding.linkToAccessTheFund')}:{' '}
-                                        <Link href={data.link} target="_blank" rel="noopener noreferrer">
-                                            {data.link}
-                                        </Link></b>
-                                </Text> */}
+  return (
+    <>
+      <DrawerRoot
+        open={isOpen}
+        placement="end"
+        onExitComplete={onClose}
+        size="xl"
+      >
+        <DrawerBackdrop />
+        <DrawerContent>
+          <DrawerBody>
+            <Stack px={4} py={10}>
+              <ButtonMedium
+                as="button"
+                color="content.link"
+                alignSelf="flex-start"
+                onClick={onClose}
+                px={6}
+                py={4}
+                mb={6}
+              >
+                <Icon as={MdArrowBack} boxSize={4} mr={2} />
+                {t("goBack")}
+              </ButtonMedium>
+              <Stack gap={6} id="funding-source-info">
+                <Heading size="lg">
+                  {t(
+                    `fundingSources.${institutionId}.sources.${sourceKey}.name`
+                  )}
+                </Heading>
+                <Text
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 7,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  {t(
+                    `fundingSources.${institutionId}.sources.${sourceKey}.description`
+                  )}
+                </Text>
 
-                            </VStack>
-                            <VStack align="start" gap={2}>
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.prioritySectors")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.prioritySectors`
+                    )}
+                  </Text>
+                </VStack>
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.instrumentType")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.instrumentType`
+                    )}
+                  </Text>
+                </VStack>
 
-                            </VStack>
-                        </Stack>
-                        <Separator />
-                        <Button px={6} py={4} mb={6}
-                            color="#0D44EC"
-                            alignSelf="center"
-                            justifyContent="center"
-                            onClick={() => handleDownloadPDF(data, t)}>
-                            <ButtonMedium
-                                alignSelf="center"
-                                color="white"
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.eligibleBorrowers")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.eligibleBorrowers`
+                    )}
+                  </Text>
+                </VStack>
 
-                            >
-                                {t("funding.downloadPDF")}
-                            </ButtonMedium>
-                        </Button>
-                    </Stack>
-                </DrawerBody>
-            </DrawerContent>
-        </DrawerRoot>
-    );
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.ticketWindow")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.ticketWindow`
+                    )}
+                  </Text>
+                </VStack>
+
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.financingShare")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.financingShare`
+                    )}
+                  </Text>
+                </VStack>
+
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.financialCost")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.financialCost`
+                    )}
+                  </Text>
+                </VStack>
+
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.tenor")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.tenor`
+                    )}
+                  </Text>
+                </VStack>
+
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.safeguards")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.safeguards`
+                    )}
+                  </Text>
+                </VStack>
+
+                <VStack align="start" gap={2}>
+                  <Heading size="md">{t("funding.applicationChannel")}</Heading>
+                  <Text>
+                    {t(
+                      `fundingSources.${institutionId}.sources.${sourceKey}.applicationChannel`
+                    )}
+                  </Text>
+                </VStack>
+              </Stack>
+              <Separator />
+              <Box mt={10} width="100%" display="flex" justifyContent="center">
+                <Stack gap={6} direction="row" width="auto" alignItems="center">
+                  <Button
+                    bg="#2456E6"
+                    color="white"
+                    fontWeight="bold"
+                    borderRadius="2em"
+                    px={10}
+                    py={6}
+                    fontSize="md"
+                    width={"auto"}
+                    _hover={{ bg: "#1741b6" }}
+                    onClick={() =>
+                      isChosenSource
+                        ? handleOpenNextStepsDrawer(fundingSource)
+                        : setChosenSource(fundingSource)
+                    }
+                  >
+                    {isChosenSource
+                      ? t("funding.seeNextSteps")
+                      : t("funding.chooseSource")}
+                  </Button>
+                  <Button
+                    bg="#2456E6"
+                    color="white"
+                    fontWeight="bold"
+                    borderRadius="2em"
+                    px={10}
+                    py={6}
+                    fontSize="md"
+                    width={"auto"}
+                    _hover={{ bg: "#1741b6" }}
+                    onClick={() => handleDownloadPDF(fundingSource, t)}
+                  >
+                    Download as PDF
+                  </Button>
+                </Stack>
+              </Box>
+            </Stack>
+          </DrawerBody>
+        </DrawerContent>
+      </DrawerRoot>
+
+      <NextStepsDrawer
+        isOpen={isNextStepsDrawerOpen}
+        onClose={handleCloseNextStepsDrawer}
+        fundingSource={selectedFundingSourceForNextSteps}
+      />
+    </>
+  );
 }
