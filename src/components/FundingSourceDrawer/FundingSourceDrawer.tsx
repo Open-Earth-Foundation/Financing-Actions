@@ -75,7 +75,7 @@ export function FundingSourceDrawer({
                 {t("goBack")}
               </ButtonMedium>
               <Stack gap={6} id="funding-source-info">
-                <Heading size="lg">
+                <Heading size="2xl">
                   {t(
                     `fundingSources.${institutionId}.sources.${sourceKey}.name`
                   )}

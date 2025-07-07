@@ -8,7 +8,7 @@ import Recommendations from "./Recommendations.tsx";
 import Funding from "./Funding.tsx";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { NavBar } from "./components/NavBar.tsx";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { SurveyAnswers } from "./types.ts";
 

@@ -47,6 +47,7 @@ export function NextStepsDrawer({
       {
         text: t("nextSteps.title", { fundingSource: fundName }),
         style: "mainTitle",
+        lineHeight: 1.5,
       },
       { text: "\n" },
       ...fundingSourceData.nextSteps.flatMap((nextStep: any, idx: number) => {
@@ -130,7 +131,7 @@ export function NextStepsDrawer({
             </ButtonMedium>
 
             <Stack gap={6}>
-              <Text fontSize="2xl" fontWeight="bold" color="black">
+              <Text fontSize="2xl" fontWeight="bold" lineHeight="1.5">
                 {t("nextSteps.title", {
                   fundingSource: fundingSourceData?.["Fund Name"] || "",
                 })}
@@ -146,7 +147,7 @@ export function NextStepsDrawer({
                           {t(nextStep.subtitle)}
                         </Text>
                       )}
-                      <List.Root>
+                      <List.Root style={{ marginLeft: "16px" }}>
                         {nextStep.items.map((item: string, i: number) => (
                           <List.Item key={i} _marker={{ color: "black" }}>
                             {t(item)}

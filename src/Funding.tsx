@@ -50,7 +50,7 @@ export default function Finance() {
           <Accordion.Root collapsible>
             {institutions.map((institution) => (
               <Accordion.Item key={institution.id} value={institution.id}>
-                <Accordion.ItemTrigger>
+                <Accordion.ItemTrigger cursor={"pointer"}>
                   <Box
                     flex="1"
                     textAlign="left"

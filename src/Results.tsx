@@ -14,49 +14,92 @@ export default function Results({ answers }: ResultsProps) {
     const { t } = useTranslation('translation');
 
     return (
-        <Flex alignItems={'center'} justifyContent={'center'} width={'100vw'} my={"3%"}>
-            <Box width={'70%'}>
-                <Heading mb={4}>{t('results.title' as any)}</Heading>
-                <Heading fontSize={"16px"} mb={6}>{t('results.breakdown' as any)}</Heading>
+      <Flex
+        alignItems={"center"}
+        justifyContent={"center"}
+        width={"100vw"}
+        my={"3%"}
+      >
+        <Box backgroundColor={"#fff"}>
+          <Heading mb={4}>{t("results.title" as any)}</Heading>
+          <Heading fontSize={"16px"} mb={6}>
+            {t("results.breakdown" as any)}
+          </Heading>
 
-                {Object.entries(results).map(([category, { maturity, score }], index) => (
-                    <Box key={index} flex="1" textAlign="left" p={4} bg="gray.50" borderRadius="md">
-                        <HStack justify="space-between">
-                            <HStack>
-                                <Text fontWeight="bold">{t(`results.${category}` as any)}</Text>
-                                <MaturityTag maturity={maturity} />
-                                <Text fontSize="sm" color="gray.600">{t('score')}: {score}</Text>
-                            </HStack>
-                        </HStack>
-                    </Box>
-                ))}
-
-                <HStack justifyContent="center" width="100%" my={4} gap={4}>
-                    <Link to="/questionnaire">
-                        <Button width={"215px"} backgroundColor="#dbeafe" color="#2146aa" size="md" _hover={{ bg: '#bfdbfe' }}>
-                            {t('results.retake' as any)}
-                        </Button>
-                    </Link>
-                    <Link to="/">
-                        <Button width={"215px"} backgroundColor="#fee2e2" color="#ba5b5b" size="md" _hover={{ bg: '#fecaca' }}>
-                            {t('results.close' as any)}
-                        </Button>
-                    </Link>
-
+          {Object.entries(results).map(
+            ([category, { maturity, score }], index) => (
+              <Box
+                key={index}
+                flex="1"
+                textAlign="left"
+                p={4}
+                bg="gray.50"
+                borderRadius="md"
+              >
+                <HStack justify="space-between">
+                  <HStack>
+                    <Text fontWeight="bold">
+                      {t(`results.${category}` as any)}
+                    </Text>
+                    <MaturityTag maturity={maturity} />
+                    <Text fontSize="sm" color="gray.600">
+                      {t("score")}: {score}
+                    </Text>
+                  </HStack>
                 </HStack>
-                <VStack>
-                    <Link to="/recommendations">
-                        <Button width={"440px"} backgroundColor="#fef9c3" color="#724c2d" size="lg" my={"10px"}>
-                            {t('results.recommendations' as any)}
-                        </Button>
-                    </Link>
-                    <Link to="/funding">
-                        <Button width={"440px"} backgroundColor="#dcfce7" color="#267945" size="lg" my={"10px"}>
-                            {t('results.funding' as any)}
-                        </Button>
-                    </Link>
-                </VStack>
-            </Box>
-        </Flex>
+              </Box>
+            )
+          )}
+
+          <HStack justifyContent="center" width="100%" my={4} gap={4}>
+            <Link to="/questionnaire">
+              <Button
+                width={"215px"}
+                backgroundColor="#dbeafe"
+                color="#2146aa"
+                size="md"
+                _hover={{ bg: "#bfdbfe" }}
+              >
+                {t("results.retake" as any)}
+              </Button>
+            </Link>
+            <Link to="/">
+              <Button
+                width={"215px"}
+                backgroundColor="#fee2e2"
+                color="#ba5b5b"
+                size="md"
+                _hover={{ bg: "#fecaca" }}
+              >
+                {t("results.close" as any)}
+              </Button>
+            </Link>
+          </HStack>
+          <VStack>
+            <Link to="/recommendations">
+              <Button
+                width={"440px"}
+                backgroundColor="#fef9c3"
+                color="#724c2d"
+                size="lg"
+                my={"10px"}
+              >
+                {t("results.recommendations" as any)}
+              </Button>
+            </Link>
+            <Link to="/funding">
+              <Button
+                width={"440px"}
+                backgroundColor="#dcfce7"
+                color="#267945"
+                size="lg"
+                my={"10px"}
+              >
+                {t("results.funding")}
+              </Button>
+            </Link>
+          </VStack>
+        </Box>
+      </Flex>
     );
 }
