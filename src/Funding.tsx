@@ -9,18 +9,21 @@ import {
   HStack,
   Grid,
   GridItem,
+  Icon,
 } from "@chakra-ui/react";
 
 import { institutions } from "./components/institutions";
 import { useState } from "react";
 import { FundingSourceDrawer } from "./components/FundingSourceDrawer/FundingSourceDrawer.tsx";
-
+import { ButtonMedium } from "./components/Texts/Button.tsx";
+import { MdArrowBack } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 export default function Finance() {
   const { t } = useTranslation("translation");
   const [selectedFundingSourceForDetails, setSelectedFundingSource] = useState<
     any | null
   >(null);
-
+  const navigate = useNavigate();
   const onSourceSelected = (source: any) => {
     setSelectedFundingSource(source);
   };
@@ -34,7 +37,20 @@ export default function Finance() {
           fundingSource={selectedFundingSourceForDetails}
         />
       )}
-
+      <ButtonMedium
+        cursor={"pointer"}
+        as="button"
+        color="content.link"
+        alignSelf="flex-start"
+        textAlign={"left"}
+        onClick={() => navigate("/")}
+        width={"100%"}
+        px={6}
+        py={4}
+      >
+        <Icon as={MdArrowBack} boxSize={4} mr={2} />
+        {t("goBack")}
+      </ButtonMedium>
       <Flex
         alignItems={"center"}
         justifyContent={"center"}
@@ -42,7 +58,7 @@ export default function Finance() {
         minWidth={"100%"}
         my={"3%"}
       >
-        <Box width={"100%"} maxWidth={"1200px"} px={4} mx="auto">
+        <Box width={"100%"} maxWidth={"1200px"} px={4}>
           <Heading mb={4}>{t("funding.title" as any)}</Heading>
           <Heading fontSize={"16px"} mb={6}>
             {t("funding.breakdown" as any)}
