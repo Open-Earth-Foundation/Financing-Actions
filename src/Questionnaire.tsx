@@ -65,12 +65,13 @@ function SurveyComponent({ updateData }: { updateData: () => void }) {
     <Box
       width="100%"
       minHeight="100vh"
-      bg="gray.100" 
+      bg="gray.100" // Set this to match your desired gray color
       py={8} // Add some padding
     >
       <Center>
         <Box
-          width="100%"
+          
+          maxWidth="800px"          
           bg="gray.100" // Same as parent
         >
           <Survey model={survey} />
