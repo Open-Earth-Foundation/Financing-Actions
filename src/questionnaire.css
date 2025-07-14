@@ -13,23 +13,17 @@
   text-align: left !important;  
 }
 
-.sd-description {
-    width: 100vw;
-}
-
-.survey-custom-centered {
-    width: 50vw;
-}
-.sd-progress--requiredQuestions{
-    width: 50vw;
-}
-.sd-root-modern--full-container {
-    width: 50vw;
-}
-
 .sd-description,
 .sd-page__description {
-    width: 50vw;
 text-align: left
 }
+
+.sd-description {
+    /* text-align: left; */
+    /* white-space: normal !important; */
+    /* overflow-wrap: break-word !important; */
+    width: 600px !important;
+}
+
+
 
