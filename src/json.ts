@@ -11,8 +11,8 @@ export const json = {
     {
       "name": "page1",
       "title": {
-        "default": "Finance Readiness Assessment",
-        "pt": "Avaliação de Preparação Financeira"
+        "default": "Climate Governance and Planning",
+        "pt": "Gestão e Planejamento Climático"
       },
       "description": {
         "default": "Refers to a city's ability to develop, implement, and oversee climate policies, strategies, and action plans. It assesses how well a city integrates climate action into its governance structure, institutional framework, and long-term development plans.",
